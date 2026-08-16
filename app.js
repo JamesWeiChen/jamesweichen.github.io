@@ -5,6 +5,7 @@
   const app = document.querySelector("#app");
   const state = {
     lang: localStorage.getItem("jwc-lang") === "zh" ? "zh" : "en",
+    theme: document.documentElement.dataset.theme === "light" ? "light" : "dark",
     researchFilter: "all",
   };
 
@@ -45,6 +46,9 @@
       ncu: "National Central University",
       download: "Download CV",
       updated: "Content updated August 2026",
+      switchTheme: "Switch theme",
+      useLight: "Light",
+      useDark: "Dark",
     },
     zh: {
       home: "首頁",
@@ -82,6 +86,9 @@
       ncu: "國立中央大學",
       download: "下載 CV",
       updated: "內容更新於 2026 年 8 月",
+      switchTheme: "切換顯示主題",
+      useLight: "淺色",
+      useDark: "深色",
     },
   };
 
@@ -119,6 +126,16 @@
             ${linkTo("teaching", t("teaching"))}
             <a class="nav-link" href="${data.profile.cv}" target="_blank" rel="noreferrer">${t("cv")} ↗</a>
           </div>
+          <button
+            type="button"
+            class="theme-toggle"
+            data-theme-toggle
+            aria-label="${t("switchTheme")}: ${state.theme === "dark" ? t("useLight") : t("useDark") }"
+            title="${t("switchTheme")}: ${state.theme === "dark" ? t("useLight") : t("useDark") }"
+          >
+            <span class="theme-icon" aria-hidden="true">${state.theme === "dark" ? "☼" : "◐"}</span>
+            <span>${state.theme === "dark" ? t("useLight") : t("useDark")}</span>
+          </button>
           <div class="language-switch" aria-label="Language">
             <button type="button" data-lang="en" class="${state.lang === "en" ? "is-active" : ""}" lang="en">EN</button>
             <span aria-hidden="true">/</span>
@@ -396,6 +413,10 @@
 
   function render() {
     const currentRoute = route();
+    document.documentElement.dataset.theme = state.theme;
+    document.documentElement.style.colorScheme = state.theme;
+    const themeColor = document.querySelector("#theme-color");
+    if (themeColor) themeColor.content = state.theme === "dark" ? "#101411" : "#f3f1ec";
     document.documentElement.lang = state.lang === "zh" ? "zh-Hant" : "en";
     document.title = `${
       currentRoute === "home" ? data.profile.name : t(currentRoute)
@@ -411,6 +432,14 @@
   }
 
   document.addEventListener("click", (event) => {
+    const themeButton = event.target.closest("[data-theme-toggle]");
+    if (themeButton) {
+      state.theme = state.theme === "dark" ? "light" : "dark";
+      localStorage.setItem("jwc-theme", state.theme);
+      render();
+      return;
+    }
+
     const languageButton = event.target.closest("[data-lang]");
     if (languageButton) {
       state.lang = languageButton.dataset.lang;

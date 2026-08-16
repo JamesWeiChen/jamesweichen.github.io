@@ -10,6 +10,7 @@ This is a static single-page website designed for GitHub Pages:
 - `styles.css` contains the visual system and responsive layout.
 - `data.js` contains the editable profile, publication, people, teaching, and news content.
 - `app.js` renders the pages, hash-based navigation, language switch, and research filters.
+- Dark mode is the default; the theme switch stores each visitor's light/dark preference in their browser.
 - `cv-wei.pdf` is linked directly from the navigation.
 
 There is no database or server. GitHub Pages serves these files directly. To update content, edit `data.js`, commit the change, and push it to GitHub.
