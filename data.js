@@ -74,6 +74,101 @@
       },
     ],
 
+    methods: [
+      {
+        id: "behavioral",
+        number: "01",
+        title: { en: "Behavioral experiments", zh: "行為實驗" },
+        text: {
+          en: "Lab and online experiments that reveal choice, learning, and strategic behavior.",
+          zh: "以實驗室與線上實驗研究選擇、學習與策略行為。",
+        },
+        tags: { en: "Lab · Online · Games", zh: "實驗室 · 線上 · 賽局" },
+      },
+      {
+        id: "tracking",
+        number: "02",
+        title: { en: "Process tracing", zh: "決策歷程追蹤" },
+        text: {
+          en: "Follow the hidden process of choice through eyes, pupils, and cursor movement.",
+          zh: "透過眼動、瞳孔與滑鼠軌跡，追蹤選擇背後看不見的過程。",
+        },
+        tags: { en: "Eye · Pupil · Mouse", zh: "眼動 · 瞳孔 · 滑鼠" },
+      },
+      {
+        id: "computational",
+        number: "03",
+        title: { en: "Computational modeling", zh: "計算模型" },
+        text: {
+          en: "Use formal models, behavioral data, and synthetic subjects to explain decisions.",
+          zh: "結合形式模型、行為資料與合成受試者來解釋決策。",
+        },
+        tags: { en: "Models · Data · LLM", zh: "模型 · 資料 · LLM" },
+      },
+      {
+        id: "field",
+        number: "04",
+        title: { en: "Field & quasi-experiments", zh: "田野與準實驗" },
+        text: {
+          en: "Connect causal evidence to classrooms, farms, policy, and other real settings.",
+          zh: "將因果證據延伸至課堂、農業、政策與其他真實情境。",
+        },
+        tags: { en: "Field · Policy · Education", zh: "田野 · 政策 · 教育" },
+      },
+      {
+        id: "metascience",
+        number: "05",
+        title: { en: "Research design", zh: "研究設計" },
+        text: {
+          en: "Study reproducibility, peer review, and the institutions that shape evidence.",
+          zh: "研究可重現性、同儕審查，以及形塑科學證據的制度。",
+        },
+        tags: { en: "Meta-science · Peer review", zh: "後設科學 · 同儕審查" },
+      },
+    ],
+
+    featuredFindings: [
+      {
+        number: "95",
+        unit: { en: "% reproduced", zh: "% 可重現" },
+        category: { en: "Scientific institutions", zh: "科學制度" },
+        title: "Reproducibility in Management Science",
+        authors: "Management Science Reproducibility Collaboration",
+        venue: "Management Science, 2024",
+        finding: {
+          en: "When the original data and software were available, 95% of reviewed results were fully or largely reproduced. Across the full sample, inaccessible materials reduced the estimate to 68%.",
+          zh: "當原始資料與程式可取得時，95% 的受檢結果可被完整或大致重現；若把材料無法取得的研究納入全部樣本，比例則降為 68%。",
+        },
+        link: "https://pubsonline.informs.org/doi/10.1287/mnsc.2023.03556",
+      },
+      {
+        number: "94",
+        unit: { en: "% agreement", zh: "% 分類一致" },
+        category: { en: "Learning & insight", zh: "學習與頓悟" },
+        title: "Computational Modeling of Epiphany Learning",
+        authors: "Wei James Chen and Ian Krajbich",
+        venue: "PNAS, 2017",
+        finding: {
+          en: "Among participants whose choices converged to the optimal strategy, two independent classification methods agreed that 94% learned through an epiphany-like shift.",
+          zh: "在選擇最終收斂至最佳策略的參與者中，兩種獨立分類方法一致判定其中 94% 經歷了近似頓悟的學習轉折。",
+        },
+        link: "https://pmc.ncbi.nlm.nih.gov/articles/PMC5422778/",
+      },
+      {
+        number: "100",
+        unit: { en: "doors", zh: "扇門" },
+        category: { en: "Decision learning", zh: "決策學習" },
+        title: "A Modified Monty Hall Problem",
+        authors: "Wei James Chen and Joseph Tao-yi Wang",
+        venue: "Theory and Decision, 2020",
+        finding: {
+          en: "Experience with a simplified 100-door version improved later performance on the classic three-door problem relative to a control group.",
+          zh: "先體驗簡化的 100 扇門版本，能讓參與者之後在經典三門問題上的表現優於控制組。",
+        },
+        link: "https://link.springer.com/article/10.1007/s11238-020-09757-1",
+      },
+    ],
+
     publications: [
       {
         year: 2025,
@@ -83,6 +178,7 @@
         venue: "Experimental Economics, published online, 1-28",
         link: "https://www.cambridge.org/core/journals/experimental-economics/article/measuring-higherorder-rationality-with-belief-control/1A47976B734D6647D7D2B1FC4CF5AC0E",
         theme: "learning",
+        method: "behavioral",
       },
       {
         year: 2023,
@@ -92,6 +188,7 @@
         venue: "Management Science, 70(3), 1343-1356",
         link: "https://doi.org/10.1287/mnsc.2023.03556",
         theme: "institutions",
+        method: "metascience",
       },
       {
         year: 2020,
@@ -101,6 +198,7 @@
         venue: "Theory and Decision, 89, 151-156",
         link: "https://link.springer.com/article/10.1007/s11238-020-09757-1",
         theme: "learning",
+        method: "behavioral",
       },
       {
         year: 2017,
@@ -110,6 +208,7 @@
         venue: "Proceedings of the National Academy of Sciences, 114(18), 4637-4642",
         link: "https://www.pnas.org/doi/10.1073/pnas.1618161114",
         theme: "process",
+        method: "computational",
       },
       {
         year: 2011,
@@ -119,6 +218,7 @@
         venue: "Games, 2(1), 187-199",
         link: "https://www.mdpi.com/2073-4336/2/1/187",
         theme: "learning",
+        method: "computational",
       },
     ],
 
@@ -130,14 +230,17 @@
         authors: "Wei-Cheng Chen, Wei James Chen, and Greg Chih-Hsin Sheen",
         venue: "Working paper",
         theme: "institutions",
+        method: "metascience",
       },
       {
         year: 2026,
         status: "working",
-        title: "The Sampling Unit Shapes Behavioural Similarity in Large Language Model Simulations",
+        title: "From Individuals to Populations: Eliciting Human Behaviour from Large Language Models",
         authors: "Zhi-Hong Howie Jian and Wei James Chen",
         venue: "Working paper",
         theme: "computation",
+        method: "computational",
+        abstract: "When using large language models (LLMs) to simulate population-level human behaviour, researchers typically generate one decision per model call, a procedure we call atomic elicitation. We propose chunked elicitation, in which each call simulates multiple participants and returns their decisions. Across several widely studied economic games and frontier LLMs, chunked elicitation substantially improves distributional fit to human benchmarks. Control tasks show that this improvement is not merely due to indiscriminate noise. The elicitation protocol therefore shapes how closely LLM outputs match human behavioural distributions and should itself be validated.",
       },
       {
         year: 2026,
@@ -146,6 +249,7 @@
         authors: "Wei James Chen and Joseph Tao-yi Wang",
         venue: "R&R, Journal of Economic Psychology",
         theme: "learning",
+        method: "behavioral",
       },
       {
         year: 2025,
@@ -154,6 +258,7 @@
         authors: "Wei James Chen and Ya-Ting Chuang",
         venue: "Working paper",
         theme: "institutions",
+        method: "behavioral",
       },
       {
         year: 2024,
@@ -162,6 +267,7 @@
         authors: "Wei James Chen and Wei-Cheng Chen",
         venue: "Working paper",
         theme: "institutions",
+        method: "behavioral",
       },
       {
         year: 2023,
@@ -170,6 +276,7 @@
         authors: "Wei James Chen, Zhi Li, and Joseph Tao-yi Wang",
         venue: "R&R, International Review of Economics Education",
         theme: "institutions",
+        method: "field",
       },
       {
         year: 2023,
@@ -178,6 +285,7 @@
         authors: "Wei James Chen and Meng-Jhang Fong",
         venue: "Working paper",
         theme: "learning",
+        method: "computational",
       },
       {
         year: 2023,
@@ -186,6 +294,7 @@
         authors: "Wei James Chen and Ian Krajbich",
         venue: "Working paper",
         theme: "process",
+        method: "tracking",
       },
       {
         year: 2023,
@@ -194,6 +303,7 @@
         authors: "Jiang-Shiang Hu, Josie I Chen, and Wei James Chen",
         venue: "Working paper",
         theme: "process",
+        method: "tracking",
       },
       {
         year: 2023,
@@ -202,6 +312,7 @@
         authors: "Ching-Yuan Kao and Wei James Chen",
         venue: "Working paper",
         theme: "institutions",
+        method: "behavioral",
       },
       {
         year: 2022,
@@ -210,6 +321,7 @@
         authors: "Yu-Hsiang Wang, Joseph Tao-yi Wang, and Wei James Chen",
         venue: "Working paper",
         theme: "process",
+        method: "tracking",
       },
       {
         year: 2022,
@@ -218,6 +330,7 @@
         authors: "Yu-Pei Chen, Wei James Chen, and Greg Chih-Hsin Sheen",
         venue: "Working paper",
         theme: "institutions",
+        method: "behavioral",
       },
       {
         year: null,
@@ -226,6 +339,7 @@
         authors: "Wei James Chen and Yan Han",
         venue: "R&R, Taiwan Economic Forecast and Policy",
         theme: "institutions",
+        method: "field",
       },
     ],
 

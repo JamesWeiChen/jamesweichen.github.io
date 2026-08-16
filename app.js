@@ -6,13 +6,20 @@
   const state = {
     lang: localStorage.getItem("jwc-lang") === "zh" ? "zh" : "en",
     theme: document.documentElement.dataset.theme === "light" ? "light" : "dark",
-    researchFilter: "all",
+    researchMethod: "all",
+    featuredIndex: 0,
+    featuredPaused: false,
+    browseQuery: "",
+    browseStatuses: new Set(),
   };
+  let featuredTimer;
 
   const copy = {
     en: {
       home: "Home",
       research: "Research",
+      featured: "Featured findings",
+      browse: "Browse papers",
       people: "People",
       teaching: "Teaching",
       cv: "CV",
@@ -28,8 +35,8 @@
       latestNews: "Lab news",
       allNews: "Current and recent milestones from the lab.",
       explore: "Explore the research map",
-      mapTitle: "A map of our research",
-      mapIntro: "Choose a research stream to filter the paper list. Published work links to the journal page.",
+      mapTitle: "Research methods map",
+      mapIntro: "Explore the lab by how evidence is produced, from behavioral experiments and process tracing to computational models and field evidence.",
       all: "All work",
       published: "Published",
       working: "Working papers",
@@ -53,6 +60,8 @@
     zh: {
       home: "首頁",
       research: "研究",
+      featured: "精選發現",
+      browse: "瀏覽論文",
       people: "成員",
       teaching: "教學",
       cv: "履歷",
@@ -68,8 +77,8 @@
       latestNews: "實驗室消息",
       allNews: "實驗室近期的重要進展。",
       explore: "探索研究地圖",
-      mapTitle: "研究地圖",
-      mapIntro: "選擇研究方向即可篩選論文；已發表論文可連至期刊頁面。",
+      mapTitle: "研究方法地圖",
+      mapIntro: "依照證據如何產生來探索實驗室研究：從行為實驗、歷程追蹤，到計算模型與田野證據。",
       all: "全部研究",
       published: "已發表",
       working: "工作論文",
@@ -100,13 +109,17 @@
     return typeof value === "string" ? value : value[state.lang];
   }
 
-  function route() {
-    const value = window.location.hash.replace(/^#\/?/, "").split("?")[0];
-    return ["research", "people", "teaching"].includes(value) ? value : "home";
+  function escapeAttribute(value) {
+    return String(value).replace(/&/g, "&amp;").replace(/"/g, "&quot;");
   }
 
-  function linkTo(path, label) {
-    const current = route() === path;
+  function route() {
+    const value = window.location.hash.replace(/^#\/?/, "").split("?")[0];
+    return ["featured", "research", "browse", "people", "teaching"].includes(value) ? value : "home";
+  }
+
+  function linkTo(path, label, activePaths = [path]) {
+    const current = activePaths.includes(route());
     const href = path === "home" ? "#/" : `#/${path}`;
     return `<a class="nav-link${current ? " is-active" : ""}" href="${href}"${current ? ' aria-current="page"' : ""}>${label}</a>`;
   }
@@ -121,7 +134,7 @@
           </a>
           <div class="nav-links">
             ${linkTo("home", t("home"))}
-            ${linkTo("research", t("research"))}
+            ${linkTo("featured", t("research"), ["featured", "research", "browse"])}
             ${linkTo("people", t("people"))}
             ${linkTo("teaching", t("teaching"))}
             <a class="nav-link" href="${data.profile.cv}" target="_blank" rel="noreferrer">${t("cv")} ↗</a>
@@ -178,6 +191,18 @@
           </article>`,
       )
       .join("");
+    const findings = data.featuredFindings
+      .map(
+        (finding, index) => `
+          <a class="finding-preview-card finding-preview-${index + 1}" href="#/featured?slide=${index + 1}">
+            <span class="finding-category">${localized(finding.category)}</span>
+            <span class="finding-preview-number">${finding.number}</span>
+            <span class="finding-preview-unit">${localized(finding.unit)}</span>
+            <p>${localized(finding.finding)}</p>
+            <span class="finding-preview-link">${state.lang === "en" ? "Read the finding" : "閱讀完整發現"} →</span>
+          </a>`,
+      )
+      .join("");
 
     return `
       <main id="main-content">
@@ -203,13 +228,9 @@
               <p class="eyebrow">${t("selected")}</p>
               <h2 id="stats-title">${t("researchIntro")}</h2>
             </div>
-            <a class="text-link" href="#/research">${t("explore")} →</a>
+            <a class="text-link" href="#/featured">${state.lang === "en" ? "See all findings" : "查看全部發現"} →</a>
           </div>
-          <div class="stat-grid">
-            <div class="stat-card stat-green"><strong>${data.publications.length}</strong><span>${t("publications")}</span></div>
-            <div class="stat-card stat-rust"><strong>${data.people.current.length}</strong><span>${t("activeStudents")}</span></div>
-            <div class="stat-card stat-blue"><strong>${data.themes.length}</strong><span>${t("researchStreams")}</span></div>
-          </div>
+          <div class="finding-preview-grid">${findings}</div>
         </section>
 
         <section class="themes-section page-shell section-rule" aria-labelledby="themes-title">
@@ -245,58 +266,115 @@
       ? `<a href="${paper.link}" target="_blank" rel="noreferrer">${paper.title} ↗</a>`
       : `<span>${paper.title}</span>`;
     return `
-      <article class="paper-row">
+      <article class="paper-row" data-paper-row data-status="${paper.status}" data-search="${escapeAttribute(`${paper.title} ${paper.authors} ${paper.venue} ${paper.year || ""}`.toLowerCase())}">
         <div class="paper-year">${paper.year || "—"}</div>
         <div class="paper-body">
           <div class="paper-meta"><span class="status status-${paper.status}">${paperStatus(paper)}</span></div>
           <h3>${title}</h3>
           <p>${paper.authors}</p>
           <p class="venue">${paper.venue}</p>
+          ${paper.abstract ? `<p class="paper-abstract">${paper.abstract}</p>` : ""}
         </div>
       </article>`;
   }
 
-  function researchPage() {
-    const query = new URLSearchParams(window.location.hash.split("?")[1] || "");
-    const themeFromUrl = query.get("theme");
-    if (themeFromUrl && data.themes.some((theme) => theme.id === themeFromUrl)) state.researchFilter = themeFromUrl;
+  function researchSubnav() {
+    const links = [
+      ["featured", t("featured")],
+      ["research", state.lang === "en" ? "Methods map" : "研究方法地圖"],
+      ["browse", state.lang === "en" ? "Browse all papers" : "瀏覽所有論文"],
+    ];
+    return `
+      <nav class="research-subnav" aria-label="${state.lang === "en" ? "Research views" : "研究瀏覽方式"}">
+        ${links
+          .map(([path, label]) => `<a href="#/${path}" class="${route() === path ? "is-active" : ""}"${route() === path ? ' aria-current="page"' : ""}>${label}</a>`)
+          .join("")}
+      </nav>`;
+  }
 
+  function featuredPage() {
+    const query = new URLSearchParams(window.location.hash.split("?")[1] || "");
+    const requestedSlide = Number(query.get("slide"));
+    if (Number.isInteger(requestedSlide) && requestedSlide >= 1 && requestedSlide <= data.featuredFindings.length) {
+      state.featuredIndex = requestedSlide - 1;
+    }
+    const finding = data.featuredFindings[state.featuredIndex];
+    const dots = data.featuredFindings
+      .map(
+        (_, index) => `<button type="button" class="featured-dot${index === state.featuredIndex ? " is-active" : ""}" data-featured-index="${index}" aria-label="${state.lang === "en" ? "Show finding" : "顯示發現"} ${index + 1}"${index === state.featuredIndex ? ' aria-current="true"' : ""}></button>`,
+      )
+      .join("");
+    return `
+      <main id="main-content" class="page-shell inner-page featured-page">
+        ${researchSubnav()}
+        <header class="page-intro">
+          <p class="eyebrow">${state.lang === "en" ? "Selected evidence" : "精選研究證據"}</p>
+          <h1>${t("featured")}</h1>
+          <p>${state.lang === "en" ? "Three results that capture how we study learning, decision-making, and scientific institutions." : "三項代表性結果，呈現我們如何研究學習、決策與科學制度。"}</p>
+        </header>
+        <section class="featured-spotlight" aria-live="polite">
+          <div class="featured-metric">
+            <span class="finding-category">${localized(finding.category)}</span>
+            <strong>${finding.number}</strong>
+            <span>${localized(finding.unit)}</span>
+          </div>
+          <article class="featured-copy">
+            <p class="featured-count">${String(state.featuredIndex + 1).padStart(2, "0")} / ${String(data.featuredFindings.length).padStart(2, "0")}</p>
+            <h2>${finding.title}</h2>
+            <p class="featured-authors">${finding.authors}<br />${finding.venue}</p>
+            <p class="featured-summary">${localized(finding.finding)}</p>
+            <a class="button-link" href="${finding.link}" target="_blank" rel="noreferrer">${state.lang === "en" ? "Read the source" : "閱讀研究來源"} ↗</a>
+          </article>
+        </section>
+        <div class="featured-controls">
+          <div class="featured-dots">${dots}</div>
+          <div class="featured-arrows">
+            <button type="button" data-featured-step="-1" aria-label="${state.lang === "en" ? "Previous finding" : "上一項發現"}">←</button>
+            <button type="button" data-featured-step="1" aria-label="${state.lang === "en" ? "Next finding" : "下一項發現"}">→</button>
+          </div>
+        </div>
+      </main>`;
+  }
+
+  function researchPage() {
     const filters = [
       { id: "all", label: t("all") },
-      ...data.themes.map((theme) => ({ id: theme.id, label: localized(theme.title) })),
+      ...data.methods.map((method) => ({ id: method.id, label: localized(method.title) })),
     ];
     const filterButtons = filters
       .map(
         (filter) => `
-          <button type="button" class="filter-button${state.researchFilter === filter.id ? " is-active" : ""}" data-filter="${filter.id}">
+          <button type="button" class="filter-button${state.researchMethod === filter.id ? " is-active" : ""}" data-method-filter="${filter.id}">
             ${filter.label}
           </button>`,
       )
       .join("");
     const allPapers = [...data.publications, ...data.workingPapers];
     const visible = allPapers.filter(
-      (paper) => state.researchFilter === "all" || paper.theme === state.researchFilter,
+      (paper) => state.researchMethod === "all" || paper.method === state.researchMethod,
     );
-    const cards = data.themes
+    const cards = data.methods
       .map(
-        (theme) => `
-          <button type="button" class="map-card${state.researchFilter === theme.id ? " is-active" : ""}" data-filter="${theme.id}">
-            <span class="map-card-number">${theme.number}</span>
-            <span class="map-card-title">${localized(theme.title)}</span>
-            <span class="map-card-copy">${localized(theme.text)}</span>
-            <span class="tag-line">${theme.tags.join(" · ")}</span>
+        (method) => `
+          <button type="button" class="method-card${state.researchMethod === method.id ? " is-active" : ""}" data-method-filter="${method.id}">
+            <span class="map-card-number">${method.number}</span>
+            <span class="map-card-title">${localized(method.title)}</span>
+            <span class="map-card-copy">${localized(method.text)}</span>
+            <span class="tag-line">${localized(method.tags)}</span>
+            <span class="method-count">${allPapers.filter((paper) => paper.method === method.id).length} ${state.lang === "en" ? "projects" : "項研究"}</span>
           </button>`,
       )
       .join("");
 
     return `
       <main id="main-content" class="page-shell inner-page">
+        ${researchSubnav()}
         <header class="page-intro">
-          <p class="eyebrow">Research atlas · ${data.publications.length + data.workingPapers.length} projects</p>
+          <p class="eyebrow">Methods atlas · ${data.publications.length + data.workingPapers.length} projects</p>
           <h1>${t("mapTitle")}</h1>
           <p>${t("mapIntro")}</p>
         </header>
-        <section class="research-map" aria-label="Research streams">${cards}</section>
+        <section class="methods-map" aria-label="${state.lang === "en" ? "Research methods" : "研究方法"}">${cards}</section>
         <section class="paper-section section-rule" aria-labelledby="paper-list-title">
           <div class="paper-toolbar">
             <h2 id="paper-list-title">${state.lang === "en" ? "Papers & projects" : "論文與研究計畫"}</h2>
@@ -304,6 +382,38 @@
           </div>
           <div class="paper-list">${visible.map(paperRow).join("")}</div>
         </section>
+      </main>`;
+  }
+
+  function browsePage() {
+    const allPapers = [...data.publications, ...data.workingPapers].sort((a, b) => (b.year || 0) - (a.year || 0));
+    const statusOptions = [
+      ["published", t("published")],
+      ["rr", t("rr")],
+      ["working", t("working")],
+    ];
+    return `
+      <main id="main-content" class="page-shell inner-page browse-page">
+        ${researchSubnav()}
+        <header class="page-intro">
+          <p class="eyebrow">${allPapers.length} ${state.lang === "en" ? "projects" : "項研究"}</p>
+          <h1>${state.lang === "en" ? "Browse all papers" : "瀏覽所有論文"}</h1>
+          <p>${state.lang === "en" ? "Search by title, author, venue, or year, then narrow the list by publication status." : "依標題、作者、期刊或年份搜尋，並可用發表狀態縮小範圍。"}</p>
+        </header>
+        <section class="browse-controls" aria-label="${state.lang === "en" ? "Paper filters" : "論文篩選"}">
+          <label class="paper-search">
+            <span>${state.lang === "en" ? "Search papers" : "搜尋論文"}</span>
+            <input type="search" data-paper-search value="${escapeAttribute(state.browseQuery)}" placeholder="${state.lang === "en" ? "Title, author, venue, year…" : "標題、作者、期刊、年份…"}" />
+          </label>
+          <div class="browse-statuses">
+            ${statusOptions
+              .map(([status, label]) => `<button type="button" data-status-filter="${status}" aria-pressed="${state.browseStatuses.has(status)}" class="filter-button${state.browseStatuses.has(status) ? " is-active" : ""}">${label}</button>`)
+              .join("")}
+          </div>
+        </section>
+        <div class="browse-result-line"><strong data-result-count>${allPapers.length}</strong> ${state.lang === "en" ? "results" : "筆結果"}</div>
+        <section class="paper-list browse-paper-list">${allPapers.map(paperRow).join("")}</section>
+        <p class="browse-empty" data-browse-empty hidden>${state.lang === "en" ? "No papers match these filters." : "沒有符合目前條件的論文。"}</p>
       </main>`;
   }
 
@@ -411,7 +521,8 @@
       </footer>`;
   }
 
-  function render() {
+  function render(preserveScroll = false) {
+    window.clearInterval(featuredTimer);
     const currentRoute = route();
     document.documentElement.dataset.theme = state.theme;
     document.documentElement.style.colorScheme = state.theme;
@@ -423,12 +534,42 @@
     } | National Taiwan University`;
     const page = {
       home: homePage,
+      featured: featuredPage,
       research: researchPage,
+      browse: browsePage,
       people: peoplePage,
       teaching: teachingPage,
     }[currentRoute]();
     app.innerHTML = `${header()}${page}${footer()}`;
-    window.scrollTo({ top: 0, behavior: "instant" });
+    if (!preserveScroll) window.scrollTo({ top: 0, behavior: "instant" });
+    if (currentRoute === "browse") applyBrowseFilters();
+    if (currentRoute === "featured" && !state.featuredPaused) {
+      featuredTimer = window.setInterval(() => {
+        state.featuredIndex = (state.featuredIndex + 1) % data.featuredFindings.length;
+        updateFeaturedHash();
+      }, 7000);
+    }
+  }
+
+  function updateFeaturedHash() {
+    const nextHash = `#/featured?slide=${state.featuredIndex + 1}`;
+    window.history.replaceState(null, "", nextHash);
+    render(true);
+  }
+
+  function applyBrowseFilters() {
+    const query = state.browseQuery.trim().toLowerCase();
+    let visibleCount = 0;
+    document.querySelectorAll("[data-paper-row]").forEach((row) => {
+      const matchesText = !query || row.dataset.search.includes(query);
+      const matchesStatus = state.browseStatuses.size === 0 || state.browseStatuses.has(row.dataset.status);
+      row.hidden = !(matchesText && matchesStatus);
+      if (!row.hidden) visibleCount += 1;
+    });
+    const count = document.querySelector("[data-result-count]");
+    const empty = document.querySelector("[data-browse-empty]");
+    if (count) count.textContent = visibleCount;
+    if (empty) empty.hidden = visibleCount !== 0;
   }
 
   document.addEventListener("click", (event) => {
@@ -448,16 +589,42 @@
       return;
     }
 
-    const filterButton = event.target.closest("[data-filter]");
-    if (filterButton) {
-      state.researchFilter = filterButton.dataset.filter;
-      const base = "#/research";
-      const nextHash = state.researchFilter === "all" ? base : `${base}?theme=${state.researchFilter}`;
-      if (window.location.hash === nextHash) render();
-      else window.location.hash = nextHash;
+    const methodButton = event.target.closest("[data-method-filter]");
+    if (methodButton) {
+      state.researchMethod = methodButton.dataset.methodFilter;
+      render(true);
+      return;
+    }
+
+    const featuredButton = event.target.closest("[data-featured-index], [data-featured-step]");
+    if (featuredButton) {
+      state.featuredPaused = true;
+      if (featuredButton.dataset.featuredIndex !== undefined) {
+        state.featuredIndex = Number(featuredButton.dataset.featuredIndex);
+      } else {
+        state.featuredIndex = (state.featuredIndex + Number(featuredButton.dataset.featuredStep) + data.featuredFindings.length) % data.featuredFindings.length;
+      }
+      updateFeaturedHash();
+      return;
+    }
+
+    const statusButton = event.target.closest("[data-status-filter]");
+    if (statusButton) {
+      const status = statusButton.dataset.statusFilter;
+      if (state.browseStatuses.has(status)) state.browseStatuses.delete(status);
+      else state.browseStatuses.add(status);
+      statusButton.classList.toggle("is-active", state.browseStatuses.has(status));
+      statusButton.setAttribute("aria-pressed", String(state.browseStatuses.has(status)));
+      applyBrowseFilters();
     }
   });
 
-  window.addEventListener("hashchange", render);
+  document.addEventListener("input", (event) => {
+    if (!event.target.matches("[data-paper-search]")) return;
+    state.browseQuery = event.target.value;
+    applyBrowseFilters();
+  });
+
+  window.addEventListener("hashchange", () => render());
   render();
 })();
