@@ -399,7 +399,7 @@
         { name: "Yao Yi Ruan (阮耀誼)", title: { en: "B.A. research assistant", zh: "學士級研究助理" } },
         { name: "Yi Wun Liao (廖羿雯)", title: { en: "M.A. research assistant", zh: "碩士級研究助理" } },
         { name: "Yong Syun Lin (林咏壎)", title: { en: "M.A. research assistant", zh: "碩士級研究助理" } },
-        { name: "邱奕馨", title: { en: "B.A. research assistant", zh: "學士級研究助理" } },
+        { name: "CHIU, I-SIN (邱奕馨)", title: { en: "B.A. research assistant", zh: "學士級研究助理" } },
       ],
     },
 
