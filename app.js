@@ -42,9 +42,10 @@
       working: "Working papers",
       rr: "R&R",
       peopleTitle: "People",
-      peopleIntro: "Current students and former lab members advised or supervised in the lab.",
+      peopleIntro: "Current students, former students, and research assistants advised or supervised in the lab.",
       current: "Current students",
-      alumni: "Former students & research assistants",
+      formerStudents: "Former students",
+      formerResearchAssistants: "Former research assistants",
       join: "Join the lab",
       joinText: "We are currently recruiting master’s and Ph.D. students and research assistants. Please email James with your interests and background.",
       teachingTitle: "Teaching",
@@ -84,9 +85,10 @@
       working: "工作論文",
       rr: "修訂中",
       peopleTitle: "實驗室成員",
-      peopleIntro: "目前與過去曾在實驗室接受指導的學生與研究助理。",
+      peopleIntro: "目前與過去曾在實驗室接受指導的學生，以及歷任研究助理。",
       current: "現任學生",
-      alumni: "歷屆學生與研究助理",
+      formerStudents: "畢業學生",
+      formerResearchAssistants: "歷任研究助理",
       join: "加入實驗室",
       joinText: "目前招募碩士生、博士生與研究助理。歡迎來信說明你的研究興趣與背景。",
       teachingTitle: "教學",
@@ -440,7 +442,18 @@
           </article>`,
       )
       .join("");
-    const alumni = data.people.alumni.map((name) => `<li>${name}</li>`).join("");
+    const alumniList = (people) =>
+      people
+        .map(
+          (person) => `
+            <li>
+              <span>${person.name}</span>
+              <small>${localized(person.title)}</small>
+            </li>`,
+        )
+        .join("");
+    const formerStudents = alumniList(data.people.formerStudents);
+    const formerResearchAssistants = alumniList(data.people.formerResearchAssistants);
 
     return `
       <main id="main-content" class="page-shell inner-page">
@@ -456,6 +469,22 @@
           </div>
           <div class="people-grid">${current}</div>
         </section>
+        <section class="alumni-section section-rule" aria-labelledby="alumni-title">
+          <div class="alumni-group">
+            <div class="split-heading">
+              <h2 id="alumni-title">${t("formerStudents")}</h2>
+              <span>${data.people.formerStudents.length.toString().padStart(2, "0")}</span>
+            </div>
+            <ul class="alumni-list">${formerStudents}</ul>
+          </div>
+          <div class="alumni-group">
+            <div class="split-heading">
+              <h2 id="former-ra-title">${t("formerResearchAssistants")}</h2>
+              <span>${data.people.formerResearchAssistants.length.toString().padStart(2, "0")}</span>
+            </div>
+            <ul class="alumni-list" aria-labelledby="former-ra-title">${formerResearchAssistants}</ul>
+          </div>
+        </section>
         <section class="join-panel">
           <div>
             <p class="eyebrow">Open positions</p>
@@ -465,13 +494,6 @@
             <p>${t("joinText")}</p>
             <a class="button-link" href="mailto:${data.profile.email}">${t("contact")} ↗</a>
           </div>
-        </section>
-        <section class="alumni-section section-rule" aria-labelledby="alumni-title">
-          <div class="split-heading">
-            <h2 id="alumni-title">${t("alumni")}</h2>
-            <span>${data.people.alumni.length.toString().padStart(2, "0")}</span>
-          </div>
-          <ul class="alumni-list">${alumni}</ul>
         </section>
       </main>`;
   }
