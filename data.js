@@ -270,7 +270,7 @@
         method: "behavioral",
       },
       {
-        year: 2023,
+        year: 2026,
         status: "rr",
         title: "Interactive Game-Based Pedagogy: A Quasi-Experimental Study in Microeconomics",
         authors: "Wei James Chen, Zhi Li, and Joseph Tao-yi Wang",
