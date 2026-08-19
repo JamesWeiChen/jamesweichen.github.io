@@ -27,4 +27,4 @@ Then open `http://localhost:8000/`.
 
 ## Content sources
 
-The initial version was assembled from the August 2026 CV and the connected Notion workspace. Student photos are intentionally not published; the people page uses initials instead.
+The initial version was assembled from the August 2026 CV and the connected Notion workspace. Student photos are intentionally not published; the Lab page uses initials instead.

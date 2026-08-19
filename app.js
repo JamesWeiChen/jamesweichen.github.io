@@ -20,7 +20,7 @@
       research: "Research",
       featured: "Featured findings",
       browse: "Browse papers",
-      people: "Lab",
+      lab: "Lab",
       presentations: "Talks",
       teaching: "Teaching",
       cv: "CV",
@@ -42,8 +42,8 @@
       published: "Published",
       working: "Working papers",
       rr: "R&R",
-      peopleTitle: "Lab members",
-      peopleIntro: "Current students, former students, and research assistants advised or supervised in the lab.",
+      labTitle: "Lab members",
+      labIntro: "Current students, former students, and research assistants advised or supervised in the lab.",
       current: "Current students",
       formerStudents: "Former students",
       formerResearchAssistants: "Former research assistants",
@@ -80,7 +80,7 @@
       research: "研究",
       featured: "精選發現",
       browse: "瀏覽論文",
-      people: "實驗室",
+      lab: "實驗室",
       presentations: "發表",
       teaching: "教學",
       cv: "履歷",
@@ -102,8 +102,8 @@
       published: "已發表",
       working: "工作論文",
       rr: "修訂中",
-      peopleTitle: "實驗室成員",
-      peopleIntro: "目前與過去曾在實驗室接受指導的學生，以及歷任研究助理。",
+      labTitle: "實驗室成員",
+      labIntro: "目前與過去曾在實驗室接受指導的學生，以及歷任研究助理。",
       current: "現任學生",
       formerStudents: "畢業學生",
       formerResearchAssistants: "歷任研究助理",
@@ -151,7 +151,7 @@
 
   function route() {
     const value = window.location.hash.replace(/^#\/?/, "").split("?")[0];
-    return ["featured", "research", "browse", "people", "presentations", "teaching"].includes(value) ? value : "home";
+    return ["featured", "research", "browse", "lab", "presentations", "teaching"].includes(value) ? value : "home";
   }
 
   function linkTo(path, label, activePaths = [path]) {
@@ -172,7 +172,7 @@
             ${linkTo("home", t("home"))}
             ${linkTo("featured", t("research"), ["featured", "research", "browse"])}
             ${linkTo("teaching", t("teaching"))}
-            ${linkTo("people", t("people"))}
+            ${linkTo("lab", t("lab"))}
             ${linkTo("presentations", t("presentations"))}
             <a class="nav-link" href="${data.profile.cv}" target="_blank" rel="noreferrer">${t("cv")} ↗</a>
           </div>
@@ -462,7 +462,7 @@
       .join("");
   }
 
-  function peoplePage() {
+  function labPage() {
     const current = data.people.current
       .map(
         (person, index) => `
@@ -491,12 +491,12 @@
 
     return `
       <main id="main-content" class="page-shell inner-page">
-        <header class="page-intro people-intro">
+        <header class="page-intro lab-intro">
           <p class="eyebrow">The lab</p>
-          <h1>${t("peopleTitle")}</h1>
-          <p>${t("peopleIntro")}</p>
+          <h1>${t("labTitle")}</h1>
+          <p>${t("labIntro")}</p>
         </header>
-        <section class="people-section section-rule" aria-labelledby="current-title">
+        <section class="lab-section section-rule" aria-labelledby="current-title">
           <div class="split-heading">
             <h2 id="current-title">${t("current")}</h2>
             <span>${data.people.current.length.toString().padStart(2, "0")}</span>
@@ -706,7 +706,7 @@
       featured: featuredPage,
       research: researchPage,
       browse: browsePage,
-      people: peoplePage,
+      lab: labPage,
       presentations: presentationsPage,
       teaching: teachingPage,
     }[currentRoute]();
