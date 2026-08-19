@@ -88,22 +88,22 @@
       contact: "電子郵件",
       department: "系所網站",
       facebook: "Facebook",
-      researchIntro: "我們研究經濟決策的形成過程，從注意力與學習，到形塑行為的制度環境。",
+      researchIntro: "我們研究經濟決策如何形成，包括注意力、學習，以及制度如何影響行為。",
       selected: "研究概覽",
       publications: "篇已發表論文",
       activeStudents: "位現任學生",
       researchStreams: "個研究方向",
       latestNews: "實驗室消息",
-      allNews: "實驗室近期的重要進展。",
+      allNews: "實驗室近期消息。",
       explore: "探索研究地圖",
       mapTitle: "研究方法地圖",
-      mapIntro: "依照證據如何產生來探索實驗室研究：從行為實驗、歷程追蹤，到計算模型與田野證據。",
+      mapIntro: "可依研究方法瀏覽實驗室成果，包括行為實驗、歷程追蹤、計算模型與田野研究。",
       all: "全部研究",
       published: "已發表",
       working: "工作論文",
       rr: "修訂中",
       labTitle: "實驗室成員",
-      labIntro: "目前與過去曾在實驗室接受指導的學生，以及歷任研究助理。",
+      labIntro: "這裡列出目前與過去指導的學生，以及歷任研究助理。",
       current: "現任學生",
       formerStudents: "畢業學生",
       formerResearchAssistants: "歷任研究助理",
@@ -119,7 +119,7 @@
       join: "加入實驗室",
       joinText: "目前招募碩士生、博士生與研究助理。歡迎來信說明你的研究興趣與背景。",
       teachingTitle: "教學",
-      teachingIntro: "國立臺灣大學、國立中央大學授課，以及面向校外學習者的付費線上課程與免費影音資源。",
+      teachingIntro: "這裡整理我在國立臺灣大學與國立中央大學開設的課程，另有付費線上課程與免費影音。",
       ntu: "國立臺灣大學",
       ncu: "國立中央大學",
       featuredCourse: "精選線上課程",
@@ -346,7 +346,7 @@
         <header class="page-intro">
           <p class="eyebrow">${state.lang === "en" ? "Selected evidence" : "精選研究證據"}</p>
           <h1>${t("featured")}</h1>
-          <p>${state.lang === "en" ? "Three results that capture how we study learning, decision-making, and scientific institutions." : "三項代表性結果，呈現我們如何研究學習、決策與科學制度。"}</p>
+          <p>${state.lang === "en" ? "Five results from our published work on learning, strategic reasoning, behavioral models, and scientific institutions." : "五項已發表研究的主要發現，涵蓋學習、策略推理、行為模型與科學制度。"}</p>
         </header>
         <section class="featured-spotlight" aria-live="polite">
           <div class="featured-metric">
@@ -356,7 +356,7 @@
           </div>
           <article class="featured-copy">
             <p class="featured-count">${String(state.featuredIndex + 1).padStart(2, "0")} / ${String(data.featuredFindings.length).padStart(2, "0")}</p>
-            <h2>${finding.title}</h2>
+            <h2>${localized(finding.title)}</h2>
             <p class="featured-authors">${finding.authors}<br />${finding.venue}</p>
             <p class="featured-summary">${localized(finding.finding)}</p>
             <a class="button-link" href="${finding.link}" target="_blank" rel="noreferrer">${state.lang === "en" ? "Read the source" : "閱讀研究來源"} ↗</a>

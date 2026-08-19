@@ -26,8 +26,8 @@
         "Our lab combines experimental economics, neuroeconomics, and data science to study how people learn, decide, and respond to institutional environments. Across projects on intertemporal choice, voting behavior, synthetic subjects, and scientific institutions, we examine how cognition, rules, and research design jointly shape economic behavior.",
       ],
       zh: [
-        "我是國立臺灣大學農業經濟學系助理教授，並取得美國俄亥俄州立大學經濟學博士學位。",
-        "本實驗室結合實驗經濟學、神經經濟學與資料科學，研究人們如何學習、決策，以及如何回應不同制度環境。我們的研究涵蓋跨期選擇、投票行為、合成受試者與科學制度，關注認知、制度規則與研究設計如何共同形塑經濟行為。",
+        "我是國立臺灣大學農業經濟學系助理教授，博士畢業於美國俄亥俄州立大學經濟學系。",
+        "我的研究結合實驗經濟學、神經經濟學與資料科學，探討人們如何學習、做決定，以及制度如何影響行為。研究題目包括跨期選擇、投票、合成受試者與科學制度。",
       ],
     },
 
@@ -38,7 +38,7 @@
         title: { en: "Learning & decision", zh: "學習與決策" },
         text: {
           en: "How beliefs, attention, and moments of insight change choice.",
-          zh: "探討信念、注意力與頓悟如何改變選擇。",
+          zh: "研究信念、注意力與頓悟如何影響選擇。",
         },
         tags: ["Epiphany learning", "Monty Hall", "Decision theory"],
       },
@@ -48,7 +48,7 @@
         title: { en: "Process tracing", zh: "決策歷程追蹤" },
         text: {
           en: "Using gaze, pupil dilation, mouse trajectories, EEG, and fMRI to study choice as it unfolds.",
-          zh: "運用眼動、瞳孔變化、滑鼠軌跡、EEG 與 fMRI，觀察決策形成的過程。",
+          zh: "用眼動、瞳孔、滑鼠軌跡、EEG 與 fMRI 觀察決策過程。",
         },
         tags: ["Eye tracking", "Mouse tracking", "Neuroeconomics"],
       },
@@ -58,7 +58,7 @@
         title: { en: "Institutions & policy", zh: "制度與政策" },
         text: {
           en: "Experimental evidence on elections, carbon policy, litigation, and scientific institutions.",
-          zh: "以實驗方法研究選舉、碳政策、訴訟與科學制度。",
+          zh: "透過實驗研究選舉、碳政策、訴訟與科學制度。",
         },
         tags: ["Political economy", "Environmental economics", "Institutions"],
       },
@@ -68,7 +68,7 @@
         title: { en: "Models & synthetic subjects", zh: "模型與合成受試者" },
         text: {
           en: "Computational models and large language models as tools for behavioral science.",
-          zh: "將計算模型與大型語言模型應用於行為科學研究。",
+          zh: "用計算模型與大型語言模型研究行為。",
         },
         tags: ["Data science", "LLM simulation", "Behavioral modeling"],
       },
@@ -81,7 +81,7 @@
         title: { en: "Behavioral experiments", zh: "行為實驗" },
         text: {
           en: "Lab and online experiments that reveal choice, learning, and strategic behavior.",
-          zh: "以實驗室與線上實驗研究選擇、學習與策略行為。",
+          zh: "透過實驗室與線上實驗研究選擇、學習和策略行為。",
         },
         tags: { en: "Lab · Online · Games", zh: "實驗室 · 線上 · 賽局" },
       },
@@ -91,7 +91,7 @@
         title: { en: "Process tracing", zh: "決策歷程追蹤" },
         text: {
           en: "Follow the hidden process of choice through eyes, pupils, and cursor movement.",
-          zh: "透過眼動、瞳孔與滑鼠軌跡，追蹤選擇背後看不見的過程。",
+          zh: "從眼動、瞳孔與滑鼠軌跡觀察選擇如何形成。",
         },
         tags: { en: "Eye · Pupil · Mouse", zh: "眼動 · 瞳孔 · 滑鼠" },
       },
@@ -101,7 +101,7 @@
         title: { en: "Computational modeling", zh: "計算模型" },
         text: {
           en: "Use formal models, behavioral data, and synthetic subjects to explain decisions.",
-          zh: "結合形式模型、行為資料與合成受試者來解釋決策。",
+          zh: "用形式模型、行為資料與合成受試者解釋決策。",
         },
         tags: { en: "Models · Data · LLM", zh: "模型 · 資料 · LLM" },
       },
@@ -111,7 +111,7 @@
         title: { en: "Field & quasi-experiments", zh: "田野與準實驗" },
         text: {
           en: "Connect causal evidence to classrooms, farms, policy, and other real settings.",
-          zh: "將因果證據延伸至課堂、農業、政策與其他真實情境。",
+          zh: "在課堂、農業與政策等真實場域檢驗因果關係。",
         },
         tags: { en: "Field · Policy · Education", zh: "田野 · 政策 · 教育" },
       },
@@ -121,7 +121,7 @@
         title: { en: "Research design", zh: "研究設計" },
         text: {
           en: "Study reproducibility, peer review, and the institutions that shape evidence.",
-          zh: "研究可重現性、同儕審查，以及形塑科學證據的制度。",
+          zh: "研究可重現性、同儕審查，以及產出科學證據的制度。",
         },
         tags: { en: "Meta-science · Peer review", zh: "後設科學 · 同儕審查" },
       },
@@ -129,43 +129,84 @@
 
     featuredFindings: [
       {
-        number: "95",
-        unit: { en: "% reproduced", zh: "% 可重現" },
+        number: "85",
+        unit: { en: "% at least as high", zh: "% 未降低" },
+        category: { en: "Strategic reasoning", zh: "策略推理" },
+        title: {
+          en: "Measuring Higher-Order Rationality with Belief Control",
+          zh: "以信念控制衡量高階理性",
+        },
+        authors: "Wei James Chen, Meng-Jhang Fong, and Po-Hsuan Lin",
+        venue: "Experimental Economics, 2025",
+        finding: {
+          en: "When opponents were fully rational computers, 85% of participants showed rationality levels at least as high as when responding to recorded human choices. Belief control also made individual reasoning levels more stable across games.",
+          zh: "面對完全理性的電腦對手時，85% 的參與者所展現的理性層級，不低於他們回應人類過往選擇時的表現。控制對手信念後，同一人在不同賽局中的推理層級也更穩定。",
+        },
+        link: "https://www.cambridge.org/core/journals/experimental-economics/article/measuring-higherorder-rationality-with-belief-control/1A47976B734D6647D7D2B1FC4CF5AC0E",
+      },
+      {
+        number: "95.3",
+        unit: { en: "% reproducible", zh: "% 可重現" },
         category: { en: "Scientific institutions", zh: "科學制度" },
-        title: "Reproducibility in Management Science",
-        authors: "Management Science Reproducibility Collaboration",
+        title: {
+          en: "Reproducibility in Management Science",
+          zh: "《Management Science》的研究可重現性",
+        },
+        authors: "Miloš Fišar et al. and the Management Science Reproducibility Collaboration",
         venue: "Management Science, 2024",
         finding: {
-          en: "When the original data and software were available, 95% of reviewed results were fully or largely reproduced. Across the full sample, inaccessible materials reduced the estimate to 68%.",
-          zh: "當原始資料與程式可取得時，95% 的受檢結果可被完整或大致重現；若把材料無法取得的研究納入全部樣本，比例則降為 68%。",
+          en: "After Management Science introduced mandatory data and code disclosure, reviewers fully or largely reproduced 95.3% of articles they could verify. Counting articles blocked by inaccessible data or computing requirements lowers the rate to 67.5%.",
+          zh: "《Management Science》規定作者公開資料與程式碼後，在可驗證的論文中，95.3% 能完整或大致重現。若把因資料、軟體或硬體限制而無法驗證的論文也納入，比例為 67.5%。",
         },
         link: "https://pubsonline.informs.org/doi/10.1287/mnsc.2023.03556",
+      },
+      {
+        number: "+9",
+        unit: { en: "percentage points", zh: "個百分點" },
+        category: { en: "Decision learning", zh: "決策學習" },
+        title: {
+          en: "A Modified Monty Hall Problem",
+          zh: "改良版蒙提霍爾問題",
+        },
+        authors: "Wei James Chen and Joseph Tao-yi Wang",
+        venue: "Theory and Decision, 2020",
+        finding: {
+          en: "After 15 rounds of the 100-door problem, participants switched on 86% of later three-door trials, compared with 77% in the control group. Starting with the easier example helped transfer the optimal strategy to the original problem.",
+          zh: "先玩 15 回合的 100 扇門版本後，參與者在三門版本中的換門率為 86%，控制組則是 77%。先從較容易看出答案的例子開始，有助於把最佳策略帶回原本的問題。",
+        },
+        link: "https://link.springer.com/article/10.1007/s11238-020-09757-1",
       },
       {
         number: "94",
         unit: { en: "% agreement", zh: "% 分類一致" },
         category: { en: "Learning & insight", zh: "學習與頓悟" },
-        title: "Computational Modeling of Epiphany Learning",
+        title: {
+          en: "Computational Modeling of Epiphany Learning",
+          zh: "頓悟學習的計算模型",
+        },
         authors: "Wei James Chen and Ian Krajbich",
         venue: "PNAS, 2017",
         finding: {
-          en: "Among participants whose choices converged to the optimal strategy, two independent classification methods agreed that 94% learned through an epiphany-like shift.",
-          zh: "在選擇最終收斂至最佳策略的參與者中，兩種獨立分類方法一致判定其中 94% 經歷了近似頓悟的學習轉折。",
+          en: "Among participants whose choices eventually converged on the optimal strategy, both the change-point test and model comparison classified 94% as epiphany learners. Eye movements and pupil responses also tracked the underlying evidence-accumulation process.",
+          zh: "在最後收斂到最佳策略的參與者中，變點檢定與模型比較都把 94% 判定為頓悟學習者。眼動與瞳孔反應也反映出決策前累積證據的過程。",
         },
         link: "https://pmc.ncbi.nlm.nih.gov/articles/PMC5422778/",
       },
       {
-        number: "100",
-        unit: { en: "doors", zh: "扇門" },
-        category: { en: "Decision learning", zh: "決策學習" },
-        title: "A Modified Monty Hall Problem",
-        authors: "Wei James Chen and Joseph Tao-yi Wang",
-        venue: "Theory and Decision, 2020",
-        finding: {
-          en: "Experience with a simplified 100-door version improved later performance on the classic three-door problem relative to a control group.",
-          zh: "先體驗簡化的 100 扇門版本，能讓參與者之後在經典三門問題上的表現優於控制組。",
+        number: "6",
+        unit: { en: "recent trials", zh: "回合記憶範圍" },
+        category: { en: "Behavioral modeling", zh: "行為模型" },
+        title: {
+          en: "Bounded Memory, Inertia, Sampling and Weighting Model for Market Entry Games",
+          zh: "市場進入賽局的有限記憶、慣性、抽樣與加權模型",
         },
-        link: "https://link.springer.com/article/10.1007/s11238-020-09757-1",
+        authors: "Wei James Chen, Shu-Yu Liu, Chih-Han Chen, and Yi-Shan Lee",
+        venue: "Games, 2011",
+        finding: {
+          en: "The BI-SAW model assumes that detailed recall is limited to the six most recent trials. That bounded-memory change improved out-of-sample prediction over I-SAW and won the 2010 Market Entry Prediction Competition.",
+          zh: "BI-SAW 模型假設，人們只能精確回想最近六回合的經驗。這項有限記憶的設定，使模型的樣本外預測優於 I-SAW，並在 2010 年市場進入預測競賽中排名第一。",
+        },
+        link: "https://www.mdpi.com/2073-4336/2/1/187",
       },
     ],
 
@@ -175,16 +216,16 @@
         status: "published",
         title: "Measuring Higher-Order Rationality with Belief Control",
         authors: "Wei James Chen, Meng-Jhang Fong, and Po-Hsuan Lin",
-        venue: "Experimental Economics, published online, 1-28",
+        venue: "Experimental Economics, 28(3), 804-831",
         link: "https://www.cambridge.org/core/journals/experimental-economics/article/measuring-higherorder-rationality-with-belief-control/1A47976B734D6647D7D2B1FC4CF5AC0E",
         theme: "learning",
         method: "behavioral",
       },
       {
-        year: 2023,
+        year: 2024,
         status: "published",
         title: "Reproducibility in Management Science",
-        authors: "Management Science Reproducibility Collaboration",
+        authors: "Miloš Fišar, Ben Greiner, Christoph Huber, Elena Katok, Ali I. Ozkes, and the Management Science Reproducibility Collaboration",
         venue: "Management Science, 70(3), 1343-1356",
         link: "https://doi.org/10.1287/mnsc.2023.03556",
         theme: "institutions",
@@ -351,7 +392,7 @@
           role: { en: "M.A. student", zh: "碩士生" },
           bio: {
             en: "Interested in economics and data analysis; works primarily with Python.",
-            zh: "研究興趣包含經濟學與資料分析，主要使用 Python。",
+            zh: "研究興趣是經濟學與資料分析，主要使用 Python。",
           },
         },
         {
@@ -360,7 +401,7 @@
           role: { en: "M.A. student", zh: "碩士生" },
           bio: {
             en: "Interested in data analysis and experimental economics.",
-            zh: "對資料分析與實驗經濟學感興趣。",
+            zh: "對資料分析和實驗經濟學有興趣。",
           },
         },
         {
@@ -369,7 +410,7 @@
           role: { en: "M.A. student", zh: "碩士生" },
           bio: {
             en: "Graduate student in the in-service M.A. program in Agricultural Economics.",
-            zh: "農業經濟學系碩士在職專班研究生。",
+            zh: "就讀農業經濟學系碩士在職專班。",
           },
         },
         {
@@ -378,7 +419,7 @@
           role: { en: "M.A. student", zh: "碩士生" },
           bio: {
             en: "Studies experimental economics and the design and execution of economic experiments.",
-            zh: "研究實驗經濟學，並學習經濟實驗的設計與執行。",
+            zh: "研究實驗經濟學，也學習如何設計與執行經濟實驗。",
           },
         },
       ],
@@ -560,7 +601,7 @@
         },
         description: {
           en: "A self-paced online course that builds calculus from the ground up and applies differentiation and integration to economic and management problems.",
-          zh: "從基礎數學概念出發，逐步掌握微分與積分，並將微積分應用於經濟和管理問題。",
+          zh: "從基礎數學開始，介紹微分與積分，以及這些工具在經濟與管理問題中的用法。",
         },
         provider: {
           en: "NTU School of Professional Education and Continuing Studies",
@@ -573,7 +614,7 @@
         handle: "@James_Chen",
         description: {
           en: "Additional teaching videos and public learning resources are available on my YouTube channel.",
-          zh: "更多教學影片與公開學習資源，請至我的 YouTube 頻道觀看。",
+          zh: "YouTube 頻道另有教學影片與公開學習資源。",
         },
         url: "https://www.youtube.com/@James_Chen",
       },
