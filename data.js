@@ -572,24 +572,46 @@
 
     news: [
       {
-        date: "2025.06",
-        en: "The lab received an NSTC Young Scholar Research Grant for an eye-tracking study of carbon-footprint and nutrition labels.",
-        zh: "實驗室獲得國科會新進人員研究計畫，以眼動追蹤研究碳足跡與營養標籤對消費選擇的影響。",
+        date: "2025.06.30",
+        datetime: "2025-06-30",
+        en: "The lab received an NSTC Young Scholar Research Grant for the project “The Impact of Carbon Footprint and Nutrition Labels on Consumer Choices: An Eye-Tracking Experiment.”",
+        zh: "實驗室獲得國科會新進人員研究計畫「碳足跡與營養標籤對消費選擇的影響：基於眼動追蹤的實驗研究」。",
       },
       {
-        date: "2024.12",
-        en: "The lab received a joint Academia Sinica-NTU grant to study carbon taxes and emissions trading with experiments.",
-        zh: "實驗室獲得中研院與臺大創新性合作計畫補助，以實驗方法評估碳稅與碳權交易制度。",
+        date: "2024.12.04",
+        datetime: "2024-12-04",
+        en: "The lab received a joint research grant from Academia Sinica and NTU for the project “Experimental Insights into Carbon Policy: Evaluating the Environmental and Economic Impacts of Carbon Taxes and Emissions Trading Systems.”",
+        zh: "實驗室獲得中研院與臺大補助計畫「碳政策的實驗洞察：評估碳稅與碳權交易制度對環境與經濟的影響」。",
       },
       {
-        date: "2024.11",
-        en: "Supervised master’s student Shih Chuan Chu received two honorable mentions in the Taiwan Economic Association Best Master’s Thesis Award.",
-        zh: "指導碩士生朱世全獲臺灣經濟學會最佳碩士論文獎一般類與政策類雙料佳作。",
+        date: "2024.11.15",
+        datetime: "2024-11-15",
+        en: "Supervised master’s student Shih Chuan Chu (朱世全) received Honorable Mention in both the General and Policy categories of the Taiwan Economic Association Best Master’s Thesis Award.",
+        zh: "指導碩士生 Shih Chuan Chu（朱世全）獲得臺灣經濟學會最佳碩士論文獎佳作（一般類與政策類雙料）。",
       },
       {
-        date: "2023.11",
-        en: "Lab students received first prize and honorable mentions in the Taiwan Economic Association Best Master’s Thesis Award.",
-        zh: "實驗室學生獲臺灣經濟學會最佳碩士論文獎最佳獎與佳作。",
+        date: "2023.11.15",
+        datetime: "2023-11-15",
+        en: "Co-supervised master’s student Chiang-Hsiang Hu received First Prize in the General category of the Taiwan Economic Association Best Master’s Thesis Award.",
+        zh: "共同指導碩士生胡將相獲得臺灣經濟學會最佳碩士論文獎最佳獎（一般類）。",
+      },
+      {
+        date: "2023.11.15",
+        datetime: "2023-11-15",
+        en: "Supervised master’s student Ching Yuan Kao (高敬媛) received Honorable Mention in the Policy category of the Taiwan Economic Association Best Master’s Thesis Award.",
+        zh: "指導碩士生 Ching Yuan Kao（高敬媛）獲得臺灣經濟學會最佳碩士論文獎佳作（政策類）。",
+      },
+      {
+        date: "2022.11.15",
+        datetime: "2022-11-15",
+        en: "Supervised master’s student Asta Chen (陳玉配) received Honorable Mention in the Policy category of the Taiwan Economic Association Best Master’s Thesis Award.",
+        zh: "指導碩士生 Asta Chen（陳玉配）獲得臺灣經濟學會最佳碩士論文獎佳作（政策類）。",
+      },
+      {
+        date: "2021.10.15",
+        datetime: "2021-10-15",
+        en: "The NSTC YSFXWORLD channel featured a video introducing research by Wei James Chen (陳暐) on epiphany learning.",
+        zh: "國科會 YSFXWORLD 頻道刊登介紹 Wei James Chen（陳暐）頓悟學習研究的影片。",
       },
     ],
   };

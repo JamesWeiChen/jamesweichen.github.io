@@ -205,11 +205,10 @@
       )
       .join("");
     const news = data.news
-      .slice(0, 3)
       .map(
         (item) => `
           <article class="news-item">
-            <time>${item.date}</time>
+            <time datetime="${item.datetime}">${item.date}</time>
             <p>${item[state.lang]}</p>
           </article>`,
       )
