@@ -48,17 +48,14 @@
       formerStudents: "Former students",
       formerResearchAssistants: "Former research assistants",
       presentationsTitle: "Conference Presentations",
-      presentationsIntro: "Layout template only. Presentation records will be added after the information has been verified.",
+      presentationsIntro: "Conference and workshop presentations, listed in reverse chronological order.",
       presentationCount: "presentations",
       forthcoming: "Forthcoming",
-      poster: "Poster presentation",
-      posterSpotlight: "Poster spotlight",
       templatePreview: "Entry template",
       templateYear: "Year",
       templateTitle: "Presentation title",
       templateEvent: "Conference or workshop name",
       templateLocation: "City, Country",
-      templateFormat: "Presentation format (optional)",
       join: "Join the lab",
       joinText: "We are currently recruiting master’s and Ph.D. students and research assistants. Please email James with your interests and background.",
       teachingTitle: "Teaching",
@@ -104,17 +101,14 @@
       formerStudents: "畢業學生",
       formerResearchAssistants: "歷任研究助理",
       presentationsTitle: "研討會發表",
-      presentationsIntro: "目前僅建立版面模板；資料確認後再加入正式發表紀錄。",
+      presentationsIntro: "研討會與工作坊發表紀錄，依時間由近至遠排列。",
       presentationCount: "場發表",
       forthcoming: "即將發表",
-      poster: "海報發表",
-      posterSpotlight: "海報精選發表",
       templatePreview: "單筆資料模板",
       templateYear: "年份",
       templateTitle: "發表題名",
       templateEvent: "研討會或工作坊名稱",
       templateLocation: "城市、國家",
-      templateFormat: "發表形式（選填）",
       join: "加入實驗室",
       joinText: "目前招募碩士生、博士生與研究助理。歡迎來信說明你的研究興趣與背景。",
       teachingTitle: "教學",
@@ -163,6 +157,7 @@
           <div class="nav-links">
             ${linkTo("home", t("home"))}
             ${linkTo("featured", t("research"), ["featured", "research", "browse"])}
+            ${linkTo("presentations", t("presentations"))}
             ${linkTo("people", t("people"))}
             ${linkTo("teaching", t("teaching"))}
             <a class="nav-link" href="${data.profile.cv}" target="_blank" rel="noreferrer">${t("cv")} ↗</a>
@@ -576,7 +571,6 @@
                       </div>
                       <div class="presentation-meta">
                         <span>${presentation.location}</span>
-                        ${presentation.format ? `<span class="presentation-format">${t(presentation.format)}</span>` : ""}
                       </div>
                     </li>`,
                 )
@@ -597,7 +591,6 @@
           </div>
           <div class="presentation-meta">
             <span>${t("templateLocation")}</span>
-            <span class="presentation-format">${t("templateFormat")}</span>
           </div>
         </div>
       </section>`;

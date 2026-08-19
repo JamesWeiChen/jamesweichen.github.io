@@ -1277,17 +1277,6 @@ h3 {
   font: 500 13px/1.5 var(--mono);
 }
 
-.presentation-format {
-  display: inline-flex;
-  padding: 6px 9px;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  color: var(--green);
-  font-size: 11px;
-  line-height: 1.2;
-  text-transform: uppercase;
-}
-
 .teaching-column {
   position: relative;
 }
