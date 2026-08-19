@@ -553,20 +553,86 @@
     ],
 
     teaching: {
+      featured: {
+        title: {
+          en: "A Journey Through Calculus in the Business World",
+          zh: "商業世界的微積分之旅",
+        },
+        description: {
+          en: "A self-paced online course that builds calculus from the ground up and applies differentiation and integration to economic and management problems.",
+          zh: "從基礎數學概念出發，逐步掌握微分與積分，並將微積分應用於經濟和管理問題。",
+        },
+        provider: {
+          en: "NTU School of Professional Education and Continuing Studies",
+          zh: "國立臺灣大學進修推廣學院",
+        },
+        duration: { en: "3 hr 23 min", zh: "3 小時 23 分" },
+        url: "https://online.ntuspecs.ntu.edu.tw/%E5%95%86%E6%A5%AD%E4%B8%96%E7%95%8C%E7%9A%84%E5%BE%AE%E7%A9%8D%E5%88%86%E4%B9%8B%E6%97%85",
+      },
       ntu: [
-        "Capstone Project for Data Science and Social Inquiry (co-taught)",
-        "Macroeconomic Theory",
-        "Microeconomic Theory (II)",
-        "Management of Economic Analysis",
-        "Applied Game Theory",
-        "Principles of Microeconomics",
-        "Principles of Economics (I) and (II)",
-        "Theories and Social Applications of Behavioral Economics (co-taught)",
+        {
+          code: "DSSI",
+          title: { en: "Data Science and Social Inquiry", zh: "資料科學與社會研究" },
+          note: { en: "Co-taught", zh: "共同授課" },
+        },
+        {
+          code: "AGEC 7022",
+          title: { en: "Macroeconomic Theory", zh: "總體經濟理論" },
+        },
+        {
+          code: "AGEC 7130",
+          title: { en: "Managerial Economics Analysis", zh: "管理經濟分析" },
+        },
+        {
+          code: "BICD 6003",
+          title: { en: "Principles of Microeconomics", zh: "個體經濟學原理" },
+        },
+        {
+          code: "AGEC 1005",
+          title: { en: "Principle of Economics (I)", zh: "經濟學原理（一）" },
+        },
+        {
+          code: "AGEC 1006",
+          title: { en: "Principle of Economics (II)", zh: "經濟學原理（二）" },
+        },
+        {
+          code: "AGEC 3032 / 7147",
+          title: { en: "Applied Game Theory", zh: "應用賽局理論" },
+        },
+        {
+          code: "AGEC 7021",
+          title: { en: "Microeconomic Theory (II)", zh: "個體經濟理論（二）" },
+        },
+        {
+          code: "AGEC 8011",
+          title: { en: "Production Economics (II)", zh: "生產經濟學（二）" },
+        },
+        {
+          code: "SW 5046",
+          title: {
+            en: "Theories and Social Applications of Behavioral Economics",
+            zh: "行為經濟之理論與社會應用",
+          },
+          note: { en: "Co-taught", zh: "共同授課" },
+        },
       ],
       ncu: [
-        "Intermediate Microeconomics",
-        "Behavioral Decision Theory",
-        "Principles of Economics",
+        {
+          code: "BA 3070",
+          title: { en: "Microeconomics", zh: "個體經濟學" },
+        },
+        {
+          code: "BA 7018",
+          title: { en: "Behavioral Decision Theory", zh: "行為決策理論" },
+        },
+        {
+          code: "MT 1011",
+          title: { en: "Economics", zh: "經濟學" },
+        },
+        {
+          code: "SC 0003V",
+          title: { en: "Service Learning", zh: "服務學習" },
+        },
       ],
     },
 

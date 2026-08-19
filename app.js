@@ -59,9 +59,12 @@
       join: "Join the lab",
       joinText: "We are currently recruiting master’s and Ph.D. students and research assistants. Please email James with your interests and background.",
       teachingTitle: "Teaching",
-      teachingIntro: "Courses taught at National Taiwan University and National Central University.",
+      teachingIntro: "University teaching and an online course for learners beyond the classroom.",
       ntu: "National Taiwan University",
       ncu: "National Central University",
+      featuredCourse: "Featured online course",
+      paidOnlineCourse: "Self-paced paid course",
+      viewCourse: "View course",
       download: "Download CV",
       updated: "Content updated August 2026",
       switchTheme: "Switch theme",
@@ -112,9 +115,12 @@
       join: "加入實驗室",
       joinText: "目前招募碩士生、博士生與研究助理。歡迎來信說明你的研究興趣與背景。",
       teachingTitle: "教學",
-      teachingIntro: "於國立臺灣大學與國立中央大學開設之課程。",
+      teachingIntro: "國立臺灣大學、國立中央大學授課，以及面向校外學習者的線上課程。",
       ntu: "國立臺灣大學",
       ncu: "國立中央大學",
+      featuredCourse: "精選線上課程",
+      paidOnlineCourse: "自學型付費課程",
+      viewCourse: "查看課程",
       download: "下載 CV",
       updated: "內容更新於 2026 年 8 月",
       switchTheme: "切換顯示主題",
@@ -129,6 +135,10 @@
 
   function localized(value) {
     return typeof value === "string" ? value : value[state.lang];
+  }
+
+  function alternate(value) {
+    return typeof value === "string" ? "" : value[state.lang === "en" ? "zh" : "en"];
   }
 
   function escapeAttribute(value) {
@@ -519,7 +529,21 @@
   }
 
   function teachingPage() {
-    const courseList = (courses) => courses.map((course) => `<li>${course}</li>`).join("");
+    const courseList = (courses) =>
+      courses
+        .map(
+          (course) => `
+            <li>
+              <span class="course-code">${course.code}</span>
+              <span class="course-name">
+                <strong>${localized(course.title)}</strong>
+                <small>${alternate(course.title)}</small>
+                ${course.note ? `<em>${localized(course.note)}</em>` : ""}
+              </span>
+            </li>`,
+        )
+        .join("");
+    const featured = data.teaching.featured;
     return `
       <main id="main-content" class="page-shell inner-page">
         <header class="page-intro teaching-intro">
@@ -527,6 +551,23 @@
           <h1>${t("teachingTitle")}</h1>
           <p>${t("teachingIntro")}</p>
         </header>
+        <section class="featured-course" aria-labelledby="featured-course-title">
+          <div class="featured-course-copy">
+            <p class="eyebrow">${t("featuredCourse")}</p>
+            <h2 id="featured-course-title">${localized(featured.title)}</h2>
+            <p class="featured-course-alt">${alternate(featured.title)}</p>
+            <p class="featured-course-description">${localized(featured.description)}</p>
+            <div class="featured-course-meta">
+              <span>${t("paidOnlineCourse")}</span>
+              <span>${localized(featured.duration)}</span>
+              <span>${localized(featured.provider)}</span>
+            </div>
+            <a class="button-link" href="${featured.url}" target="_blank" rel="noreferrer">${t("viewCourse")} ↗</a>
+          </div>
+          <div class="featured-course-visual" aria-hidden="true">
+            <span>∂</span><span>∫</span><span>∇</span><span>Σ</span>
+          </div>
+        </section>
         <section class="teaching-grid section-rule">
           <article class="teaching-column">
             <span class="institution-mark">NTU</span>
