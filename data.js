@@ -403,6 +403,11 @@
       ],
     },
 
+    // Conference presentation entry template:
+    // { year: 2026, title: "...", event: "...", location: "City, Country", format: "poster" }
+    // `format` is optional; supported values are `poster` and `posterSpotlight`.
+    presentations: [],
+
     teaching: {
       ntu: [
         "Capstone Project for Data Science and Social Inquiry (co-taught)",
