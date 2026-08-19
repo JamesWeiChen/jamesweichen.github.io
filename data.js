@@ -637,10 +637,6 @@
           code: "MT 1011",
           title: { en: "Economics", zh: "經濟學" },
         },
-        {
-          code: "SC 0003V",
-          title: { en: "Service Learning", zh: "服務學習" },
-        },
       ],
     },
 
