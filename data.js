@@ -569,6 +569,14 @@
         duration: { en: "3 hr 23 min", zh: "3 小時 23 分" },
         url: "https://online.ntuspecs.ntu.edu.tw/%E5%95%86%E6%A5%AD%E4%B8%96%E7%95%8C%E7%9A%84%E5%BE%AE%E7%A9%8D%E5%88%86%E4%B9%8B%E6%97%85",
       },
+      youtube: {
+        handle: "@James_Chen",
+        description: {
+          en: "Additional teaching videos and public learning resources are available on my YouTube channel.",
+          zh: "更多教學影片與公開學習資源，請至我的 YouTube 頻道觀看。",
+        },
+        url: "https://www.youtube.com/@James_Chen",
+      },
       ntu: [
         {
           code: "DSSI",

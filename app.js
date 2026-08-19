@@ -59,12 +59,16 @@
       join: "Join the lab",
       joinText: "We are currently recruiting master’s and Ph.D. students and research assistants. Please email James with your interests and background.",
       teachingTitle: "Teaching",
-      teachingIntro: "University teaching and an online course for learners beyond the classroom.",
+      teachingIntro: "University courses, a paid online course, and free video resources for learners beyond the classroom.",
       ntu: "National Taiwan University",
       ncu: "National Central University",
       featuredCourse: "Featured online course",
       paidOnlineCourse: "Self-paced paid course",
       viewCourse: "View course",
+      videoResources: "Free video resources",
+      youtubeChannel: "Wei James Chen on YouTube",
+      freeVideoChannel: "Free teaching videos",
+      visitYoutube: "Visit YouTube channel",
       download: "Download CV",
       updated: "Content updated August 2026",
       switchTheme: "Switch theme",
@@ -115,12 +119,16 @@
       join: "加入實驗室",
       joinText: "目前招募碩士生、博士生與研究助理。歡迎來信說明你的研究興趣與背景。",
       teachingTitle: "教學",
-      teachingIntro: "國立臺灣大學、國立中央大學授課，以及面向校外學習者的線上課程。",
+      teachingIntro: "國立臺灣大學、國立中央大學授課，以及面向校外學習者的付費線上課程與免費影音資源。",
       ntu: "國立臺灣大學",
       ncu: "國立中央大學",
       featuredCourse: "精選線上課程",
       paidOnlineCourse: "自學型付費課程",
       viewCourse: "查看課程",
+      videoResources: "免費影音資源",
+      youtubeChannel: "Wei James Chen 的 YouTube 頻道",
+      freeVideoChannel: "免費教學影片",
+      visitYoutube: "前往 YouTube 頻道",
       download: "下載 CV",
       updated: "內容更新於 2026 年 8 月",
       switchTheme: "切換顯示主題",
@@ -135,10 +143,6 @@
 
   function localized(value) {
     return typeof value === "string" ? value : value[state.lang];
-  }
-
-  function alternate(value) {
-    return typeof value === "string" ? "" : value[state.lang === "en" ? "zh" : "en"];
   }
 
   function escapeAttribute(value) {
@@ -167,9 +171,9 @@
           <div class="nav-links">
             ${linkTo("home", t("home"))}
             ${linkTo("featured", t("research"), ["featured", "research", "browse"])}
-            ${linkTo("presentations", t("presentations"))}
-            ${linkTo("people", t("people"))}
             ${linkTo("teaching", t("teaching"))}
+            ${linkTo("people", t("people"))}
+            ${linkTo("presentations", t("presentations"))}
             <a class="nav-link" href="${data.profile.cv}" target="_blank" rel="noreferrer">${t("cv")} ↗</a>
           </div>
           <button
@@ -537,13 +541,13 @@
               <span class="course-code">${course.code}</span>
               <span class="course-name">
                 <strong>${localized(course.title)}</strong>
-                <small>${alternate(course.title)}</small>
                 ${course.note ? `<em>${localized(course.note)}</em>` : ""}
               </span>
             </li>`,
         )
         .join("");
     const featured = data.teaching.featured;
+    const youtube = data.teaching.youtube;
     return `
       <main id="main-content" class="page-shell inner-page">
         <header class="page-intro teaching-intro">
@@ -551,22 +555,36 @@
           <h1>${t("teachingTitle")}</h1>
           <p>${t("teachingIntro")}</p>
         </header>
-        <section class="featured-course" aria-labelledby="featured-course-title">
-          <div class="featured-course-copy">
-            <p class="eyebrow">${t("featuredCourse")}</p>
-            <h2 id="featured-course-title">${localized(featured.title)}</h2>
-            <p class="featured-course-alt">${alternate(featured.title)}</p>
-            <p class="featured-course-description">${localized(featured.description)}</p>
-            <div class="featured-course-meta">
-              <span>${t("paidOnlineCourse")}</span>
-              <span>${localized(featured.duration)}</span>
-              <span>${localized(featured.provider)}</span>
+        <section class="teaching-resources-grid" aria-label="${state.lang === "en" ? "Online learning resources" : "線上學習資源"}">
+          <article class="featured-course" aria-labelledby="featured-course-title">
+            <div class="featured-course-copy">
+              <p class="eyebrow">${t("featuredCourse")}</p>
+              <h2 id="featured-course-title">${localized(featured.title)}</h2>
+              <p class="featured-course-description">${localized(featured.description)}</p>
+              <div class="featured-course-meta">
+                <span>${t("paidOnlineCourse")}</span>
+                <span>${localized(featured.duration)}</span>
+                <span>${localized(featured.provider)}</span>
+              </div>
+              <a class="button-link" href="${featured.url}" target="_blank" rel="noreferrer">${t("viewCourse")} ↗</a>
             </div>
-            <a class="button-link" href="${featured.url}" target="_blank" rel="noreferrer">${t("viewCourse")} ↗</a>
-          </div>
-          <div class="featured-course-visual" aria-hidden="true">
-            <span>∂</span><span>∫</span><span>∇</span><span>Σ</span>
-          </div>
+            <div class="featured-course-visual" aria-hidden="true">
+              <span>∂</span><span>∫</span><span>∇</span><span>Σ</span>
+            </div>
+          </article>
+          <article class="youtube-resource" aria-labelledby="youtube-resource-title">
+            <div class="youtube-resource-copy">
+              <p class="eyebrow">${t("videoResources")}</p>
+              <h2 id="youtube-resource-title">${t("youtubeChannel")}</h2>
+              <p>${localized(youtube.description)}</p>
+              <a class="button-link" href="${youtube.url}" target="_blank" rel="noreferrer">${t("visitYoutube")} ↗</a>
+            </div>
+            <div class="youtube-resource-mark" aria-hidden="true">
+              <span class="youtube-play">▶</span>
+              <strong>${youtube.handle}</strong>
+              <small>${t("freeVideoChannel")}</small>
+            </div>
+          </article>
         </section>
         <section class="teaching-grid section-rule">
           <article class="teaching-column">
