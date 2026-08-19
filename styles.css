@@ -1154,6 +1154,109 @@ h3 {
   border-top: 1px solid var(--line);
 }
 
+.presentation-summary {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  padding: 25px 0;
+  border-top: 1px solid var(--line);
+  color: var(--green);
+}
+
+.presentation-summary strong {
+  font: 500 clamp(42px, 6vw, 72px)/0.9 var(--sans);
+  letter-spacing: -0.06em;
+}
+
+.presentation-summary span {
+  font: 700 13px/1.4 var(--mono);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.presentation-section {
+  border-top: 1px solid var(--line);
+}
+
+.presentation-year-group {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr);
+  gap: 40px;
+  padding: 48px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.presentation-year {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.presentation-year h2 {
+  margin: 0;
+  font: 500 28px/1 var(--sans);
+  letter-spacing: -0.035em;
+}
+
+.presentation-year span {
+  color: var(--green);
+  font: 700 12px/1 var(--mono);
+}
+
+.presentation-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--line);
+}
+
+.presentation-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(150px, 0.28fr);
+  gap: 36px;
+  padding: 25px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.presentation-item:last-child {
+  border-bottom: 0;
+}
+
+.presentation-copy h3 {
+  max-width: 780px;
+  margin-bottom: 10px;
+  font: 500 clamp(19px, 2vw, 24px)/1.25 var(--sans);
+  letter-spacing: -0.025em;
+}
+
+.presentation-copy p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.presentation-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  color: var(--muted);
+  font: 500 13px/1.5 var(--mono);
+}
+
+.presentation-format {
+  display: inline-flex;
+  padding: 6px 9px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--green);
+  font-size: 11px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
 .teaching-column {
   position: relative;
 }
@@ -1463,6 +1566,20 @@ h3 {
 
   .teaching-column + .teaching-column {
     margin-top: 40px;
+  }
+
+  .presentation-year-group,
+  .presentation-item {
+    grid-template-columns: 1fr;
+  }
+
+  .presentation-year-group {
+    gap: 24px;
+    padding: 40px 0;
+  }
+
+  .presentation-item {
+    gap: 14px;
   }
 
   .footer-shell {

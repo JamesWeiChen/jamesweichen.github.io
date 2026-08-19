@@ -21,6 +21,7 @@
       featured: "Featured findings",
       browse: "Browse papers",
       people: "People",
+      presentations: "Talks",
       teaching: "Teaching",
       cv: "CV",
       greeting: "Greetings!",
@@ -46,6 +47,12 @@
       current: "Current students",
       formerStudents: "Former students",
       formerResearchAssistants: "Former research assistants",
+      presentationsTitle: "Conference Presentations",
+      presentationsIntro: "Conference and workshop presentations, listed in reverse chronological order.",
+      presentationCount: "presentations",
+      forthcoming: "Forthcoming",
+      poster: "Poster presentation",
+      posterSpotlight: "Poster spotlight",
       join: "Join the lab",
       joinText: "We are currently recruiting master’s and Ph.D. students and research assistants. Please email James with your interests and background.",
       teachingTitle: "Teaching",
@@ -64,6 +71,7 @@
       featured: "精選發現",
       browse: "瀏覽論文",
       people: "成員",
+      presentations: "發表",
       teaching: "教學",
       cv: "履歷",
       greeting: "你好！",
@@ -89,6 +97,12 @@
       current: "現任學生",
       formerStudents: "畢業學生",
       formerResearchAssistants: "歷任研究助理",
+      presentationsTitle: "研討會發表",
+      presentationsIntro: "研討會與工作坊發表紀錄，依時間由近至遠排列。",
+      presentationCount: "場發表",
+      forthcoming: "即將發表",
+      poster: "海報發表",
+      posterSpotlight: "海報精選發表",
       join: "加入實驗室",
       joinText: "目前招募碩士生、博士生與研究助理。歡迎來信說明你的研究興趣與背景。",
       teachingTitle: "教學",
@@ -117,7 +131,7 @@
 
   function route() {
     const value = window.location.hash.replace(/^#\/?/, "").split("?")[0];
-    return ["featured", "research", "browse", "people", "teaching"].includes(value) ? value : "home";
+    return ["featured", "research", "browse", "people", "presentations", "teaching"].includes(value) ? value : "home";
   }
 
   function linkTo(path, label, activePaths = [path]) {
@@ -138,6 +152,7 @@
             ${linkTo("home", t("home"))}
             ${linkTo("featured", t("research"), ["featured", "research", "browse"])}
             ${linkTo("people", t("people"))}
+            ${linkTo("presentations", t("presentations"))}
             ${linkTo("teaching", t("teaching"))}
             <a class="nav-link" href="${data.profile.cv}" target="_blank" rel="noreferrer">${t("cv")} ↗</a>
           </div>
@@ -522,6 +537,59 @@
       </main>`;
   }
 
+  function presentationsPage() {
+    const groups = data.presentations.reduce((result, presentation) => {
+      const key = String(presentation.year);
+      const existing = result.find((group) => group.year === key);
+      if (existing) existing.items.push(presentation);
+      else result.push({ year: key, items: [presentation] });
+      return result;
+    }, []);
+
+    const presentationGroups = groups
+      .map(
+        (group, groupIndex) => `
+          <section class="presentation-year-group" aria-labelledby="presentation-year-${groupIndex}">
+            <div class="presentation-year">
+              <h2 id="presentation-year-${groupIndex}">${group.year === "Forthcoming" ? t("forthcoming") : group.year}</h2>
+              <span>${group.items.length.toString().padStart(2, "0")}</span>
+            </div>
+            <ol class="presentation-list">
+              ${group.items
+                .map(
+                  (presentation) => `
+                    <li class="presentation-item">
+                      <div class="presentation-copy">
+                        <h3>${presentation.title}</h3>
+                        <p><em>${presentation.event}</em></p>
+                      </div>
+                      <div class="presentation-meta">
+                        <span>${presentation.location}</span>
+                        ${presentation.format ? `<span class="presentation-format">${t(presentation.format)}</span>` : ""}
+                      </div>
+                    </li>`,
+                )
+                .join("")}
+            </ol>
+          </section>`,
+      )
+      .join("");
+
+    return `
+      <main id="main-content" class="page-shell inner-page">
+        <header class="page-intro presentations-intro">
+          <p class="eyebrow">Academic exchange</p>
+          <h1>${t("presentationsTitle")}</h1>
+          <p>${t("presentationsIntro")}</p>
+        </header>
+        <div class="presentation-summary">
+          <strong>${data.presentations.length}</strong>
+          <span>${t("presentationCount")}</span>
+        </div>
+        <div class="presentation-section">${presentationGroups}</div>
+      </main>`;
+  }
+
   function footer() {
     const year = new Date().getFullYear();
     return `
@@ -560,6 +628,7 @@
       research: researchPage,
       browse: browsePage,
       people: peoplePage,
+      presentations: presentationsPage,
       teaching: teachingPage,
     }[currentRoute]();
     app.innerHTML = `${header()}${page}${footer()}`;
