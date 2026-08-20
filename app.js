@@ -482,7 +482,10 @@
           (person) => `
             <li>
               <span>${person.name}</span>
-              <small>${localized(person.title)}</small>
+              <small>
+                <span>${localized(person.title)}</span>
+                ${person.current ? `<span class="alumni-current">${localized(person.current)}</span>` : ""}
+              </small>
             </li>`,
         )
         .join("");

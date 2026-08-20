@@ -436,16 +436,18 @@
         { name: "Asta Chen (陳玉配)", title: { en: "M.A. student", zh: "碩士畢業生" } },
         {
           name: "Ching Yuan Kao (高敬媛)",
-          title: {
-            en: "M.A. alumna · Ph.D. student in Agricultural Economics at Texas A&M University",
-            zh: "碩士畢業生 · 德州農工大學農業經濟學博士生",
+          title: { en: "M.A. student", zh: "碩士畢業生" },
+          current: {
+            en: "Ph.D. student in Agricultural Economics at Texas A&M University",
+            zh: "德州農工大學農業經濟學博士生",
           },
         },
         {
           name: "Jiang-Shiang Hu (胡將相)",
-          title: {
-            en: "M.A. alumnus · Ph.D. student in Economics at NTU",
-            zh: "碩士畢業生 · 臺大經濟學系博士生",
+          title: { en: "M.A. student", zh: "碩士畢業生" },
+          current: {
+            en: "Ph.D. student in Economics at NTU",
+            zh: "臺大經濟學系博士生",
           },
         },
         { name: "Shih Chuan Chu (朱世全)", title: { en: "M.A. student", zh: "碩士畢業生" } },
@@ -453,9 +455,10 @@
       formerResearchAssistants: [
         {
           name: "Gustave Yang (楊仲)",
-          title: {
-            en: "B.A. research assistant · Ph.D. student in Economics at Harvard University",
-            zh: "學士級研究助理 · 哈佛大學經濟學博士生",
+          title: { en: "B.A. research assistant", zh: "學士級研究助理" },
+          current: {
+            en: "Ph.D. student in Economics at Harvard University",
+            zh: "哈佛大學經濟學博士生",
           },
         },
         { name: "Ping Yi Wu (吳品儀)", title: { en: "B.A. research assistant", zh: "學士級研究助理" } },
