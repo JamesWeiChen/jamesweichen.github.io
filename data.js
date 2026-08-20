@@ -777,8 +777,9 @@
       {
         date: "2021.10.15",
         datetime: "2021-10-15",
-        en: "The NSTC YSFXWORLD channel featured a video introducing research by Wei James Chen (陳暐) on epiphany learning.",
-        zh: "國科會 YSFXWORLD 頻道刊登介紹 Wei James Chen（陳暐）頓悟學習研究的影片。",
+        en: "The NSTC YSFXWORLD channel features a video introducing the lab’s research on epiphany learning.",
+        zh: "國科會 YSFXWORLD 頻道介紹實驗室的頓悟學習研究的影片。",
+        url: "https://www.youtube.com/watch?v=7w8GYrwqKOo",
       },
     ],
   };

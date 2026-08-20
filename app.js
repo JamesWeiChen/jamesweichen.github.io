@@ -242,7 +242,9 @@
         (item) => `
           <article class="news-item">
             <time datetime="${item.datetime}">${item.date}</time>
-            <p>${item[state.lang]}</p>
+            <p>${item.url
+              ? `<a href="${item.url}" target="_blank" rel="noreferrer">${item[state.lang]} <span aria-hidden="true">↗</span></a>`
+              : item[state.lang]}</p>
           </article>`,
       )
       .join("");

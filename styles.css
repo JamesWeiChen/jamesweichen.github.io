@@ -601,6 +601,20 @@ h3 {
   line-height: 1.46;
 }
 
+.news-item p a {
+  text-decoration: underline;
+  text-decoration-color: var(--line);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  transition: color 140ms ease, text-decoration-color 140ms ease;
+}
+
+.news-item p a:hover,
+.news-item p a:focus-visible {
+  color: var(--green);
+  text-decoration-color: var(--green);
+}
+
 .inner-page {
   min-height: 70vh;
 }
