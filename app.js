@@ -465,9 +465,9 @@
   function labPage() {
     const current = data.people.current
       .map(
-        (person, index) => `
+        (person) => `
           <article class="person-card">
-            <div class="person-avatar avatar-${(index % 4) + 1}" aria-hidden="true">${initials(person.name)}</div>
+            <div class="person-avatar avatar-3" aria-hidden="true">${initials(person.name)}</div>
             <div>
               <p class="person-role">${localized(person.role)}</p>
               <h3>${person.name} <span>${person.nameZh}</span></h3>
