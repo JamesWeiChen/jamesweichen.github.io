@@ -777,8 +777,8 @@
       {
         date: "2021.10.15",
         datetime: "2021-10-15",
-        en: "The NSTC YSFXWORLD channel features a video introducing the lab’s research on epiphany learning.",
-        zh: "國科會 YSFXWORLD 頻道介紹實驗室的頓悟學習研究的影片。",
+        en: "The NSTC YSFXWORLD channel published a video introducing the lab’s research on epiphany learning.",
+        zh: "國科會 YSFXWORLD 頻道發布介紹實驗室頓悟學習研究的影片。",
         url: "https://www.youtube.com/watch?v=7w8GYrwqKOo",
       },
     ],
