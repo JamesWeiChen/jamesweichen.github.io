@@ -387,6 +387,15 @@
     people: {
       current: [
         {
+          name: "Adiyasuren Otgon",
+          nameZh: "艾迪雅",
+          role: { en: "International M.A. student", zh: "國際碩士專班學生" },
+          bio: {
+            en: "International Master's Program in Agricultural Economics; from Mongolia.",
+            zh: "就讀農業經濟學系國際碩士專班，來自蒙古。",
+          },
+        },
+        {
           name: "Shi Han Huang",
           nameZh: "黃詩涵",
           role: { en: "M.A. student", zh: "碩士生" },
