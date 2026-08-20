@@ -207,6 +207,17 @@
 
   function homePage() {
     const bios = data.bio[state.lang].map((paragraph) => `<p>${paragraph}</p>`).join("");
+    const distinction = data.profile.distinction;
+    const distinctionMarkup = `
+      <aside class="hero-distinction" aria-label="${localized(distinction.label)}">
+        <span class="material-symbols-rounded hero-distinction-icon" aria-hidden="true">emoji_events</span>
+        <div class="hero-distinction-copy">
+          <span class="hero-distinction-label">${localized(distinction.label)} · ${distinction.years}</span>
+          <strong>${localized(distinction.title)}</strong>
+          <span>${localized(distinction.program)}</span>
+          <small>${localized(distinction.agency)}</small>
+        </div>
+      </aside>`;
     const themeCards = data.themes
       .map(
         (theme) => `
@@ -247,6 +258,7 @@
             <p class="eyebrow">${localized(data.profile.role)}</p>
             <h1>${t("greeting")}</h1>
             <div class="bio-copy">${bios}</div>
+            ${distinctionMarkup}
             ${socialLinks()}
           </div>
           <figure class="portrait-frame">

@@ -18,6 +18,16 @@
       department: "http://www.agec.ntu.edu.tw/",
       facebook: "https://www.facebook.com/profile.php?id=100045836090802",
       cv: "./cv-wei.pdf",
+      distinction: {
+        label: { en: "Selected distinction", zh: "重要學術榮譽" },
+        years: "2020–2024",
+        title: { en: "Einstein Program awardee", zh: "愛因斯坦培植計畫獲選學者" },
+        program: { en: "MOST Young Scholar Fellowship", zh: "科技部年輕學者養成計畫" },
+        agency: {
+          en: "Ministry of Science and Technology → National Science and Technology Council (2022)",
+          zh: "科技部 → 國家科學及技術委員會（2022 年改制）",
+        },
+      },
     },
 
     bio: {
