@@ -454,8 +454,8 @@
         {
           name: "Gustave Yang (楊仲)",
           title: {
-            en: "B.A. research assistant · Economics Ph.D. program at Harvard University",
-            zh: "學士級研究助理 · 哈佛大學經濟學博士班",
+            en: "B.A. research assistant · Ph.D. student in Economics at Harvard University",
+            zh: "學士級研究助理 · 哈佛大學經濟學博士生",
           },
         },
         { name: "Ping Yi Wu (吳品儀)", title: { en: "B.A. research assistant", zh: "學士級研究助理" } },
