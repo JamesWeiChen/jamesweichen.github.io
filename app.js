@@ -26,6 +26,8 @@
       cv: "CV",
       greeting: "Greetings!",
       contact: "Email",
+      scholar: "Google Scholar",
+      orcid: "ORCID",
       department: "Department",
       facebook: "Facebook",
       researchIntro: "We study economic decisions as they happen - from attention and learning to the institutions that shape behavior.",
@@ -86,6 +88,8 @@
       cv: "履歷",
       greeting: "你好！",
       contact: "電子郵件",
+      scholar: "Google Scholar",
+      orcid: "ORCID",
       department: "系所網站",
       facebook: "Facebook",
       researchIntro: "我們研究經濟決策如何形成，包括注意力、學習，以及制度如何影響行為。",
@@ -199,6 +203,8 @@
     return `
       <div class="hero-links">
         <a href="mailto:${data.profile.email}">${t("contact")} ↗</a>
+        <a href="${data.profile.scholar}" target="_blank" rel="noreferrer">${t("scholar")} ↗</a>
+        <a href="${data.profile.orcid}" target="_blank" rel="me noreferrer">${t("orcid")} ↗</a>
         <a href="${data.profile.department}" target="_blank" rel="noreferrer">${t("department")} ↗</a>
         <a href="${data.profile.facebook}" target="_blank" rel="noreferrer">${t("facebook")} ↗</a>
         <a href="${data.profile.cv}" target="_blank" rel="noreferrer">${t("download")} ↗</a>
