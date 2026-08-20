@@ -476,6 +476,30 @@
           </article>`,
       )
       .join("");
+    const awardCategory = {
+      general: { en: "General", zh: "一般類" },
+      policy: { en: "Policy", zh: "政策類" },
+    };
+    const awardLevel = {
+      first: { en: "First Prize", zh: "最佳獎" },
+      honorable: { en: "Honorable Mention", zh: "佳作" },
+    };
+    const awardBadge = (award) => {
+      const category = localized(awardCategory[award.category]);
+      const level = localized(awardLevel[award.level]);
+      const label = state.lang === "en" ? `TEA · ${category} · ${level}` : `臺經學會 · ${category} · ${level}`;
+      const fullLabel = state.lang === "en"
+        ? `Taiwan Economic Association Best Master’s Thesis Award: ${category}, ${level}`
+        : `臺灣經濟學會最佳碩士論文獎：${category}，${level}`;
+      return `
+        <span class="thesis-award thesis-award-${award.category} thesis-award-${award.level}" title="${fullLabel}" aria-label="${fullLabel}">
+          <span class="thesis-award-icon" aria-hidden="true">
+            <span class="material-symbols-rounded thesis-award-rank">${award.level === "first" ? "emoji_events" : "military_tech"}</span>
+            <span class="thesis-award-category">${award.category === "general" ? "G" : "P"}</span>
+          </span>
+          <span>${label}</span>
+        </span>`;
+    };
     const alumniList = (people) =>
       people
         .map(
@@ -486,6 +510,7 @@
                 <span>${localized(person.title)}</span>
                 ${person.current ? `<span class="alumni-current">${localized(person.current)}</span>` : ""}
               </small>
+              ${person.awards && person.awards.length ? `<div class="alumni-awards">${person.awards.map(awardBadge).join("")}</div>` : ""}
             </li>`,
         )
         .join("");

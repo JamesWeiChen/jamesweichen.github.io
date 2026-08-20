@@ -1160,6 +1160,82 @@ h3 {
   color: var(--faint);
 }
 
+.alumni-awards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 4px;
+}
+
+.thesis-award {
+  display: inline-flex;
+  min-height: 40px;
+  align-items: center;
+  gap: 9px;
+  padding: 4px 10px 4px 5px;
+  border: 1px solid var(--line);
+  background: var(--paper-deep);
+  color: var(--muted);
+  font: 600 10px/1.25 var(--mono);
+  letter-spacing: 0.01em;
+}
+
+.thesis-award-icon {
+  --award-color: var(--blue);
+  position: relative;
+  width: 31px;
+  height: 31px;
+  flex: 0 0 31px;
+  display: grid;
+  place-items: center;
+  border: 1.5px solid var(--award-color);
+  color: var(--award-color);
+}
+
+.thesis-award-general .thesis-award-icon {
+  --award-color: var(--blue);
+  border-radius: 50%;
+}
+
+.thesis-award-policy .thesis-award-icon {
+  --award-color: var(--green);
+  border-radius: 5px 5px 13px 13px;
+}
+
+.thesis-award-first .thesis-award-icon {
+  background: var(--award-color);
+  color: var(--paper);
+}
+
+.thesis-award-rank {
+  font-family: "Material Symbols Rounded";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  font-feature-settings: "liga";
+}
+
+.thesis-award-category {
+  position: absolute;
+  right: -4px;
+  bottom: -4px;
+  width: 14px;
+  height: 14px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--award-color);
+  border-radius: 50%;
+  background: var(--paper);
+  color: var(--award-color);
+  font: 700 7px/1 var(--mono);
+}
+
 .teaching-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;

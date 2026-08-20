@@ -433,7 +433,11 @@
         },
       ],
       formerStudents: [
-        { name: "Asta Chen (陳玉配)", title: { en: "M.A. student", zh: "碩士畢業生" } },
+        {
+          name: "Asta Chen (陳玉配)",
+          title: { en: "M.A. student", zh: "碩士畢業生" },
+          awards: [{ category: "policy", level: "honorable" }],
+        },
         {
           name: "Ching Yuan Kao (高敬媛)",
           title: { en: "M.A. student", zh: "碩士畢業生" },
@@ -441,6 +445,7 @@
             en: "Ph.D. student in Agricultural Economics at Texas A&M University",
             zh: "德州農工大學農業經濟學博士生",
           },
+          awards: [{ category: "policy", level: "honorable" }],
         },
         {
           name: "Jiang-Shiang Hu (胡將相)",
@@ -449,8 +454,16 @@
             en: "Ph.D. student in Economics at NTU",
             zh: "臺大經濟學系博士生",
           },
+          awards: [{ category: "general", level: "first" }],
         },
-        { name: "Shih Chuan Chu (朱世全)", title: { en: "M.A. student", zh: "碩士畢業生" } },
+        {
+          name: "Shih Chuan Chu (朱世全)",
+          title: { en: "M.A. student", zh: "碩士畢業生" },
+          awards: [
+            { category: "general", level: "honorable" },
+            { category: "policy", level: "honorable" },
+          ],
+        },
       ],
       formerResearchAssistants: [
         {
