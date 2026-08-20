@@ -434,7 +434,20 @@
       ],
       formerStudents: [
         { name: "Asta Chen (陳玉配)", title: { en: "M.A. student", zh: "碩士畢業生" } },
-        { name: "Ching Yuan Kao (高敬媛)", title: { en: "M.A. student", zh: "碩士畢業生" } },
+        {
+          name: "Ching Yuan Kao (高敬媛)",
+          title: {
+            en: "M.A. alumna · Ph.D. student in Agricultural Economics at Texas A&M University",
+            zh: "碩士畢業生 · 德州農工大學農業經濟學博士生",
+          },
+        },
+        {
+          name: "Jiang-Shiang Hu (胡將相)",
+          title: {
+            en: "M.A. alumnus · Ph.D. student in Economics at NTU",
+            zh: "碩士畢業生 · 臺大經濟學系博士生",
+          },
+        },
         { name: "Shih Chuan Chu (朱世全)", title: { en: "M.A. student", zh: "碩士畢業生" } },
       ],
       formerResearchAssistants: [
@@ -712,7 +725,7 @@
       {
         date: "2023.11.15",
         datetime: "2023-11-15",
-        en: "Co-supervised master’s student Chiang-Hsiang Hu received First Prize in the General category of the Taiwan Economic Association Best Master’s Thesis Award.",
+        en: "Co-supervised master’s student Jiang-Shiang Hu received First Prize in the General category of the Taiwan Economic Association Best Master’s Thesis Award.",
         zh: "共同指導碩士生胡將相獲得臺灣經濟學會最佳碩士論文獎最佳獎（一般類）。",
       },
       {
