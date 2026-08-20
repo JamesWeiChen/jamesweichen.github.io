@@ -484,10 +484,14 @@
       first: { en: "First Prize", zh: "最佳獎" },
       honorable: { en: "Honorable Mention", zh: "佳作" },
     };
+    const thesisAwardName = {
+      en: "Taiwan Economic Association Best Master’s Thesis Award",
+      zh: "臺灣經濟學會最佳碩士論文獎",
+    };
     const awardBadge = (award) => {
       const category = localized(awardCategory[award.category]);
       const level = localized(awardLevel[award.level]);
-      const label = state.lang === "en" ? `TEA · ${category} · ${level}` : `臺經學會 · ${category} · ${level}`;
+      const label = `${category} · ${level}`;
       const fullLabel = state.lang === "en"
         ? `Taiwan Economic Association Best Master’s Thesis Award: ${category}, ${level}`
         : `臺灣經濟學會最佳碩士論文獎：${category}，${level}`;
@@ -510,7 +514,11 @@
                 <span>${localized(person.title)}</span>
                 ${person.current ? `<span class="alumni-current">${localized(person.current)}</span>` : ""}
               </small>
-              ${person.awards && person.awards.length ? `<div class="alumni-awards">${person.awards.map(awardBadge).join("")}</div>` : ""}
+              ${person.awards && person.awards.length ? `
+                <div class="alumni-awards">
+                  <span class="alumni-award-name">${localized(thesisAwardName)}</span>
+                  <div class="alumni-award-badges">${person.awards.map(awardBadge).join("")}</div>
+                </div>` : ""}
             </li>`,
         )
         .join("");

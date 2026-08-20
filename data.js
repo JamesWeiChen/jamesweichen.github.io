@@ -442,8 +442,8 @@
           name: "Ching Yuan Kao (高敬媛)",
           title: { en: "M.A. student", zh: "碩士畢業生" },
           current: {
-            en: "Ph.D. student in Agricultural Economics at Texas A&M University",
-            zh: "德州農工大學農業經濟學博士生",
+            en: "Ph.D. student in the Department of Agricultural Economics at Texas A&M University",
+            zh: "德州農工大學農業經濟學系博士生",
           },
           awards: [{ category: "policy", level: "honorable" }],
         },
@@ -451,8 +451,8 @@
           name: "Jiang-Shiang Hu (胡將相)",
           title: { en: "M.A. student", zh: "碩士畢業生" },
           current: {
-            en: "Ph.D. student in Economics at NTU",
-            zh: "臺大經濟學系博士生",
+            en: "Ph.D. student in the Department of Economics at National Taiwan University",
+            zh: "國立臺灣大學經濟學系博士生",
           },
           awards: [{ category: "general", level: "first" }],
         },
@@ -470,7 +470,7 @@
           name: "Gustave Yang (楊仲)",
           title: { en: "B.A. research assistant", zh: "學士級研究助理" },
           current: {
-            en: "Ph.D. student in Economics at Harvard University",
+            en: "Ph.D. student in the Department of Economics at Harvard University",
             zh: "哈佛大學經濟學博士生",
           },
         },

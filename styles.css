@@ -1161,10 +1161,21 @@ h3 {
 }
 
 .alumni-awards {
+  width: 100%;
+  display: grid;
+  gap: 7px;
+  margin-top: 4px;
+}
+
+.alumni-award-name {
+  color: var(--ink);
+  font: 600 11px/1.4 var(--sans);
+}
+
+.alumni-award-badges {
   display: flex;
   flex-wrap: wrap;
   gap: 7px;
-  margin-top: 4px;
 }
 
 .thesis-award {
