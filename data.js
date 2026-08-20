@@ -451,7 +451,13 @@
         { name: "Shih Chuan Chu (朱世全)", title: { en: "M.A. student", zh: "碩士畢業生" } },
       ],
       formerResearchAssistants: [
-        { name: "Gustave Yang (楊仲)", title: { en: "B.A. research assistant", zh: "學士級研究助理" } },
+        {
+          name: "Gustave Yang (楊仲)",
+          title: {
+            en: "B.A. research assistant · Economics Ph.D. program at Harvard University",
+            zh: "學士級研究助理 · 哈佛大學經濟學博士班",
+          },
+        },
         { name: "Ping Yi Wu (吳品儀)", title: { en: "B.A. research assistant", zh: "學士級研究助理" } },
         { name: "Rita Liao (廖行慈)", title: { en: "B.A. research assistant", zh: "學士級研究助理" } },
         { name: "Song Duo Ma (馬松鐸)", title: { en: "B.A. research assistant", zh: "學士級研究助理" } },
