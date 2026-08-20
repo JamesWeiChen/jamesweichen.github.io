@@ -209,13 +209,12 @@
     const bios = data.bio[state.lang].map((paragraph) => `<p>${paragraph}</p>`).join("");
     const distinction = data.profile.distinction;
     const distinctionMarkup = `
-      <aside class="hero-distinction" aria-label="${localized(distinction.label)}">
+      <aside class="hero-distinction" aria-label="${localized(distinction.title)}">
         <span class="material-symbols-rounded hero-distinction-icon" aria-hidden="true">emoji_events</span>
         <div class="hero-distinction-copy">
-          <span class="hero-distinction-label">${localized(distinction.label)} · ${distinction.years}</span>
+          <span class="hero-distinction-years">${distinction.years}</span>
           <strong>${localized(distinction.title)}</strong>
           <span>${localized(distinction.program)}</span>
-          <small>${localized(distinction.agency)}</small>
         </div>
       </aside>`;
     const themeCards = data.themes

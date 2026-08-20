@@ -327,11 +327,10 @@ h3 {
   gap: 2px;
 }
 
-.hero-distinction-label {
+.hero-distinction-years {
   color: var(--green);
   font: 700 10px/1.4 var(--mono);
   letter-spacing: 0.08em;
-  text-transform: uppercase;
 }
 
 .hero-distinction-copy strong {
@@ -339,14 +338,9 @@ h3 {
   font: 600 16px/1.35 var(--sans);
 }
 
-.hero-distinction-copy > span:not(.hero-distinction-label) {
+.hero-distinction-copy > span:not(.hero-distinction-years) {
   color: var(--muted);
   font: 600 12px/1.45 var(--mono);
-}
-
-.hero-distinction-copy small {
-  color: var(--faint);
-  font: 500 11px/1.45 var(--sans);
 }
 
 .hero-links {
