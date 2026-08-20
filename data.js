@@ -444,6 +444,7 @@
         {
           name: "Asta Chen (陳玉配)",
           title: { en: "M.A. student", zh: "碩士畢業生" },
+          awardYear: "2022",
           awards: [{ category: "policy", level: "honorable" }],
         },
         {
@@ -453,6 +454,7 @@
             en: "Ph.D. student in the Department of Agricultural Economics at Texas A&M University",
             zh: "德州農工大學農業經濟學系博士生",
           },
+          awardYear: "2023",
           awards: [{ category: "policy", level: "honorable" }],
         },
         {
@@ -462,11 +464,13 @@
             en: "Ph.D. student in the Department of Economics at National Taiwan University",
             zh: "國立臺灣大學經濟學系博士生",
           },
+          awardYear: "2023",
           awards: [{ category: "general", level: "first" }],
         },
         {
           name: "Shih Chuan Chu (朱世全)",
           title: { en: "M.A. student", zh: "碩士畢業生" },
+          awardYear: "2024",
           awards: [
             { category: "general", level: "honorable" },
             { category: "policy", level: "honorable" },
