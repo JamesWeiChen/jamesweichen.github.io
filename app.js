@@ -204,13 +204,13 @@
   function socialLinks() {
     return `
       <div class="hero-links">
-        <a href="mailto:${data.profile.email}">${t("contact")} ↗</a>
-      <a href="${data.profile.scholar}" target="_blank" rel="noreferrer">${t("scholar")} ↗</a>
-      <a href="${data.profile.orcid}" target="_blank" rel="me noreferrer">${t("orcid")} ↗</a>
-      <a href="${data.profile.crossing}" target="_blank" rel="noreferrer">${t("crossing")} ↗</a>
-      <a href="${data.profile.department}" target="_blank" rel="noreferrer">${t("department")} ↗</a>
-        <a href="${data.profile.facebook}" target="_blank" rel="noreferrer">${t("facebook")} ↗</a>
-        <a href="${data.profile.cv}" target="_blank" rel="noreferrer">${t("download")} ↗</a>
+        <a href="mailto:${data.profile.email}"><span class="material-symbols-rounded hero-link-icon" aria-hidden="true">mail</span><span>${t("contact")}</span><span aria-hidden="true">↗</span></a>
+        <a href="${data.profile.scholar}" target="_blank" rel="noreferrer"><span class="material-symbols-rounded hero-link-icon" aria-hidden="true">school</span><span>${t("scholar")}</span><span aria-hidden="true">↗</span></a>
+        <a href="${data.profile.orcid}" target="_blank" rel="me noreferrer"><span class="material-symbols-rounded hero-link-icon" aria-hidden="true">fingerprint</span><span>${t("orcid")}</span><span aria-hidden="true">↗</span></a>
+        <a href="${data.profile.crossing}" target="_blank" rel="noreferrer"><span class="material-symbols-rounded hero-link-icon" aria-hidden="true">article</span><span>${t("crossing")}</span><span aria-hidden="true">↗</span></a>
+        <a href="${data.profile.department}" target="_blank" rel="noreferrer"><span class="material-symbols-rounded hero-link-icon" aria-hidden="true">account_balance</span><span>${t("department")}</span><span aria-hidden="true">↗</span></a>
+        <a href="${data.profile.facebook}" target="_blank" rel="noreferrer"><span class="material-symbols-rounded hero-link-icon" aria-hidden="true">public</span><span>${t("facebook")}</span><span aria-hidden="true">↗</span></a>
+        <a href="${data.profile.cv}" target="_blank" rel="noreferrer"><span class="material-symbols-rounded hero-link-icon" aria-hidden="true">description</span><span>${t("download")}</span><span aria-hidden="true">↗</span></a>
       </div>`;
   }
 
