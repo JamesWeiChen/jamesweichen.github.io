@@ -18,6 +18,7 @@
       department: "http://www.agec.ntu.edu.tw/",
       scholar: "https://scholar.google.com/citations?user=kuvJ5ZgAAAAJ&hl=en",
       orcid: "https://orcid.org/0000-0001-6360-9348",
+      crossing: "https://crossing.cw.com.tw/author/1596",
       facebook: "https://www.facebook.com/profile.php?id=100045836090802",
       cv: "./cv-wei.pdf",
       distinction: {
