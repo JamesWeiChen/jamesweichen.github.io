@@ -344,9 +344,11 @@ h3 {
 }
 
 .hero-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px 24px;
+  display: grid;
+  grid-template-columns: repeat(4, max-content);
+  gap: 14px clamp(24px, 2.5vw, 38px);
+  align-items: start;
+  justify-content: start;
   margin-top: 28px;
   font: 600 14px/1.4 var(--sans);
 }
@@ -1709,6 +1711,12 @@ h3 {
   outline-offset: 4px;
 }
 
+@media (max-width: 1120px) {
+  .hero-links {
+    grid-template-columns: repeat(3, max-content);
+  }
+}
+
 @media (max-width: 940px) {
   .nav-shell {
     grid-template-columns: 1fr auto auto;
@@ -1810,6 +1818,10 @@ h3 {
 
   .hero h1 {
     font-size: 56px;
+  }
+
+  .hero-links {
+    grid-template-columns: repeat(2, max-content);
   }
 
   .portrait-frame {
@@ -1970,6 +1982,12 @@ h3 {
 
   .footer-shell {
     gap: 35px;
+  }
+}
+
+@media (max-width: 430px) {
+  .hero-links {
+    grid-template-columns: max-content;
   }
 }
 
