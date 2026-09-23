@@ -85,7 +85,7 @@
       featured: "精選發現",
       browse: "瀏覽論文",
       lab: "實驗室",
-      presentations: "發表",
+      presentations: "學術發表",
       teaching: "教學",
       cv: "履歷",
       greeting: "你好！",
