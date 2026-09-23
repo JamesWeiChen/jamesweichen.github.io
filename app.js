@@ -23,6 +23,7 @@
       lab: "Lab",
       presentations: "Talks",
       teaching: "Teaching",
+      apps: "Apps",
       cv: "CV",
       greeting: "Greetings!",
       contact: "Email",
@@ -71,6 +72,11 @@
       viewCourse: "View course",
       videoResources: "Free video resources",
       youtubeChannel: "Wei James Chen on YouTube",
+      appsTitle: "Apps by Wei James Chen",
+      appsIntro: "Two small tools I built for the moments when good software can make a real difference: presenting your work and finding your way through a conference.",
+      beamerDescription: "A presenter for LaTeX Beamer PDFs. Keep your slides, private speaker notes, and next-slide preview on your iPad while the audience sees only the slides. Annotate with Apple Pencil, and use your iPhone as a remote.",
+      acadendaDescription: "Turn a conference programme PDF into a schedule you can navigate. Explore sessions and speakers, find talks matched to your research interests, and keep notes with your agenda.",
+      appStore: "Download on the App Store",
       freeVideoChannel: "Free teaching videos",
       visitYoutube: "Visit YouTube channel",
       download: "Download CV",
@@ -87,6 +93,7 @@
       lab: "實驗室",
       presentations: "研討會紀錄",
       teaching: "教學",
+      apps: "應用程式",
       cv: "履歷",
       greeting: "你好！",
       contact: "電子郵件",
@@ -135,6 +142,11 @@
       viewCourse: "查看課程",
       videoResources: "免費影音資源",
       youtubeChannel: "Wei James Chen 的 YouTube 頻道",
+      appsTitle: "我製作的 App",
+      appsIntro: "我為簡報與學術研討會打造了兩款工具，希望在準備演講、安排議程與記錄交流時，讓事情更簡單。",
+      beamerDescription: "專為 LaTeX Beamer PDF 設計的簡報工具。在 iPad 上查看投影片、私人講稿與下一張預覽，觀眾只會看到投影片；也可用 Apple Pencil 手寫標註，並以 iPhone 遙控簡報。",
+      acadendaDescription: "把研討會議程 PDF 轉成方便瀏覽的行程。查看場次與講者、依研究興趣探索推薦演講，並在議程中整理筆記。",
+      appStore: "前往 App Store 下載",
       freeVideoChannel: "免費教學影片",
       visitYoutube: "前往 YouTube 頻道",
       download: "下載 CV",
@@ -159,7 +171,7 @@
 
   function route() {
     const value = window.location.hash.replace(/^#\/?/, "").split("?")[0];
-    return ["featured", "research", "browse", "lab", "presentations", "teaching"].includes(value) ? value : "home";
+    return ["featured", "research", "browse", "lab", "presentations", "teaching", "apps"].includes(value) ? value : "home";
   }
 
   function linkTo(path, label, activePaths = [path]) {
@@ -182,6 +194,7 @@
             ${linkTo("teaching", t("teaching"))}
             ${linkTo("lab", t("lab"))}
             ${linkTo("presentations", t("presentations"))}
+            ${linkTo("apps", t("apps"))}
             <a class="nav-link" href="${data.profile.cv}" target="_blank" rel="noreferrer">${t("cv")} ↗</a>
           </div>
           <button
@@ -670,6 +683,47 @@
       </main>`;
   }
 
+  function appsPage() {
+    const apps = [
+      {
+        name: "Beamer Notes",
+        mark: "BN",
+        category: state.lang === "en" ? "PRESENTATION TOOL" : "簡報工具",
+        description: t("beamerDescription"),
+        url: "https://apps.apple.com/tw/app/beamer-notes/id6810103112",
+        className: "app-card-beamer",
+      },
+      {
+        name: "Acadenda",
+        mark: "A",
+        category: state.lang === "en" ? "CONFERENCE PLANNER" : "研討會議程工具",
+        description: t("acadendaDescription"),
+        url: "https://apps.apple.com/tw/app/acadenda/id6812816802",
+        className: "app-card-acadenda",
+      },
+    ];
+    return `
+      <main id="main-content" class="page-shell inner-page apps-page">
+        <header class="page-intro">
+          <p class="eyebrow">${state.lang === "en" ? "Independent projects" : "個人作品"}</p>
+          <h1>${t("appsTitle")}</h1>
+          <p>${t("appsIntro")}</p>
+        </header>
+        <section class="apps-grid" aria-label="${t("appsTitle")}">
+          ${apps.map((app) => `
+            <article class="app-card ${app.className}">
+              <div class="app-card-top">
+                <span class="app-mark" aria-hidden="true">${app.mark}</span>
+                <span class="app-category">${app.category}</span>
+              </div>
+              <h2>${app.name}</h2>
+              <p>${app.description}</p>
+              <a class="button-link" href="${app.url}" target="_blank" rel="noreferrer">${t("appStore")} ↗</a>
+            </article>`).join("")}
+        </section>
+      </main>`;
+  }
+
   function presentationsPage() {
     const groups = data.presentations.reduce((result, presentation) => {
       const key = String(presentation.year);
@@ -778,6 +832,7 @@
       lab: labPage,
       presentations: presentationsPage,
       teaching: teachingPage,
+      apps: appsPage,
     }[currentRoute]();
     app.innerHTML = `${header()}${page}${footer()}`;
     if (!preserveScroll) window.scrollTo({ top: 0, behavior: "instant" });
