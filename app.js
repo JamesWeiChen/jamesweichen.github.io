@@ -48,6 +48,7 @@
       labTitle: "Lab members",
       labIntro: "Current students, former students, and research assistants advised or supervised in the lab.",
       current: "Current students",
+      currentResearchAssistants: "Current research assistants",
       formerStudents: "Former students",
       formerResearchAssistants: "Former research assistants",
       presentationsTitle: "Conference Presentations",
@@ -109,8 +110,9 @@
       working: "工作論文",
       rr: "修訂中",
       labTitle: "實驗室成員",
-      labIntro: "這裡列出目前與過去指導的學生，以及歷任研究助理。",
+      labIntro: "這裡列出目前與過去指導的學生，以及現任與歷任研究助理。",
       current: "現任學生",
+      currentResearchAssistants: "現任研究助理",
       formerStudents: "畢業學生",
       formerResearchAssistants: "歷任研究助理",
       presentationsTitle: "研討會發表",
@@ -485,7 +487,7 @@
   }
 
   function labPage() {
-    const current = data.people.current
+    const personCards = (people) => people
       .map(
         (person) => `
           <article class="person-card">
@@ -498,6 +500,8 @@
           </article>`,
       )
       .join("");
+    const current = personCards(data.people.current);
+    const currentResearchAssistants = personCards(data.people.currentResearchAssistants);
     const awardCategory = {
       general: { en: "General", zh: "一般類" },
       policy: { en: "Policy", zh: "政策類" },
@@ -560,6 +564,13 @@
             <span>${data.people.current.length.toString().padStart(2, "0")}</span>
           </div>
           <div class="people-grid">${current}</div>
+        </section>
+        <section class="lab-section section-rule" aria-labelledby="current-ra-title">
+          <div class="split-heading">
+            <h2 id="current-ra-title">${t("currentResearchAssistants")}</h2>
+            <span>${data.people.currentResearchAssistants.length.toString().padStart(2, "0")}</span>
+          </div>
+          <div class="people-grid">${currentResearchAssistants}</div>
         </section>
         <section class="alumni-section section-rule" aria-labelledby="alumni-title">
           <div class="alumni-group">

@@ -395,15 +395,6 @@
     people: {
       current: [
         {
-          name: "Adiyasuren Otgon",
-          nameZh: "艾迪雅",
-          role: { en: "International M.A. student", zh: "國際碩士專班學生" },
-          bio: {
-            en: "International Master's Program in Agricultural Economics; from Mongolia.",
-            zh: "就讀農業經濟學系國際碩士專班，來自蒙古。",
-          },
-        },
-        {
           name: "Shi Han Huang",
           nameZh: "黃詩涵",
           role: { en: "M.A. student", zh: "碩士生" },
@@ -422,21 +413,23 @@
           },
         },
         {
-          name: "Yen Han",
-          nameZh: "韓硯",
-          role: { en: "M.A. student", zh: "碩士生" },
-          bio: {
-            en: "Graduate student in the in-service M.A. program in Agricultural Economics.",
-            zh: "就讀農業經濟學系碩士在職專班。",
-          },
-        },
-        {
           name: "Ying Chen Lin",
           nameZh: "林映辰",
           role: { en: "M.A. student", zh: "碩士生" },
           bio: {
             en: "Studies experimental economics and the design and execution of economic experiments.",
             zh: "研究實驗經濟學，也學習如何設計與執行經濟實驗。",
+          },
+        },
+      ],
+      currentResearchAssistants: [
+        {
+          name: "Yen Han",
+          nameZh: "韓硯",
+          role: { en: "Research assistant", zh: "研究助理" },
+          bio: {
+            en: "Graduated from the in-service M.A. program in Agricultural Economics.",
+            zh: "畢業於農業經濟學系碩士在職專班。",
           },
         },
       ],
@@ -475,6 +468,10 @@
             { category: "general", level: "honorable" },
             { category: "policy", level: "honorable" },
           ],
+        },
+        {
+          name: "Adiyasuren Otgon (艾迪雅)",
+          title: { en: "International M.A. graduate", zh: "國際碩士專班畢業生" },
         },
       ],
       formerResearchAssistants: [
