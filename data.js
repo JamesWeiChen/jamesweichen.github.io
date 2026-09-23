@@ -471,7 +471,7 @@
         },
         {
           name: "Adiyasuren Otgon (艾迪雅)",
-          title: { en: "International M.A. graduate", zh: "國際碩士專班畢業生" },
+          title: { en: "M.A. student", zh: "國際碩士專班畢業生" },
         },
       ],
       formerResearchAssistants: [
