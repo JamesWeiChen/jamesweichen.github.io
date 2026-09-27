@@ -28,3 +28,16 @@ Then open `http://localhost:8000/`.
 ## Content sources
 
 The initial version was assembled from the August 2026 CV and the connected Notion workspace. Student photos are intentionally not published; the Lab page uses initials instead.
+
+## Acadenda guide
+
+The Apps page links to `acadenda/guide.html` (English) and
+`acadenda/guide-zh.html` (Traditional Chinese). These standalone HTML pages
+include seven steps, localized screenshots, FAQs, and a fictional sample PDF.
+They remain readable without JavaScript; `acadenda/guide.js` adds theme
+preferences and preserves the current step when switching languages.
+
+The source script and approved images came from
+`/Users/jameschen/Documents/Acadenda/Screenshots/Guide/website/`.
+When the app workflow changes, update both guide pages and their corresponding
+images together. GitHub Pages deploys the repository root from `main`.

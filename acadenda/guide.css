@@ -1,0 +1,38 @@
+.guide-header, .guide-main, .guide-footer { max-width: 1080px; margin: auto; padding-inline: 28px; }
+.guide-header { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding-block: 24px; font-family: var(--sans); border-bottom: 1px solid var(--line); }
+.guide-brand { font-size: 22px; font-weight: 700; }
+.guide-brand span { color: var(--muted); font-size: 15px; font-weight: 400; }
+.guide-header nav { display: flex; align-items: center; gap: 16px; }
+.guide-header [aria-current] { color: var(--green); text-decoration: underline; text-underline-offset: 6px; }
+#theme-toggle { border: 1px solid var(--line); border-radius: 50%; background: var(--paper-deep); width: 40px; height: 40px; cursor: pointer; }
+.guide-intro { padding-block: 72px 30px; max-width: 830px; }
+.guide-intro h1 { font-size: clamp(36px, 5.8vw, 64px); line-height: 1.16; letter-spacing: -.035em; margin: 20px 0; }
+.guide-lead { font-size: 21px; line-height: 1.8; color: var(--muted); }
+.guide-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 24px; margin-top: 28px; font-family: var(--sans); }
+.guide-actions > a:last-child { text-decoration: underline; text-underline-offset: 5px; }
+.sample-note, figcaption { font: 14px/1.7 var(--sans); color: var(--muted); }
+.sample-note { margin-top: 22px; }
+.privacy-note { border-left: 3px solid var(--green); background: var(--paper-deep); padding: 22px 26px; font: 16px/1.8 var(--sans); }
+.privacy-note p { margin: 6px 0 0; color: var(--muted); }
+.guide-contents { padding-block: 38px; }
+.guide-contents ol { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 40px; padding-left: 25px; font: 16px/1.6 var(--sans); }
+.guide-contents a:hover, .guide-footer a:hover { color: var(--green); }
+.guide-step { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; padding-block: 56px; border-top: 1px solid var(--line); scroll-margin-top: 24px; align-items: start; }
+.step-number { font: 16px var(--mono); color: var(--green); }
+.step-copy h2, .guide-faq h2 { font-size: clamp(26px, 3vw, 34px); line-height: 1.35; margin: 14px 0 20px; }
+.step-copy p { color: var(--muted); font-size: 19px; line-height: 1.85; }
+.tip { border: 1px solid var(--line); border-radius: 12px; padding: 18px; font: 15px/1.8 var(--sans); }
+.step-images { display: grid; gap: 24px; justify-items: center; }
+.step-images figure { margin: 0; width: 100%; max-width: 350px; }
+.step-images img { width: 100%; height: auto; border-radius: 18px; border: 1px solid var(--line); }
+.step-images a { display: block; cursor: zoom-in; }
+figcaption { margin-top: 10px; text-align: center; }
+.guide-faq { border-top: 1px solid var(--line); padding-block: 56px; }
+.guide-faq details { border-bottom: 1px solid var(--line); padding: 20px 0; font: 17px/1.8 var(--sans); }
+.guide-faq summary { cursor: pointer; font-weight: 600; }
+.guide-faq details p, .parse-note { color: var(--muted); line-height: 1.8; }
+.parse-note { max-width: 800px; font-size: 16px; margin-top: 28px; }
+.guide-footer { border-top: 1px solid var(--line); padding-block: 30px; display: flex; flex-wrap: wrap; gap: 24px; font: 14px/1.8 var(--sans); color: var(--muted); }
+a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--green); outline-offset: 5px; }
+@media (max-width: 650px) { .guide-header, .guide-main, .guide-footer { padding-inline: 20px; } .guide-brand span { display: none; } .guide-intro { padding-top: 40px; } .guide-lead { font-size: 18px; } .guide-contents ol { grid-template-columns: 1fr; } .guide-step { grid-template-columns: 1fr; gap: 20px; padding-block: 36px; } .step-copy p { font-size: 18px; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } body { transition: none; } }

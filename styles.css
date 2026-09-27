@@ -2080,3 +2080,5 @@ h3 {
     transition-duration: 0.01ms !important;
   }
 }
+
+.app-guide-link { margin-top: 12px; margin-left: 8px; }

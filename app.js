@@ -700,6 +700,7 @@
         description: t("acadendaDescription"),
         url: "https://apps.apple.com/tw/app/acadenda/id6812816802",
         className: "app-card-acadenda",
+        guide: state.lang === "en" ? "./acadenda/guide.html" : "./acadenda/guide-zh.html",
       },
     ];
     return `
@@ -719,6 +720,7 @@
               <h2>${app.name}</h2>
               <p>${app.description}</p>
               <a class="button-link" href="${app.url}" target="_blank" rel="noreferrer">${t("appStore")} ↗</a>
+              ${app.guide ? `<a class="button-link app-guide-link" href="${app.guide}">${state.lang === "en" ? "Step-by-step guide" : "圖文使用教學"} →</a>` : ""}
             </article>`).join("")}
         </section>
       </main>`;
