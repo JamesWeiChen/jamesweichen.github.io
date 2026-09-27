@@ -2081,22 +2081,32 @@ h3 {
   }
 }
 
-/* Keep the guide separate so both App Store links share the card baseline. */
+/* Shared rows keep downloads aligned; the guide stays inside Acadenda. */
+@media (min-width: 681px) {
+  .app-card {
+    display: grid;
+    grid-row: span 5;
+    grid-template-rows: subgrid;
+    align-items: start;
+    row-gap: 0;
+  }
+  .app-card > .button-link { margin-top: 0; justify-self: start; }
+}
+
 .app-guide-panel {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-  margin: 24px 0 56px;
-  padding: 28px 32px;
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  background: var(--paper-deep);
+  display: grid;
+  grid-template-columns: 40px minmax(0, 1fr);
+  align-items: start;
+  gap: 16px;
+  width: 100%;
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
 }
 
 .app-guide-icon {
-  flex: 0 0 48px;
-  width: 48px;
-  height: 48px;
+  width: 40px;
+  height: 40px;
   display: grid;
   place-items: center;
   border-radius: 12px;
@@ -2105,11 +2115,13 @@ h3 {
 }
 
 .app-guide-icon svg { width: 25px; height: 25px; }
-.app-guide-copy { flex: 1; }
-.app-guide-copy h2 { margin: 0 0 6px; font: 600 19px/1.4 var(--sans); }
+.app-guide-copy { min-width: 0; }
+.app-guide-copy h3 { margin: 0 0 6px; font: 600 17px/1.4 var(--sans); }
 .app-guide-copy p { margin: 0; color: var(--muted); font: 15px/1.65 var(--sans); }
 
 .app-guide-button {
+  grid-column: 1 / -1;
+  justify-self: start;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -2128,8 +2140,6 @@ h3 {
 .app-guide-button:hover { background: var(--rust); color: var(--paper); }
 .app-guide-button:focus-visible { outline: 2px solid var(--rust); outline-offset: 4px; }
 
-@media (max-width: 700px) {
-  .app-guide-panel { flex-wrap: wrap; gap: 16px; padding: 24px; }
-  .app-guide-copy { flex-basis: calc(100% - 64px); }
+@media (max-width: 680px) {
   .app-guide-button { width: 100%; justify-content: space-between; }
 }

@@ -719,16 +719,18 @@
               <h2>${app.name}</h2>
               <p>${app.description}</p>
               <a class="button-link" href="${app.url}" target="_blank" rel="noreferrer">${t("appStore")} ↗</a>
-            </article>`).join("")}
-        </section>
+              ${app.className === "app-card-acadenda" ? `
         <aside class="app-guide-panel" aria-labelledby="app-guide-title">
           <span class="app-guide-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5.5C9 3.5 5 3.5 2 5v14c3-1.5 7-1.5 10 .5 3-2 7-2 10-.5V5c-3-1.5-7-1.5-10 .5Z"/><path d="M12 5.5v14"/></svg></span>
           <div class="app-guide-copy">
-            <h2 id="app-guide-title">${state.lang === "en" ? "Getting started with Acadenda?" : "第一次使用 Acadenda？"}</h2>
+            <h3 id="app-guide-title">${state.lang === "en" ? "Getting started with Acadenda?" : "第一次使用 Acadenda？"}</h3>
             <p>${state.lang === "en" ? "Turn your program PDF into a schedule in seven illustrated steps." : "跟著 7 個圖文步驟，把議程 PDF 變成行程。"}</p>
           </div>
           <a class="app-guide-button" href="${state.lang === "en" ? "./acadenda/guide.html" : "./acadenda/guide-zh.html"}">${state.lang === "en" ? "Step-by-step guide" : "圖文使用教學"}<span aria-hidden="true">→</span></a>
-        </aside>
+        </aside>` : ""}
+            </article>`).join("")}
+        </section>
+
       </main>`;
   }
 
