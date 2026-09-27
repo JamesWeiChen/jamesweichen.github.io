@@ -41,3 +41,11 @@ The source script and approved images came from
 `/Users/jameschen/Documents/Acadenda/Screenshots/Guide/website/`.
 When the app workflow changes, update both guide pages and their corresponding
 images together. GitHub Pages deploys the repository root from `main`.
+
+Language can be specified with `?lang=en` or `?lang=zh` (`zh-Hant` also works).
+For the main site, place the query before the hash route, for example
+`/?lang=zh#/apps`. For the guide, `acadenda/guide.html?lang=zh` redirects to
+the Chinese HTML page while preserving query parameters and the current step.
+A valid URL language overrides the saved preference. Unknown values fall back
+to the main site's saved preference or the guide's existing page language.
+Language switches update the query so refreshing retains the selected language.

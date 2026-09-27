@@ -3,8 +3,15 @@
 
   const data = window.siteData;
   const app = document.querySelector("#app");
+  const requestedLang = new URLSearchParams(window.location.search).get("lang");
+  const urlLang = requestedLang === "zh" || requestedLang === "zh-Hant" ? "zh" : requestedLang === "en" ? "en" : null;
+  let preferredLang = "en";
+  try {
+    preferredLang = localStorage.getItem("jwc-lang") === "zh" ? "zh" : "en";
+    if (urlLang) localStorage.setItem("jwc-lang", urlLang);
+  } catch (error) { /* URL language works even when storage is unavailable. */ }
   const state = {
-    lang: localStorage.getItem("jwc-lang") === "zh" ? "zh" : "en",
+    lang: urlLang || preferredLang,
     theme: document.documentElement.dataset.theme === "light" ? "light" : "dark",
     researchMethod: "all",
     featuredIndex: 0,
@@ -888,7 +895,10 @@
     const languageButton = event.target.closest("[data-lang]");
     if (languageButton) {
       state.lang = languageButton.dataset.lang;
-      localStorage.setItem("jwc-lang", state.lang);
+      try { localStorage.setItem("jwc-lang", state.lang); } catch (error) { /* Optional preference. */ }
+      const url = new URL(window.location.href);
+      url.searchParams.set("lang", state.lang);
+      window.history.replaceState(null, "", url);
       render();
       return;
     }
