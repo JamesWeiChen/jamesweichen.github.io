@@ -15,7 +15,8 @@
     theme: document.documentElement.dataset.theme === "light" ? "light" : "dark",
     researchMethod: "all",
     featuredIndex: 0,
-    featuredPaused: false,
+    // Auto-rotation never starts for visitors who prefer reduced motion.
+    featuredPaused: window.matchMedia("(prefers-reduced-motion: reduce)").matches,
     browseQuery: "",
     browseStatuses: new Set(),
   };
@@ -372,27 +373,10 @@
       </nav>`;
   }
 
-  function featuredPage() {
-    const query = new URLSearchParams(window.location.hash.split("?")[1] || "");
-    const requestedSlide = Number(query.get("slide"));
-    if (Number.isInteger(requestedSlide) && requestedSlide >= 1 && requestedSlide <= data.featuredFindings.length) {
-      state.featuredIndex = requestedSlide - 1;
-    }
+  function featuredSpotlight() {
     const finding = data.featuredFindings[state.featuredIndex];
-    const dots = data.featuredFindings
-      .map(
-        (_, index) => `<button type="button" class="featured-dot${index === state.featuredIndex ? " is-active" : ""}" data-featured-index="${index}" aria-label="${state.lang === "en" ? "Show finding" : "顯示發現"} ${index + 1}"${index === state.featuredIndex ? ' aria-current="true"' : ""}></button>`,
-      )
-      .join("");
     return `
-      <main id="main-content" class="page-shell inner-page featured-page">
-        ${researchSubnav()}
-        <header class="page-intro">
-          <p class="eyebrow">${state.lang === "en" ? "Selected evidence" : "精選研究證據"}</p>
-          <h1>${t("featured")}</h1>
-          <p>${state.lang === "en" ? "Five results from our published work on learning, strategic reasoning, behavioral models, and scientific institutions." : "五項已發表研究的主要發現，涵蓋學習、策略推理、行為模型與科學制度。"}</p>
-        </header>
-        <section class="featured-spotlight" aria-live="polite">
+        <section class="featured-spotlight" aria-live="${state.featuredPaused ? "polite" : "off"}">
           <div class="featured-metric">
             <span class="finding-category">${localized(finding.category)}</span>
             <strong>${finding.number}</strong>
@@ -405,10 +389,43 @@
             <p class="featured-summary">${localized(finding.finding)}</p>
             <a class="button-link" href="${finding.link}" target="_blank" rel="noreferrer">${state.lang === "en" ? "Read the source" : "閱讀研究來源"} ↗</a>
           </article>
-        </section>
+        </section>`;
+  }
+
+  function featuredDots() {
+    return data.featuredFindings
+      .map(
+        (_, index) => `<button type="button" class="featured-dot${index === state.featuredIndex ? " is-active" : ""}" data-featured-index="${index}" aria-label="${state.lang === "en" ? "Show finding" : "顯示發現"} ${index + 1}"${index === state.featuredIndex ? ' aria-current="true"' : ""}></button>`,
+      )
+      .join("");
+  }
+
+  function featuredToggle() {
+    const label = state.featuredPaused
+      ? state.lang === "en" ? "Play rotation" : "播放輪播"
+      : state.lang === "en" ? "Pause rotation" : "暫停輪播";
+    return `<button type="button" class="featured-toggle" data-featured-toggle aria-label="${label}" title="${label}">${state.featuredPaused ? "▶" : "❚❚"}</button>`;
+  }
+
+  function featuredPage() {
+    const query = new URLSearchParams(window.location.hash.split("?")[1] || "");
+    const requestedSlide = Number(query.get("slide"));
+    if (Number.isInteger(requestedSlide) && requestedSlide >= 1 && requestedSlide <= data.featuredFindings.length) {
+      state.featuredIndex = requestedSlide - 1;
+    }
+    return `
+      <main id="main-content" class="page-shell inner-page featured-page">
+        ${researchSubnav()}
+        <header class="page-intro">
+          <p class="eyebrow">${state.lang === "en" ? "Selected evidence" : "精選研究證據"}</p>
+          <h1>${t("featured")}</h1>
+          <p>${state.lang === "en" ? "Five results from our published work on learning, strategic reasoning, behavioral models, and scientific institutions." : "五項已發表研究的主要發現，涵蓋學習、策略推理、行為模型與科學制度。"}</p>
+        </header>
+        ${featuredSpotlight()}
         <div class="featured-controls">
-          <div class="featured-dots">${dots}</div>
+          <div class="featured-dots">${featuredDots()}</div>
           <div class="featured-arrows">
+            ${featuredToggle()}
             <button type="button" data-featured-step="-1" aria-label="${state.lang === "en" ? "Previous finding" : "上一項發現"}">←</button>
             <button type="button" data-featured-step="1" aria-label="${state.lang === "en" ? "Next finding" : "下一項發現"}">→</button>
           </div>
@@ -417,6 +434,8 @@
   }
 
   function researchPage() {
+    const query = new URLSearchParams(window.location.hash.split("?")[1] || "");
+    const theme = data.themes.find((item) => item.id === query.get("theme"));
     const filters = [
       { id: "all", label: t("all") },
       ...data.methods.map((method) => ({ id: method.id, label: localized(method.title) })),
@@ -431,8 +450,17 @@
       .join("");
     const allPapers = [...data.publications, ...data.workingPapers];
     const visible = allPapers.filter(
-      (paper) => state.researchMethod === "all" || paper.method === state.researchMethod,
+      (paper) =>
+        (state.researchMethod === "all" || paper.method === state.researchMethod) &&
+        (!theme || paper.theme === theme.id),
     );
+    const themeNotice = theme
+      ? `
+          <div class="theme-filter-notice">
+            <span>${state.lang === "en" ? "Research area" : "研究領域"}: <strong>${localized(theme.title)}</strong></span>
+            <a href="#/research">${state.lang === "en" ? "Show all areas" : "顯示全部領域"} ✕</a>
+          </div>`
+      : "";
     const cards = data.methods
       .map(
         (method) => `
@@ -460,7 +488,9 @@
             <h2 id="paper-list-title">${state.lang === "en" ? "Papers & projects" : "論文與研究計畫"}</h2>
             <div class="filter-group" aria-label="Filter research">${filterButtons}</div>
           </div>
+          ${themeNotice}
           <div class="paper-list">${visible.map(paperRow).join("")}</div>
+          ${visible.length ? "" : `<p class="browse-empty">${state.lang === "en" ? "No papers match these filters." : "沒有符合目前條件的論文。"}</p>`}
         </section>
       </main>`;
   }
@@ -854,18 +884,32 @@
     app.innerHTML = `${header()}${page}${footer()}`;
     if (!preserveScroll) window.scrollTo({ top: 0, behavior: "instant" });
     if (currentRoute === "browse") applyBrowseFilters();
-    if (currentRoute === "featured" && !state.featuredPaused) {
-      featuredTimer = window.setInterval(() => {
-        state.featuredIndex = (state.featuredIndex + 1) % data.featuredFindings.length;
-        updateFeaturedHash();
-      }, 7000);
-    }
+    if (currentRoute === "featured") startFeaturedTimer();
   }
 
-  function updateFeaturedHash() {
-    const nextHash = `#/featured?slide=${state.featuredIndex + 1}`;
-    window.history.replaceState(null, "", nextHash);
-    render(true);
+  function startFeaturedTimer() {
+    window.clearInterval(featuredTimer);
+    if (state.featuredPaused) return;
+    featuredTimer = window.setInterval(() => {
+      state.featuredIndex = (state.featuredIndex + 1) % data.featuredFindings.length;
+      updateFeatured();
+    }, 7000);
+  }
+
+  // Swap only the slide and its controls so focus elsewhere on the page survives.
+  function updateFeatured() {
+    window.history.replaceState(null, "", `#/featured?slide=${state.featuredIndex + 1}`);
+    const spotlight = document.querySelector(".featured-spotlight");
+    const dots = document.querySelector(".featured-dots");
+    const toggle = document.querySelector("[data-featured-toggle]");
+    if (!spotlight || !dots || !toggle) return render(true);
+    const focusedDot = document.activeElement && document.activeElement.matches(".featured-dot");
+    const focusedToggle = document.activeElement === toggle;
+    spotlight.outerHTML = featuredSpotlight();
+    dots.innerHTML = featuredDots();
+    toggle.outerHTML = featuredToggle();
+    if (focusedDot) dots.querySelector(".featured-dot.is-active").focus();
+    if (focusedToggle) document.querySelector("[data-featured-toggle]").focus();
   }
 
   function applyBrowseFilters() {
@@ -887,7 +931,7 @@
     const themeButton = event.target.closest("[data-theme-toggle]");
     if (themeButton) {
       state.theme = state.theme === "dark" ? "light" : "dark";
-      localStorage.setItem("jwc-theme", state.theme);
+      try { localStorage.setItem("jwc-theme", state.theme); } catch (error) { /* Optional preference. */ }
       render();
       return;
     }
@@ -918,7 +962,15 @@
       } else {
         state.featuredIndex = (state.featuredIndex + Number(featuredButton.dataset.featuredStep) + data.featuredFindings.length) % data.featuredFindings.length;
       }
-      updateFeaturedHash();
+      window.clearInterval(featuredTimer);
+      updateFeatured();
+      return;
+    }
+
+    if (event.target.closest("[data-featured-toggle]")) {
+      state.featuredPaused = !state.featuredPaused;
+      updateFeatured();
+      startFeaturedTimer();
       return;
     }
 
