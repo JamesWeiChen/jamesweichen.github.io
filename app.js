@@ -448,11 +448,12 @@
           </button>`,
       )
       .join("");
-    const allPapers = [...data.publications, ...data.workingPapers];
+    // Card counts and the list both use the theme-filtered set so they always agree.
+    const allPapers = [...data.publications, ...data.workingPapers].filter(
+      (paper) => !theme || paper.theme === theme.id,
+    );
     const visible = allPapers.filter(
-      (paper) =>
-        (state.researchMethod === "all" || paper.method === state.researchMethod) &&
-        (!theme || paper.theme === theme.id),
+      (paper) => state.researchMethod === "all" || paper.method === state.researchMethod,
     );
     const themeNotice = theme
       ? `
@@ -478,7 +479,7 @@
       <main id="main-content" class="page-shell inner-page">
         ${researchSubnav()}
         <header class="page-intro">
-          <p class="eyebrow">Methods atlas · ${data.publications.length + data.workingPapers.length} projects</p>
+          <p class="eyebrow">Methods atlas · ${allPapers.length} projects</p>
           <h1>${t("mapTitle")}</h1>
           <p>${t("mapIntro")}</p>
         </header>
@@ -991,6 +992,10 @@
     applyBrowseFilters();
   });
 
-  window.addEventListener("hashchange", () => render());
+  window.addEventListener("hashchange", () => {
+    // A new route or research area starts from all methods, so a stale method never empties the list.
+    state.researchMethod = "all";
+    render();
+  });
   render();
 })();
