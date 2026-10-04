@@ -226,7 +226,7 @@
         authors: "Wei James Chen, Meng-Jhang Fong, and Po-Hsuan Lin",
         venue: "Experimental Economics, 28(3), 804-831",
         link: "https://www.cambridge.org/core/journals/experimental-economics/article/measuring-higherorder-rationality-with-belief-control/1A47976B734D6647D7D2B1FC4CF5AC0E",
-        theme: "learning",
+        themes: ["learning"],
         method: "behavioral",
       },
       {
@@ -236,7 +236,7 @@
         authors: "Miloš Fišar, Ben Greiner, Christoph Huber, Elena Katok, Ali I. Ozkes, and the Management Science Reproducibility Collaboration",
         venue: "Management Science, 70(3), 1343-1356",
         link: "https://doi.org/10.1287/mnsc.2023.03556",
-        theme: "institutions",
+        themes: ["institutions"],
         method: "metascience",
       },
       {
@@ -246,7 +246,7 @@
         authors: "Wei James Chen and Joseph Tao-yi Wang",
         venue: "Theory and Decision, 89, 151-156",
         link: "https://link.springer.com/article/10.1007/s11238-020-09757-1",
-        theme: "learning",
+        themes: ["learning"],
         method: "behavioral",
       },
       {
@@ -256,7 +256,7 @@
         authors: "Wei James Chen and Ian Krajbich",
         venue: "Proceedings of the National Academy of Sciences, 114(18), 4637-4642",
         link: "https://www.pnas.org/doi/10.1073/pnas.1618161114",
-        theme: "process",
+        themes: ["learning", "process", "computation"],
         method: "computational",
       },
       {
@@ -266,7 +266,7 @@
         authors: "Wei Chen, Shu-Yu Liu, Chih-Han Chen, and Yi-Shan Lee",
         venue: "Games, 2(1), 187-199",
         link: "https://www.mdpi.com/2073-4336/2/1/187",
-        theme: "learning",
+        themes: ["learning", "computation"],
         method: "computational",
       },
     ],
@@ -278,7 +278,7 @@
         title: "Research Design as Evidence: Information and Incentives in Peer Review",
         authors: "Wei-Cheng Chen, Wei James Chen, and Greg Chih-Hsin Sheen",
         venue: "Working paper",
-        theme: "institutions",
+        themes: ["institutions"],
         method: "metascience",
       },
       {
@@ -287,7 +287,7 @@
         title: "From Individuals to Populations: Eliciting Human Behaviour from Large Language Models",
         authors: "Zhi-Hong Howie Jian and Wei James Chen",
         venue: "Working paper",
-        theme: "computation",
+        themes: ["computation"],
         method: "computational",
         abstract: "When using large language models (LLMs) to simulate population-level human behaviour, researchers typically generate one decision per model call, a procedure we call atomic elicitation. We propose chunked elicitation, in which each call simulates multiple participants and returns their decisions. Across several widely studied economic games and frontier LLMs, chunked elicitation substantially improves distributional fit to human benchmarks. Control tasks show that this improvement is not merely due to indiscriminate noise. The elicitation protocol therefore shapes how closely LLM outputs match human behavioural distributions and should itself be validated.",
       },
@@ -297,7 +297,7 @@
         title: "The Transparent-Door Monty Hall Problem: An Experimental Study of Learning and Bias",
         authors: "Wei James Chen and Joseph Tao-yi Wang",
         venue: "R&R, Journal of Economic Psychology",
-        theme: "learning",
+        themes: ["learning"],
         method: "behavioral",
       },
       {
@@ -306,7 +306,7 @@
         title: "Cap or Tax? Experimental Evidence on Carbon Policy under Market Power and Real Emissions",
         authors: "Wei James Chen and Ya-Ting Chuang",
         venue: "Working paper",
-        theme: "institutions",
+        themes: ["institutions"],
         method: "behavioral",
       },
       {
@@ -315,7 +315,7 @@
         title: "Third-Party Litigation Funding on Settlement: An Experimental Study",
         authors: "Wei James Chen and Wei-Cheng Chen",
         venue: "Working paper",
-        theme: "institutions",
+        themes: ["institutions"],
         method: "behavioral",
       },
       {
@@ -324,7 +324,7 @@
         title: "Interactive Game-Based Pedagogy: A Quasi-Experimental Study in Microeconomics",
         authors: "Wei James Chen, Zhi Li, and Joseph Tao-yi Wang",
         venue: "R&R, International Review of Economics Education",
-        theme: "institutions",
+        themes: ["learning", "institutions"],
         method: "field",
       },
       {
@@ -333,7 +333,7 @@
         title: "Modeling Epiphany Learning Behavior in the Two-Person Beauty Contest",
         authors: "Wei James Chen and Meng-Jhang Fong",
         venue: "Working paper",
-        theme: "learning",
+        themes: ["learning", "computation"],
         method: "computational",
       },
       {
@@ -342,7 +342,7 @@
         title: "Pupil Dilation Amplifies Gaze Bias in Value-Based Choice",
         authors: "Wei James Chen and Ian Krajbich",
         venue: "Working paper",
-        theme: "process",
+        themes: ["learning", "process"],
         method: "tracking",
       },
       {
@@ -351,7 +351,7 @@
         title: "“Will” It Be Seen? Using Eye Tracking to Reexamine the Future Tense Effect in Intertemporal Choices",
         authors: "Jiang-Shiang Hu, Josie I Chen, and Wei James Chen",
         venue: "Working paper",
-        theme: "process",
+        themes: ["learning", "process"],
         method: "tracking",
       },
       {
@@ -360,7 +360,7 @@
         title: "Exploring the Impact of Representative Systems on Decision Making",
         authors: "Ching-Yuan Kao and Wei James Chen",
         venue: "Working paper",
-        theme: "institutions",
+        themes: ["institutions"],
         method: "behavioral",
       },
       {
@@ -369,7 +369,7 @@
         title: "A Broader Window of Cognition: Eye Tracking and Mouse Tracking in Spatial Beauty Contest Games",
         authors: "Yu-Hsiang Wang, Joseph Tao-yi Wang, and Wei James Chen",
         venue: "Working paper",
-        theme: "process",
+        themes: ["learning", "process"],
         method: "tracking",
       },
       {
@@ -378,7 +378,7 @@
         title: "Does Combining General Election and Electoral Referendum Increase Voter Turnout?",
         authors: "Yu-Pei Chen, Wei James Chen, and Greg Chih-Hsin Sheen",
         venue: "Working paper",
-        theme: "institutions",
+        themes: ["institutions"],
         method: "behavioral",
       },
       {
@@ -387,7 +387,7 @@
         title: "Does Disaster Relief Encourage High-Risk Planting? Evidence from Banana Farmers’ Planting Timing in Taiwan",
         authors: "Wei James Chen and Yan Han",
         venue: "R&R, Taiwan Economic Forecast and Policy",
-        theme: "institutions",
+        themes: ["institutions"],
         method: "field",
       },
     ],

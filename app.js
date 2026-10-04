@@ -450,7 +450,7 @@
       .join("");
     // Card counts and the list both use the theme-filtered set so they always agree.
     const allPapers = [...data.publications, ...data.workingPapers].filter(
-      (paper) => !theme || paper.theme === theme.id,
+      (paper) => !theme || paper.themes.includes(theme.id),
     );
     const visible = allPapers.filter(
       (paper) => state.researchMethod === "all" || paper.method === state.researchMethod,
