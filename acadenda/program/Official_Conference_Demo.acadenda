@@ -1,0 +1,147 @@
+{
+  "acadenda": {
+    "version": 1,
+    "exportedAt": "2026-10-05T12:00:00Z"
+  },
+  "conference": {
+    "name": "Open Scholarship Conference 2027",
+    "shortName": "OSC 2027",
+    "venue": "Harbour Convention Centre",
+    "city": "Kaohsiung",
+    "startDate": "2027-03-18",
+    "endDate": "2027-03-19"
+  },
+  "days": [
+    {
+      "label": "Thursday, March 18",
+      "date": "2027-03-18",
+      "items": [
+        {
+          "id": "10000000-0000-4000-8000-000000000001",
+          "kind": "registration",
+          "title": "Registration",
+          "room": "Level 1 Foyer",
+          "chair": "",
+          "startTime": "08:30",
+          "endTime": "09:00",
+          "sourcePage": 1,
+          "talks": []
+        },
+        {
+          "id": "10000000-0000-4000-8000-000000000002",
+          "kind": "keynote",
+          "title": "Opening Keynote",
+          "room": "Harbour Hall",
+          "chair": "",
+          "startTime": "09:00",
+          "endTime": "10:00",
+          "sourcePage": 1,
+          "talks": [
+            {
+              "id": "20000000-0000-4000-8000-000000000001",
+              "title": "Knowledge Without Borders",
+              "speaker": "Professor Maya Lin",
+              "affiliation": "Pacific Open Research Institute",
+              "coauthors": [],
+              "startTime": "09:00",
+              "endTime": "10:00"
+            }
+          ]
+        },
+        {
+          "id": "10000000-0000-4000-8000-000000000003",
+          "kind": "coffeeBreak",
+          "title": "Coffee Break",
+          "room": "Level 2 Foyer",
+          "chair": "",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "sourcePage": 1,
+          "talks": []
+        },
+        {
+          "id": "10000000-0000-4000-8000-000000000004",
+          "kind": "parallelSession",
+          "title": "Open Data and Reproducibility",
+          "room": "Room 201",
+          "chair": "Dr Daniel Wu",
+          "startTime": "10:30",
+          "endTime": "12:00",
+          "sourcePage": 2,
+          "talks": [
+            {
+              "id": "20000000-0000-4000-8000-000000000002",
+              "title": "A Practical Framework for Reproducible Field Research",
+              "speaker": "Dr Sofia Chen",
+              "affiliation": "Formosa University",
+              "coauthors": [
+                "Alex Morgan",
+                "Priya Nair"
+              ],
+              "startTime": "10:30",
+              "endTime": "11:00"
+            },
+            {
+              "id": "20000000-0000-4000-8000-000000000003",
+              "title": "Community Archives as Shared Infrastructure",
+              "speaker": "Jordan Lee",
+              "affiliation": "Civic Knowledge Lab",
+              "coauthors": [
+                "Emilia Rossi"
+              ],
+              "startTime": "11:00",
+              "endTime": "11:30"
+            },
+            {
+              "id": "20000000-0000-4000-8000-000000000004",
+              "title": "Teaching Transparent Research Workflows",
+              "speaker": "Dr Noah Williams",
+              "affiliation": "East Bay College",
+              "coauthors": [],
+              "startTime": "11:30",
+              "endTime": "12:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Friday, March 19",
+      "date": "2027-03-19",
+      "items": [
+        {
+          "id": "10000000-0000-4000-8000-000000000005",
+          "kind": "workshop",
+          "title": "Building a Sustainable Open Research Plan",
+          "room": "Workshop Studio",
+          "chair": "",
+          "startTime": "09:00",
+          "endTime": "10:30",
+          "sourcePage": 3,
+          "talks": [
+            {
+              "id": "20000000-0000-4000-8000-000000000005",
+              "title": "Building a Sustainable Open Research Plan",
+              "speaker": "Dr Amina Patel",
+              "affiliation": "Global Methods Network",
+              "coauthors": [],
+              "startTime": "",
+              "endTime": ""
+            }
+          ]
+        },
+        {
+          "id": "10000000-0000-4000-8000-000000000006",
+          "kind": "reception",
+          "title": "Closing Reception",
+          "room": "Rooftop Garden",
+          "chair": "",
+          "startTime": "17:00",
+          "endTime": "18:30",
+          "sourcePage": 4,
+          "talks": []
+        }
+      ]
+    }
+  ]
+}

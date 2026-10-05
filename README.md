@@ -49,3 +49,16 @@ the Chinese HTML page while preserving query parameters and the current step.
 A valid URL language overrides the saved preference. Unknown values fall back
 to the main site's saved preference or the guide's existing page language.
 Language switches update the query so refreshing retains the selected language.
+
+The guide's `#qr-samples` section offers two prepared schedule examples from
+`Acadenda/Acadenda/Docs/Samples`. Their stable direct URLs are:
+
+- `https://jamesweichen.github.io/acadenda/program/Official_Conference_Demo.acadenda`
+- `https://jamesweichen.github.io/acadenda/program/Official_Conference_Demo.json`
+
+The QR images encode those complete URLs, not JSON content. Regenerate with
+`python scripts/generate-acadenda-qr.py` after installing `qrcode[pil]` if the
+URLs change. Keep filenames stable so imported conferences can follow updates.
+GitHub Pages serves the raw files; it controls Content-Type by file extension
+and does not support repository-defined response headers. The app's link
+importer reads the response body as JSON regardless of Content-Type.

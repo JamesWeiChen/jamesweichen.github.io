@@ -1,0 +1,105 @@
+{
+  "conference": {
+    "name": "Asia-Pacific Research Methods Forum 2027",
+    "shortName": "APRMF 2027",
+    "venue": "Central Learning Hub",
+    "city": "Taipei",
+    "startDate": "2027-04-09",
+    "endDate": "2027-04-09"
+  },
+  "days": [
+    {
+      "label": "Friday, April 9",
+      "date": "2027-04-09",
+      "items": [
+        {
+          "id": "30000000-0000-4000-8000-000000000001",
+          "kind": "plenary",
+          "title": "Opening Plenary",
+          "room": "Auditorium",
+          "chair": "",
+          "startTime": "09:00",
+          "endTime": "10:00",
+          "sourcePage": 1,
+          "talks": [
+            {
+              "id": "40000000-0000-4000-8000-000000000001",
+              "title": "Evidence, Uncertainty, and Better Decisions",
+              "speaker": "Professor Elena García",
+              "affiliation": "Institute for Evidence Design",
+              "coauthors": [],
+              "startTime": "09:00",
+              "endTime": "10:00"
+            }
+          ]
+        },
+        {
+          "id": "30000000-0000-4000-8000-000000000002",
+          "kind": "session",
+          "title": "New Directions in Causal Inference",
+          "room": "Seminar Room A",
+          "chair": "Professor Samuel Kim",
+          "startTime": "10:30",
+          "endTime": "12:00",
+          "sourcePage": 2,
+          "talks": [
+            {
+              "id": "40000000-0000-4000-8000-000000000002",
+              "title": "Design-Based Inference in Small Samples",
+              "speaker": "Dr Hana Suzuki",
+              "affiliation": "North Coast University",
+              "coauthors": [
+                "Michael Brown"
+              ],
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "id": "40000000-0000-4000-8000-000000000003",
+              "title": "Interpreting Treatment Effects Across Contexts",
+              "speaker": "Dr Lucas Martin",
+              "affiliation": "Metropolitan School of Economics",
+              "coauthors": [],
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "id": "40000000-0000-4000-8000-000000000004",
+              "title": "Communicating Identification Assumptions",
+              "speaker": "Mei Huang",
+              "affiliation": "Social Data Collaborative",
+              "coauthors": [
+                "Owen Clark",
+                "Fatima Zahra"
+              ],
+              "startTime": "",
+              "endTime": ""
+            }
+          ]
+        },
+        {
+          "id": "30000000-0000-4000-8000-000000000003",
+          "kind": "lunch",
+          "title": "Networking Lunch",
+          "room": "Commons",
+          "chair": "",
+          "startTime": "12:00",
+          "endTime": "13:30",
+          "sourcePage": 2,
+          "talks": []
+        },
+        {
+          "id": "30000000-0000-4000-8000-000000000004",
+          "kind": "posterSession",
+          "title": "Poster Session and Methods Clinic",
+          "room": "Exhibition Hall",
+          "chair": "Dr Olivia Tan",
+          "startTime": "14:00",
+          "endTime": "15:30",
+          "sourcePage": 3,
+          "talks": []
+        }
+      ]
+    }
+  ]
+}
