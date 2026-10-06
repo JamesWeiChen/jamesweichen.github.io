@@ -5,7 +5,17 @@
     "venue": "Central Learning Hub",
     "city": "Taipei",
     "startDate": "2027-04-09",
-    "endDate": "2027-04-09"
+    "endDate": "2027-04-09",
+    "maps": [
+      {
+        "title": "一樓會場配置圖",
+        "imageURL": "https://jamesweichen.github.io/acadenda/images/maps/demo-venue-level-1.png"
+      },
+      {
+        "title": "校園交通圖",
+        "imageURL": "https://jamesweichen.github.io/acadenda/images/maps/demo-campus-transport.png"
+      }
+    ]
   },
   "days": [
     {

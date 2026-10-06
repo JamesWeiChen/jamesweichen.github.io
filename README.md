@@ -62,3 +62,14 @@ URLs change. Keep filenames stable so imported conferences can follow updates.
 GitHub Pages serves the raw files; it controls Content-Type by file extension
 and does not support repository-defined response headers. The app's link
 importer reads the response body as JSON regardless of Content-Type.
+
+Both website schedule samples include `conference.maps` pointing to the two
+original fictional PNG diagrams in `acadenda/images/maps/`. They share the
+same map URLs and retain their existing schedule IDs and download URLs, so
+the existing QR codes still import the updated samples. The source files in
+the Acadenda app repository are not changed.
+
+Regenerate the diagrams with `python scripts/generate-acadenda-maps.py`
+(Pillow required; the script uses macOS's Arial Unicode font). Each image is
+1800 × 1200 pixels and under 100 KB. They are fictional testing illustrations,
+not real venue plans or navigation directions.
