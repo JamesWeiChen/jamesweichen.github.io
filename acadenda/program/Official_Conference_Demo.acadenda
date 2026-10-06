@@ -12,12 +12,12 @@
     "endDate": "2027-03-19",
     "maps": [
       {
-        "title": "一樓會場配置圖",
-        "imageURL": "https://jamesweichen.github.io/acadenda/images/maps/demo-venue-level-1.png"
+        "title": "Level 1 Venue Plan",
+        "imageURL": "https://jamesweichen.github.io/acadenda/images/maps/demo-venue-level-1-en.png"
       },
       {
-        "title": "校園交通圖",
-        "imageURL": "https://jamesweichen.github.io/acadenda/images/maps/demo-campus-transport.png"
+        "title": "Campus Transport Map",
+        "imageURL": "https://jamesweichen.github.io/acadenda/images/maps/demo-campus-transport-en.png"
       }
     ]
   },

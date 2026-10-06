@@ -52,7 +52,7 @@ room(d,(1541,745,1702,975),'Lift','', '#e8e7ed')
 d.rectangle((650,970,855,1025),fill='white');arrow(d,[(751,1070),(751,929)])
 text(d,(915,1052),'Main entrance',28,TEAL)
 text(d,(104,1052),'Interior above',22,MUTED)
-im.save(OUT/'demo-venue-level-1.png',optimize=True)
+im.save(OUT/'demo-venue-level-1-en.png',optimize=True)
 
 im,d=base('Campus Transport Map','Campus transport & venue locations · Fictional campus', '02')
 d.rounded_rectangle((64,235,1736,1058),radius=22,fill='#e4ede0',outline='#bccfbd',width=3)
@@ -78,7 +78,7 @@ text(d,(918,1015),'South gate',25,TEAL,'mm')
 text(d,(755,701),'Walking route',22,TEAL,'mm')
 # North arrow in the unused east margin.
 arrow(d,[(1610,386),(1610,286)],INK,6);text(d,(1610,254),'N',25,INK,'mm')
-im.save(OUT/'demo-campus-transport.png',optimize=True)
+im.save(OUT/'demo-campus-transport-en.png',optimize=True)
 for path in OUT.glob('*.png'):
     with Image.open(path) as image:
         assert image.width*image.height<120_000_000

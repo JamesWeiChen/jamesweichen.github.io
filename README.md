@@ -71,5 +71,7 @@ the Acadenda app repository are not changed.
 
 Regenerate the diagrams with `python scripts/generate-acadenda-maps.py`
 (Pillow required; the script uses macOS's Arial Unicode font). Each image is
-1800 × 1200 pixels and under 100 KB. They are fictional testing illustrations,
+1800 × 1200 pixels and under 100 KB. The map labels are English-only; the `-en.png` URLs ensure browsers and the app
+load this version instead of cached bilingual images. The original image URLs
+remain available for older imports. They are fictional testing illustrations,
 not real venue plans or navigation directions.
