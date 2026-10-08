@@ -31,8 +31,9 @@ footer { color:var(--muted); font-size:.9rem; padding:0 12px 20px; }
 <p>Acadenda is a conference agenda and note-taking app. You do not need an Acadenda account. Imported agendas, saved map images, favorites, talk and person notes, research interests, followed people, timer settings, reminder preferences, and local support history are stored on your device.</p>
 <p>The app uses this information to display your agenda, match talks to your research interests locally, keep your notes, and provide timers and reminders. These local notes and research profiles are not sent to an Acadenda server. This Android version has no cloud synchronization, advertising service, or developer-operated analytics service.</p>
 <h2>Files, QR codes and notifications</h2>
-<p>The app reads agenda files or images you choose through Android's file picker. If you choose QR scanning, camera access is used to read the code locally; camera frames are not uploaded by Acadenda. A scanned download link is handled as described below.</p>
-<p>Optional notifications provide reminders for starred conference events. Reminder scheduling uses the conference timezone and Android notification settings. You can disable notifications or camera access in Android settings. The app does not request device location or address-book access.</p>
+<p>The app reads agenda files, photos and contact cards that you select through Android's pickers. You can attach up to ten photos to a note or take a photo using a camera app. Imported note photos are resized, oriented and stored as JPEG files in private app storage, without the original EXIF metadata. QR codes and contact cards are decoded locally; Acadenda does not upload your photos, camera frames, contact cards or contact reminders. A scanned agenda download link is handled as described below.</p>
+<p>Your academic card is stored separately from People. Sharing a QR image or VCF file sends only the fields you selected (including the required name) to the app or recipient you choose. Recipients retain their own copies, which cannot be updated or deleted remotely by Acadenda. Temporary capture and sharing files may remain in app cache until cleanup or Android removes them.</p>
+<p>Optional notifications provide reminders for starred conference events and contact follow-ups. Conference reminders use the conference timezone; contact reminder times are entered in the device timezone and stored as a fixed instant. Android may delay notifications for battery management. You can disable notifications or camera access in Android settings. The app does not request device location or address-book access.</p>
 <h2>Downloads you request</h2>
 <p>When you import an agenda or download a map from a URL, or choose to check a conference for updates, the app connects to the server at that URL. Download connections use HTTPS. The receiving server can see normal connection information such as your IP address, request time, and the requested path or query parameters, including information already contained in the URL.</p>
 <p>The app does not add your local notes or research profile to these requests. The operator of the selected server controls its own logs and retention; consult that operator's privacy policy. Choose links from sources you trust.</p>
@@ -54,8 +55,9 @@ footer { color:var(--muted); font-size:.9rem; padding:0 12px 20px; }
 <p>Acadenda 是研討會議程與筆記應用程式，不需要建立 Acadenda 帳號。 匯入的議程、儲存的地圖圖片、收藏、報告與人物筆記、研究興趣、 追蹤人物、計時器設定、提醒偏好及支持紀錄，均儲存在你的裝置上。</p>
 <p>這些資料用於顯示議程、在本機比對報告與研究興趣、保存筆記， 以及提供計時器與提醒。本機筆記與研究資料不會傳送至 Acadenda 伺服器。此 Android 版本沒有雲端同步、廣告服務或開發者自行營運 的使用分析服務。</p>
 <h2>檔案、QR code 與通知</h2>
-<p>App 透過 Android 檔案選擇器讀取你選取的議程檔案或圖片。 選擇 QR 掃描時，相機僅用於本機辨識代碼，Acadenda 不會上傳 相機影像。掃描所得的下載連結依下方「下載」說明處理。</p>
-<p>選用的通知功能會提醒已收藏的會議活動，排程依會議時區及 Android 通知設定處理。你可以在 Android 設定中停用通知或相機權限。 App 不要求裝置定位或通訊錄存取權限。</p>
+<p>App 透過 Android 選擇器讀取你選取的議程檔案、照片及聯絡人名片。 每篇筆記可附加最多十張照片，也可使用相機 App 拍照。匯入照片會 縮圖、修正方向並轉為 JPEG，儲存於 App 私有空間，不保留原始 EXIF 資料。 QR code 與名片都在本機辨識；Acadenda 不會上傳照片、相機影像、 名片或聯絡提醒。議程 QR code 的下載連結依下方「下載」說明處理。</p>
+<p>我的學術名片與人物資料分開保存。分享 QR 圖片或 VCF 時，只有你 選取的欄位（包括固定分享的姓名）會交給指定的 App 或接收者。 接收者會保有獨立副本，Acadenda 無法遠端更新或刪除。拍照及分享的 暫存檔可能保留於 App 快取，直到清理或由 Android 移除。</p>
+<p>選用通知可提醒已收藏的會議活動及人物聯絡事項。會議提醒使用會議 時區；聯絡提醒依裝置時區輸入，並儲存為固定時間點。Android 省電 機制可能延後通知。你可以在 Android 設定中停用通知或相機權限。 App 不要求裝置定位或通訊錄存取權限。</p>
 <h2>你主動要求的下載</h2>
 <p>透過網址匯入議程、下載地圖或自行檢查議程更新時，App 會連線至 該網址的伺服器，下載連線使用 HTTPS。接收端可能看見一般連線資訊， 例如 IP 位址、請求時間、網址路徑及查詢參數，包括網址本身已有的資訊。</p>
 <p>App 不會在這些請求中加入你的本機筆記或研究資料。 所選伺服器的營運者自行決定紀錄與保存方式，請參閱對方的隱私政策， 並使用你信任的來源。</p>
