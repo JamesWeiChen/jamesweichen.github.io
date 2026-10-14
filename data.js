@@ -20,6 +20,7 @@
       orcid: "https://orcid.org/0000-0001-6360-9348",
       crossing: "https://crossing.cw.com.tw/author/1596",
       facebook: "https://www.facebook.com/profile.php?id=100045836090802",
+      linkedin: "https://www.linkedin.com/in/wei-chen-phd-a30036184/",
       cv: "./cv-wei.pdf",
       distinction: {
         years: "2020–2024",

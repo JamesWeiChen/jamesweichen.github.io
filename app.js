@@ -40,6 +40,7 @@
       crossing: "Crossing Column",
       department: "Department",
       facebook: "Facebook",
+      linkedin: "LinkedIn",
       researchIntro: "We study economic decisions as they happen - from attention and learning to the institutions that shape behavior.",
       selected: "At a glance",
       publications: "publications",
@@ -110,6 +111,7 @@
       crossing: "換日線專欄",
       department: "系所網站",
       facebook: "Facebook",
+      linkedin: "LinkedIn",
       researchIntro: "我們研究經濟決策如何形成，包括注意力、學習，以及制度如何影響行為。",
       selected: "研究概覽",
       publications: "篇已發表論文",
@@ -233,6 +235,7 @@
         <a href="${data.profile.crossing}" target="_blank" rel="noreferrer"><span class="material-symbols-rounded hero-link-icon" aria-hidden="true">article</span><span>${t("crossing")}</span><span aria-hidden="true">↗</span></a>
         <a href="${data.profile.department}" target="_blank" rel="noreferrer"><span class="material-symbols-rounded hero-link-icon" aria-hidden="true">account_balance</span><span>${t("department")}</span><span aria-hidden="true">↗</span></a>
         <a href="${data.profile.facebook}" target="_blank" rel="noreferrer"><span class="material-symbols-rounded hero-link-icon" aria-hidden="true">public</span><span>${t("facebook")}</span><span aria-hidden="true">↗</span></a>
+        <a href="${data.profile.linkedin}" target="_blank" rel="noreferrer"><span class="material-symbols-rounded hero-link-icon" aria-hidden="true">work</span><span>${t("linkedin")}</span><span aria-hidden="true">↗</span></a>
         <a href="${data.profile.cv}" target="_blank" rel="noreferrer"><span class="material-symbols-rounded hero-link-icon" aria-hidden="true">description</span><span>${t("download")}</span><span aria-hidden="true">↗</span></a>
       </div>`;
   }
