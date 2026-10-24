@@ -17,7 +17,7 @@ with tempfile.TemporaryDirectory() as tmp:
     site = Path(tmp)/'site'
     shutil.copytree(ROOT/'acadenda/conferences', site/'acadenda/conferences')
     shutil.copytree(ROOT/'acadenda/program', site/'acadenda/program')
-    for name in ('site-preferences.js', 'index.html', 'app.js', 'data.js', 'styles.css'):
+    for name in ('site-preferences.js', 'preferences.css', 'index.html', 'app.js', 'data.js', 'styles.css'):
         shutil.copy2(ROOT/name, site/name)
     (site/'acadenda/images').symlink_to(ROOT/'acadenda/images', target_is_directory=True)
     for name in ('guide.html', 'guide-zh.html', 'guide.js', 'guide.css'):
@@ -83,7 +83,7 @@ with tempfile.TemporaryDirectory() as tmp:
             page.emulate_media(color_scheme='light')
             page.wait_for_function("getComputedStyle(document.body).backgroundColor === 'rgb(243, 241, 236)'")
             page.locator('#changes').fill('Preserve this draft')
-            page.locator('[data-language="en"]').click()
+            page.locator('#language').select_option('en')
             page.locator('article').first.wait_for()
             assert page.locator('html').get_attribute('lang') == 'en'
             assert page.locator('#copy-link').inner_text() == 'Copy program link'
@@ -100,7 +100,7 @@ with tempfile.TemporaryDirectory() as tmp:
             page.wait_for_function("getComputedStyle(document.body).backgroundColor === 'rgb(16, 20, 17)'")
             assert page.evaluate('document.documentElement.scrollWidth <= window.innerWidth')
             page.screenshot(path='/tmp/acadenda-site-english-dark.png', full_page=True)
-            page.locator('[data-language="zh"]').click()
+            page.locator('#language').select_option('zh')
             page.locator('article').first.wait_for()
             assert page.locator('#copy-link').inner_text() == '複製議程連結'
             # Carry language and system theme from conference to main site and guide.
@@ -109,7 +109,7 @@ with tempfile.TemporaryDirectory() as tmp:
             assert page.locator('html').get_attribute('lang') == 'zh-Hant'
             page.emulate_media(color_scheme='light')
             page.wait_for_function("document.documentElement.dataset.theme === 'light'")
-            page.locator('.app-guide-button').click()
+            page.locator('.app-guide-panel[aria-labelledby="app-guide-title"] .app-guide-button').click()
             page.locator('#guide-theme').wait_for()
             assert 'guide-zh.html' in page.url
             assert page.locator('html').get_attribute('data-theme') == 'light'
@@ -145,7 +145,7 @@ with tempfile.TemporaryDirectory() as tmp:
                 assert check.locator('html').get_attribute('lang') != expected
                 check.locator('[data-language-select]').select_option('system')
                 assert check.locator('html').get_attribute('lang') == expected
-                check.locator('.app-guide-button').click()
+                check.locator('.app-guide-panel[aria-labelledby="app-guide-title"] .app-guide-button').click()
                 check.locator('#guide-language').wait_for()
                 assert check.locator('#guide-language').input_value() == 'system'
                 assert check.evaluate('document.documentElement.scrollWidth <= window.innerWidth'), 'guide ' + locale
@@ -153,7 +153,12 @@ with tempfile.TemporaryDirectory() as tmp:
                 check.locator('a[href*="conferences/official-demo/"]').click()
                 check.locator('article').first.wait_for()
                 assert check.locator('html').get_attribute('lang') == expected
-                assert check.locator('[data-language="system"]').get_attribute('aria-current') == 'page'
+                assert check.locator('#language').input_value() == 'system'
+                check.locator('#developer-link').click()
+                check.locator('.app-demo-button').click()
+                check.locator('article').first.wait_for()
+                assert check.locator('#language').input_value() == 'system'
+                assert check.locator('html').get_attribute('lang') == expected
                 if locale == 'zh-TW':
                     check.goto(f'http://127.0.0.1:{server.server_port}/?lang=system#/apps')
                     check.locator('[data-language-select]').wait_for()

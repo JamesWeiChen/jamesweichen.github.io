@@ -1,5 +1,6 @@
 'use strict';
 const english = {
+  "語言": "Language",
   "網站導覽": "Site navigation",
   "Acadenda 使用教學": "Acadenda guide",
   "開發者網站 ↗": "Developer website ↗",

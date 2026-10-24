@@ -754,6 +754,14 @@
             <p>${state.lang === "en" ? "Turn your program PDF into a schedule in seven illustrated steps." : "跟著 7 個圖文步驟，把議程 PDF 變成行程。"}</p>
           </div>
           <a class="app-guide-button" href="${state.lang === "en" ? "./acadenda/guide.html" : "./acadenda/guide-zh.html"}?lang=${window.sitePreferences.languageMode}">${state.lang === "en" ? "Step-by-step guide" : "圖文使用教學"}<span aria-hidden="true">→</span></a>
+        </aside>
+        <aside class="app-guide-panel" aria-labelledby="app-demo-title">
+          <span class="app-guide-icon" aria-hidden="true">▦</span>
+          <div class="app-guide-copy">
+            <h3 id="app-demo-title">${state.lang === "en" ? "Explore a sample conference" : "看看示範會議"}</h3>
+            <p>${state.lang === "en" ? "Browse a fictional program, view venue maps, and try importing it into Acadenda." : "瀏覽虛構會議議程、查看會場地圖，並試著匯入 Acadenda。"}</p>
+          </div>
+          <a class="app-demo-button app-guide-button" href="./acadenda/conferences/official-demo/?lang=${window.sitePreferences.languageMode}">${state.lang === "en" ? "View demo program" : "查看示範議程"}<span aria-hidden="true">→</span></a>
         </aside>` : ""}
             </article>`).join("")}
         </section>

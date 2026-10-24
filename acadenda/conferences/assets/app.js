@@ -9,17 +9,13 @@ for (const attribute of ['aria-label', 'alt', 'placeholder']) {
 
 document.getElementById('guide-link').href = (window.conferenceLanguage === 'en' ? '../../guide.html' : '../../guide-zh.html') + '?lang=' + window.sitePreferences.languageMode;
 document.getElementById('developer-link').href = `../../../?lang=${window.sitePreferences.languageMode}#/apps`;
-for (const link of document.querySelectorAll('[data-language]')) {
-  const url = new URL(location.href); url.searchParams.set('lang', link.dataset.language);
-  link.href = url.href;
-  if (link.dataset.language === window.sitePreferences.languageMode) link.setAttribute('aria-current', 'page');
-  // Preserve a partially written change request when switching language.
-  link.addEventListener('click', event => {
-    event.preventDefault();
-    try { sessionStorage.setItem('acadenda-changes:' + location.pathname, document.getElementById('changes').value); } catch {}
-    location.href = link.href;
-  });
-}
+const languagePicker = document.getElementById('language');
+languagePicker.value = window.sitePreferences.languageMode;
+languagePicker.addEventListener('change', () => {
+  try { sessionStorage.setItem('acadenda-changes:' + location.pathname, document.getElementById('changes').value); } catch {}
+  window.sitePreferences.setLanguage(languagePicker.value);
+  location.reload();
+});
 try { document.getElementById('changes').value = sessionStorage.getItem('acadenda-changes:' + location.pathname) || ''; } catch {}
 const themePicker = document.getElementById('theme');
 themePicker.value = window.sitePreferences.theme;
