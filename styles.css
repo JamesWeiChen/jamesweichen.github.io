@@ -2181,3 +2181,10 @@ h3 {
   .guide-header nav{flex-wrap:wrap}
 }
 .nav-links .nav-link{white-space:nowrap;flex-shrink:0}
+
+.conference-demo-callout{margin-top:28px;max-width:760px;padding:24px;border:1px solid var(--line);border-left:4px solid var(--green);border-radius:12px;background:var(--paper-deep)}
+.conference-demo-callout h2{margin:0 0 10px;font:600 20px/1.4 var(--sans);letter-spacing:0}
+.page-intro .conference-demo-callout p{margin:0 0 20px;font:16px/1.65 var(--sans);color:var(--muted)}
+.conference-demo-callout .app-demo-button{gap:24px;min-height:48px;padding:14px 22px;border-radius:8px;background:var(--green);color:var(--paper);font-size:16px}
+.conference-demo-callout .app-demo-button:hover{filter:brightness(1.08)}
+.conference-demo-callout .app-demo-button:focus-visible{outline:3px solid var(--green);outline-offset:4px}

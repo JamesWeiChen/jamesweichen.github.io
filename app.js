@@ -735,6 +735,11 @@
           <p class="eyebrow">${state.lang === "en" ? "Independent projects" : "個人作品"}</p>
           <h1>${t("appsTitle")}</h1>
           <p>${t("appsIntro")}</p>
+          <aside class="conference-demo-callout" aria-labelledby="app-demo-title">
+            <h2 id="app-demo-title">${state.lang === "en" ? "Acadenda for conference organizers" : "Acadenda・給會議主辦方"}</h2>
+            <p>${state.lang === "en" ? "See how your conference program can look online, with venue maps and a link attendees can import into Acadenda." : "看看會議議程如何呈現在網頁上，搭配會場地圖，以及讓與會者匯入 Acadenda 的連結。"}</p>
+            <a class="app-demo-button button-link" href="./acadenda/conferences/official-demo/?lang=${window.sitePreferences.languageMode}">${state.lang === "en" ? "View demo program" : "查看示範議程"}<span aria-hidden="true">→</span></a>
+          </aside>
         </header>
         <section class="apps-grid" aria-label="${t("appsTitle")}">
           ${apps.map((app) => `
@@ -755,14 +760,7 @@
           </div>
           <a class="app-guide-button" href="${state.lang === "en" ? "./acadenda/guide.html" : "./acadenda/guide-zh.html"}?lang=${window.sitePreferences.languageMode}">${state.lang === "en" ? "Step-by-step guide" : "圖文使用教學"}<span aria-hidden="true">→</span></a>
         </aside>
-        <aside class="app-guide-panel" aria-labelledby="app-demo-title">
-          <span class="app-guide-icon" aria-hidden="true">▦</span>
-          <div class="app-guide-copy">
-            <h3 id="app-demo-title">${state.lang === "en" ? "Explore a sample conference" : "看看示範會議"}</h3>
-            <p>${state.lang === "en" ? "Browse a fictional program, view venue maps, and try importing it into Acadenda." : "瀏覽虛構會議議程、查看會場地圖，並試著匯入 Acadenda。"}</p>
-          </div>
-          <a class="app-demo-button app-guide-button" href="./acadenda/conferences/official-demo/?lang=${window.sitePreferences.languageMode}">${state.lang === "en" ? "View demo program" : "查看示範議程"}<span aria-hidden="true">→</span></a>
-        </aside>` : ""}
+` : ""}
             </article>`).join("")}
         </section>
 
