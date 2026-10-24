@@ -86,7 +86,8 @@ function render(program) {
       maps.append(link);
     } catch { /* Ignore invalid map URLs; never turn them into executable links. */ }
   }
-  byID('maps').hidden = !maps.childNodes.length;
+  // Pages with map previews already provide the same image and download links.
+  byID('maps').hidden = !maps.childNodes.length || Boolean(document.querySelector('.map-previews'));
   byID('map-links').replaceChildren(maps);
 }
 async function copyText(text, message) {

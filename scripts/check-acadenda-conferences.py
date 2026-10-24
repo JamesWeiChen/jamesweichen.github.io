@@ -35,7 +35,8 @@ with tempfile.TemporaryDirectory() as tmp:
             page.locator('#schedule article').first.wait_for()
             assert page.locator('#schedule article').count() == 4
             assert page.locator('.talk').count() == 4
-            assert page.locator('#map-links a').count() == 2
+            assert page.locator('#maps').is_hidden()
+            assert page.locator('[data-sample-language="zh"] .map-previews img').count() == 2
             assert page.locator('#sample-note').is_visible()
             assert page.locator('.site-header .nav-link').count() == 7
             assert page.locator('.site-header .brand-zh').inner_text() == '陳暐'
