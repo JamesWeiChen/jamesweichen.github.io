@@ -733,7 +733,7 @@
           <a class="app-guide-button" href="${state.lang === "en" ? "./acadenda/guide.html" : "./acadenda/guide-zh.html"}?lang=${window.sitePreferences.languageMode}">${state.lang === "en" ? "Guide & sample imports" : "查看教學與匯入範例"}<span aria-hidden="true">→</span></a>
         </aside>
         <aside class="app-guide-panel" aria-labelledby="app-organizer-title">
-          <span class="app-guide-icon" aria-hidden="true">▦</span>
+          <span class="app-guide-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4M17 3v4M3 10h18M7 14h2M12 14h5M7 17h2M12 17h5"/></svg></span>
           <div class="app-guide-copy">
             <h3 id="app-organizer-title">${state.lang === "en" ? "For conference organizers" : "給會議主辦方"}</h3>
             <p>${state.lang === "en" ? "Preview a published agenda, venue maps, and the links attendees use to import your program." : "預覽會議議程網頁、會場地圖，以及提供給與會者的議程匯入連結。"}</p>
