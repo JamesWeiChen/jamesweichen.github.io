@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>會議議程 · Acadenda</title>
+<meta name="description" content="查看會議議程，取得 Acadenda 議程連結與 QR Code。">
+<script src="../../../site-preferences.js"></script>
+<script src="../assets/preferences.js"></script>
+<script src="../assets/translations.js"></script>
+<link rel="stylesheet" href="../assets/style.css"><script src="../assets/app.js" defer></script>
+</head>
+<body>
+<main>
+<nav class="site-nav" aria-label="網站導覽" data-i18n-aria-label="網站導覽"><a id="guide-link" href="../../guide-zh.html" data-i18n="Acadenda 使用教學">Acadenda 使用教學</a><a id="developer-link" href="../../../?lang=zh#/apps" data-i18n="開發者網站 ↗">開發者網站 ↗</a></nav>
+<div class="preferences"><nav aria-label="Language"><a href="?lang=system" data-language="system" data-i18n="跟隨系統">跟隨系統</a><a href="?lang=zh" data-language="zh">中文</a><a href="?lang=en" data-language="en">EN</a></nav><label for="theme" data-i18n="外觀">外觀</label><select id="theme"><option value="system" data-i18n="跟隨系統">跟隨系統</option><option value="light" data-i18n="淺色">淺色</option><option value="dark" data-i18n="深色">深色</option></select></div>
+<noscript>請啟用 JavaScript 以顯示議程，或直接開啟 <a href="PROGRAM_PATH" data-i18n="議程 JSON">議程 JSON</a>。</noscript>
+<header><p class="eyebrow">CONFERENCE PROGRAM · ACADENDA</p><h1 id="title" data-i18n="載入議程中…">載入議程中…</h1><p id="details"></p></header>
+<p id="status" role="status" aria-live="polite"></p>
+<section class="access" id="access" hidden>
+<div><h2 data-i18n="在 Acadenda 使用議程">在 Acadenda 使用議程</h2><p data-i18n="複製下方連結，貼到 Acadenda 的議程連結匯入功能。QR Code 包含同一個 JSON 網址。">複製下方連結，貼到 Acadenda 的議程連結匯入功能。QR Code 包含同一個 JSON 網址。</p>
+<a id="program-link" rel="noopener" data-i18n="議程 JSON">議程 JSON</a><div class="buttons"><button id="copy-link" data-i18n="複製議程連結">複製議程連結</button><button id="refresh" data-i18n="重新載入">重新載入</button></div>
+<p class="muted" data-i18n="更新時使用原連結。掃描 QR Code 包含議程網址，可在 Acadenda 的掃描匯入功能使用。">更新時使用原連結。掃描 QR Code 包含議程網址，可在 Acadenda 的掃描匯入功能使用。</p></div>
+<img src="qrcode.svg" alt="議程 JSON 連結 QR Code" data-i18n-alt="議程 JSON 連結 QR Code" width="164" height="164">
+</section>
+<div id="schedule"></div>
+<section id="maps" hidden><h2 data-i18n="會場地圖">會場地圖</h2><div id="map-links"></div></section>
+<details id="operator" hidden><summary data-i18n="營運工具 · 複製 AI 更新指令">營運工具 · 複製 AI 更新指令</summary>
+<p data-i18n="按下按鈕會重新讀取目前已發布的 JSON，再連同固定規則與修改要求一起複製。此頁面沒有上傳或發布權限。">按下按鈕會重新讀取目前已發布的 JSON，再連同固定規則與修改要求一起複製。此頁面沒有上傳或發布權限。</p>
+<label for="changes" data-i18n="本次修改要求">本次修改要求</label><textarea id="changes" rows="5" placeholder="例如：將 Design-Based Inference 改到 14:00，保留其他內容。" data-i18n-placeholder="例如：將 Design-Based Inference 改到 14:00，保留其他內容。"></textarea>
+<button id="copy-prompt" data-i18n="複製更新指令＋目前 JSON">複製更新指令＋目前 JSON</button>
+<label for="copy-fallback" id="fallback-label" hidden data-i18n="自動複製不可用，請全選以下內容後複製：">自動複製不可用，請全選以下內容後複製：</label>
+<textarea id="copy-fallback" rows="10" readonly hidden></textarea>
+</details>
+<footer><p id="sample-note" hidden data-i18n="這是虛構的示範會議，供測試與檢查操作流程使用。">這是虛構的示範會議，供測試與檢查操作流程使用。</p><span data-i18n="議程內容由會議提供方確認；此頁面不會修改正式議程。">議程內容由會議提供方確認；此頁面不會修改正式議程。</span></footer>
+</main>
+</body></html>

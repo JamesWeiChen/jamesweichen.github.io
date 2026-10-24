@@ -10,7 +10,7 @@ This is a static single-page website designed for GitHub Pages:
 - `styles.css` contains the visual system and responsive layout.
 - `data.js` contains the editable profile, publication, people, teaching, and news content.
 - `app.js` renders the pages, hash-based navigation, language switch, and research filters.
-- Dark mode is the default; the theme switch stores each visitor's light/dark preference in their browser.
+- Language and appearance default to the browser/system preference; visitors can select System, Light or Dark and System, 繁體中文 or English. `site-preferences.js` shares these settings across the main site, guide, and conference pages. Only a primary Traditional Chinese browser locale selects Chinese automatically; all others use English.
 - `cv-wei.pdf` is linked directly from the navigation.
 
 There is no database or server. GitHub Pages serves these files directly. To update content, edit `data.js`, commit the change, and push it to GitHub.
@@ -47,7 +47,7 @@ For the main site, place the query before the hash route, for example
 `/?lang=zh#/apps`. For the guide, `acadenda/guide.html?lang=zh` redirects to
 the Chinese HTML page while preserving query parameters and the current step.
 A valid URL language overrides the saved preference. Unknown values fall back
-to the main site's saved preference or the guide's existing page language.
+to the saved preference, then system detection. `?lang=system` explicitly selects automatic language.
 Language switches update the query so refreshing retains the selected language.
 
 The guide's `#qr-samples` section offers two prepared schedule examples from
@@ -75,3 +75,17 @@ Regenerate the diagrams with `python scripts/generate-acadenda-maps.py`
 load this version instead of cached bilingual images. The original image URLs
 remain available for older imports. They are fictional testing illustrations,
 not real venue plans or navigation directions.
+
+## Conference agenda pages
+
+`acadenda/conferences/official-demo/` renders the existing official demo JSON,
+including its venue maps, without changing the JSON or its import URL.
+Both guide pages link to the agenda. The page provides a canonical JSON link,
+a locally generated QR code, and an expandable AI update prompt helper.
+The helper re-fetches the JSON when copying; it cannot edit or publish data.
+
+Use `scripts/create-acadenda-conference.py` to create another conference page
+from a validated JSON in `acadenda/program/`. Each edition keeps its own fixed
+JSON filename and page slug. Shared assets live in `acadenda/conferences/assets/`.
+See [the operator instructions](acadenda/conferences/README.md) for setup,
+preview, update review, and browser checks. No deployment is performed by the tool.

@@ -3,15 +3,8 @@
 
   const data = window.siteData;
   const app = document.querySelector("#app");
-  const requestedLang = new URLSearchParams(window.location.search).get("lang");
-  const urlLang = requestedLang === "zh" || requestedLang === "zh-Hant" ? "zh" : requestedLang === "en" ? "en" : null;
-  let preferredLang = "en";
-  try {
-    preferredLang = localStorage.getItem("jwc-lang") === "zh" ? "zh" : "en";
-    if (urlLang) localStorage.setItem("jwc-lang", urlLang);
-  } catch (error) { /* URL language works even when storage is unavailable. */ }
   const state = {
-    lang: urlLang || preferredLang,
+    lang: window.sitePreferences.language(),
     theme: document.documentElement.dataset.theme === "light" ? "light" : "dark",
     researchMethod: "all",
     featuredIndex: 0,
@@ -207,21 +200,14 @@
             ${linkTo("apps", t("apps"))}
             <a class="nav-link" href="${data.profile.cv}" target="_blank" rel="noreferrer">${t("cv")} ↗</a>
           </div>
-          <button
-            type="button"
-            class="theme-toggle"
-            data-theme-toggle
-            aria-label="${t("switchTheme")}: ${state.theme === "dark" ? t("useLight") : t("useDark") }"
-            title="${t("switchTheme")}: ${state.theme === "dark" ? t("useLight") : t("useDark") }"
-          >
-            <span class="theme-icon" aria-hidden="true">${state.theme === "dark" ? "☼" : "◐"}</span>
-            <span>${state.theme === "dark" ? t("useLight") : t("useDark")}</span>
-          </button>
-          <div class="language-switch" aria-label="Language">
-            <button type="button" data-lang="en" class="${state.lang === "en" ? "is-active" : ""}" lang="en">EN</button>
-            <span aria-hidden="true">/</span>
-            <button type="button" data-lang="zh" class="${state.lang === "zh" ? "is-active" : ""}" lang="zh-Hant">中文</button>
-          </div>
+          <label class="preference-control"><span>${state.lang === 'zh' ? '外觀' : 'Appearance'}</span>
+            <select data-theme-select aria-label="${state.lang === 'zh' ? '外觀' : 'Appearance'}">
+              ${['system','light','dark'].map((mode, index) => `<option value="${mode}" ${window.sitePreferences.theme === mode ? 'selected' : ''}>${(state.lang === 'zh' ? ['跟隨系統','淺色','深色'] : ['System','Light','Dark'])[index]}</option>`).join('')}
+            </select></label>
+          <label class="preference-control"><span>${state.lang === 'zh' ? '語言' : 'Language'}</span>
+            <select data-language-select aria-label="${state.lang === 'zh' ? '語言' : 'Language'}">
+              ${['system','zh','en'].map((mode, index) => `<option value="${mode}" ${window.sitePreferences.languageMode === mode ? 'selected' : ''}>${[state.lang === 'zh' ? '跟隨系統' : 'System','繁體中文','English'][index]}</option>`).join('')}
+            </select></label>
         </nav>
       </header>`;
   }
@@ -767,7 +753,7 @@
             <h3 id="app-guide-title">${state.lang === "en" ? "Getting started with Acadenda?" : "第一次使用 Acadenda？"}</h3>
             <p>${state.lang === "en" ? "Turn your program PDF into a schedule in seven illustrated steps." : "跟著 7 個圖文步驟，把議程 PDF 變成行程。"}</p>
           </div>
-          <a class="app-guide-button" href="${state.lang === "en" ? "./acadenda/guide.html" : "./acadenda/guide-zh.html"}">${state.lang === "en" ? "Step-by-step guide" : "圖文使用教學"}<span aria-hidden="true">→</span></a>
+          <a class="app-guide-button" href="${state.lang === "en" ? "./acadenda/guide.html" : "./acadenda/guide-zh.html"}?lang=${window.sitePreferences.languageMode}">${state.lang === "en" ? "Step-by-step guide" : "圖文使用教學"}<span aria-hidden="true">→</span></a>
         </aside>` : ""}
             </article>`).join("")}
         </section>
@@ -931,26 +917,23 @@
     if (empty) empty.hidden = visibleCount !== 0;
   }
 
+  window.addEventListener("site-theme-change", () => {
+    state.theme = document.documentElement.dataset.theme;
+    render();
+  });
+
+  document.addEventListener('change', event => {
+    if (event.target.matches('[data-theme-select]')) window.sitePreferences.setTheme(event.target.value);
+    if (event.target.matches('[data-language-select]')) {
+      window.sitePreferences.setLanguage(event.target.value);
+      state.lang = window.sitePreferences.language();
+      render();
+    }
+  });
+  window.addEventListener('languagechange', () => {
+    if (window.sitePreferences.languageMode === 'system') { state.lang = window.sitePreferences.language(); render(); }
+  });
   document.addEventListener("click", (event) => {
-    const themeButton = event.target.closest("[data-theme-toggle]");
-    if (themeButton) {
-      state.theme = state.theme === "dark" ? "light" : "dark";
-      try { localStorage.setItem("jwc-theme", state.theme); } catch (error) { /* Optional preference. */ }
-      render();
-      return;
-    }
-
-    const languageButton = event.target.closest("[data-lang]");
-    if (languageButton) {
-      state.lang = languageButton.dataset.lang;
-      try { localStorage.setItem("jwc-lang", state.lang); } catch (error) { /* Optional preference. */ }
-      const url = new URL(window.location.href);
-      url.searchParams.set("lang", state.lang);
-      window.history.replaceState(null, "", url);
-      render();
-      return;
-    }
-
     const methodButton = event.target.closest("[data-method-filter]");
     if (methodButton) {
       state.researchMethod = methodButton.dataset.methodFilter;
