@@ -1,6 +1,12 @@
 (function () {
   "use strict";
   const url = new URL(window.location.href);
+  // Retired sample-section links now lead into the personal PDF walkthrough.
+  if (url.hash === '#qr-samples') {
+    url.hash = '#step-1';
+    history.replaceState(null, '', url);
+    document.getElementById('step-1')?.scrollIntoView();
+  }
   const requestedLang = url.searchParams.get("lang");
   const urlLang = requestedLang === "zh" || requestedLang === "zh-Hant" ? "zh" : requestedLang === "en" ? "en" : null;
   const pageLang = document.documentElement.lang === "zh-Hant" ? "zh" : "en";

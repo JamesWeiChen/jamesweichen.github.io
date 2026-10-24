@@ -33,7 +33,7 @@ The initial version was assembled from the August 2026 CV and the connected Noti
 
 The Apps page links to `acadenda/guide.html` (English) and
 `acadenda/guide-zh.html` (Traditional Chinese). These standalone HTML pages
-include seven steps, localized screenshots, FAQs, and a fictional sample PDF.
+include only the seven-step PDF import walkthrough, localized screenshots, and a fictional sample PDF. Downloadable schedule and map examples are on the organizer demo page.
 They remain readable without JavaScript; `acadenda/guide.js` adds theme
 preferences and preserves the current step when switching languages.
 

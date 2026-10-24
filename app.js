@@ -730,7 +730,7 @@
             <h3 id="app-guide-title">${state.lang === "en" ? "For attendees" : "給一般使用者"}</h3>
             <p>${state.lang === "en" ? "Turn your program PDF into a schedule in seven illustrated steps." : "跟著 7 個圖文步驟，把議程 PDF 變成行程。"}</p>
           </div>
-          <a class="app-guide-button" href="${state.lang === "en" ? "./acadenda/guide.html" : "./acadenda/guide-zh.html"}?lang=${window.sitePreferences.languageMode}">${state.lang === "en" ? "Guide & sample imports" : "查看教學與匯入範例"}<span aria-hidden="true">→</span></a>
+          <a class="app-guide-button" href="${state.lang === "en" ? "./acadenda/guide.html" : "./acadenda/guide-zh.html"}?lang=${window.sitePreferences.languageMode}">${state.lang === "en" ? "PDF import guide" : "查看 PDF 匯入教學"}<span aria-hidden="true">→</span></a>
         </aside>
         <aside class="app-guide-panel" aria-labelledby="app-organizer-title">
           <span class="app-guide-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4M17 3v4M3 10h18M7 14h2M12 14h5M7 17h2M12 17h5"/></svg></span>
