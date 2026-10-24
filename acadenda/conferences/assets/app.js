@@ -1,5 +1,12 @@
 'use strict';
 let publication;
+// Use the same profile as the main site; the HTML retains a readable fallback.
+const profile = window.siteData?.profile;
+const brand = document.getElementById('developer-link');
+if (profile?.name && profile?.nameZh) {
+  brand.firstChild.nodeValue = profile.name + ' ';
+  brand.querySelector('[lang="zh-Hant"]').textContent = profile.nameZh;
+}
 for (const element of document.querySelectorAll('[data-i18n]')) element.textContent = t(element.dataset.i18n);
 for (const attribute of ['aria-label', 'alt', 'placeholder']) {
   for (const element of document.querySelectorAll(`[data-i18n-${attribute}]`)) {
