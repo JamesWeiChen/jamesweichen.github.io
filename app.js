@@ -735,11 +735,7 @@
           <p class="eyebrow">${state.lang === "en" ? "Independent projects" : "個人作品"}</p>
           <h1>${t("appsTitle")}</h1>
           <p>${t("appsIntro")}</p>
-          <aside class="conference-demo-callout" aria-labelledby="app-demo-title">
-            <h2 id="app-demo-title">${state.lang === "en" ? "Acadenda for conference organizers" : "Acadenda・給會議主辦方"}</h2>
-            <p>${state.lang === "en" ? "See how your conference program can look online, with venue maps and a link attendees can import into Acadenda." : "看看會議議程如何呈現在網頁上，搭配會場地圖，以及讓與會者匯入 Acadenda 的連結。"}</p>
-            <a class="app-demo-button button-link" href="./acadenda/conferences/official-demo/?lang=${window.sitePreferences.languageMode}">${state.lang === "en" ? "View demo program" : "查看示範議程"}<span aria-hidden="true">→</span></a>
-          </aside>
+
         </header>
         <section class="apps-grid" aria-label="${t("appsTitle")}">
           ${apps.map((app) => `
@@ -750,7 +746,12 @@
               </div>
               <h2>${app.name}</h2>
               <p>${app.description}</p>
-              <a class="button-link" href="${app.url}" target="_blank" rel="noreferrer">${t("appStore")} ↗</a>
+              <div class="app-actions">
+                ${app.className === "app-card-acadenda" ? `
+                  <a class="app-demo-button button-link" href="./acadenda/conferences/official-demo/?lang=${window.sitePreferences.languageMode}">${state.lang === "en" ? "View demo program" : "查看示範議程"}<span aria-hidden="true">→</span></a>` : ""}
+                <a class="button-link app-download-button" href="${app.url}" target="_blank" rel="noreferrer">${t("appStore")} ↗</a>
+                ${app.className === "app-card-acadenda" ? `<p class="organizer-note">${state.lang === "en" ? "For organizers: preview an agenda, venue maps, and attendee import links." : "給會議主辦方：預覽議程、會場地圖，以及與會者匯入連結。"}</p>` : ""}
+              </div>
               ${app.className === "app-card-acadenda" ? `
         <aside class="app-guide-panel" aria-labelledby="app-guide-title">
           <span class="app-guide-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5.5C9 3.5 5 3.5 2 5v14c3-1.5 7-1.5 10 .5 3-2 7-2 10-.5V5c-3-1.5-7-1.5-10 .5Z"/><path d="M12 5.5v14"/></svg></span>
