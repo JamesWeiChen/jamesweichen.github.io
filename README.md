@@ -50,7 +50,7 @@ A valid URL language overrides the saved preference. Unknown values fall back
 to the saved preference, then system detection. `?lang=system` explicitly selects automatic language.
 Language switches update the query so refreshing retains the selected language.
 
-The guide's `#qr-samples` section offers two prepared schedule examples from
+The organizer demo at `acadenda/conferences/official-demo/` offers two prepared schedule examples from
 `Acadenda/Acadenda/Docs/Samples`. Their stable direct URLs are:
 
 - `https://jamesweichen.github.io/acadenda/program/Official_Conference_Demo.acadenda`

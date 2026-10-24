@@ -32,8 +32,8 @@ with tempfile.TemporaryDirectory() as tmp:
             errors=[]; page.on('pageerror', lambda error: errors.append(str(error)))
             page.add_init_script("Object.defineProperty(navigator, 'clipboard', {value: {writeText: async text => {window.copiedText = text;}}});")
             page.goto(f'http://127.0.0.1:{server.server_port}/acadenda/conferences/official-demo/?lang=zh')
-            page.locator('article').first.wait_for()
-            assert page.locator('article').count() == 4
+            page.locator('#schedule article').first.wait_for()
+            assert page.locator('#schedule article').count() == 4
             assert page.locator('.talk').count() == 4
             assert page.locator('#map-links a').count() == 2
             assert page.locator('#sample-note').is_visible()
@@ -75,10 +75,10 @@ with tempfile.TemporaryDirectory() as tmp:
             page.route('**/Official_Conference_Demo.json', lambda route: route.fulfill(status=200, content_type='application/json', body='{}'))
             page.locator('#refresh').click()
             page.wait_for_function("document.getElementById('status').textContent.includes('讀取失敗')")
-            assert page.locator('article').count() == 0
+            assert page.locator('#schedule article').count() == 0
             page.unroute('**/Official_Conference_Demo.json')
             page.locator('#refresh').click()
-            page.locator('article').first.wait_for()
+            page.locator('#schedule article').first.wait_for()
             page.locator('#theme').select_option('system')
             page.emulate_media(color_scheme='dark')
             page.wait_for_function("getComputedStyle(document.body).backgroundColor === 'rgb(16, 20, 17)'")
@@ -86,14 +86,14 @@ with tempfile.TemporaryDirectory() as tmp:
             page.wait_for_function("getComputedStyle(document.body).backgroundColor === 'rgb(243, 241, 236)'")
             page.locator('#changes').fill('Preserve this draft')
             page.locator('#language').select_option('en')
-            page.locator('article').first.wait_for()
+            page.locator('#schedule article').first.wait_for()
             assert page.locator('html').get_attribute('lang') == 'en'
             assert page.locator('#copy-link').inner_text() == 'Copy program link'
             assert page.locator('#changes').input_value() == 'Preserve this draft'
-            assert 'Chair: ' in page.locator('article').nth(1).inner_text()
+            assert 'Chair: ' in page.locator('#schedule article').nth(1).inner_text()
             page.locator('#theme').select_option('dark')
             page.wait_for_function("getComputedStyle(document.body).backgroundColor === 'rgb(16, 20, 17)'")
-            page.reload(); page.locator('article').first.wait_for()
+            page.reload(); page.locator('#schedule article').first.wait_for()
             assert page.locator('#theme').input_value() == 'dark'
             page.locator('#theme').select_option('light')
             page.emulate_media(color_scheme='dark')
@@ -103,7 +103,7 @@ with tempfile.TemporaryDirectory() as tmp:
             assert page.evaluate('document.documentElement.scrollWidth <= window.innerWidth')
             page.screenshot(path='/tmp/acadenda-site-english-dark.png', full_page=True)
             page.locator('#language').select_option('zh')
-            page.locator('article').first.wait_for()
+            page.locator('#schedule article').first.wait_for()
             assert page.locator('#copy-link').inner_text() == '複製議程連結'
             # Carry language and system theme from conference to main site and guide.
             page.locator('.site-header .nav-link[href*="/apps"]').click()
@@ -120,8 +120,9 @@ with tempfile.TemporaryDirectory() as tmp:
             page.locator('#guide-language').select_option('en')
             page.locator('#guide-theme').wait_for()
             assert page.locator('html').get_attribute('lang') == 'en'
-            page.locator('a[href*="conferences/official-demo/"]').click()
-            page.locator('article').first.wait_for()
+            page.locator('.site-header .nav-link[href*="/apps"]').click()
+            page.locator('.app-demo-button').click()
+            page.locator('#schedule article').first.wait_for()
             assert page.locator('html').get_attribute('lang') == 'en'
             assert page.locator('#theme').input_value() == 'dark'
             # Shared preferences also carry across tabs.
@@ -153,13 +154,14 @@ with tempfile.TemporaryDirectory() as tmp:
                 assert check.locator('.site-header .nav-link').count() == 7
                 assert check.evaluate('document.documentElement.scrollWidth <= window.innerWidth'), 'guide ' + locale
                 assert check.locator('html').get_attribute('lang') == expected
-                check.locator('a[href*="conferences/official-demo/"]').click()
-                check.locator('article').first.wait_for()
+                check.locator('.site-header .nav-link[href*="/apps"]').click()
+                check.locator('.app-demo-button').click()
+                check.locator('#schedule article').first.wait_for()
                 assert check.locator('html').get_attribute('lang') == expected
                 assert check.locator('#language').input_value() == 'system'
                 check.locator('.site-header .nav-link[href*="/apps"]').click()
                 check.locator('.app-demo-button').click()
-                check.locator('article').first.wait_for()
+                check.locator('#schedule article').first.wait_for()
                 assert check.locator('#language').input_value() == 'system'
                 assert check.locator('html').get_attribute('lang') == expected
                 if locale == 'zh-TW':

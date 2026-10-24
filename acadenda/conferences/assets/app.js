@@ -1,5 +1,8 @@
 'use strict';
 let publication;
+for (const section of document.querySelectorAll('[data-sample-language]')) {
+  section.hidden = section.dataset.sampleLanguage !== window.conferenceLanguage;
+}
 for (const element of document.querySelectorAll('[data-i18n]')) element.textContent = t(element.dataset.i18n);
 for (const attribute of ['aria-label', 'alt', 'placeholder']) {
   for (const element of document.querySelectorAll(`[data-i18n-${attribute}]`)) {
@@ -7,7 +10,6 @@ for (const attribute of ['aria-label', 'alt', 'placeholder']) {
   }
 }
 
-document.getElementById('guide-link').href = (window.conferenceLanguage === 'en' ? '../../guide.html' : '../../guide-zh.html') + '?lang=' + window.sitePreferences.languageMode;
 try { document.getElementById('changes').value = sessionStorage.getItem('acadenda-changes:' + location.pathname) || ''; } catch {}
 const byID = id => document.getElementById(id);
 function node(tag, text, className) {
