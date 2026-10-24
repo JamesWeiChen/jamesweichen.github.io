@@ -89,3 +89,7 @@ from a validated JSON in `acadenda/program/`. Each edition keeps its own fixed
 JSON filename and page slug. Shared assets live in `acadenda/conferences/assets/`.
 See [the operator instructions](acadenda/conferences/README.md) for setup,
 preview, update review, and browser checks. No deployment is performed by the tool.
+
+The main site, Acadenda guide, and conference agenda pages share `site-header.js` and
+`site-header.css` for the full navigation bar. Profile names come from `data.js`.
+The Acadenda card keeps its App Store download above separate attendee and organizer resources.

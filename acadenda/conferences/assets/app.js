@@ -1,12 +1,5 @@
 'use strict';
 let publication;
-// Use the same profile as the main site; the HTML retains a readable fallback.
-const profile = window.siteData?.profile;
-const brand = document.getElementById('developer-link');
-if (profile?.name && profile?.nameZh) {
-  brand.firstChild.nodeValue = profile.name + ' ';
-  brand.querySelector('[lang="zh-Hant"]').textContent = profile.nameZh;
-}
 for (const element of document.querySelectorAll('[data-i18n]')) element.textContent = t(element.dataset.i18n);
 for (const attribute of ['aria-label', 'alt', 'placeholder']) {
   for (const element of document.querySelectorAll(`[data-i18n-${attribute}]`)) {
@@ -15,21 +8,7 @@ for (const attribute of ['aria-label', 'alt', 'placeholder']) {
 }
 
 document.getElementById('guide-link').href = (window.conferenceLanguage === 'en' ? '../../guide.html' : '../../guide-zh.html') + '?lang=' + window.sitePreferences.languageMode;
-document.getElementById('developer-link').href = `../../../?lang=${window.sitePreferences.languageMode}#/apps`;
-const languagePicker = document.getElementById('language');
-languagePicker.value = window.sitePreferences.languageMode;
-languagePicker.addEventListener('change', () => {
-  try { sessionStorage.setItem('acadenda-changes:' + location.pathname, document.getElementById('changes').value); } catch {}
-  window.sitePreferences.setLanguage(languagePicker.value);
-  location.reload();
-});
 try { document.getElementById('changes').value = sessionStorage.getItem('acadenda-changes:' + location.pathname) || ''; } catch {}
-const themePicker = document.getElementById('theme');
-themePicker.value = window.sitePreferences.theme;
-window.addEventListener('site-theme-change', () => { themePicker.value = window.sitePreferences.theme; });
-themePicker.addEventListener('change', () => {
-  window.sitePreferences.setTheme(themePicker.value);
-});
 const byID = id => document.getElementById(id);
 function node(tag, text, className) {
   const element = document.createElement(tag);

@@ -17,7 +17,7 @@ with tempfile.TemporaryDirectory() as tmp:
     site = Path(tmp)/'site'
     shutil.copytree(ROOT/'acadenda/conferences', site/'acadenda/conferences')
     shutil.copytree(ROOT/'acadenda/program', site/'acadenda/program')
-    for name in ('site-preferences.js', 'preferences.css', 'index.html', 'app.js', 'data.js', 'styles.css'):
+    for name in ('site-preferences.js', 'site-header.js', 'site-header.css', 'preferences.css', 'index.html', 'app.js', 'data.js', 'styles.css'):
         shutil.copy2(ROOT/name, site/name)
     (site/'acadenda/images').symlink_to(ROOT/'acadenda/images', target_is_directory=True)
     for name in ('guide.html', 'guide-zh.html', 'guide.js', 'guide.css'):
@@ -37,6 +37,8 @@ with tempfile.TemporaryDirectory() as tmp:
             assert page.locator('.talk').count() == 4
             assert page.locator('#map-links a').count() == 2
             assert page.locator('#sample-note').is_visible()
+            assert page.locator('.site-header .nav-link').count() == 7
+            assert page.locator('.site-header .brand-zh').inner_text() == '陳暐'
             page.screenshot(path='/tmp/acadenda-site-desktop.png', full_page=True)
             page.set_viewport_size({'width':390,'height':844})
             page.screenshot(path='/tmp/acadenda-site-mobile.png', full_page=True)
@@ -104,7 +106,7 @@ with tempfile.TemporaryDirectory() as tmp:
             page.locator('article').first.wait_for()
             assert page.locator('#copy-link').inner_text() == '複製議程連結'
             # Carry language and system theme from conference to main site and guide.
-            page.locator('#developer-link').click()
+            page.locator('.site-header .nav-link[href*="/apps"]').click()
             page.locator('[data-theme-select]').wait_for()
             assert page.locator('html').get_attribute('lang') == 'zh-Hant'
             page.emulate_media(color_scheme='light')
@@ -148,13 +150,14 @@ with tempfile.TemporaryDirectory() as tmp:
                 check.locator('.app-guide-panel[aria-labelledby="app-guide-title"] .app-guide-button').click()
                 check.locator('#guide-language').wait_for()
                 assert check.locator('#guide-language').input_value() == 'system'
+                assert check.locator('.site-header .nav-link').count() == 7
                 assert check.evaluate('document.documentElement.scrollWidth <= window.innerWidth'), 'guide ' + locale
                 assert check.locator('html').get_attribute('lang') == expected
                 check.locator('a[href*="conferences/official-demo/"]').click()
                 check.locator('article').first.wait_for()
                 assert check.locator('html').get_attribute('lang') == expected
                 assert check.locator('#language').input_value() == 'system'
-                check.locator('#developer-link').click()
+                check.locator('.site-header .nav-link[href*="/apps"]').click()
                 check.locator('.app-demo-button').click()
                 check.locator('article').first.wait_for()
                 assert check.locator('#language').input_value() == 'system'

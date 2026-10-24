@@ -184,32 +184,7 @@
   }
 
   function header() {
-    return `
-      <header class="site-header">
-        <nav class="nav-shell" aria-label="Primary navigation">
-          <a class="brand" href="#/" aria-label="Wei James Chen home">
-            <span>${data.profile.name}</span>
-            <span class="brand-zh">${data.profile.nameZh}</span>
-          </a>
-          <div class="nav-links">
-            ${linkTo("home", t("home"))}
-            ${linkTo("featured", t("research"), ["featured", "research", "browse"])}
-            ${linkTo("teaching", t("teaching"))}
-            ${linkTo("lab", t("lab"))}
-            ${linkTo("presentations", t("presentations"))}
-            ${linkTo("apps", t("apps"))}
-            <a class="nav-link" href="${data.profile.cv}" target="_blank" rel="noreferrer">${t("cv")} ↗</a>
-          </div>
-          <label class="preference-control"><span>${state.lang === 'zh' ? '外觀' : 'Appearance'}</span>
-            <select data-theme-select aria-label="${state.lang === 'zh' ? '外觀' : 'Appearance'}">
-              ${['system','light','dark'].map((mode, index) => `<option value="${mode}" ${window.sitePreferences.theme === mode ? 'selected' : ''}>${(state.lang === 'zh' ? ['跟隨系統','淺色','深色'] : ['System','Light','Dark'])[index]}</option>`).join('')}
-            </select></label>
-          <label class="preference-control"><span>${state.lang === 'zh' ? '語言' : 'Language'}</span>
-            <select data-language-select aria-label="${state.lang === 'zh' ? '語言' : 'Language'}">
-              ${['system','zh','en'].map((mode, index) => `<option value="${mode}" ${window.sitePreferences.languageMode === mode ? 'selected' : ''}>${[state.lang === 'zh' ? '跟隨系統' : 'System','繁體中文','English'][index]}</option>`).join('')}
-            </select></label>
-        </nav>
-      </header>`;
+    return window.renderSiteHeader(state.lang, route(), './');
   }
 
   function socialLinks() {
@@ -746,22 +721,26 @@
               </div>
               <h2>${app.name}</h2>
               <p>${app.description}</p>
-              <div class="app-actions">
-                ${app.className === "app-card-acadenda" ? `
-                  <a class="app-demo-button button-link" href="./acadenda/conferences/official-demo/?lang=${window.sitePreferences.languageMode}">${state.lang === "en" ? "View demo program" : "查看示範議程"}<span aria-hidden="true">→</span></a>` : ""}
-                <a class="button-link app-download-button" href="${app.url}" target="_blank" rel="noreferrer">${t("appStore")} ↗</a>
-                ${app.className === "app-card-acadenda" ? `<p class="organizer-note">${state.lang === "en" ? "For organizers: preview an agenda, venue maps, and attendee import links." : "給會議主辦方：預覽議程、會場地圖，以及與會者匯入連結。"}</p>` : ""}
-              </div>
+              <a class="button-link app-download-button" href="${app.url}" target="_blank" rel="noreferrer">${t("appStore")} ↗</a>
               ${app.className === "app-card-acadenda" ? `
+        <div class="app-resources">
         <aside class="app-guide-panel" aria-labelledby="app-guide-title">
           <span class="app-guide-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5.5C9 3.5 5 3.5 2 5v14c3-1.5 7-1.5 10 .5 3-2 7-2 10-.5V5c-3-1.5-7-1.5-10 .5Z"/><path d="M12 5.5v14"/></svg></span>
           <div class="app-guide-copy">
-            <h3 id="app-guide-title">${state.lang === "en" ? "Getting started with Acadenda?" : "第一次使用 Acadenda？"}</h3>
+            <h3 id="app-guide-title">${state.lang === "en" ? "For attendees" : "給一般使用者"}</h3>
             <p>${state.lang === "en" ? "Turn your program PDF into a schedule in seven illustrated steps." : "跟著 7 個圖文步驟，把議程 PDF 變成行程。"}</p>
           </div>
-          <a class="app-guide-button" href="${state.lang === "en" ? "./acadenda/guide.html" : "./acadenda/guide-zh.html"}?lang=${window.sitePreferences.languageMode}">${state.lang === "en" ? "Step-by-step guide" : "圖文使用教學"}<span aria-hidden="true">→</span></a>
+          <a class="app-guide-button" href="${state.lang === "en" ? "./acadenda/guide.html" : "./acadenda/guide-zh.html"}?lang=${window.sitePreferences.languageMode}">${state.lang === "en" ? "Guide & sample imports" : "查看教學與匯入範例"}<span aria-hidden="true">→</span></a>
         </aside>
-` : ""}
+        <aside class="app-guide-panel" aria-labelledby="app-organizer-title">
+          <span class="app-guide-icon" aria-hidden="true">▦</span>
+          <div class="app-guide-copy">
+            <h3 id="app-organizer-title">${state.lang === "en" ? "For conference organizers" : "給會議主辦方"}</h3>
+            <p>${state.lang === "en" ? "Preview a published agenda, venue maps, and the links attendees use to import your program." : "預覽會議議程網頁、會場地圖，以及提供給與會者的議程匯入連結。"}</p>
+          </div>
+          <a class="app-demo-button app-guide-button" href="./acadenda/conferences/official-demo/?lang=${window.sitePreferences.languageMode}">${state.lang === "en" ? "View organizer demo" : "查看主辦方示範"}<span aria-hidden="true">→</span></a>
+        </aside>
+        </div>` : ""}
             </article>`).join("")}
         </section>
 

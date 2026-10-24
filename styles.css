@@ -2182,11 +2182,4 @@ h3 {
 }
 .nav-links .nav-link{white-space:nowrap;flex-shrink:0}
 
-.app-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px;width:100%}
-.app-card .app-actions .button-link{margin-top:0;min-height:48px;border-radius:8px;gap:18px}
-.app-actions .app-demo-button{background:var(--rust);color:var(--paper);padding:14px 20px}
-.app-actions .app-download-button{border:1px solid var(--line);background:transparent}
-.app-actions .app-demo-button:hover{filter:brightness(1.08)}
-.app-actions .app-demo-button:focus-visible{outline:3px solid var(--rust);outline-offset:4px}
-.app-actions .organizer-note{flex-basis:100%;margin:0;color:var(--muted);font:14px/1.65 var(--sans)}
-@media(max-width:680px){.app-actions .button-link{justify-content:space-between;width:100%}}
+.app-resources{width:100%}.app-resources .app-guide-panel{margin-top:28px}.app-resources .app-demo-button{background:var(--rust);color:var(--paper)}
