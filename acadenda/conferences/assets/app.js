@@ -49,8 +49,17 @@ function parseProgram(raw) {
 async function currentProgram() {
   return parseProgram(await fetchText(publication.file));
 }
+function sampleCounts(program) {
+  const items = program.days.flatMap(day => day.items);
+  const talks = items.reduce((total, item) => total + (item.talks || []).length, 0);
+  const maps = Array.isArray(program.conference.maps) ? program.conference.maps.length : 0;
+  const days = program.days.length;
+  if (window.conferenceLanguage === 'en') return `${days} ${days === 1 ? 'day' : 'days'} · ${items.length} agenda items · ${talks} talks · ${maps} maps`;
+  return `${days} 天 · ${items.length} 個議程項目 · ${talks} 場演講 · ${maps} 張地圖`;
+}
 function render(program) {
   const meta = program.conference;
+  for (const element of document.querySelectorAll('.json-sample-counts')) element.textContent = sampleCounts(program);
   byID('title').textContent = meta.name || t('會議議程');
   document.title = `${meta.name || t('會議議程')} · Acadenda`;
   byID('details').textContent = [meta.startDate, meta.endDate !== meta.startDate ? meta.endDate : '', meta.venue, meta.city].filter(Boolean).join(' · ');
@@ -106,6 +115,76 @@ async function reload() {
   status(t('正在讀取議程…'));
   try { render(await currentProgram()); status(`${t('已讀取：')}${new Date().toLocaleString(window.conferenceLanguage === 'en' ? 'en-US' : 'zh-TW')}${t('。議程以主辦方公告為準。')}`); }
   catch (error) { byID('schedule').replaceChildren(); byID('maps').hidden = true; status(`${t('讀取失敗：')}${error.message}${t(' 請按「重新載入」再試一次。')}`, true); }
+}
+// Test-only: changes three demo agenda items so the App's update flow can be checked.
+const demoUpdates = [
+  // A speaker withdraws (talk ...003 is dropped), and the two remaining talks swap order.
+  {id: '30000000-0000-4000-8000-000000000002', talks: ['40000000-0000-4000-8000-000000000004', '40000000-0000-4000-8000-000000000002']},
+  // The chair changes at the last minute.
+  {id: '30000000-0000-4000-8000-000000000004', changes: {chair: 'Professor Elena García'}}
+];
+function applyDemoUpdates(program) {
+  for (const update of demoUpdates) {
+    const item = program.days.flatMap(day => day.items).find(row => row.id === update.id);
+    if (!item) throw new Error(t('找不到測試更新所需的議程。'));
+    if (update.talks) {
+      item.talks = update.talks.map(id => {
+        const talk = (item.talks || []).find(row => row.id === id);
+        if (!talk) throw new Error(t('找不到測試更新所需的講者。'));
+        return talk;
+      });
+    }
+    Object.assign(item, update.changes);
+  }
+  return program;
+}
+for (const button of document.querySelectorAll('.demo-update-button')) {
+  button.addEventListener('click', async () => {
+    if (!publication?.demo) return;
+    button.disabled = true;
+    try {
+      const program = applyDemoUpdates(await currentProgram());
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(new Blob([`${JSON.stringify(program, null, 2)}\n`], {type: 'application/json'}));
+      link.download = 'Official_Conference_Demo.json';
+      document.body.append(link);
+      link.click();
+      link.remove();
+      setTimeout(() => URL.revokeObjectURL(link.href), 1000);
+      status(t('已下載測試更新版 JSON。請替換 program/Official_Conference_Demo.json 並推送，再到 App 更新。'));
+    } catch (error) { status(`${t('未下載：')}${error.message}`, true); }
+    finally { button.disabled = false; }
+  });
+}
+// Live test: the Cloudflare Worker commits the demo update (or restore) to GitHub, then Pages redeploys.
+const demoUpdaterURL = 'https://acadenda-demo-updater.thisis-chenwei.workers.dev';
+const demoServerMessages = {
+  applied: () => t('已送出測試更新。GitHub Pages 約一分鐘後更新，之後按「重新載入」或到 App 更新既有會議。'),
+  restored: () => t('已還原線上版本。GitHub Pages 約一分鐘後更新，之後按「重新載入」或到 App 更新既有會議。'),
+  unchanged: () => t('線上版本已是原始內容，沒有重新寫入。')
+};
+for (const button of document.querySelectorAll('.demo-server-button')) {
+  button.addEventListener('click', async () => {
+    if (!publication?.demo) return;
+    const password = button.closest('section').querySelector('.demo-password').value;
+    if (!password) { status(t('請輸入示範密碼。'), true); return; }
+    const path = button.classList.contains('demo-apply-button') ? '/apply' : '/restore';
+    const buttons = document.querySelectorAll('.demo-server-button');
+    for (const element of buttons) element.disabled = true;
+    status(t('正在送出到 GitHub…'));
+    try {
+      const response = await fetch(`${demoUpdaterURL}${path}`, {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({password}),
+        signal: AbortSignal.timeout(30000)
+      });
+      const data = await response.json().catch(() => ({}));
+      if (!response.ok) throw new Error(data.error || `HTTP ${response.status}`);
+      status(demoServerMessages[data.status]?.() || t('已完成。'));
+    } catch (error) { status(`${t('未完成：')}${error.message}`, true); }
+    finally { for (const element of buttons) element.disabled = false; }
+  });
 }
 byID('refresh').addEventListener('click', reload);
 byID('copy-link').addEventListener('click', () => copyText(publication.url, t('已複製固定議程連結。')));
