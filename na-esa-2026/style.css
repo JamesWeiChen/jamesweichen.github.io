@@ -1,5 +1,5 @@
 :root {
-  color-scheme: light dark;
+  color-scheme: light;
   --bg: #f6f5f1;
   --card: #ffffff;
   --ink: #1d1f1c;
@@ -10,8 +10,21 @@
   --error: #a32020;
 }
 
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #111513;
+  --card: #1a201d;
+  --ink: #eeeee8;
+  --muted: #b3b8ae;
+  --line: #3d4841;
+  --accent: #8cc3dd;
+  --accent-soft: #22303a;
+  --error: #ffb3b3;
+}
+
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
     --bg: #111513;
     --card: #1a201d;
     --ink: #eeeee8;
@@ -64,6 +77,15 @@ h3 { font-size: 1.05rem; margin: 0; overflow-wrap: anywhere; }
   font-size: .95rem;
 }
 .site-nav a { color: var(--accent); text-decoration: none; font-weight: 600; }
+.appearance { display: flex; align-items: center; gap: 8px; margin-left: auto; color: var(--muted); font-size: .85rem; }
+.appearance select {
+  font: inherit;
+  color: var(--ink);
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 6px 8px;
+}
 
 .section { padding: 28px 0; border-bottom: 1px solid var(--line); scroll-margin-top: 64px; }
 .section:last-of-type { border-bottom: 0; }

@@ -5,6 +5,15 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>NA ESA 2026 Program</title>
 <meta name="description" content="Program, venue map, Fun Run information and Acadenda import for the 2026 North American Economic Science Association Meeting. Independent conference companion.">
+<script>
+  // Apply the saved appearance before the page paints; the same key as the main site.
+  (function () {
+    try {
+      var theme = localStorage.getItem('jwc-theme');
+      if (theme === 'light' || theme === 'dark') document.documentElement.dataset.theme = theme;
+    } catch (error) { /* Storage can be blocked; follow the system setting instead. */ }
+  })();
+</script>
 <link rel="stylesheet" href="style.css">
 <script src="app.js" defer></script>
 </head>
@@ -16,39 +25,22 @@
 </header>
 
 <nav class="site-nav" aria-label="Conference sections">
+  <a href="#acadenda">Acadenda</a>
   <a href="#program">Program</a>
   <a href="#venue">Venue Map</a>
   <a href="#fun-run">Fun Run</a>
-  <a href="#acadenda">Acadenda</a>
+  <label class="appearance">
+    <span>Appearance</span>
+    <select id="theme">
+      <option value="system">System</option>
+      <option value="light">Light</option>
+      <option value="dark">Dark</option>
+    </select>
+  </label>
 </nav>
 
 <main>
   <p class="status" id="status" role="status" aria-live="polite"></p>
-
-  <section id="program" class="section" aria-labelledby="program-title">
-    <h2 id="program-title">Program</h2>
-    <div class="controls">
-      <div class="day-tabs" id="day-tabs" role="group" aria-label="Choose a day"></div>
-      <label class="search">
-        <span>Search speaker, paper or session</span>
-        <input type="search" id="search" placeholder="e.g. Palfrey, auctions, Kenya" autocomplete="off">
-      </label>
-      <p class="muted" id="result-count" aria-live="polite"></p>
-    </div>
-    <div id="schedule"></div>
-  </section>
-
-  <section id="venue" class="section" aria-labelledby="venue-title">
-    <h2 id="venue-title">Venue Map</h2>
-    <p class="muted">Virginia Guesthouse, second floor. Tap the image to view it full size.</p>
-    <figure class="map" id="venue-map"></figure>
-  </section>
-
-  <section id="fun-run" class="section" aria-labelledby="fun-run-title">
-    <h2 id="fun-run-title">Fun Run / Walk</h2>
-    <div id="fun-run-items"></div>
-    <figure class="map" id="fun-run-map"></figure>
-  </section>
 
   <section id="acadenda" class="section" aria-labelledby="acadenda-title">
     <h2 id="acadenda-title">Use this program in Acadenda</h2>
@@ -80,6 +72,31 @@
       </div>
     </div>
     <p class="muted small">The program link stays the same when the schedule is updated, so the QR code does not need to be replaced.</p>
+  </section>
+
+  <section id="program" class="section" aria-labelledby="program-title">
+    <h2 id="program-title">Program</h2>
+    <div class="controls">
+      <div class="day-tabs" id="day-tabs" role="group" aria-label="Choose a day"></div>
+      <label class="search">
+        <span>Search speaker, paper or session</span>
+        <input type="search" id="search" placeholder="e.g. Palfrey, auctions, Kenya" autocomplete="off">
+      </label>
+      <p class="muted" id="result-count" aria-live="polite"></p>
+    </div>
+    <div id="schedule"></div>
+  </section>
+
+  <section id="venue" class="section" aria-labelledby="venue-title">
+    <h2 id="venue-title">Venue Map</h2>
+    <p class="muted">Virginia Guesthouse, second floor. Tap the image to view it full size.</p>
+    <figure class="map" id="venue-map"></figure>
+  </section>
+
+  <section id="fun-run" class="section" aria-labelledby="fun-run-title">
+    <h2 id="fun-run-title">Fun Run / Walk</h2>
+    <div id="fun-run-items"></div>
+    <figure class="map" id="fun-run-map"></figure>
   </section>
 </main>
 

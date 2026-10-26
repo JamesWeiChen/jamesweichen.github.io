@@ -8,6 +8,25 @@ const byID = id => document.getElementById(id);
 let program = null;
 let selectedDay = 0;
 
+// Same storage key as the main site, so the chosen appearance carries over between the two.
+function readTheme() {
+  try {
+    const saved = localStorage.getItem('jwc-theme');
+    return ['light', 'dark', 'system'].includes(saved) ? saved : 'system';
+  } catch { return 'system'; }
+}
+function applyTheme(theme) {
+  if (theme === 'system') delete document.documentElement.dataset.theme;
+  else document.documentElement.dataset.theme = theme;
+}
+const themeSelect = byID('theme');
+themeSelect.value = readTheme();
+themeSelect.addEventListener('change', () => {
+  const theme = themeSelect.value;
+  try { localStorage.setItem('jwc-theme', theme); } catch { /* Storage can be blocked; the choice still applies for this visit. */ }
+  applyTheme(theme);
+});
+
 function el(tag, text, className) {
   const element = document.createElement(tag);
   if (text) element.textContent = text;
