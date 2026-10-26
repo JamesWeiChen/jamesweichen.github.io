@@ -144,12 +144,13 @@ h3 { font-size: 1.05rem; margin: 0; overflow-wrap: anywhere; }
 .map figcaption { margin-top: 8px; font-size: .9rem; }
 .map figcaption a { color: var(--accent); font-weight: 600; }
 
-.import { display: grid; gap: 24px; grid-template-columns: minmax(0, 1fr) minmax(0, 340px); align-items: start; }
+.import-grid { display: grid; gap: 20px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.import-card { display: flex; flex-direction: column; gap: 8px; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 18px; }
+.import-card h3 { font-size: 1.05rem; }
+.import-card .qr { margin-top: auto; align-self: flex-start; }
 .steps { padding-left: 22px; margin: 0 0 12px; }
 .steps li { margin: 6px 0; }
-.import + p { margin-top: 28px; }
-.qr { margin-bottom: 20px; }
-.qr .button-link { display: block; box-sizing: border-box; margin-top: 12px; padding: 9px 12px; text-align: center; font-size: .9rem; color: var(--accent); }
+.import-grid + p { margin-top: 24px; }
 .buttons { display: flex; gap: 10px; flex-wrap: wrap; margin: 14px 0 8px; }
 .buttons button, .button-link {
   font: inherit;
@@ -162,7 +163,6 @@ h3 { font-size: 1.05rem; margin: 0; overflow-wrap: anywhere; }
   cursor: pointer;
   text-decoration: none;
 }
-.qr-pair { display: flex; gap: 16px; flex-wrap: wrap; }
 .qr { margin: 0; background: #ffffff; padding: 10px; border-radius: 12px; width: 100%; max-width: 184px; }
 .qr img { display: block; width: 100%; max-width: 164px; height: auto; }
 .qr figcaption { color: #5f635b; font-size: .8rem; margin-top: 6px; }
@@ -183,6 +183,5 @@ a:focus-visible, button:focus-visible, input:focus-visible {
 }
 
 @media (max-width: 640px) {
-  .import { grid-template-columns: minmax(0, 1fr); }
-  .qr-pair { justify-content: flex-start; }
+  .import-grid { grid-template-columns: minmax(0, 1fr); }
 }

@@ -14,7 +14,7 @@
     } catch (error) { /* Storage can be blocked; follow the system setting instead. */ }
   })();
 </script>
-<link rel="stylesheet" href="style.css?v=20261026-2">
+<link rel="stylesheet" href="style.css?v=20261026-3">
 <script src="app.js?v=20261026-2" defer></script>
 </head>
 <body>
@@ -47,30 +47,34 @@
 
   <section id="acadenda" class="section" aria-labelledby="acadenda-title">
     <h2 id="acadenda-title">Use this program in Acadenda</h2>
-    <div class="import">
-      <div>
+    <div class="import-grid">
+      <article class="import-card">
+        <h3>Import the program</h3>
         <ol class="steps">
-          <li>Install Acadenda from the App Store.</li>
           <li>In Acadenda, open Conference → Import → Add from a Link.</li>
-          <li>Paste the program link below, or scan the QR code with the app’s scanner.</li>
+          <li>Paste the program link, or scan the QR code with the app’s scanner.</li>
           <li>Preview the schedule, then tap Add to my conferences.</li>
         </ol>
         <div class="buttons">
           <button type="button" id="copy-link">Copy program link</button>
         </div>
         <p class="muted small" id="copy-status" role="status" aria-live="polite"></p>
-      </div>
-      <div class="qr-pair">
         <figure class="qr">
           <img src="qrcode.svg" width="164" height="164" alt="QR code for the program JSON link">
           <figcaption>Scan to import the program. The code links to the JSON file, not to this page.</figcaption>
         </figure>
+      </article>
+      <article class="import-card">
+        <h3>Get Acadenda for iOS</h3>
+        <p>Install Acadenda from the App Store first, then follow the import steps.</p>
         <figure class="qr">
           <img src="qrcode-app-store.svg" width="164" height="164" alt="QR code for the Acadenda page on the App Store">
           <figcaption>Scan to download Acadenda for iOS.</figcaption>
-          <a class="button-link" href="https://apps.apple.com/tw/app/acadenda/id6812816802" rel="noopener">Get Acadenda on the App Store</a>
         </figure>
-      </div>
+        <div class="buttons">
+          <a class="button-link" href="https://apps.apple.com/tw/app/acadenda/id6812816802" rel="noopener">Get Acadenda on the App Store</a>
+        </div>
+      </article>
     </div>
     <p class="muted small">The program link stays the same when the schedule is updated, so the QR code does not need to be replaced.</p>
   </section>
