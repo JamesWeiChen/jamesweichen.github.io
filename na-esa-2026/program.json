@@ -67,8 +67,8 @@
           "title": "Research Statement Clinic (throughout the day)",
           "room": "Drawing Room",
           "chair": "",
-          "startTime": "",
-          "endTime": "",
+          "startTime": "09:00",
+          "endTime": "17:00",
           "sourcePage": 3,
           "talks": []
         },
@@ -1256,8 +1256,8 @@
           "title": "Research Statement Clinic (throughout the day)",
           "room": "Drawing Room",
           "chair": "",
-          "startTime": "",
-          "endTime": "",
+          "startTime": "09:00",
+          "endTime": "17:00",
           "sourcePage": 13,
           "talks": []
         },
