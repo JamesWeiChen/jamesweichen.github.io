@@ -70,14 +70,7 @@
           "startTime": "",
           "endTime": "",
           "sourcePage": 3,
-          "talks": [],
-          "uncertain": [
-            {
-              "field": "time",
-              "why": "missing",
-              "note": "The program says “throughout the day”; no start or end time is given."
-            }
-          ]
+          "talks": []
         },
         {
           "id": "e3ce7ed8-180e-59d6-8881-069cdadf6628",
@@ -156,18 +149,11 @@
               "id": "7369e443-7c3e-5606-84a1-3b7816fbcd17",
               "title": "Do Rideshare Drivers Supply Labor one Day at a Time? Observational and Experimental Evidence from the Field",
               "speaker": "Alec Brandon",
-              "affiliation": "Johns Hopkings, Carey Bus. Sch.",
+              "affiliation": "Johns Hopkins University, Carey Business School",
               "coauthors": [],
               "startTime": "",
               "endTime": "",
-              "email": "",
-              "uncertain": [
-                {
-                  "field": "affiliation",
-                  "why": "ambiguous",
-                  "note": "Institution spelling is reproduced from the source program and may contain a typo."
-                }
-              ]
+              "email": ""
             },
             {
               "id": "3bc88dd7-c01d-5c57-bc96-679c01e7533d",
@@ -511,13 +497,6 @@
               "startTime": "",
               "endTime": "",
               "email": ""
-            }
-          ],
-          "uncertain": [
-            {
-              "field": "title",
-              "why": "ambiguous",
-              "note": "Page 6 also prints “Advice & Algorithm Aversion” above the talks column; retained the session heading from the Session column."
             }
           ]
         },
@@ -1263,14 +1242,7 @@
           "startTime": "19:00",
           "endTime": "",
           "sourcePage": 13,
-          "talks": [],
-          "uncertain": [
-            {
-              "field": "time",
-              "why": "missing",
-              "note": "The program gives a start time but no separate end time; this is part of the 18:00–20:00 reception."
-            }
-          ]
+          "talks": []
         }
       ]
     },
@@ -1287,14 +1259,7 @@
           "startTime": "",
           "endTime": "",
           "sourcePage": 13,
-          "talks": [],
-          "uncertain": [
-            {
-              "field": "time",
-              "why": "missing",
-              "note": "The program says “throughout the day”; no start or end time is given."
-            }
-          ]
+          "talks": []
         },
         {
           "id": "492441c9-6203-53fe-968e-c5842b07ab2b",
@@ -1305,14 +1270,7 @@
           "startTime": "07:30",
           "endTime": "",
           "sourcePage": 13,
-          "talks": [],
-          "uncertain": [
-            {
-              "field": "time",
-              "why": "missing",
-              "note": "The end time is not printed. Arrival is requested by 07:20; see the route map on page 30."
-            }
-          ]
+          "talks": []
         },
         {
           "id": "55f0990b-1c54-5165-bd3d-b22ce15d5ab8",
@@ -1391,18 +1349,11 @@
               "id": "87b2daa3-6a1b-534f-8669-f4913a6fe999",
               "title": "Ostracism and Imperfect Observability in Common Pool Resources",
               "speaker": "James Murphy",
-              "affiliation": "Alaska - Ankorage",
+              "affiliation": "University of Alaska Anchorage",
               "coauthors": [],
               "startTime": "",
               "endTime": "",
-              "email": "",
-              "uncertain": [
-                {
-                  "field": "affiliation",
-                  "why": "ambiguous",
-                  "note": "Institution spelling is reproduced from the source program and may contain a typo."
-                }
-              ]
+              "email": ""
             },
             {
               "id": "d780aa44-b831-59ee-97bf-d82bde5c0cba",
