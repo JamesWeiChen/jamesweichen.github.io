@@ -54,6 +54,26 @@
           "sourcePage": 2,
           "talks": [
             {
+              "id": "40000000-0000-4000-8000-000000000002",
+              "title": "Design-Based Inference in Small Samples",
+              "speaker": "Dr Hana Suzuki",
+              "affiliation": "North Coast University",
+              "coauthors": [
+                "Michael Brown"
+              ],
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "id": "40000000-0000-4000-8000-000000000003",
+              "title": "Interpreting Treatment Effects Across Contexts",
+              "speaker": "Dr Lucas Martin",
+              "affiliation": "Metropolitan School of Economics",
+              "coauthors": [],
+              "startTime": "",
+              "endTime": ""
+            },
+            {
               "id": "40000000-0000-4000-8000-000000000004",
               "title": "Communicating Identification Assumptions",
               "speaker": "Mei Huang",
@@ -61,17 +81,6 @@
               "coauthors": [
                 "Owen Clark",
                 "Fatima Zahra"
-              ],
-              "startTime": "",
-              "endTime": ""
-            },
-            {
-              "id": "40000000-0000-4000-8000-000000000002",
-              "title": "Design-Based Inference in Small Samples",
-              "speaker": "Dr Hana Suzuki",
-              "affiliation": "North Coast University",
-              "coauthors": [
-                "Michael Brown"
               ],
               "startTime": "",
               "endTime": ""
@@ -94,7 +103,7 @@
           "kind": "posterSession",
           "title": "Poster Session and Methods Clinic",
           "room": "Exhibition Hall",
-          "chair": "Professor Elena García",
+          "chair": "Dr Olivia Tan",
           "startTime": "14:00",
           "endTime": "15:30",
           "sourcePage": 3,
