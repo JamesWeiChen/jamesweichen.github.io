@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NA ESA 2026 Program</title>
+<meta name="description" content="Program, venue map, Fun Run information and Acadenda import for the 2026 North American Economic Science Association Meeting. Independent conference companion.">
+<link rel="stylesheet" href="style.css">
+<script src="app.js" defer></script>
+</head>
+<body>
+<header class="masthead">
+  <p class="eyebrow">NA ESA 2026</p>
+  <h1>2026 North American Economic Science Association Meeting</h1>
+  <p class="meta" id="meta">Loading program…</p>
+</header>
+
+<nav class="site-nav" aria-label="Conference sections">
+  <a href="#program">Program</a>
+  <a href="#venue">Venue Map</a>
+  <a href="#fun-run">Fun Run</a>
+  <a href="#acadenda">Acadenda</a>
+</nav>
+
+<main>
+  <p class="status" id="status" role="status" aria-live="polite"></p>
+
+  <section id="program" class="section" aria-labelledby="program-title">
+    <h2 id="program-title">Program</h2>
+    <div class="controls">
+      <div class="day-tabs" id="day-tabs" role="group" aria-label="Choose a day"></div>
+      <label class="search">
+        <span>Search speaker, paper or session</span>
+        <input type="search" id="search" placeholder="e.g. Palfrey, auctions, Kenya" autocomplete="off">
+      </label>
+      <p class="muted" id="result-count" aria-live="polite"></p>
+    </div>
+    <div id="schedule"></div>
+  </section>
+
+  <section id="venue" class="section" aria-labelledby="venue-title">
+    <h2 id="venue-title">Venue Map</h2>
+    <p class="muted">Virginia Guesthouse, second floor. Tap the image to view it full size.</p>
+    <figure class="map" id="venue-map"></figure>
+  </section>
+
+  <section id="fun-run" class="section" aria-labelledby="fun-run-title">
+    <h2 id="fun-run-title">Fun Run / Walk</h2>
+    <div id="fun-run-items"></div>
+    <figure class="map" id="fun-run-map"></figure>
+  </section>
+
+  <section id="acadenda" class="section" aria-labelledby="acadenda-title">
+    <h2 id="acadenda-title">Use this program in Acadenda</h2>
+    <div class="import">
+      <div>
+        <ol class="steps">
+          <li>Install Acadenda from the App Store.</li>
+          <li>In Acadenda, open Conference → Import → Add from a Link.</li>
+          <li>Paste the program link below, or scan the QR code with the app’s scanner.</li>
+          <li>Preview the schedule, then tap Add to my conferences.</li>
+        </ol>
+        <p class="link-line"><a id="program-link" href="program.json">https://jamesweichen.github.io/na-esa-2026/program.json</a></p>
+        <div class="buttons">
+          <button type="button" id="copy-link">Copy program link</button>
+          <a class="button-link" href="program.json" download="NA-ESA-2026.json">Download JSON</a>
+          <a class="button-link" href="https://apps.apple.com/tw/app/acadenda/id6812816802" rel="noopener">Get Acadenda on the App Store</a>
+        </div>
+        <p class="muted small" id="copy-status" role="status" aria-live="polite"></p>
+      </div>
+      <div class="qr-pair">
+        <figure class="qr">
+          <img src="qrcode.svg" width="164" height="164" alt="QR code for the program JSON link">
+          <figcaption>Scan to import the program. The code links to the JSON file, not to this page.</figcaption>
+        </figure>
+        <figure class="qr">
+          <img src="qrcode-app-store.svg" width="164" height="164" alt="QR code for the Acadenda page on the App Store">
+          <figcaption>Scan to download Acadenda for iOS.</figcaption>
+        </figure>
+      </div>
+    </div>
+    <p class="muted small">The program link stays the same when the schedule is updated, so the QR code does not need to be replaced.</p>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>Independent conference companion · Powered by Acadenda</p>
+  <p>The program is compiled from the organizer’s conference schedule. This is not an official ESA website.</p>
+</footer>
+</body>
+</html>
