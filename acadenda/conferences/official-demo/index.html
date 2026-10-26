@@ -7,12 +7,12 @@
 <script src="../../../site-preferences.js"></script>
 <script src="../assets/preferences.js"></script>
 <script src="../assets/translations.js?v=20261026-1"></script>
-<link rel="stylesheet" href="../assets/style.css?v=20261026-4">
+<link rel="stylesheet" href="../assets/style.css?v=20261026-5">
 <link rel="stylesheet" href="../../../preferences.css"><link rel="stylesheet" href="../../../site-header.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&amp;family=Noto+Serif+TC:wght@600&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap">
 <script src="../../../data.js?v=20261014-1" defer></script>
 <script src="../../../site-header.js" defer></script>
-<script src="../assets/app.js?v=20261026-6" defer></script>
+<script src="../assets/app.js?v=20261026-7" defer></script>
 </head>
 <body>
 <div id="shared-site-header" data-root="../../../" data-kind="conference"></div>
@@ -98,6 +98,7 @@
 <details id="developer-tools"><summary data-i18n="開發者工具">開發者工具</summary>
 <p data-i18n="輸入示範密碼後，會把三處臨時變動直接寫入示範 JSON 並推送到 GitHub。約一分鐘後 GitHub Pages 更新，再到 App 更新既有會議，即可用同一個連結測試新內容。還原會回到原始版本。">輸入示範密碼後，會把三處臨時變動直接寫入示範 JSON 並推送到 GitHub。約一分鐘後 GitHub Pages 更新，再到 App 更新既有會議，即可用同一個連結測試新內容。還原會回到原始版本。</p>
 <div class="buttons demo-server"><input class="demo-password" type="password" autocomplete="off" data-i18n-aria-label="示範密碼" aria-label="示範密碼" data-i18n-placeholder="示範密碼" placeholder="示範密碼"><button class="demo-server-button demo-apply-button" type="button" data-i18n="套用測試更新到線上">套用測試更新到線上</button><button class="demo-server-button demo-restore-button" type="button" data-i18n="還原線上版本">還原線上版本</button></div>
+<p id="demo-server-status" role="status" aria-live="polite"></p>
 </details>
 <footer><p id="sample-note" hidden data-i18n="這是虛構的示範會議，供測試與檢查操作流程使用。">這是虛構的示範會議，供測試與檢查操作流程使用。</p><span data-i18n="議程內容由會議提供方確認；此頁面不會修改正式議程。">議程內容由會議提供方確認；此頁面不會修改正式議程。</span></footer>
 </main>

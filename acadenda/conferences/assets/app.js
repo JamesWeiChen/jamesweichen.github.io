@@ -123,15 +123,20 @@ const demoServerMessages = {
   restored: () => t('已還原線上版本。GitHub Pages 約一分鐘後更新，之後按「重新載入」或到 App 更新既有會議。'),
   unchanged: () => t('線上版本已是原始內容，沒有重新寫入。')
 };
+// Show results next to the developer tools buttons; the top status line can be far away from them.
+function serverStatus(message, error = false) {
+  byID('demo-server-status').textContent = message;
+  byID('demo-server-status').className = error ? 'error' : 'success';
+}
 for (const button of document.querySelectorAll('.demo-server-button')) {
   button.addEventListener('click', async () => {
     if (!publication?.demo) return;
     const password = byID('developer-tools').querySelector('.demo-password').value;
-    if (!password) { status(t('請輸入示範密碼。'), true); return; }
+    if (!password) { serverStatus(t('請輸入示範密碼。'), true); return; }
     const path = button.classList.contains('demo-apply-button') ? '/apply' : '/restore';
     const buttons = document.querySelectorAll('.demo-server-button');
     for (const element of buttons) element.disabled = true;
-    status(t('正在送出到 GitHub…'));
+    serverStatus(t('正在送出到 GitHub…'));
     try {
       const response = await fetch(`${demoUpdaterURL}${path}`, {
         method: 'POST',
@@ -141,8 +146,8 @@ for (const button of document.querySelectorAll('.demo-server-button')) {
       });
       const data = await response.json().catch(() => ({}));
       if (!response.ok) throw new Error(data.error || `HTTP ${response.status}`);
-      status(demoServerMessages[data.status]?.() || t('已完成。'));
-    } catch (error) { status(`${t('未完成：')}${error.message}`, true); }
+      serverStatus(demoServerMessages[data.status]?.() || t('已完成。'));
+    } catch (error) { serverStatus(`${t('未完成：')}${error.message}`, true); }
     finally { for (const element of buttons) element.disabled = false; }
   });
 }
