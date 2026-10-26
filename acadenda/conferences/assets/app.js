@@ -116,46 +116,6 @@ async function reload() {
   try { render(await currentProgram()); status(`${t('已讀取：')}${new Date().toLocaleString(window.conferenceLanguage === 'en' ? 'en-US' : 'zh-TW')}${t('。議程以主辦方公告為準。')}`); }
   catch (error) { byID('schedule').replaceChildren(); byID('maps').hidden = true; status(`${t('讀取失敗：')}${error.message}${t(' 請按「重新載入」再試一次。')}`, true); }
 }
-// Test-only: changes three demo agenda items so the App's update flow can be checked.
-const demoUpdates = [
-  // A speaker withdraws (talk ...003 is dropped), and the two remaining talks swap order.
-  {id: '30000000-0000-4000-8000-000000000002', talks: ['40000000-0000-4000-8000-000000000004', '40000000-0000-4000-8000-000000000002']},
-  // The chair changes at the last minute.
-  {id: '30000000-0000-4000-8000-000000000004', changes: {chair: 'Professor Elena García'}}
-];
-function applyDemoUpdates(program) {
-  for (const update of demoUpdates) {
-    const item = program.days.flatMap(day => day.items).find(row => row.id === update.id);
-    if (!item) throw new Error(t('找不到測試更新所需的議程。'));
-    if (update.talks) {
-      item.talks = update.talks.map(id => {
-        const talk = (item.talks || []).find(row => row.id === id);
-        if (!talk) throw new Error(t('找不到測試更新所需的講者。'));
-        return talk;
-      });
-    }
-    Object.assign(item, update.changes);
-  }
-  return program;
-}
-for (const button of document.querySelectorAll('.demo-update-button')) {
-  button.addEventListener('click', async () => {
-    if (!publication?.demo) return;
-    button.disabled = true;
-    try {
-      const program = applyDemoUpdates(await currentProgram());
-      const link = document.createElement('a');
-      link.href = URL.createObjectURL(new Blob([`${JSON.stringify(program, null, 2)}\n`], {type: 'application/json'}));
-      link.download = 'Official_Conference_Demo.json';
-      document.body.append(link);
-      link.click();
-      link.remove();
-      setTimeout(() => URL.revokeObjectURL(link.href), 1000);
-      status(t('已下載測試更新版 JSON。請替換 program/Official_Conference_Demo.json 並推送，再到 App 更新。'));
-    } catch (error) { status(`${t('未下載：')}${error.message}`, true); }
-    finally { button.disabled = false; }
-  });
-}
 // Live test: the Cloudflare Worker commits the demo update (or restore) to GitHub, then Pages redeploys.
 const demoUpdaterURL = 'https://acadenda-demo-updater.thisis-chenwei.workers.dev';
 const demoServerMessages = {
@@ -166,7 +126,7 @@ const demoServerMessages = {
 for (const button of document.querySelectorAll('.demo-server-button')) {
   button.addEventListener('click', async () => {
     if (!publication?.demo) return;
-    const password = button.closest('section').querySelector('.demo-password').value;
+    const password = byID('developer-tools').querySelector('.demo-password').value;
     if (!password) { status(t('請輸入示範密碼。'), true); return; }
     const path = button.classList.contains('demo-apply-button') ? '/apply' : '/restore';
     const buttons = document.querySelectorAll('.demo-server-button');

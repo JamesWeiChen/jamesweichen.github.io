@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&amp;family=Noto+Serif+TC:wght@600&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap">
 <script src="../../../data.js?v=20261014-1" defer></script>
 <script src="../../../site-header.js" defer></script>
-<script src="../assets/app.js?v=20261026-4" defer></script>
+<script src="../assets/app.js?v=20261026-6" defer></script>
 </head>
 <body>
 <div id="shared-site-header" data-root="../../../" data-kind="conference"></div>
@@ -57,9 +57,6 @@
   <a class="qr-file-url" href="https://jamesweichen.github.io/acadenda/program/Official_Conference_Demo.json">https://jamesweichen.github.io/acadenda/program/Official_Conference_Demo.json</a>
 </article></div>
 <p class="qr-footnote">每個 QR Code 的內容都是完整的 HTTPS 檔案網址。兩個下載網址會直接回傳行程檔；從連結加入後，Acadenda 也會追蹤該網址的議程更新。</p>
-<div class="buttons demo-server"><input class="demo-password" type="password" autocomplete="off" data-i18n-aria-label="示範密碼" aria-label="示範密碼" data-i18n-placeholder="示範密碼" placeholder="示範密碼"><button class="demo-server-button demo-apply-button" type="button" data-i18n="套用測試更新到線上">套用測試更新到線上</button><button class="demo-server-button demo-restore-button" type="button" data-i18n="還原線上版本">還原線上版本</button></div>
-<div class="buttons"><button class="demo-update-button" type="button" data-i18n="下載測試更新版 JSON">下載測試更新版 JSON</button></div>
-<p class="muted" data-i18n="輸入示範密碼後，會把三處臨時變動直接寫入示範 JSON 並推送到 GitHub。約一分鐘後 GitHub Pages 更新，再到 App 更新既有會議，即可用同一個連結測試新內容。還原會回到原始版本；也可以只下載測試版 JSON 自行替換。">輸入示範密碼後，會把三處臨時變動直接寫入示範 JSON 並推送到 GitHub。約一分鐘後 GitHub Pages 更新，再到 App 更新既有會議，即可用同一個連結測試新內容。還原會回到原始版本；也可以只下載測試版 JSON 自行替換。</p>
 </section>
 <section class="guide-qr" data-sample-language="en" hidden id="qr-samples-en" aria-labelledby="qr-samples-title-en">
 <p class="eyebrow">DIRECT IMPORT · QR CODE / LINK</p>
@@ -90,9 +87,6 @@
   <a class="qr-file-url" href="https://jamesweichen.github.io/acadenda/program/Official_Conference_Demo.json">https://jamesweichen.github.io/acadenda/program/Official_Conference_Demo.json</a>
 </article></div>
 <p class="qr-footnote">Each QR code contains the complete HTTPS file URL. Both URLs return the schedule file directly. After adding from a link, Acadenda also follows that URL for program updates.</p>
-<div class="buttons demo-server"><input class="demo-password" type="password" autocomplete="off" data-i18n-aria-label="示範密碼" aria-label="示範密碼" data-i18n-placeholder="示範密碼" placeholder="示範密碼"><button class="demo-server-button demo-apply-button" type="button" data-i18n="套用測試更新到線上">套用測試更新到線上</button><button class="demo-server-button demo-restore-button" type="button" data-i18n="還原線上版本">還原線上版本</button></div>
-<div class="buttons"><button class="demo-update-button" type="button" data-i18n="下載測試更新版 JSON">下載測試更新版 JSON</button></div>
-<p class="muted" data-i18n="Enter the demo password to write the three last-minute changes to the sample JSON and push them to GitHub. GitHub Pages updates in about a minute; then update the existing conference in the App to test the same link with new content. Restore returns to the original version. You can also download the test-update JSON and replace the file yourself.">Enter the demo password to write the three last-minute changes to the sample JSON and push them to GitHub. GitHub Pages updates in about a minute; then update the existing conference in the App to test the same link with new content. Restore returns to the original version. You can also download the test-update JSON and replace the file yourself.</p>
 </section>
 <details id="operator" hidden><summary data-i18n="營運工具 · 複製 AI 更新指令">營運工具 · 複製 AI 更新指令</summary>
 <p data-i18n="按下按鈕會重新讀取目前已發布的 JSON，再連同固定規則與修改要求一起複製。此頁面沒有上傳或發布權限。">按下按鈕會重新讀取目前已發布的 JSON，再連同固定規則與修改要求一起複製。此頁面沒有上傳或發布權限。</p>
@@ -100,6 +94,10 @@
 <button id="copy-prompt" data-i18n="複製更新指令＋目前 JSON">複製更新指令＋目前 JSON</button>
 <label for="copy-fallback" id="fallback-label" hidden data-i18n="自動複製不可用，請全選以下內容後複製：">自動複製不可用，請全選以下內容後複製：</label>
 <textarea id="copy-fallback" rows="10" readonly hidden></textarea>
+</details>
+<details id="developer-tools"><summary data-i18n="開發者工具">開發者工具</summary>
+<p data-i18n="輸入示範密碼後，會把三處臨時變動直接寫入示範 JSON 並推送到 GitHub。約一分鐘後 GitHub Pages 更新，再到 App 更新既有會議，即可用同一個連結測試新內容。還原會回到原始版本。">輸入示範密碼後，會把三處臨時變動直接寫入示範 JSON 並推送到 GitHub。約一分鐘後 GitHub Pages 更新，再到 App 更新既有會議，即可用同一個連結測試新內容。還原會回到原始版本。</p>
+<div class="buttons demo-server"><input class="demo-password" type="password" autocomplete="off" data-i18n-aria-label="示範密碼" aria-label="示範密碼" data-i18n-placeholder="示範密碼" placeholder="示範密碼"><button class="demo-server-button demo-apply-button" type="button" data-i18n="套用測試更新到線上">套用測試更新到線上</button><button class="demo-server-button demo-restore-button" type="button" data-i18n="還原線上版本">還原線上版本</button></div>
 </details>
 <footer><p id="sample-note" hidden data-i18n="這是虛構的示範會議，供測試與檢查操作流程使用。">這是虛構的示範會議，供測試與檢查操作流程使用。</p><span data-i18n="議程內容由會議提供方確認；此頁面不會修改正式議程。">議程內容由會議提供方確認；此頁面不會修改正式議程。</span></footer>
 </main>

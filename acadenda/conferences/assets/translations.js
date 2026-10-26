@@ -50,11 +50,7 @@ const english = {
   "跟隨系統": "System",
   "淺色": "Light",
   "深色": "Dark",
-  "找不到測試更新所需的議程。": "The agenda item needed for this test update was not found.",
-  "找不到測試更新所需的講者。": "The talk needed for this test update was not found.",
-  "未下載：": "Not downloaded: ",
-  "下載測試更新版 JSON": "Download test-update JSON",
-  "輸入示範密碼後，會把三處臨時變動直接寫入示範 JSON 並推送到 GitHub。約一分鐘後 GitHub Pages 更新，再到 App 更新既有會議，即可用同一個連結測試新內容。還原會回到原始版本；也可以只下載測試版 JSON 自行替換。": "Enter the demo password to write the three last-minute changes to the sample JSON and push them to GitHub. GitHub Pages updates in about a minute; then update the existing conference in the App to test the same link with new content. Restore returns to the original version. You can also download the test-update JSON and replace the file yourself.",
+  "輸入示範密碼後，會把三處臨時變動直接寫入示範 JSON 並推送到 GitHub。約一分鐘後 GitHub Pages 更新，再到 App 更新既有會議，即可用同一個連結測試新內容。還原會回到原始版本。": "Enter the demo password to write the three last-minute changes to the sample JSON and push them to GitHub. GitHub Pages updates in about a minute; then update the existing conference in the App to test the same link with new content. Restore returns to the original version.",
   "示範密碼": "Demo password",
   "套用測試更新到線上": "Apply test update to live",
   "還原線上版本": "Restore live version",
@@ -65,6 +61,6 @@ const english = {
   "已送出測試更新。GitHub Pages 約一分鐘後更新，之後按「重新載入」或到 App 更新既有會議。": "Test update sent. GitHub Pages updates in about a minute; then select Refresh or update the existing conference in the App.",
   "已還原線上版本。GitHub Pages 約一分鐘後更新，之後按「重新載入」或到 App 更新既有會議。": "Live version restored. GitHub Pages updates in about a minute; then select Refresh or update the existing conference in the App.",
   "線上版本已是原始內容，沒有重新寫入。": "The live version is already the original content, so nothing was written.",
-  "已下載測試更新版 JSON。請替換 program/Official_Conference_Demo.json 並推送，再到 App 更新。": "Downloaded the test-update JSON. Replace program/Official_Conference_Demo.json, push it, then update the conference in the App."
+  "開發者工具": "Developer tools"
 };
 const t = text => window.conferenceLanguage === 'en' ? (english[text] || text) : text;
