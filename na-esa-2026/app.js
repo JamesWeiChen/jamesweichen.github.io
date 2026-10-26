@@ -157,11 +157,7 @@ function renderMap(map) {
   image.alt = map.title;
   image.loading = 'lazy';
   link.append(image);
-  const caption = el('figcaption', `${map.title} · `);
-  const download = el('a', 'Download PNG');
-  download.href = url.href;
-  download.download = '';
-  caption.append(download);
+  const caption = el('figcaption', map.title);
   return [link, caption];
 }
 
