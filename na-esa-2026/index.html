@@ -18,6 +18,17 @@
 <script src="app.js" defer></script>
 </head>
 <body>
+<div class="topbar">
+  <label class="preference-control">
+    <span>Appearance</span>
+    <select id="theme" aria-label="Appearance">
+      <option value="system">System</option>
+      <option value="light">Light</option>
+      <option value="dark">Dark</option>
+    </select>
+  </label>
+</div>
+
 <header class="masthead">
   <p class="eyebrow">NA ESA 2026</p>
   <h1>2026 North American Economic Science Association Meeting</h1>
@@ -29,14 +40,6 @@
   <a href="#program">Program</a>
   <a href="#venue">Venue Map</a>
   <a href="#fun-run">Fun Run</a>
-  <label class="appearance">
-    <span>Appearance</span>
-    <select id="theme">
-      <option value="system">System</option>
-      <option value="light">Light</option>
-      <option value="dark">Dark</option>
-    </select>
-  </label>
 </nav>
 
 <main>
@@ -52,11 +55,8 @@
           <li>Paste the program link below, or scan the QR code with the app’s scanner.</li>
           <li>Preview the schedule, then tap Add to my conferences.</li>
         </ol>
-        <p class="link-line"><a id="program-link" href="program.json">https://jamesweichen.github.io/na-esa-2026/program.json</a></p>
         <div class="buttons">
           <button type="button" id="copy-link">Copy program link</button>
-          <a class="button-link" href="program.json" download="NA-ESA-2026.json">Download JSON</a>
-          <a class="button-link" href="https://apps.apple.com/tw/app/acadenda/id6812816802" rel="noopener">Get Acadenda on the App Store</a>
         </div>
         <p class="muted small" id="copy-status" role="status" aria-live="polite"></p>
       </div>
@@ -68,6 +68,7 @@
         <figure class="qr">
           <img src="qrcode-app-store.svg" width="164" height="164" alt="QR code for the Acadenda page on the App Store">
           <figcaption>Scan to download Acadenda for iOS.</figcaption>
+          <a class="button-link" href="https://apps.apple.com/tw/app/acadenda/id6812816802" rel="noopener">Get Acadenda on the App Store</a>
         </figure>
       </div>
     </div>
