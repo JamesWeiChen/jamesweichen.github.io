@@ -147,7 +147,9 @@ h3 { font-size: 1.05rem; margin: 0; overflow-wrap: anywhere; }
 .import { display: grid; gap: 24px; grid-template-columns: minmax(0, 1fr) minmax(0, 340px); align-items: start; }
 .steps { padding-left: 22px; margin: 0 0 12px; }
 .steps li { margin: 6px 0; }
-.qr .button-link { display: inline-block; margin-top: 10px; font-size: .9rem; color: var(--accent); }
+.import + p { margin-top: 28px; }
+.qr { margin-bottom: 20px; }
+.qr .button-link { display: block; box-sizing: border-box; margin-top: 12px; padding: 9px 12px; text-align: center; font-size: .9rem; color: var(--accent); }
 .buttons { display: flex; gap: 10px; flex-wrap: wrap; margin: 14px 0 8px; }
 .buttons button, .button-link {
   font: inherit;
