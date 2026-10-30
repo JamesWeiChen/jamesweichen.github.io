@@ -29,6 +29,11 @@
       },
     },
 
+    nav: {
+      en: {home: "Home", research: "Research", featured: "Featured findings", browse: "Browse papers", lab: "Lab", presentations: "Talks", teaching: "Teaching", apps: "Apps", cv: "CV"},
+      zh: {home: "首頁", research: "研究", featured: "精選發現", browse: "瀏覽論文", lab: "實驗室", presentations: "研討會紀錄", teaching: "教學", apps: "應用程式", cv: "履歷"},
+    },
+
     bio: {
       en: [
         "I am an assistant professor in the Department of Agricultural Economics at National Taiwan University. I received my Ph.D. in Economics from The Ohio State University.",

@@ -1,9 +1,8 @@
 (function () {
   'use strict';
-  const labels = {en:{home:'Home',research:'Research',teaching:'Teaching',lab:'Lab',presentations:'Talks',apps:'Apps',cv:'CV'},zh:{home:'首頁',research:'研究',teaching:'教學',lab:'實驗室',presentations:'研討會紀錄',apps:'應用程式',cv:'履歷'}};
   window.renderSiteHeader = function(lang, currentRoute = 'apps', rootURL = './') {
     const data = window.siteData;
-    const t = key => labels[lang][key];
+    const t = key => data.nav[lang][key];
     const linkTo = (path, label, activePaths = [path]) => {
       const current = activePaths.includes(currentRoute);
       return `<a class="nav-link${current ? ' is-active' : ''}" href="${rootURL}?lang=${window.sitePreferences.languageMode}#/${path === 'home' ? '' : path}"${current ? ' aria-current="page"' : ''}>${label}</a>`;

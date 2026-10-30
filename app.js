@@ -17,15 +17,7 @@
 
   const copy = {
     en: {
-      home: "Home",
-      research: "Research",
-      featured: "Featured findings",
-      browse: "Browse papers",
-      lab: "Lab",
-      presentations: "Talks",
-      teaching: "Teaching",
-      apps: "Apps",
-      cv: "CV",
+      ...data.nav.en,
       greeting: "Greetings!",
       contact: "Email",
       scholar: "Google Scholar",
@@ -37,17 +29,47 @@
       researchIntro: "We study economic decisions as they happen - from attention and learning to the institutions that shape behavior.",
       selected: "At a glance",
       publications: "publications",
-      activeStudents: "active students",
-      researchStreams: "research streams",
       latestNews: "Lab news",
       allNews: "Current and recent milestones from the lab.",
-      explore: "Explore the research map",
+      seeAllFindings: "See all findings",
+      readFinding: "Read the finding",
+      researchAtlas: "Research atlas",
+      whereWeWork: "Where we work",
+      methodsAtlas: "Methods atlas",
+      filterResearch: "Filter research",
+      portraitOf: "Portrait of",
+      theLab: "The lab",
+      openPositions: "Open positions",
+      courses: "Courses",
+      academicExchange: "Academic exchange",
+      selectedEvidence: "Selected evidence",
+      featuredIntro: "Five results from our published work on learning, strategic reasoning, behavioral models, and scientific institutions.",
+      previousFinding: "Previous finding",
+      nextFinding: "Next finding",
+      showFinding: "Show finding",
+      playRotation: "Play rotation",
+      pauseRotation: "Pause rotation",
+      readSource: "Read the source",
+      methodsMap: "Methods map",
       mapTitle: "Research methods map",
       mapIntro: "Explore the lab by how evidence is produced, from behavioral experiments and process tracing to computational models and field evidence.",
+      researchMethods: "Research methods",
       all: "All work",
       published: "Published",
       working: "Working papers",
       rr: "R&R",
+      projectUnit: "projects",
+      researchArea: "Research area",
+      showAllAreas: "Show all areas",
+      papersAndProjects: "Papers & projects",
+      researchViews: "Research views",
+      noMatches: "No papers match these filters.",
+      browseAll: "Browse all papers",
+      browseIntro: "Search by title, author, venue, or year, then narrow the list by publication status.",
+      paperFilters: "Paper filters",
+      searchPapers: "Search papers",
+      searchPlaceholder: "Title, author, venue, year…",
+      results: "results",
       labTitle: "Lab members",
       labIntro: "Current students, former students, and research assistants advised or supervised in the lab.",
       current: "Current students",
@@ -74,29 +96,28 @@
       viewCourse: "View course",
       videoResources: "Free video resources",
       youtubeChannel: "Wei James Chen on YouTube",
+      onlineLearningResources: "Online learning resources",
       appsTitle: "Apps by Wei James Chen",
       appsIntro: "Two small tools I built for the moments when good software can make a real difference: presenting your work and finding your way through a conference.",
+      independentProjects: "Independent projects",
+      beamerCategory: "PRESENTATION TOOL",
+      acadendaCategory: "CONFERENCE PLANNER",
       beamerDescription: "A presenter for LaTeX Beamer PDFs. Keep your slides, private speaker notes, and next-slide preview on your iPad while the audience sees only the slides. Annotate with Apple Pencil, and use your iPhone as a remote.",
       acadendaDescription: "Turn a conference programme PDF into a schedule you can navigate. Explore sessions and speakers, find talks matched to your research interests, and keep notes with your agenda.",
       appStore: "Download on the App Store",
+      attendeesTitle: "For attendees",
+      attendeesText: "Turn your program PDF into a schedule in seven illustrated steps.",
+      pdfImportGuide: "PDF import guide",
+      organizersTitle: "For conference organizers",
+      organizersText: "Preview a published agenda, venue maps, and the links attendees use to import your program.",
+      organizerDemo: "View organizer demo",
       freeVideoChannel: "Free teaching videos",
       visitYoutube: "Visit YouTube channel",
       download: "Download CV",
       updated: "Content updated September 2026",
-      switchTheme: "Switch theme",
-      useLight: "Light",
-      useDark: "Dark",
     },
     zh: {
-      home: "首頁",
-      research: "研究",
-      featured: "精選發現",
-      browse: "瀏覽論文",
-      lab: "實驗室",
-      presentations: "研討會紀錄",
-      teaching: "教學",
-      apps: "應用程式",
-      cv: "履歷",
+      ...data.nav.zh,
       greeting: "你好！",
       contact: "電子郵件",
       scholar: "Google Scholar",
@@ -108,17 +129,47 @@
       researchIntro: "我們研究經濟決策如何形成，包括注意力、學習，以及制度如何影響行為。",
       selected: "研究概覽",
       publications: "篇已發表論文",
-      activeStudents: "位現任學生",
-      researchStreams: "個研究方向",
       latestNews: "實驗室消息",
       allNews: "實驗室近期消息。",
-      explore: "探索研究地圖",
+      seeAllFindings: "查看全部發現",
+      readFinding: "閱讀完整發現",
+      researchAtlas: "研究地圖",
+      whereWeWork: "我們關注的研究領域",
+      methodsAtlas: "研究方法總覽",
+      filterResearch: "篩選研究",
+      portraitOf: "肖像：",
+      theLab: "實驗室",
+      openPositions: "招募資訊",
+      courses: "課程",
+      academicExchange: "學術交流",
+      selectedEvidence: "精選研究證據",
+      featuredIntro: "五項已發表研究的主要發現，涵蓋學習、策略推理、行為模型與科學制度。",
+      previousFinding: "上一項發現",
+      nextFinding: "下一項發現",
+      showFinding: "顯示發現",
+      playRotation: "播放輪播",
+      pauseRotation: "暫停輪播",
+      readSource: "閱讀研究來源",
+      methodsMap: "研究方法地圖",
       mapTitle: "研究方法地圖",
       mapIntro: "可依研究方法瀏覽實驗室成果，包括行為實驗、歷程追蹤、計算模型與田野研究。",
+      researchMethods: "研究方法",
       all: "全部研究",
       published: "已發表",
       working: "工作論文",
       rr: "修訂中",
+      projectUnit: "項研究",
+      researchArea: "研究領域",
+      showAllAreas: "顯示全部領域",
+      papersAndProjects: "論文與研究計畫",
+      researchViews: "研究瀏覽方式",
+      noMatches: "沒有符合目前條件的論文。",
+      browseAll: "瀏覽所有論文",
+      browseIntro: "依標題、作者、期刊或年份搜尋，並可用發表狀態縮小範圍。",
+      paperFilters: "論文篩選",
+      searchPapers: "搜尋論文",
+      searchPlaceholder: "標題、作者、期刊、年份…",
+      results: "筆結果",
       labTitle: "實驗室成員",
       labIntro: "這裡列出目前與過去指導的學生，以及現任與歷任研究助理。",
       current: "現任學生",
@@ -145,18 +196,25 @@
       viewCourse: "查看課程",
       videoResources: "免費影音資源",
       youtubeChannel: "Wei James Chen 的 YouTube 頻道",
+      onlineLearningResources: "線上學習資源",
       appsTitle: "我製作的 App",
       appsIntro: "我為簡報與學術研討會打造了兩款工具，希望在準備演講、安排議程與記錄交流時，讓事情更簡單。",
+      independentProjects: "個人作品",
+      beamerCategory: "簡報工具",
+      acadendaCategory: "研討會議程工具",
       beamerDescription: "專為 LaTeX Beamer PDF 設計的簡報工具。在 iPad 上查看投影片、私人講稿與下一張預覽，觀眾只會看到投影片；也可用 Apple Pencil 手寫標註，並以 iPhone 遙控簡報。",
       acadendaDescription: "把研討會議程 PDF 轉成方便瀏覽的行程。查看場次與講者、依研究興趣探索推薦演講，並在議程中整理筆記。",
       appStore: "前往 App Store 下載",
+      attendeesTitle: "給一般使用者",
+      attendeesText: "跟著 7 個圖文步驟，把議程 PDF 變成行程。",
+      pdfImportGuide: "查看 PDF 匯入教學",
+      organizersTitle: "給會議主辦方",
+      organizersText: "預覽會議議程網頁、會場地圖，以及提供給與會者的議程匯入連結。",
+      organizerDemo: "查看主辦方示範",
       freeVideoChannel: "免費教學影片",
       visitYoutube: "前往 YouTube 頻道",
       download: "下載 CV",
       updated: "內容更新於 2026 年 9 月",
-      switchTheme: "切換顯示主題",
-      useLight: "淺色",
-      useDark: "深色",
     },
   };
 
@@ -175,12 +233,6 @@
   function route() {
     const value = window.location.hash.replace(/^#\/?/, "").split("?")[0];
     return ["featured", "research", "browse", "lab", "presentations", "teaching", "apps"].includes(value) ? value : "home";
-  }
-
-  function linkTo(path, label, activePaths = [path]) {
-    const current = activePaths.includes(route());
-    const href = path === "home" ? "#/" : `#/${path}`;
-    return `<a class="nav-link${current ? " is-active" : ""}" href="${href}"${current ? ' aria-current="page"' : ""}>${label}</a>`;
   }
 
   function header() {
@@ -243,7 +295,7 @@
             <span class="finding-preview-number">${finding.number}</span>
             <span class="finding-preview-unit">${localized(finding.unit)}</span>
             <p>${localized(finding.finding)}</p>
-            <span class="finding-preview-link">${state.lang === "en" ? "Read the finding" : "閱讀完整發現"} →</span>
+            <span class="finding-preview-link">${t("readFinding")} →</span>
           </a>`,
       )
       .join("");
@@ -259,7 +311,7 @@
             ${socialLinks()}
           </div>
           <figure class="portrait-frame">
-            <img src="${data.profile.image}" alt="Portrait of ${data.profile.name}" />
+            <img src="${data.profile.image}" alt="${t("portraitOf")} ${data.profile.name}" />
             <figcaption>
               <span>${localized(data.profile.title)}</span>
               <span>National Taiwan University</span>
@@ -273,7 +325,7 @@
               <p class="eyebrow">${t("selected")}</p>
               <h2 id="stats-title">${t("researchIntro")}</h2>
             </div>
-            <a class="text-link" href="#/featured">${state.lang === "en" ? "See all findings" : "查看全部發現"} →</a>
+            <a class="text-link" href="#/featured">${t("seeAllFindings")} →</a>
           </div>
           <div class="finding-preview-grid">${findings}</div>
         </section>
@@ -281,8 +333,8 @@
         <section class="themes-section page-shell section-rule" aria-labelledby="themes-title">
           <div class="section-heading compact-heading">
             <div>
-              <p class="eyebrow">Research atlas</p>
-              <h2 id="themes-title">${state.lang === "en" ? "Where we work" : "我們關注的研究領域"}</h2>
+              <p class="eyebrow">${t("researchAtlas")}</p>
+              <h2 id="themes-title">${t("whereWeWork")}</h2>
             </div>
           </div>
           <div class="theme-grid">${themeCards}</div>
@@ -326,11 +378,11 @@
   function researchSubnav() {
     const links = [
       ["featured", t("featured")],
-      ["research", state.lang === "en" ? "Methods map" : "研究方法地圖"],
-      ["browse", state.lang === "en" ? "Browse all papers" : "瀏覽所有論文"],
+      ["research", t("methodsMap")],
+      ["browse", t("browseAll")],
     ];
     return `
-      <nav class="research-subnav" aria-label="${state.lang === "en" ? "Research views" : "研究瀏覽方式"}">
+      <nav class="research-subnav" aria-label="${t("researchViews")}">
         ${links
           .map(([path, label]) => `<a href="#/${path}" class="${route() === path ? "is-active" : ""}"${route() === path ? ' aria-current="page"' : ""}>${label}</a>`)
           .join("")}
@@ -351,7 +403,7 @@
             <h2>${localized(finding.title)}</h2>
             <p class="featured-authors">${finding.authors}<br />${finding.venue}</p>
             <p class="featured-summary">${localized(finding.finding)}</p>
-            <a class="button-link" href="${finding.link}" target="_blank" rel="noreferrer">${state.lang === "en" ? "Read the source" : "閱讀研究來源"} ↗</a>
+            <a class="button-link" href="${finding.link}" target="_blank" rel="noreferrer">${t("readSource")} ↗</a>
           </article>
         </section>`;
   }
@@ -359,15 +411,13 @@
   function featuredDots() {
     return data.featuredFindings
       .map(
-        (_, index) => `<button type="button" class="featured-dot${index === state.featuredIndex ? " is-active" : ""}" data-featured-index="${index}" aria-label="${state.lang === "en" ? "Show finding" : "顯示發現"} ${index + 1}"${index === state.featuredIndex ? ' aria-current="true"' : ""}></button>`,
+        (_, index) => `<button type="button" class="featured-dot${index === state.featuredIndex ? " is-active" : ""}" data-featured-index="${index}" aria-label="${t("showFinding")} ${index + 1}"${index === state.featuredIndex ? ' aria-current="true"' : ""}></button>`,
       )
       .join("");
   }
 
   function featuredToggle() {
-    const label = state.featuredPaused
-      ? state.lang === "en" ? "Play rotation" : "播放輪播"
-      : state.lang === "en" ? "Pause rotation" : "暫停輪播";
+    const label = state.featuredPaused ? t("playRotation") : t("pauseRotation");
     return `<button type="button" class="featured-toggle" data-featured-toggle aria-label="${label}" title="${label}">${state.featuredPaused ? "▶" : "❚❚"}</button>`;
   }
 
@@ -381,17 +431,17 @@
       <main id="main-content" class="page-shell inner-page featured-page">
         ${researchSubnav()}
         <header class="page-intro">
-          <p class="eyebrow">${state.lang === "en" ? "Selected evidence" : "精選研究證據"}</p>
+          <p class="eyebrow">${t("selectedEvidence")}</p>
           <h1>${t("featured")}</h1>
-          <p>${state.lang === "en" ? "Five results from our published work on learning, strategic reasoning, behavioral models, and scientific institutions." : "五項已發表研究的主要發現，涵蓋學習、策略推理、行為模型與科學制度。"}</p>
+          <p>${t("featuredIntro")}</p>
         </header>
         ${featuredSpotlight()}
         <div class="featured-controls">
           <div class="featured-dots">${featuredDots()}</div>
           <div class="featured-arrows">
             ${featuredToggle()}
-            <button type="button" data-featured-step="-1" aria-label="${state.lang === "en" ? "Previous finding" : "上一項發現"}">←</button>
-            <button type="button" data-featured-step="1" aria-label="${state.lang === "en" ? "Next finding" : "下一項發現"}">→</button>
+            <button type="button" data-featured-step="-1" aria-label="${t("previousFinding")}">←</button>
+            <button type="button" data-featured-step="1" aria-label="${t("nextFinding")}">→</button>
           </div>
         </div>
       </main>`;
@@ -422,8 +472,8 @@
     const themeNotice = theme
       ? `
           <div class="theme-filter-notice">
-            <span>${state.lang === "en" ? "Research area" : "研究領域"}: <strong>${localized(theme.title)}</strong></span>
-            <a href="#/research">${state.lang === "en" ? "Show all areas" : "顯示全部領域"} ✕</a>
+            <span>${t("researchArea")}: <strong>${localized(theme.title)}</strong></span>
+            <a href="#/research">${t("showAllAreas")} ✕</a>
           </div>`
       : "";
     const cards = data.methods
@@ -434,7 +484,7 @@
             <span class="map-card-title">${localized(method.title)}</span>
             <span class="map-card-copy">${localized(method.text)}</span>
             <span class="tag-line">${localized(method.tags)}</span>
-            <span class="method-count">${allPapers.filter((paper) => paper.method === method.id).length} ${state.lang === "en" ? "projects" : "項研究"}</span>
+            <span class="method-count">${allPapers.filter((paper) => paper.method === method.id).length} ${t("projectUnit")}</span>
           </button>`,
       )
       .join("");
@@ -443,19 +493,19 @@
       <main id="main-content" class="page-shell inner-page">
         ${researchSubnav()}
         <header class="page-intro">
-          <p class="eyebrow">Methods atlas · ${allPapers.length} projects</p>
+          <p class="eyebrow">${t("methodsAtlas")} · ${allPapers.length} ${t("projectUnit")}</p>
           <h1>${t("mapTitle")}</h1>
           <p>${t("mapIntro")}</p>
         </header>
-        <section class="methods-map" aria-label="${state.lang === "en" ? "Research methods" : "研究方法"}">${cards}</section>
+        <section class="methods-map" aria-label="${t("researchMethods")}">${cards}</section>
         <section class="paper-section section-rule" aria-labelledby="paper-list-title">
           <div class="paper-toolbar">
-            <h2 id="paper-list-title">${state.lang === "en" ? "Papers & projects" : "論文與研究計畫"}</h2>
-            <div class="filter-group" aria-label="Filter research">${filterButtons}</div>
+            <h2 id="paper-list-title">${t("papersAndProjects")}</h2>
+            <div class="filter-group" aria-label="${t("filterResearch")}">${filterButtons}</div>
           </div>
           ${themeNotice}
           <div class="paper-list">${visible.map(paperRow).join("")}</div>
-          ${visible.length ? "" : `<p class="browse-empty">${state.lang === "en" ? "No papers match these filters." : "沒有符合目前條件的論文。"}</p>`}
+          ${visible.length ? "" : `<p class="browse-empty">${t("noMatches")}</p>`}
         </section>
       </main>`;
   }
@@ -471,14 +521,14 @@
       <main id="main-content" class="page-shell inner-page browse-page">
         ${researchSubnav()}
         <header class="page-intro">
-          <p class="eyebrow">${allPapers.length} ${state.lang === "en" ? "projects" : "項研究"}</p>
-          <h1>${state.lang === "en" ? "Browse all papers" : "瀏覽所有論文"}</h1>
-          <p>${state.lang === "en" ? "Search by title, author, venue, or year, then narrow the list by publication status." : "依標題、作者、期刊或年份搜尋，並可用發表狀態縮小範圍。"}</p>
+          <p class="eyebrow">${allPapers.length} ${t("projectUnit")}</p>
+          <h1>${t("browseAll")}</h1>
+          <p>${t("browseIntro")}</p>
         </header>
-        <section class="browse-controls" aria-label="${state.lang === "en" ? "Paper filters" : "論文篩選"}">
+        <section class="browse-controls" aria-label="${t("paperFilters")}">
           <label class="paper-search">
-            <span>${state.lang === "en" ? "Search papers" : "搜尋論文"}</span>
-            <input type="search" data-paper-search value="${escapeAttribute(state.browseQuery)}" placeholder="${state.lang === "en" ? "Title, author, venue, year…" : "標題、作者、期刊、年份…"}" />
+            <span>${t("searchPapers")}</span>
+            <input type="search" data-paper-search value="${escapeAttribute(state.browseQuery)}" placeholder="${t("searchPlaceholder")}" />
           </label>
           <div class="browse-statuses">
             ${statusOptions
@@ -486,9 +536,9 @@
               .join("")}
           </div>
         </section>
-        <div class="browse-result-line"><strong data-result-count>${allPapers.length}</strong> ${state.lang === "en" ? "results" : "筆結果"}</div>
+        <div class="browse-result-line"><strong data-result-count>${allPapers.length}</strong> ${t("results")}</div>
         <section class="paper-list browse-paper-list">${allPapers.map(paperRow).join("")}</section>
-        <p class="browse-empty" data-browse-empty hidden>${state.lang === "en" ? "No papers match these filters." : "沒有符合目前條件的論文。"}</p>
+        <p class="browse-empty" data-browse-empty hidden>${t("noMatches")}</p>
       </main>`;
   }
 
@@ -569,7 +619,7 @@
     return `
       <main id="main-content" class="page-shell inner-page">
         <header class="page-intro lab-intro">
-          <p class="eyebrow">The lab</p>
+          <p class="eyebrow">${t("theLab")}</p>
           <h1>${t("labTitle")}</h1>
           <p>${t("labIntro")}</p>
         </header>
@@ -605,7 +655,7 @@
         </section>
         <section class="join-panel">
           <div>
-            <p class="eyebrow">Open positions</p>
+            <p class="eyebrow">${t("openPositions")}</p>
             <h2>${t("join")}</h2>
           </div>
           <div>
@@ -635,11 +685,11 @@
     return `
       <main id="main-content" class="page-shell inner-page">
         <header class="page-intro teaching-intro">
-          <p class="eyebrow">Courses</p>
+          <p class="eyebrow">${t("courses")}</p>
           <h1>${t("teachingTitle")}</h1>
           <p>${t("teachingIntro")}</p>
         </header>
-        <section class="teaching-resources-grid" aria-label="${state.lang === "en" ? "Online learning resources" : "線上學習資源"}">
+        <section class="teaching-resources-grid" aria-label="${t("onlineLearningResources")}">
           <article class="featured-course" aria-labelledby="featured-course-title">
             <div class="featured-course-copy">
               <p class="eyebrow">${t("featuredCourse")}</p>
@@ -690,7 +740,7 @@
       {
         name: "Beamer Notes",
         mark: "BN",
-        category: state.lang === "en" ? "PRESENTATION TOOL" : "簡報工具",
+        category: t("beamerCategory"),
         description: t("beamerDescription"),
         url: "https://apps.apple.com/tw/app/beamer-notes/id6810103112",
         className: "app-card-beamer",
@@ -698,7 +748,7 @@
       {
         name: "Acadenda",
         mark: "A",
-        category: state.lang === "en" ? "CONFERENCE PLANNER" : "研討會議程工具",
+        category: t("acadendaCategory"),
         description: t("acadendaDescription"),
         url: "https://apps.apple.com/tw/app/acadenda/id6812816802",
         className: "app-card-acadenda",
@@ -707,7 +757,7 @@
     return `
       <main id="main-content" class="page-shell inner-page apps-page">
         <header class="page-intro">
-          <p class="eyebrow">${state.lang === "en" ? "Independent projects" : "個人作品"}</p>
+          <p class="eyebrow">${t("independentProjects")}</p>
           <h1>${t("appsTitle")}</h1>
           <p>${t("appsIntro")}</p>
 
@@ -727,18 +777,18 @@
         <aside class="app-guide-panel" aria-labelledby="app-guide-title">
           <span class="app-guide-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5.5C9 3.5 5 3.5 2 5v14c3-1.5 7-1.5 10 .5 3-2 7-2 10-.5V5c-3-1.5-7-1.5-10 .5Z"/><path d="M12 5.5v14"/></svg></span>
           <div class="app-guide-copy">
-            <h3 id="app-guide-title">${state.lang === "en" ? "For attendees" : "給一般使用者"}</h3>
-            <p>${state.lang === "en" ? "Turn your program PDF into a schedule in seven illustrated steps." : "跟著 7 個圖文步驟，把議程 PDF 變成行程。"}</p>
+            <h3 id="app-guide-title">${t("attendeesTitle")}</h3>
+            <p>${t("attendeesText")}</p>
           </div>
-          <a class="app-guide-button" href="${state.lang === "en" ? "./acadenda/guide.html" : "./acadenda/guide-zh.html"}?lang=${window.sitePreferences.languageMode}">${state.lang === "en" ? "PDF import guide" : "查看 PDF 匯入教學"}<span aria-hidden="true">→</span></a>
+          <a class="app-guide-button" href="${state.lang === "en" ? "./acadenda/guide.html" : "./acadenda/guide-zh.html"}?lang=${window.sitePreferences.languageMode}">${t("pdfImportGuide")}<span aria-hidden="true">→</span></a>
         </aside>
         <aside class="app-guide-panel" aria-labelledby="app-organizer-title">
           <span class="app-guide-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4M17 3v4M3 10h18M7 14h2M12 14h5M7 17h2M12 17h5"/></svg></span>
           <div class="app-guide-copy">
-            <h3 id="app-organizer-title">${state.lang === "en" ? "For conference organizers" : "給會議主辦方"}</h3>
-            <p>${state.lang === "en" ? "Preview a published agenda, venue maps, and the links attendees use to import your program." : "預覽會議議程網頁、會場地圖，以及提供給與會者的議程匯入連結。"}</p>
+            <h3 id="app-organizer-title">${t("organizersTitle")}</h3>
+            <p>${t("organizersText")}</p>
           </div>
-          <a class="app-demo-button app-guide-button" href="./acadenda/conferences/official-demo/?lang=${window.sitePreferences.languageMode}">${state.lang === "en" ? "View organizer demo" : "查看主辦方示範"}<span aria-hidden="true">→</span></a>
+          <a class="app-demo-button app-guide-button" href="./acadenda/conferences/official-demo/?lang=${window.sitePreferences.languageMode}">${t("organizerDemo")}<span aria-hidden="true">→</span></a>
         </aside>
         </div>` : ""}
             </article>`).join("")}
@@ -802,7 +852,7 @@
     return `
       <main id="main-content" class="page-shell inner-page">
         <header class="page-intro presentations-intro">
-          <p class="eyebrow">Academic exchange</p>
+          <p class="eyebrow">${t("academicExchange")}</p>
           <h1>${t("presentationsTitle")}</h1>
           <p>${t("presentationsIntro")}</p>
         </header>
@@ -836,13 +886,18 @@
       </footer>`;
   }
 
-  function render(preserveScroll = false) {
-    window.clearInterval(featuredTimer);
-    const currentRoute = route();
+  // Theme is CSS-driven through data-theme, so switching it never needs a re-render.
+  function applyDocumentTheme() {
     document.documentElement.dataset.theme = state.theme;
     document.documentElement.style.colorScheme = state.theme;
     const themeColor = document.querySelector("#theme-color");
     if (themeColor) themeColor.content = state.theme === "dark" ? "#101411" : "#f3f1ec";
+  }
+
+  function render(preserveScroll = false) {
+    window.clearInterval(featuredTimer);
+    const currentRoute = route();
+    applyDocumentTheme();
     document.documentElement.lang = state.lang === "zh" ? "zh-Hant" : "en";
     document.title = `${
       currentRoute === "home" ? data.profile.name : t(currentRoute)
@@ -905,7 +960,7 @@
 
   window.addEventListener("site-theme-change", () => {
     state.theme = document.documentElement.dataset.theme;
-    render();
+    applyDocumentTheme();
   });
 
   document.addEventListener('change', event => {
@@ -913,11 +968,11 @@
     if (event.target.matches('[data-language-select]')) {
       window.sitePreferences.setLanguage(event.target.value);
       state.lang = window.sitePreferences.language();
-      render();
+      render(true);
     }
   });
   window.addEventListener('languagechange', () => {
-    if (window.sitePreferences.languageMode === 'system') { state.lang = window.sitePreferences.language(); render(); }
+    if (window.sitePreferences.languageMode === 'system') { state.lang = window.sitePreferences.language(); render(true); }
   });
   document.addEventListener("click", (event) => {
     const methodButton = event.target.closest("[data-method-filter]");
