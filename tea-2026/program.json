@@ -1,0 +1,1827 @@
+{
+  "conference": {
+    "name": "台灣經濟學會 2026 年年會",
+    "shortName": "",
+    "venue": "國立成功大學社會科學院（臺南市小東路 25 號力行校區）",
+    "city": "臺南市",
+    "startDate": "2026-12-04",
+    "endDate": "2026-12-05"
+  },
+  "days": [
+    {
+      "label": "12/4 星期五",
+      "date": "2026-12-04",
+      "items": [
+        {
+          "kind": "registration",
+          "title": "報到",
+          "room": "",
+          "chair": "",
+          "startTime": "13:30",
+          "endTime": "14:00",
+          "sourcePage": 1,
+          "talks": []
+        },
+        {
+          "kind": "workshop",
+          "title": "研習 A",
+          "room": "",
+          "chair": "",
+          "startTime": "14:00",
+          "endTime": "15:00",
+          "sourcePage": 1,
+          "talks": [
+            {
+              "title": "結構模型在網絡形成與網絡互動之方法與運用",
+              "speaker": "謝志昇",
+              "affiliation": "台大經濟系",
+              "email": "",
+              "discussant": "",
+              "coauthors": [],
+              "startTime": "14:00",
+              "endTime": "15:00"
+            }
+          ]
+        },
+        {
+          "kind": "workshop",
+          "title": "研習 B",
+          "room": "",
+          "chair": "",
+          "startTime": "14:00",
+          "endTime": "15:00",
+          "sourcePage": 1,
+          "talks": [
+            {
+              "title": "量化貿易模型的應用：從資料到理論",
+              "speaker": "楊宗翰",
+              "affiliation": "中研院經濟所",
+              "email": "",
+              "discussant": "",
+              "coauthors": [],
+              "startTime": "14:00",
+              "endTime": "15:00"
+            }
+          ]
+        },
+        {
+          "kind": "coffeeBreak",
+          "title": "休息",
+          "room": "",
+          "chair": "",
+          "startTime": "15:00",
+          "endTime": "15:30",
+          "sourcePage": 1,
+          "talks": []
+        },
+        {
+          "kind": "keynote",
+          "title": "專題演講",
+          "room": "",
+          "chair": "",
+          "startTime": "15:30",
+          "endTime": "17:00",
+          "sourcePage": 1,
+          "talks": [
+            {
+              "title": "人文與 AI 匯流下的經濟學：一幅新的『經濟上河圖』",
+              "speaker": "陳樹衡",
+              "affiliation": "政大經濟系",
+              "email": "",
+              "discussant": "",
+              "coauthors": [],
+              "startTime": "15:30",
+              "endTime": "17:00"
+            }
+          ]
+        },
+        {
+          "kind": "social",
+          "title": "交流討論",
+          "room": "",
+          "chair": "",
+          "startTime": "17:00",
+          "endTime": "20:00",
+          "sourcePage": 1,
+          "talks": []
+        }
+      ]
+    },
+    {
+      "label": "12/5 星期六",
+      "date": "2026-12-05",
+      "items": [
+        {
+          "kind": "registration",
+          "title": "報到",
+          "room": "",
+          "chair": "",
+          "startTime": "08:30",
+          "endTime": "09:00",
+          "sourcePage": 2,
+          "talks": []
+        },
+        {
+          "kind": "parallelSession",
+          "title": "1A 公共政策、制度與資源配置",
+          "room": "場地 A",
+          "chair": "",
+          "startTime": "09:00",
+          "endTime": "10:20",
+          "sourcePage": 4,
+          "talks": [
+            {
+              "title": "環境友善農業政策對工資不均之政策效果分析：基於雙部門一般均衡模型的理論分析",
+              "speaker": "戴孟宜",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [
+                "吳朝欽",
+                "孫鈺峯"
+              ],
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "財政政策不確定性之 Calvo 與 Rotemberg 定價機制 DSGE 分析",
+              "speaker": "朱琇妍",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [
+                "高雅貞"
+              ],
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "Regulation and Capital Misallocation in Leasing",
+              "speaker": "陳聖方",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [],
+              "startTime": "",
+              "endTime": ""
+            }
+          ]
+        },
+        {
+          "kind": "parallelSession",
+          "title": "1B 產業競爭、所有權與定價策略",
+          "room": "場地 B",
+          "chair": "",
+          "startTime": "09:00",
+          "endTime": "10:20",
+          "sourcePage": 4,
+          "talks": [
+            {
+              "title": "The Effects of Profit Shifting and Common Ownership on Trade Volume and Social Welfare",
+              "speaker": "吳世傑",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [],
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "班次、車廂座位與大眾運輸的票價競爭",
+              "speaker": "簡呈穎",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [
+                "余碩彥"
+              ],
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "Passive Partial Forward Ownership and Strategic Delegation",
+              "speaker": "劉志成",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [],
+              "startTime": "",
+              "endTime": ""
+            }
+          ]
+        },
+        {
+          "kind": "parallelSession",
+          "title": "1C 綠色投資、企業永續與環境經濟",
+          "room": "場地 C",
+          "chair": "",
+          "startTime": "09:00",
+          "endTime": "10:20",
+          "sourcePage": 4,
+          "talks": [
+            {
+              "title": "Heat and morbidity",
+              "speaker": "Shuan-Wen Lin",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [
+                "Chon-Kit Ao"
+              ],
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "Tariffs and Green Investment in Spatial Competition",
+              "speaker": "賴孚權",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [
+                "郭文忠",
+                "石宗恩"
+              ],
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "產出、能源與貿易 -- 三層次模型",
+              "speaker": "毛維凌",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [],
+              "startTime": "",
+              "endTime": ""
+            }
+          ]
+        },
+        {
+          "kind": "parallelSession",
+          "title": "1D 產業景氣、貨幣政策與低碳貿易",
+          "room": "場地 D",
+          "chair": "",
+          "startTime": "09:00",
+          "endTime": "10:20",
+          "sourcePage": 5,
+          "talks": [
+            {
+              "title": "應用大型貝氏向量自我迴歸模型預測半導體產業景氣循環",
+              "speaker": "劉文獻",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [
+                "宋威霆"
+              ],
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "Net-Zero Targets and Low-Carbon Technology Imports: Evidence of Delayed Trade Effects",
+              "speaker": "邱品璇",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [
+                "林佩蒨"
+              ],
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "半導體衝擊、貨幣政策傳導與失業：以臺灣小型開放經濟體為例",
+              "speaker": "林佳慶",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [],
+              "startTime": "",
+              "endTime": ""
+            }
+          ]
+        },
+        {
+          "kind": "parallelSession",
+          "title": "1E 金融市場、匯率與銀行信貸",
+          "room": "場地 E",
+          "chair": "",
+          "startTime": "09:00",
+          "endTime": "10:20",
+          "sourcePage": 5,
+          "talks": [
+            {
+              "title": "Loss Aversion in Strategy Switching: Evidence on Dynamic Collective Behavior in Financial Markets",
+              "speaker": "Po-Keng Cheng",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [
+                "Jing-Jhe Huang"
+              ],
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "Directional Predictability in Exchange Rates: Evidence from Econometric and Machine Learning Approaches",
+              "speaker": "Wan-Shin Mo",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [],
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "Credit Reallocation and Bank Competition",
+              "speaker": "Ting-Yao Yan",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [],
+              "startTime": "",
+              "endTime": ""
+            }
+          ]
+        },
+        {
+          "kind": "parallelSession",
+          "title": "1F 選舉制度、社會保障與社會福利",
+          "room": "場地 F",
+          "chair": "",
+          "startTime": "09:00",
+          "endTime": "10:20",
+          "sourcePage": 6,
+          "talks": [
+            {
+              "title": "Electoral System and Spatial Inequality: Theory and Quantitative Analysis",
+              "speaker": "Yi-Fan Chen",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [],
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "Optimal Social Security in a Sandwich-Generation Economy: Family Support, Fertility, and Human Capital",
+              "speaker": "Wei-Yi Gan",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [
+                "Ernie Chuang"
+              ],
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "Active Aging in Age-Friendly Cities: Theory and Evidence",
+              "speaker": "Chiao-Han Lin",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [],
+              "startTime": "",
+              "endTime": ""
+            }
+          ]
+        },
+        {
+          "kind": "parallelSession",
+          "title": "1G 勞動市場、高等教育與學習成果",
+          "room": "場地 G",
+          "chair": "",
+          "startTime": "09:00",
+          "endTime": "10:20",
+          "sourcePage": 6,
+          "talks": [
+            {
+              "title": "Mapping AI Exposure and Complementarity in Taiwan: Posting Persistence and Labor-Demand Reallocation",
+              "speaker": "陳文豪",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [],
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "Easy Credits or Intellectual Breadth? Course Selection and Learning Outcomes in General Education",
+              "speaker": "曾雅雯",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [],
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "政府補助私立大專院校學雜費對學業表現的影響--以淡江大學為例",
+              "speaker": "楊博傑",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [
+                "劉家樺",
+                "賴雁慈"
+              ],
+              "startTime": "",
+              "endTime": ""
+            }
+          ]
+        },
+        {
+          "kind": "parallelSession",
+          "title": "1H 制度變動、組織行為與績效評估",
+          "room": "場地 H",
+          "chair": "",
+          "startTime": "09:00",
+          "endTime": "10:20",
+          "sourcePage": 6,
+          "talks": [
+            {
+              "title": "The Impact of Rule Changes in Major League Baseball on Attendance Demand and Player Performance",
+              "speaker": "Yi-Ju Hung",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [
+                "曾富民",
+                "Wen-Yuan Cheng"
+              ],
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "Do Electronic Case Files Improve Judicial Efficiency? An Empirical Analysis from the Kinmen District Court",
+              "speaker": "李文君",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [
+                "楊婕妤",
+                "林世昌"
+              ],
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "公衛危機與官員晉升—以中國大陸地級市市委書記為例",
+              "speaker": "張馨月",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [],
+              "startTime": "",
+              "endTime": ""
+            }
+          ]
+        },
+        {
+          "kind": "parallelSession",
+          "title": "1I 創新、技術擴散與市場策略",
+          "room": "場地 I",
+          "chair": "",
+          "startTime": "09:00",
+          "endTime": "10:20",
+          "sourcePage": 7,
+          "talks": [
+            {
+              "title": "Innovation and Adaptation to Expanding Biological Threats",
+              "speaker": "Shu-Chen Tsao",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [],
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "Strategic Data Licensing and Two-Way Technology Diffusion in the AI Industry",
+              "speaker": "Shinn-Shyr Wang",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [],
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "Forward Cross-Ownership, Foreign Supply Strategies, and Welfare",
+              "speaker": "Yu-Ting Lee",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [
+                "Ku-Chu Tsao"
+              ],
+              "startTime": "",
+              "endTime": ""
+            }
+          ]
+        },
+        {
+          "kind": "parallelSession",
+          "title": "1J 所得分配與經濟思想",
+          "room": "場地 J",
+          "chair": "",
+          "startTime": "09:00",
+          "endTime": "10:20",
+          "sourcePage": 7,
+          "talks": [
+            {
+              "title": "Adam Smith 在美國",
+              "speaker": "張明宗",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [
+                "彭小萍"
+              ],
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "它生來如此：身份經濟學在《國富論》中的起源 It Was Born This Way: The Origin of Identity Economics in The Wealth of Nations",
+              "speaker": "雷瑩",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [
+                "劉瑞華"
+              ],
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "Income Inequality, Income Polarization, and Mitigation Policies in an M-Shaped Society: A Bimodal Income Distribution Perspective",
+              "speaker": "蕭秋銘",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [],
+              "startTime": "",
+              "endTime": ""
+            }
+          ]
+        },
+        {
+          "kind": "parallelSession",
+          "title": "1K 睡眠健康經濟學：健康投資、社會互動與公共政策",
+          "room": "場地 K",
+          "chair": "",
+          "startTime": "09:00",
+          "endTime": "10:20",
+          "sourcePage": 8,
+          "talks": [
+            {
+              "title": "數位睡眠健康服務與醫療資源配置：居家篩檢及分級照護的政策意涵",
+              "speaker": "梁勝富",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [
+                "蕭富仁"
+              ],
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "主觀與客觀睡眠差異及其對睡眠問題經濟負擔估計之意涵：系統性回顧與統合分析",
+              "speaker": "郭彥廉",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [],
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "社會互動與健康決策：以 fMRI 探討同儕影響與行為機制",
+              "speaker": "龔俊嘉",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [],
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "從休息時間到睡眠機會：職業睡眠保障政策的跨國比較與制度分析",
+              "speaker": "王靖興",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [],
+              "startTime": "",
+              "endTime": ""
+            }
+          ]
+        },
+        {
+          "kind": "coffeeBreak",
+          "title": "休息",
+          "room": "",
+          "chair": "",
+          "startTime": "10:20",
+          "endTime": "10:40",
+          "sourcePage": 2,
+          "talks": []
+        },
+        {
+          "kind": "keynote",
+          "title": "專題演講",
+          "room": "",
+          "chair": "",
+          "startTime": "10:40",
+          "endTime": "12:00",
+          "sourcePage": 2,
+          "talks": [
+            {
+              "title": "Policy Learning with α-Expected Welfare",
+              "speaker": "范延琴",
+              "affiliation": "美國華盛頓大學",
+              "email": "",
+              "discussant": "",
+              "coauthors": [],
+              "startTime": "10:40",
+              "endTime": "12:00"
+            }
+          ]
+        },
+        {
+          "kind": "lunch",
+          "title": "午餐暨新書發表會",
+          "room": "",
+          "chair": "",
+          "startTime": "12:00",
+          "endTime": "13:00",
+          "sourcePage": 2,
+          "talks": [
+            {
+              "title": "秩序的代價：求生、權力與人類文明的演化",
+              "speaker": "莊奕琦",
+              "affiliation": "政大經濟系",
+              "email": "",
+              "discussant": "",
+              "coauthors": [],
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "從萬有引力到金本位的誕生：牛頓與皇家鑄幣廠",
+              "speaker": "賴建誠",
+              "affiliation": "清大經濟系",
+              "email": "",
+              "discussant": "",
+              "coauthors": [
+                "何泰寬"
+              ],
+              "startTime": "",
+              "endTime": ""
+            }
+          ]
+        },
+        {
+          "kind": "other",
+          "title": "會員大會",
+          "room": "",
+          "chair": "",
+          "startTime": "13:00",
+          "endTime": "14:20",
+          "sourcePage": 2,
+          "talks": []
+        },
+        {
+          "kind": "parallelSession",
+          "title": "2A 女性工作小組",
+          "room": "場地 A",
+          "chair": "朱琇妍",
+          "startTime": "14:20",
+          "endTime": "15:40",
+          "sourcePage": 9,
+          "talks": [
+            {
+              "title": "求解模型，也求解人生：女性經濟學家的學術與生活對話",
+              "speaker": "朱琇妍",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [],
+              "startTime": "",
+              "endTime": ""
+            }
+          ]
+        },
+        {
+          "kind": "parallelSession",
+          "title": "2B 產業組織、競爭與所有權",
+          "room": "場地 B",
+          "chair": "",
+          "startTime": "14:20",
+          "endTime": "15:40",
+          "sourcePage": 9,
+          "talks": [
+            {
+              "title": "Profitable Mergers under Bertrand Competition with Asymmetric Product Differentiation",
+              "speaker": "Judy Hsu",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [
+                "X. Henry Wang"
+              ],
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "Passive Partial Ownership and Collusion Stability under Stackelberg Competition",
+              "speaker": "UMIARTAH MUNTE",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [
+                "Yan Shu Lin",
+                "Pei Cyuan Shih"
+              ],
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "The Effect of Vertical Common Ownership on Upstream Innovation",
+              "speaker": "Micah Mainala",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [
+                "Dang-Long Bui",
+                "Yan Shu Lin"
+              ],
+              "startTime": "",
+              "endTime": ""
+            }
+          ]
+        },
+        {
+          "kind": "parallelSession",
+          "title": "2C 環境永續、交通安全與氣候風險之經濟實證研究",
+          "room": "場地 C",
+          "chair": "",
+          "startTime": "14:20",
+          "endTime": "15:40",
+          "sourcePage": 9,
+          "talks": [
+            {
+              "title": "Do Shared E-Scooters Improve Air Quality? Evidence from a Staggered Adoption Design in Taiwan",
+              "speaker": "黎宏濬",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [],
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "Deadly License? The Effect of Driving Eligibility on Teenage Hospitalization and Mortality",
+              "speaker": "楊子霆",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [
+                "黃耀正"
+              ],
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "The Impact of Climate Change on Wildfire Losses: An Empirical Study of the United States",
+              "speaker": "李艷娟",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [
+                "楊睿中"
+              ],
+              "startTime": "",
+              "endTime": ""
+            }
+          ]
+        },
+        {
+          "kind": "parallelSession",
+          "title": "2D 家庭消費、價格與消費者選擇",
+          "room": "場地 D",
+          "chair": "",
+          "startTime": "14:20",
+          "endTime": "15:40",
+          "sourcePage": 10,
+          "talks": [
+            {
+              "title": "Macroprudential liquidity measure and consumption inequality",
+              "speaker": "Chang-Ching Lin",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [
+                "Hung Manh Tran",
+                "Ming-Jen Chang"
+              ],
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "Consumers’ Willingness to Pay for Animal Welfare–Certified Milk in a Warm-Climate Market: Evidence from Taiwan",
+              "speaker": "Chia-Lin Chang",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [
+                "Ning Chen"
+              ],
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "Consumption Weighting and Inflation Inequality across Household Groups: Evidence from Malawi",
+              "speaker": "Angela Seyama",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [
+                "Shih-Yang Lin",
+                "Chia-Yu Hung"
+              ],
+              "startTime": "",
+              "endTime": ""
+            }
+          ]
+        },
+        {
+          "kind": "parallelSession",
+          "title": "2E 貨幣、環境政策與福利分析",
+          "room": "場地 E",
+          "chair": "",
+          "startTime": "14:20",
+          "endTime": "15:40",
+          "sourcePage": 10,
+          "talks": [
+            {
+              "title": "Foreign Exchange Intervention against Dominant Currency: A New-Monetarist Approach",
+              "speaker": "Yuchen Liu",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [],
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "Monetary Policy and Diagnostic Asset PriceBubbles",
+              "speaker": "Ernie Chuang",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [
+                "Been-Lon Chen"
+              ],
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "From Command-and-Control to Emissions Trading Market: Welfare Implications of Predetermined Emissions Price",
+              "speaker": "Anggoro Prihandoko",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [
+                "YENJU LIN"
+              ],
+              "startTime": "",
+              "endTime": ""
+            }
+          ]
+        },
+        {
+          "kind": "parallelSession",
+          "title": "2F 政治行為、選舉與公共安全",
+          "room": "場地 F",
+          "chair": "",
+          "startTime": "14:20",
+          "endTime": "15:40",
+          "sourcePage": 11,
+          "talks": [
+            {
+              "title": "How Inequality Measurement Shapes Electoral Choice: Evidence from U.S. Presidential Elections",
+              "speaker": "Eric Yan",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [
+                "Ching-Hsing Wang"
+              ],
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "Guarded Guests: Immigration and Crime in Taiwan",
+              "speaker": "Yi-Ju Hung",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [],
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "The Electoral Dividend of State Power: Political Alignment and Homicides in Ecuador",
+              "speaker": "Ibeth Lopez",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [],
+              "startTime": "",
+              "endTime": ""
+            }
+          ]
+        },
+        {
+          "kind": "parallelSession",
+          "title": "2G Topics in Labor and Household Macroeconomics",
+          "room": "場地 G",
+          "chair": "",
+          "startTime": "14:20",
+          "endTime": "15:40",
+          "sourcePage": 11,
+          "talks": [
+            {
+              "title": "Assessing the Impact of Remote Work on Fertility Rate, Labor Supply and Childcare Responsibilities Between Spouses",
+              "speaker": "Pei-Ju Liao",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [],
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "Life Cycle Wage Growth in a Developing Economy: Employment Formality and Sector-Specific Human Capital Accumulation",
+              "speaker": "Samuel Leyton",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [],
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "Informal Household Transfers, Consumption Inequality and Risk Sharing: A Life-Cycle Perspective",
+              "speaker": "Mutita Ariyavutikul",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [],
+              "startTime": "",
+              "endTime": ""
+            }
+          ]
+        },
+        {
+          "kind": "parallelSession",
+          "title": "2H 家庭、性別與勞動供給",
+          "room": "場地 H",
+          "chair": "",
+          "startTime": "14:20",
+          "endTime": "15:40",
+          "sourcePage": 12,
+          "talks": [
+            {
+              "title": "Child Penalty from the Unexpected: Evidence from Physician Responses to Child Health Shocks",
+              "speaker": "Lin-Tung Tsai",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [
+                "Chen-An Lien",
+                "Kuan-Ming Chen"
+              ],
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "Fertility and Intimate Partner Violence: Evidence from Sub-Saharan Africa",
+              "speaker": "En-Tsai Liao",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [
+                "Chon-Kit Ao",
+                "Chang-Ching Lin"
+              ],
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "Wealth Effects, Leisure Complementarity, and Spousal Labor Supply",
+              "speaker": "Shirley Yu-Hsuan Yen",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [
+                "Ming-Jen Lin"
+              ],
+              "startTime": "",
+              "endTime": ""
+            }
+          ]
+        },
+        {
+          "kind": "parallelSession",
+          "title": "2I 法規變動與政策效果評估",
+          "room": "場地 I",
+          "chair": "",
+          "startTime": "14:20",
+          "endTime": "15:40",
+          "sourcePage": 12,
+          "talks": [
+            {
+              "title": "From a Choice to a Race: The America Invents Act and Strategic Patent Filing Behavior",
+              "speaker": "Yi Ting Hsieh",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [
+                "Guanming Shi"
+              ],
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "Short-Term Rentals and Market Formalization: Evidence from Japan’s Private Lodging Business Act",
+              "speaker": "許文泰",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [
+                "Nanao Muraya"
+              ],
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "Reassessing the Effects of Power-Plant Changes on Student Achievement during the Energy Transition: Evidence from Local Tax-Base Changes in Ohio",
+              "speaker": "Gi-Eu Lee",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [
+                "Elham Erfanian"
+              ],
+              "startTime": "",
+              "endTime": ""
+            }
+          ]
+        },
+        {
+          "kind": "parallelSession",
+          "title": "2J 臺灣產業轉型、AI 發展與公共投資之政策策略及均衡發展",
+          "room": "場地 J",
+          "chair": "",
+          "startTime": "14:20",
+          "endTime": "15:40",
+          "sourcePage": 13,
+          "talks": [
+            {
+              "title": "促進產業均衡發展與薪資成長策略",
+              "speaker": "陳美菊",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [],
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "AI 發展趨勢與對勞動市場的影響",
+              "speaker": "謝佳宜",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [],
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "從公共投資到區域共榮——政府公共建設的演進、實踐與展望",
+              "speaker": "李奇",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [],
+              "startTime": "",
+              "endTime": ""
+            }
+          ]
+        },
+        {
+          "kind": "parallelSession",
+          "title": "2K 碩士論文專題發表 I",
+          "room": "場地 K",
+          "chair": "",
+          "startTime": "14:20",
+          "endTime": "15:40",
+          "sourcePage": 13,
+          "talks": [
+            {
+              "title": "對中國直接投資、創新能力調節與勞動結構異質性效果：以臺灣製造業為例",
+              "speaker": "羅亦成",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [],
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "分解內戰對總體經濟之衝擊",
+              "speaker": "陳淳和",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [],
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "異質賄賂下的資源錯置和貿易自由化",
+              "speaker": "Wei-Yi Gan",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [],
+              "startTime": "",
+              "endTime": ""
+            }
+          ]
+        },
+        {
+          "kind": "parallelSession",
+          "title": "2L CEANA I : Culture, Technology, and Human Capital",
+          "room": "場地 L",
+          "chair": "",
+          "startTime": "14:20",
+          "endTime": "15:40",
+          "sourcePage": 13,
+          "talks": [
+            {
+              "title": "Why does the West lead and the East follow in modern times?",
+              "speaker": "Shu-Shiuan Lu",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [
+                "Hui-Hsin Li",
+                "Juin-Jen Chang"
+              ],
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "Artificial Intelligence and Human Capital Accumulation in an Endogenously Growing Data Economy",
+              "speaker": "Hung-Ju Chen",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [
+                "Jang-Ting Guo"
+              ],
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "College Admissions with Scholarship",
+              "speaker": "Charles Po-Cheng Huang",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [],
+              "startTime": "",
+              "endTime": ""
+            }
+          ]
+        },
+        {
+          "kind": "coffeeBreak",
+          "title": "休息",
+          "room": "",
+          "chair": "",
+          "startTime": "15:40",
+          "endTime": "16:00",
+          "sourcePage": 2,
+          "talks": []
+        },
+        {
+          "kind": "parallelSession",
+          "title": "3A 通膨與總體經濟風險評估",
+          "room": "場地 A",
+          "chair": "",
+          "startTime": "16:00",
+          "endTime": "17:40",
+          "sourcePage": 14,
+          "talks": [
+            {
+              "title": "結合多元機器學習方法預測台灣通膨率",
+              "speaker": "蕭宇翔",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [
+                "林谷炘",
+                "郭柏昇"
+              ],
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "以截尾平均法衡量台灣核心通膨之合宜性評估",
+              "speaker": "林谷炘",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [],
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "台灣氣候變遷實體與轉型風險及其對總體經濟影響之評估",
+              "speaker": "鄭漢亮",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [],
+              "startTime": "",
+              "endTime": ""
+            }
+          ]
+        },
+        {
+          "kind": "parallelSession",
+          "title": "3B 市場機制與資源配置",
+          "room": "場地 B",
+          "chair": "",
+          "startTime": "16:00",
+          "endTime": "17:40",
+          "sourcePage": 14,
+          "talks": [
+            {
+              "title": "The Evolution of Market Power in Taiwan: Evidence from Listed Firms over 1991–2025",
+              "speaker": "李柏樂",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [
+                "李文傑"
+              ],
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "存在外國競爭者下的綠色委託契約與碳關稅",
+              "speaker": "周冰瑤",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [
+                "林志翰"
+              ],
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "COVID-19 紓困政策下不同所有權銀行之放款配置與資產品質：台灣銀行業之實證分析",
+              "speaker": "吳紀瑩",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [
+                "謝明儒"
+              ],
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "漂向北方：台灣內部遷徙決定因素與薪資溢酬之實證研究",
+              "speaker": "郭祐誠",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [
+                "陳珮琪"
+              ],
+              "startTime": "",
+              "endTime": ""
+            }
+          ]
+        },
+        {
+          "kind": "parallelSession",
+          "title": "3C 都市交通、廢棄物與環境政策",
+          "room": "場地 C",
+          "chair": "",
+          "startTime": "16:00",
+          "endTime": "17:40",
+          "sourcePage": 15,
+          "talks": [
+            {
+              "title": "列管廢棄物場址對周遭房價之影響 -以臺南市為例",
+              "speaker": "蔡群立",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [
+                "林諺誠"
+              ],
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "Staggered Incinerator Adoption and Municipal Waste Treatment Efficiency: Evidence from Taiwan",
+              "speaker": "張翊如",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [
+                "Yi-Ju Hung"
+              ],
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "Mass Transit and Local Economic Development: Evidence from the Kaohsiung Circular Light Rail",
+              "speaker": "厲詠佳",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [
+                "Yi-Ju Hung"
+              ],
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "Who Prices Carbon First? Carbon Border Adjustments and Endogenous Policy Timing",
+              "speaker": "Da-Peng Cai",
+              "affiliation": "Nanzan University",
+              "email": "",
+              "discussant": "",
+              "coauthors": [
+                "Hong-Ren Din",
+                "Cheng-Hau Peng"
+              ],
+              "startTime": "",
+              "endTime": ""
+            }
+          ]
+        },
+        {
+          "kind": "parallelSession",
+          "title": "3D 房地產市場、租稅與信用政策",
+          "room": "場地 D",
+          "chair": "",
+          "startTime": "16:00",
+          "endTime": "17:40",
+          "sourcePage": 15,
+          "talks": [
+            {
+              "title": "台灣房地產資本利得稅之研究: 有效稅率與累進性之分析",
+              "speaker": "曾中信",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [
+                "傅健豪",
+                "韓幸紋"
+              ],
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "青安政策與貸款成數限制對臺灣房價與授信額度的影響",
+              "speaker": "莊美琪",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [
+                "邱惠玉",
+                "李映萱"
+              ],
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "The Impact of Taiwan’s House Hoarding Tax on Transaction Prices",
+              "speaker": "賴宗志",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [],
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "Developer-Led versus Agency-Based Property Sales: A Comparison of Market Performance",
+              "speaker": "佘健源",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [
+                "陳柏安"
+              ],
+              "startTime": "",
+              "endTime": ""
+            }
+          ]
+        },
+        {
+          "kind": "parallelSession",
+          "title": "3E 金融市場、公司治理與企業績效",
+          "room": "場地 E",
+          "chair": "",
+          "startTime": "16:00",
+          "endTime": "17:40",
+          "sourcePage": 16,
+          "talks": [
+            {
+              "title": "Information Disclosure, Product Market Competition and Market-Based Firm Performance",
+              "speaker": "李世正",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [
+                "Kung-Cheng Ho",
+                "Pan Lee-Hsien",
+                "Andreas Karathanasopolous"
+              ],
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "公司治理與租稅規避之分配效果—以分量迴歸為分析架構",
+              "speaker": "石恩銘",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [
+                "黃榆芳",
+                "陳采暄"
+              ],
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "逐筆交易新制—— 兼論臺股市價委託與多元下單",
+              "speaker": "曾翊恆",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [],
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "金融科技與 ESG 指數動態關聯性與風險溢出之研究",
+              "speaker": "蕭堯仁",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [
+                "林暉哲"
+              ],
+              "startTime": "",
+              "endTime": ""
+            }
+          ]
+        },
+        {
+          "kind": "parallelSession",
+          "title": "3G 總體經濟摩擦、勞動市場與所得不均",
+          "room": "場地 G",
+          "chair": "",
+          "startTime": "16:00",
+          "endTime": "17:40",
+          "sourcePage": 16,
+          "talks": [
+            {
+              "title": "Who Shows Up: Unemployment Insurance and the Composition of Job Seekers",
+              "speaker": "Yi-Hsuan Chang Chien",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [
+                "Tsung-Hsien Li"
+              ],
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "Uncertainty–Business Cycle Accounting: Distinguishing Financial Transmission Mechanisms",
+              "speaker": "Shih-Yang Lin",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [],
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "Separation Shocks and Labor Market Responses: The Role of Recruiting Expenses",
+              "speaker": "Jhih-Chian Wu",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [],
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "The nexus between labor share and income inequality: theory and evidence from the U.S",
+              "speaker": "Juin-Jen Chang",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [
+                "Chun-Hung Kuo",
+                "Kun-Ying Lei",
+                "Chia-Ying Liu"
+              ],
+              "startTime": "",
+              "endTime": ""
+            }
+          ]
+        },
+        {
+          "kind": "parallelSession",
+          "title": "3H 中研院人社中心/家庭動態調查資料應用",
+          "room": "場地 H",
+          "chair": "",
+          "startTime": "16:00",
+          "endTime": "17:40",
+          "sourcePage": 17,
+          "talks": [
+            {
+              "title": "The Effect of Pension Reform on Intra-family Intergenerational Transfers",
+              "speaker": "唐孟祺",
+              "affiliation": "政治大學創新國際學院",
+              "email": "",
+              "discussant": "于若蓉",
+              "coauthors": [
+                "陳禹成"
+              ],
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "Parental Health Shocks and the Labor Supply Responses of Adult Children",
+              "speaker": "黃柏鈞",
+              "affiliation": "政治大學經濟系",
+              "email": "",
+              "discussant": "鄭輝培",
+              "coauthors": [
+                "何政霖"
+              ],
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "Cumulative Self-Rated Health, Employment, and Cohort Differences among Middle-Aged and Older Adults in Taiwan",
+              "speaker": "許聖章",
+              "affiliation": "高雄大學應用經濟系",
+              "email": "",
+              "discussant": "Chon-Kit Ao",
+              "coauthors": [
+                "林品妤"
+              ],
+              "startTime": "",
+              "endTime": ""
+            }
+          ]
+        },
+        {
+          "kind": "parallelSession",
+          "title": "3I 健康結果與氣候衝擊",
+          "room": "場地 I",
+          "chair": "",
+          "startTime": "16:00",
+          "endTime": "17:40",
+          "sourcePage": 17,
+          "talks": [
+            {
+              "title": "A Study of the Relationship between Health and Income for Elders: Health and Retirement Study 2016-2022",
+              "speaker": "SHIH-NENG CHEN",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [
+                "JAULING TSENG"
+              ],
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "Drought, Excess Rainfall, and Child Survival in Malawi: Asymmetric Evidence from a Nonlinear ARDL Model",
+              "speaker": "SUCHUAN YU",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [
+                "Lloyd Nyirenda"
+              ],
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "When It's Too Hot to Go: Heat Exposure, Vulnerability, and Antenatal Care Disruption in the Philippines",
+              "speaker": "SUCHUAN YU",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [
+                "Christine Robles Varquez"
+              ],
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "Sustainability-Oriented Corporate Behavior and Industrial Agglomeration: The Role of CSR in Location Choice and Social Welfare",
+              "speaker": "王羿傑",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [],
+              "startTime": "",
+              "endTime": ""
+            }
+          ]
+        },
+        {
+          "kind": "parallelSession",
+          "title": "3J 跨境不動產的新金融秩序：信用機制、資產連動與數位轉型",
+          "room": "場地 J",
+          "chair": "",
+          "startTime": "16:00",
+          "endTime": "17:40",
+          "sourcePage": 18,
+          "talks": [
+            {
+              "title": "台積電設廠、空間外溢與區域房價：台灣、日本與美國的跨國實證分析",
+              "speaker": "連春紅",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [],
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "租賃市場的信用摩擦與第三方保證機制：日本家賃保證制度的經濟分析及其對台灣的啟示",
+              "speaker": "黃幹忠",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [],
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "台灣、日本與新加坡 REIT 與股票市場的價格連動：同期反應與跨國差異",
+              "speaker": "鍾仁義",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [],
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "穩定幣政策對房地產的影響",
+              "speaker": "林伶瑾",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [],
+              "startTime": "",
+              "endTime": ""
+            }
+          ]
+        },
+        {
+          "kind": "parallelSession",
+          "title": "3K 碩士論文專題發表 II",
+          "room": "場地 K",
+          "chair": "",
+          "startTime": "16:00",
+          "endTime": "17:40",
+          "sourcePage": 19,
+          "talks": [
+            {
+              "title": "Latent Volatility Decomposition in Taiwan Equity Market: Evidence from a Two-Factor GARCH Framework",
+              "speaker": "郭晏均",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [],
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "災害救助會鼓勵高風險種植嗎？臺灣蕉農種植時點選擇之實證分析",
+              "speaker": "韓硯",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [],
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "Subject Choice and Gender Composition: Evidence from Taiwan’s 2019 College Admission Reform",
+              "speaker": "康柏賢",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [],
+              "startTime": "",
+              "endTime": ""
+            }
+          ]
+        },
+        {
+          "kind": "parallelSession",
+          "title": "3L CEANA II ：Networks, Health, and Education",
+          "room": "場地 L",
+          "chair": "",
+          "startTime": "16:00",
+          "endTime": "17:40",
+          "sourcePage": 19,
+          "talks": [
+            {
+              "title": "Friendship Networks and Contagious Bullying",
+              "speaker": "Chenyan Xu",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [],
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "Payment Carve-Outs and Market Structure: Evidence from Taiwan’s Dialysis Market",
+              "speaker": "Tun-Kai Chiu",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [],
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "The Grandparental Effect: Cohabitation Timing, Lineage Asymmetries, and Educational Attainment in Taiwan",
+              "speaker": "Hui-Chen Wang",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [
+                "Ming-Feng Hsieh"
+              ],
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "When More Prenatal Care Looks Like Less: Selection, Information and Maternal and Infant Health",
+              "speaker": "Shinyi Chou",
+              "affiliation": "",
+              "email": "",
+              "discussant": "",
+              "coauthors": [
+                "Chien-Tzu Chen",
+                "連賢明"
+              ],
+              "startTime": "",
+              "endTime": ""
+            }
+          ]
+        },
+        {
+          "kind": "dinner",
+          "title": "邀請晚宴",
+          "room": "",
+          "chair": "",
+          "startTime": "18:00",
+          "endTime": "21:00",
+          "sourcePage": 2,
+          "talks": []
+        }
+      ]
+    }
+  ]
+}
