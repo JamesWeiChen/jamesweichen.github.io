@@ -5,7 +5,13 @@
     "venue": "國立成功大學社會科學院（臺南市小東路 25 號力行校區）",
     "city": "臺南市",
     "startDate": "2026-12-04",
-    "endDate": "2026-12-05"
+    "endDate": "2026-12-05",
+    "maps": [
+      {
+        "title": "Venue and Transport Map — NCKU College of Social Sciences",
+        "imageURL": "https://jamesweichen.github.io/tea-2026/maps/venue-transport-map.jpg"
+      }
+    ]
   },
   "days": [
     {
