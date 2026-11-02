@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>TEA 2026 Program</title>
-<meta name="description" content="Program and Acadenda import for the 2026 Annual Meeting of the Taiwan Economic Association. Independent conference companion.">
+<meta name="description" content="Program and Acadenda import for the 2026 Annual Meeting of the Taiwan Economic Association. Independent conference companion. 台灣經濟學會 2026 年年會議程。">
 <script>
   // Apply the saved appearance before the page paints; the same key as the main site.
   (function () {
@@ -14,17 +14,26 @@
     } catch (error) { /* Storage can be blocked; follow the system setting instead. */ }
   })();
 </script>
-<link rel="stylesheet" href="style.css?v=20261101-2">
-<script src="app.js?v=20261101-2" defer></script>
+<script src="../site-preferences.js"></script>
+<link rel="stylesheet" href="style.css?v=20261102-1">
+<script src="app.js?v=20261102-3" defer></script>
 </head>
 <body>
 <div class="topbar">
   <label class="preference-control">
-    <span>Appearance</span>
-    <select id="theme" aria-label="Appearance">
-      <option value="system">System</option>
-      <option value="light">Light</option>
-      <option value="dark">Dark</option>
+    <span data-i18n="appearance">Appearance</span>
+    <select id="theme" data-i18n-attr="aria-label:appearance">
+      <option value="system" data-i18n="themeSystem">System</option>
+      <option value="light" data-i18n="themeLight">Light</option>
+      <option value="dark" data-i18n="themeDark">Dark</option>
+    </select>
+  </label>
+  <label class="preference-control">
+    <span data-i18n="language">Language</span>
+    <select id="language" data-i18n-attr="aria-label:language">
+      <option value="system" data-i18n="langSystem">System</option>
+      <option value="zh">繁體中文</option>
+      <option value="en">English</option>
     </select>
   </label>
 </div>
@@ -35,59 +44,59 @@
   <p class="meta" id="meta">Loading program…</p>
 </header>
 
-<nav class="site-nav" aria-label="Conference sections">
-  <a href="#acadenda">Acadenda</a>
-  <a href="#program">Program</a>
-  <a href="#venue">Venue Map</a>
-  <a href="#fun-run">Fun Run</a>
+<nav class="site-nav" aria-label="Conference sections" data-i18n-attr="aria-label:navAria">
+  <a href="#acadenda" data-i18n="navAcadenda">Acadenda</a>
+  <a href="#program" data-i18n="navProgram">Program</a>
+  <a href="#venue" data-i18n="navVenue">Venue Map</a>
+  <a href="#fun-run" data-i18n="navFunRun">Fun Run</a>
 </nav>
 
 <main>
   <p class="status" id="status" role="status" aria-live="polite"></p>
 
   <section id="acadenda" class="section" aria-labelledby="acadenda-title">
-    <h2 id="acadenda-title">Use this program in Acadenda</h2>
+    <h2 id="acadenda-title" data-i18n="acadendaTitle">Use this program in Acadenda</h2>
     <div class="import-grid">
       <article class="import-card">
-        <h3>Import the program</h3>
-        <p class="muted">Scan the code with Acadenda, or copy the link and paste it into the app.</p>
+        <h3 data-i18n="importTitle">Import the program</h3>
+        <p class="muted" data-i18n="importText">Scan the code with Acadenda, or copy the link and paste it into the app.</p>
         <figure class="qr">
-          <img src="qrcode.svg" width="164" height="164" alt="QR code for the program JSON link">
-          <figcaption>Links to the program file, not to this page.</figcaption>
+          <img src="qrcode.svg" width="164" height="164" data-i18n-attr="alt:qrAlt" alt="QR code for the program JSON link">
+          <figcaption data-i18n="importCaption">Links to the program file, not to this page.</figcaption>
         </figure>
         <div class="buttons">
-          <button type="button" id="copy-link">Copy program link</button>
+          <button type="button" id="copy-link" data-i18n="copyLink">Copy program link</button>
         </div>
         <p class="muted small" id="copy-status" role="status" aria-live="polite"></p>
       </article>
       <article class="import-card">
-        <h3>Get Acadenda for iOS</h3>
-        <p class="muted">Scan the code with your iPhone, or open the App Store page.</p>
+        <h3 data-i18n="appTitle">Get Acadenda for iOS</h3>
+        <p class="muted" data-i18n="appText">Scan the code with your iPhone, or open the App Store page.</p>
         <figure class="qr">
-          <img src="qrcode-app-store.svg" width="164" height="164" alt="QR code for the Acadenda page on the App Store">
-          <figcaption>Opens the Acadenda page on the App Store.</figcaption>
+          <img src="qrcode-app-store.svg" width="164" height="164" data-i18n-attr="alt:appQrAlt" alt="QR code for the Acadenda page on the App Store">
+          <figcaption data-i18n="appCaption">Opens the Acadenda page on the App Store.</figcaption>
         </figure>
         <div class="buttons">
-          <a class="button-link" href="https://apps.apple.com/tw/app/acadenda/id6812816802" rel="noopener">Get Acadenda on the App Store</a>
+          <a class="button-link" href="https://apps.apple.com/tw/app/acadenda/id6812816802" rel="noopener" data-i18n="appLink">Get Acadenda on the App Store</a>
         </div>
       </article>
     </div>
     <ol class="steps">
-      <li>Install Acadenda from the App Store.</li>
-      <li>In Acadenda, open Conference → Import → Add from a Link.</li>
-      <li>Paste the program link, or scan the QR code with the app’s scanner.</li>
-      <li>Preview the schedule, then tap Add to my conferences.</li>
+      <li data-i18n="step1">Install Acadenda from the App Store.</li>
+      <li data-i18n="step2">In Acadenda, open Conference → Import → Add from a Link.</li>
+      <li data-i18n="step3">Paste the program link, or scan the QR code with the app’s scanner.</li>
+      <li data-i18n="step4">Preview the schedule, then tap Add to my conferences.</li>
     </ol>
-    <p class="muted small">The program link stays the same when the schedule is updated, so the QR code does not need to be replaced.</p>
+    <p class="muted small" data-i18n="linkNote">The program link stays the same when the schedule is updated, so the QR code does not need to be replaced.</p>
   </section>
 
   <section id="program" class="section" aria-labelledby="program-title">
-    <h2 id="program-title">Program</h2>
+    <h2 id="program-title" data-i18n="programTitle">Program</h2>
     <div class="controls">
-      <div class="day-tabs" id="day-tabs" role="group" aria-label="Choose a day"></div>
+      <div class="day-tabs" id="day-tabs" role="group" data-i18n-attr="aria-label:dayGroup" aria-label="Choose a day"></div>
       <label class="search">
-        <span>Search speaker, paper or session</span>
-        <input type="search" id="search" placeholder="e.g. 謝志昇, 貿易, 網絡" autocomplete="off">
+        <span data-i18n="searchLabel">Search speaker, paper or session</span>
+        <input type="search" id="search" data-i18n-attr="placeholder:searchPlaceholder" placeholder="e.g. 謝志昇, trade, networks" autocomplete="off">
       </label>
       <p class="muted" id="result-count" aria-live="polite"></p>
     </div>
@@ -95,21 +104,21 @@
   </section>
 
   <section id="venue" class="section" aria-labelledby="venue-title">
-    <h2 id="venue-title">Venue Map</h2>
-    <p class="muted">Tap the image to view it full size.</p>
+    <h2 id="venue-title" data-i18n="venueTitle">Venue Map</h2>
+    <p class="muted" data-i18n="venueText">Tap the image to view it full size.</p>
     <figure class="map" id="venue-map"></figure>
   </section>
 
   <section id="fun-run" class="section" aria-labelledby="fun-run-title">
-    <h2 id="fun-run-title">Fun Run / Walk</h2>
+    <h2 id="fun-run-title" data-i18n="funRunTitle">Fun Run / Walk</h2>
     <div id="fun-run-items"></div>
     <figure class="map" id="fun-run-map"></figure>
   </section>
 </main>
 
 <footer class="site-footer">
-  <p>Independent conference companion · Powered by Acadenda</p>
-  <p>The program is compiled from the organizer’s conference schedule. This is not an official TEA website.</p>
+  <p data-i18n="footerLine1">Independent conference companion · Powered by Acadenda</p>
+  <p data-i18n="footerLine2">The program is compiled from the organizer’s conference schedule. This is not an official TEA website.</p>
 </footer>
 </body>
 </html>
