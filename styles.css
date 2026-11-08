@@ -996,6 +996,10 @@ h3 {
   color: var(--green);
 }
 
+.status-accepted {
+  color: var(--green);
+}
+
 .status-rr {
   color: var(--rust);
 }

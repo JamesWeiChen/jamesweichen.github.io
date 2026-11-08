@@ -226,6 +226,15 @@
 
     publications: [
       {
+        year: 2026,
+        status: "accepted",
+        title: "Interactive Game-Based Pedagogy: A Quasi-Experimental Study in Microeconomics",
+        authors: "Wei James Chen, Zhi Li, and Joseph Tao-yi Wang",
+        venue: "Accepted, International Review of Economics Education",
+        themes: ["learning", "institutions"],
+        method: "field",
+      },
+      {
         year: 2025,
         status: "published",
         title: "Measuring Higher-Order Rationality with Belief Control",
@@ -323,15 +332,6 @@
         venue: "Working paper",
         themes: ["institutions"],
         method: "behavioral",
-      },
-      {
-        year: 2026,
-        status: "rr",
-        title: "Interactive Game-Based Pedagogy: A Quasi-Experimental Study in Microeconomics",
-        authors: "Wei James Chen, Zhi Li, and Joseph Tao-yi Wang",
-        venue: "R&R, International Review of Economics Education",
-        themes: ["learning", "institutions"],
-        method: "field",
       },
       {
         year: 2023,
