@@ -58,7 +58,6 @@
       published: "Published",
       working: "Working papers",
       rr: "R&R",
-      accepted: "Accepted",
       projectUnit: "projects",
       researchArea: "Research area",
       showAllAreas: "Show all areas",
@@ -159,7 +158,6 @@
       published: "已發表",
       working: "工作論文",
       rr: "修訂中",
-      accepted: "已接受",
       projectUnit: "項研究",
       researchArea: "研究領域",
       showAllAreas: "顯示全部領域",
@@ -356,7 +354,7 @@
 
   function paperStatus(paper) {
     if (paper.status === "published") return t("published");
-    if (paper.status === "accepted") return t("accepted");
+    if (paper.status === "forthcoming") return t("forthcoming");
     if (paper.status === "rr") return t("rr");
     return t("working");
   }
@@ -517,7 +515,7 @@
     const allPapers = [...data.publications, ...data.workingPapers].sort((a, b) => (b.year || 0) - (a.year || 0));
     const statusOptions = [
       ["published", t("published")],
-      ["accepted", t("accepted")],
+      ["forthcoming", t("forthcoming")],
       ["rr", t("rr")],
       ["working", t("working")],
     ];

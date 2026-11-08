@@ -227,10 +227,10 @@
     publications: [
       {
         year: 2026,
-        status: "accepted",
+        status: "forthcoming",
         title: "Interactive Game-Based Pedagogy: A Quasi-Experimental Study in Microeconomics",
         authors: "Wei James Chen, Zhi Li, and Joseph Tao-yi Wang",
-        venue: "Accepted, International Review of Economics Education",
+        venue: "International Review of Economics Education, forthcoming",
         themes: ["learning", "institutions"],
         method: "field",
       },
