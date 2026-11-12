@@ -61,6 +61,7 @@ const english = {
   "已送出測試更新。GitHub Pages 約一分鐘後更新，之後按「重新載入」或到 App 更新既有會議。": "Test update sent. GitHub Pages updates in about a minute; then select Refresh or update the existing conference in the App.",
   "已還原線上版本。GitHub Pages 約一分鐘後更新，之後按「重新載入」或到 App 更新既有會議。": "Live version restored. GitHub Pages updates in about a minute; then select Refresh or update the existing conference in the App.",
   "線上版本已是原始內容，沒有重新寫入。": "The live version is already the original content, so nothing was written.",
-  "開發者工具": "Developer tools"
+  "開發者工具": "Developer tools",
+  "Acadenda 會議議程": "Acadenda conference programs"
 };
 const t = text => window.conferenceLanguage === 'en' ? (english[text] || text) : text;

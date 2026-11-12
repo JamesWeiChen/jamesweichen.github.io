@@ -2,23 +2,89 @@
 <html lang="zh-Hant">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>會議議程 · Acadenda</title>
-<meta name="description" content="查看會議議程，取得 Acadenda 議程連結與 QR Code。">
+<title data-i18n="Acadenda 會議議程">Acadenda 會議議程</title>
+<meta name="description" content="用 Acadenda 發布會議議程：已使用 Acadenda 的真實會議，以及可以直接匯入試用的虛構示範議程。">
 <script src="../../../site-preferences.js"></script>
 <script src="../assets/preferences.js"></script>
-<script src="../assets/translations.js?v=20261026-1"></script>
-<link rel="stylesheet" href="../assets/style.css?v=20261026-5">
+<script src="../assets/translations.js?v=20261112-1"></script>
+<link rel="stylesheet" href="../assets/style.css?v=20261112-1">
 <link rel="stylesheet" href="../../../preferences.css"><link rel="stylesheet" href="../../../site-header.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&amp;family=Noto+Serif+TC:wght@600&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap">
 <script src="../../../data.js?v=20261031-1" defer></script>
 <script src="../../../site-header.js?v=20261031-1" defer></script>
-<script src="../assets/app.js?v=20261026-7" defer></script>
+<script src="../assets/app.js?v=20261112-1" defer></script>
 </head>
 <body>
 <div id="shared-site-header" data-root="../../../" data-kind="conference"></div>
 <main>
 <noscript>請啟用 JavaScript 以顯示議程，或直接開啟 <a href="../../program/Official_Conference_Demo.json" data-i18n="議程 JSON">議程 JSON</a>。</noscript>
-<header><p class="eyebrow">CONFERENCE PROGRAM · ACADENDA</p><h1 id="title" data-i18n="載入議程中…">載入議程中…</h1><p id="details"></p></header>
+
+<!-- Page introduction: says up front that the page has real conferences and one fictional demo. -->
+<header class="page-intro" data-sample-language="zh" hidden>
+<p class="eyebrow">ACADENDA · 會議議程</p>
+<h1>用 Acadenda 發布會議議程</h1>
+<p class="lead">主辦方提供議程後，會得到一個議程頁面、一個固定的議程連結和 QR Code。與會者把連結匯入 Acadenda，就能在手機上查議程、看會場地圖；議程有更新時，沿用同一個連結。</p>
+<nav class="page-parts" aria-label="本頁內容">
+  <a class="page-part" href="#real-conferences-zh"><span class="badge badge-real">真實會議</span><strong>已使用 Acadenda 的會議</strong><span class="page-part-text">TEA 2026 和 NA ESA 2026 的議程頁面，看看實際使用的樣子。</span></a>
+  <a class="page-part page-part-demo" href="#demo"><span class="badge badge-demo">虛構示範</span><strong>示範議程</strong><span class="page-part-text">一場虛構的會議，可以掃描 QR Code 匯入 Acadenda 試用。</span></a>
+</nav>
+</header>
+<header class="page-intro" data-sample-language="en" hidden>
+<p class="eyebrow">ACADENDA · CONFERENCE PROGRAMS</p>
+<h1>Publish your conference program with Acadenda</h1>
+<p class="lead">Each conference gets a program page, one fixed program link and a QR code. Attendees import the link into Acadenda to browse the schedule and venue maps on their phone. When the program changes, the same link carries the update.</p>
+<nav class="page-parts" aria-label="On this page">
+  <a class="page-part" href="#real-conferences-en"><span class="badge badge-real">Real conferences</span><strong>Conferences that have used Acadenda</strong><span class="page-part-text">Program pages for TEA 2026 and NA ESA 2026, to see Acadenda in real use.</span></a>
+  <a class="page-part page-part-demo" href="#demo"><span class="badge badge-demo">Fictional demo</span><strong>Demo program</strong><span class="page-part-text">A made-up conference you can scan into Acadenda to try it out.</span></a>
+</nav>
+</header>
+
+<!-- Real conferences. Add a card in both languages when a new conference page goes live. -->
+<section class="real-conferences" data-sample-language="zh" hidden id="real-conferences-zh" aria-labelledby="real-conferences-title-zh">
+<span class="badge badge-real">真實會議</span>
+<h2 id="real-conferences-title-zh">已使用 Acadenda 的會議</h2>
+<p class="qr-intro">Acadenda 曾協助以下會議發布議程。每個頁面都有完整議程、會場地圖和匯入連結。</p>
+<div class="qr-samples-grid"><article class="qr-sample-card" aria-labelledby="real-tea-title-zh">
+  <p class="qr-format">TEA 2026</p>
+  <h3 id="real-tea-title-zh">台灣經濟學會 2026 年年會</h3>
+  <p class="qr-sample-counts">2026 年 12 月 4–5 日 · 臺南</p>
+  <p class="qr-sample-description">國立成功大學社會科學院。中英雙語議程頁面。</p>
+  <a class="button-link qr-download" href="../../../tea-2026/">開啟議程頁面&nbsp;<span aria-hidden="true">→</span></a>
+</article><article class="qr-sample-card" aria-labelledby="real-na-esa-title-zh">
+  <p class="qr-format">NA ESA 2026</p>
+  <h3 id="real-na-esa-title-zh">2026 North American Economic Science Association Meeting</h3>
+  <p class="qr-sample-counts">2026 年 10 月 29 日至 11 月 1 日 · 美國維吉尼亞州夏洛茨維爾</p>
+  <p class="qr-sample-description">維吉尼亞大學 Virginia Guesthouse。英文議程頁面。</p>
+  <a class="button-link qr-download" href="../../../na-esa-2026/">開啟議程頁面&nbsp;<span aria-hidden="true">→</span></a>
+</article></div>
+<p class="qr-footnote">以上皆為獨立製作的議程輔助頁面，並非主辦單位的官方網站。</p>
+</section>
+<section class="real-conferences" data-sample-language="en" hidden id="real-conferences-en" aria-labelledby="real-conferences-title-en">
+<span class="badge badge-real">Real conferences</span>
+<h2 id="real-conferences-title-en">Conferences that have used Acadenda</h2>
+<p class="qr-intro">Acadenda has helped these conferences publish their programs. Each page has the full schedule, venue maps and an import link.</p>
+<div class="qr-samples-grid"><article class="qr-sample-card" aria-labelledby="real-tea-title-en">
+  <p class="qr-format">TEA 2026</p>
+  <h3 id="real-tea-title-en">2026 Annual Meeting of the Taiwan Economic Association</h3>
+  <p class="qr-sample-counts">4–5 December 2026 · Tainan, Taiwan</p>
+  <p class="qr-sample-description">College of Social Sciences, National Cheng Kung University. Program page in English and Traditional Chinese.</p>
+  <a class="button-link qr-download" href="../../../tea-2026/">Open the program page&nbsp;<span aria-hidden="true">→</span></a>
+</article><article class="qr-sample-card" aria-labelledby="real-na-esa-title-en">
+  <p class="qr-format">NA ESA 2026</p>
+  <h3 id="real-na-esa-title-en">2026 North American Economic Science Association Meeting</h3>
+  <p class="qr-sample-counts">29 October – 1 November 2026 · Charlottesville, Virginia</p>
+  <p class="qr-sample-description">The Virginia Guesthouse, University of Virginia. Program page in English.</p>
+  <a class="button-link qr-download" href="../../../na-esa-2026/">Open the program page&nbsp;<span aria-hidden="true">→</span></a>
+</article></div>
+<p class="qr-footnote">These are independent program companion pages, not the organizers’ official websites.</p>
+</section>
+
+<!-- Fictional demo conference: everything inside this frame comes from Official_Conference_Demo.json. -->
+<section id="demo" class="demo-zone" aria-labelledby="title">
+<div class="demo-banner" data-sample-language="zh" hidden><span class="badge badge-demo">虛構示範</span><p>以下是一場虛構的會議，會議、講者和會場都是編出來的。它示範議程頁面的樣子，也可以匯入 Acadenda 測試。</p></div>
+<div class="demo-banner" data-sample-language="en" hidden><span class="badge badge-demo">Fictional demo</span><p>Everything in this frame is a made-up conference: the conference, speakers and venue are invented. It shows what a program page looks like, and you can import it into Acadenda to try it out.</p></div>
+<h2 id="title" class="demo-title" data-i18n="載入議程中…">載入議程中…</h2>
+<p id="details"></p>
 <p id="status" role="status" aria-live="polite"></p>
 <section class="access" id="access" hidden>
 <div><h2 data-i18n="在 Acadenda 使用議程">在 Acadenda 使用議程</h2><p data-i18n="複製下方連結，貼到 Acadenda 的議程連結匯入功能。QR Code 包含同一個 JSON 網址。">複製下方連結，貼到 Acadenda 的議程連結匯入功能。QR Code 包含同一個 JSON 網址。</p>
@@ -88,6 +154,8 @@
 </article></div>
 <p class="qr-footnote">Each QR code contains the complete HTTPS file URL. Both URLs return the schedule file directly. After adding from a link, Acadenda also follows that URL for program updates.</p>
 </section>
+</section>
+
 <details id="operator" hidden><summary data-i18n="營運工具 · 複製 AI 更新指令">營運工具 · 複製 AI 更新指令</summary>
 <p data-i18n="按下按鈕會重新讀取目前已發布的 JSON，再連同固定規則與修改要求一起複製。此頁面沒有上傳或發布權限。">按下按鈕會重新讀取目前已發布的 JSON，再連同固定規則與修改要求一起複製。此頁面沒有上傳或發布權限。</p>
 <label for="changes" data-i18n="本次修改要求">本次修改要求</label><textarea id="changes" rows="5" placeholder="例如：將 Design-Based Inference 改到 14:00，保留其他內容。" data-i18n-placeholder="例如：將 Design-Based Inference 改到 14:00，保留其他內容。"></textarea>

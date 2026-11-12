@@ -28,6 +28,8 @@ JSON：https://jamesweichen.github.io/acadenda/program/Official_Conference_Demo.
 預設轉換工具位於隔壁 Acadenda/ConferencePublishing；可用 --toolkit 指定其他位置。
 新電腦請先執行轉換工具的 build_mac.command 安裝依賴，建立可用的 Python 環境。
 未來每場會議共用 assets 裡的顯示程式，不必各自維護一份 JavaScript。
+4. 會議頁上線後，在示範頁 official-demo/index.html 的「已使用 Acadenda 的會議」加一張卡片。
+   中文（real-conferences-zh）與英文（real-conferences-en）各一份，開頭介紹裡列出的會議名稱也一併更新。
 
 ## 三、後續更新
 1. 打開該會議網頁，展開「營運工具 · 複製 AI 更新指令」。

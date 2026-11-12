@@ -61,7 +61,8 @@ function render(program) {
   const meta = program.conference;
   for (const element of document.querySelectorAll('.json-sample-counts')) element.textContent = sampleCounts(program);
   byID('title').textContent = meta.name || t('會議議程');
-  document.title = `${meta.name || t('會議議程')} · Acadenda`;
+  // The demo page introduces Acadenda, so its tab title should not look like a real conference.
+  if (!publication?.demo) document.title = `${meta.name || t('會議議程')} · Acadenda`;
   byID('details').textContent = [meta.startDate, meta.endDate !== meta.startDate ? meta.endDate : '', meta.venue, meta.city].filter(Boolean).join(' · ');
   const fragment = document.createDocumentFragment();
   if (!program.days.some(day => day.items.length)) fragment.append(node('p', t('議程尚未公布。')));
