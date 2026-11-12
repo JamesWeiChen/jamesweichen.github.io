@@ -101,6 +101,13 @@
       appsIntro: "Two small tools I built for the moments when good software can make a real difference: presenting your work and finding your way through a conference.",
       independentProjects: "Independent projects",
       beamerCategory: "PRESENTATION TOOL",
+      beamerDemoTitle: "Interactive HTML example",
+      beamerDemoText: "Explore supply, demand, and taxes in a self-contained 16:9 demo. Copy the HTML URL to load it remotely in Beamer Notes.",
+      beamerDemoOpen: "Try the interactive demo",
+      beamerDemoCopy: "Copy HTML URL",
+      beamerDemoCopied: "URL copied",
+      beamerDemoCopyFailed: "Select and copy the URL above",
+      beamerDemoUrl: "Remote HTML URL",
       acadendaCategory: "CONFERENCE PLANNER",
       beamerDescription: "A presenter for LaTeX Beamer PDFs. Keep your slides, private speaker notes, and next-slide preview on your iPad while the audience sees only the slides. Annotate with Apple Pencil, and use your iPhone as a remote.",
       acadendaDescription: "Turn a conference programme PDF into a schedule you can navigate. Explore sessions and speakers, find talks matched to your research interests, and keep notes with your agenda.",
@@ -201,6 +208,13 @@
       appsIntro: "我為簡報與學術研討會打造了兩款工具，希望在準備演講、安排議程與記錄交流時，讓事情更簡單。",
       independentProjects: "個人作品",
       beamerCategory: "簡報工具",
+      beamerDemoTitle: "互動式 HTML 範例",
+      beamerDemoText: "以供需與課稅示範單檔 16:9 互動頁面。複製 HTML 網址，即可在 Beamer Notes 中載入遠端範例。",
+      beamerDemoOpen: "開啟互動範例",
+      beamerDemoCopy: "複製 HTML 網址",
+      beamerDemoCopied: "已複製網址",
+      beamerDemoCopyFailed: "請選取並複製上方網址",
+      beamerDemoUrl: "遠端 HTML 網址",
       acadendaCategory: "研討會議程工具",
       beamerDescription: "專為 LaTeX Beamer PDF 設計的簡報工具。在 iPad 上查看投影片、私人講稿與下一張預覽，觀眾只會看到投影片；也可用 Apple Pencil 手寫標註，並以 iPhone 遙控簡報。",
       acadendaDescription: "把研討會議程 PDF 轉成方便瀏覽的行程。查看場次與講者、依研究興趣探索推薦演講，並在議程中整理筆記。",
@@ -774,6 +788,17 @@
               <h2>${app.name}</h2>
               <p>${app.description}</p>
               <a class="button-link app-download-button" href="${app.url}" target="_blank" rel="noreferrer">${t("appStore")} ↗</a>
+              ${app.className === "app-card-beamer" ? `
+        <div class="app-resources">
+        <aside class="app-guide-panel beamer-demo-panel" aria-labelledby="beamer-demo-title">
+          <span class="app-guide-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="15" rx="2"/><path d="M8 22l4-4 4 4M6 14l4-4 4 2 4-5"/></svg></span>
+          <div class="app-guide-copy"><h3 id="beamer-demo-title">${t("beamerDemoTitle")}</h3><p>${t("beamerDemoText")}</p></div>
+          <a class="app-guide-button" href="./beamernotes/interactive-demo.html?lang=${state.lang}" target="_blank" rel="noopener">${t("beamerDemoOpen")}<span aria-hidden="true">↗</span></a>
+          <label class="beamer-demo-url">${t("beamerDemoUrl")}<input type="text" readonly value="https://jamesweichen.github.io/beamernotes/interactive-demo.html?lang=${state.lang}" data-beamer-demo-url></label>
+          <button class="app-guide-button" type="button" data-copy-beamer-demo>${t("beamerDemoCopy")}</button>
+          <span class="beamer-demo-status" role="status" data-beamer-demo-status></span>
+        </aside>
+        </div>` : ""}
               ${app.className === "app-card-acadenda" ? `
         <div class="app-resources">
         <aside class="app-guide-panel" aria-labelledby="app-guide-title">
@@ -976,7 +1001,21 @@
   window.addEventListener('languagechange', () => {
     if (window.sitePreferences.languageMode === 'system') { state.lang = window.sitePreferences.language(); render(true); }
   });
-  document.addEventListener("click", (event) => {
+  document.addEventListener("click", async (event) => {
+    const copyDemoButton = event.target.closest("[data-copy-beamer-demo]");
+    if (copyDemoButton) {
+      const input = document.querySelector("[data-beamer-demo-url]");
+      const status = document.querySelector("[data-beamer-demo-status]");
+      try {
+        await navigator.clipboard.writeText(input.value);
+        status.textContent = t("beamerDemoCopied");
+      } catch {
+        input.focus();
+        input.select();
+        status.textContent = t("beamerDemoCopyFailed");
+      }
+      return;
+    }
     const methodButton = event.target.closest("[data-method-filter]");
     if (methodButton) {
       state.researchMethod = methodButton.dataset.methodFilter;

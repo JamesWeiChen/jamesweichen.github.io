@@ -93,3 +93,27 @@ preview, update review, and browser checks. No deployment is performed by the to
 The main site, Acadenda guide, and conference agenda pages share `site-header.js` and
 `site-header.css` for the full navigation bar. Profile names come from `data.js`.
 The Acadenda card keeps its App Store download above separate attendee and organizer resources.
+
+## Beamer Notes interactive HTML sample
+
+The Beamer Notes resource panel on the Apps page links to the self-contained
+`beamernotes/interactive-demo.html` and provides its remote URL for copying:
+
+- `https://jamesweichen.github.io/beamernotes/interactive-demo.html?lang=en`
+- `https://jamesweichen.github.io/beamernotes/interactive-demo.html?lang=zh`
+
+The UTF-8 file includes its own styles, JavaScript, SVG chart, and English /
+Traditional Chinese text. It does not request external fonts, libraries, or
+assets. The site’s Space Grotesk, Source Serif 4, and Space Mono Latin fonts
+are embedded as data URLs with their OFL licenses; Chinese text uses local font
+fallbacks. It shares the main site’s palette and saved `jwc-theme` preference,
+with a light/dark toggle and an optional `?theme=light`, `dark`, or `system`.
+Its 1280 × 720 stage scales uniformly to fit the available viewport
+without page scrolling; all content remains in the 16:9 stage. It uses native
+range inputs and buttons and leaves Apple Pencil annotations to Beamer Notes.
+
+The example is an illustrative linear market: inverse demand `P = 100 + d − Q`,
+inverse supply `P = 20 + c + Q`, and unit tax `t`. The sliders and presets update
+quantity, buyer / seller prices, tax revenue, and deadweight loss. The comparison
+button overlays the initial market (`d = c = t = 0`); reset restores that market.
+The HTML also opens directly from a local file without a server.
