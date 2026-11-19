@@ -15,8 +15,8 @@
   })();
 </script>
 <script src="../site-preferences.js"></script>
-<link rel="stylesheet" href="style.css?v=20261102-1">
-<script src="app.js?v=20261107-3" defer></script>
+<link rel="stylesheet" href="style.css?v=20261119-1">
+<script src="app.js?v=20261119-1" defer></script>
 </head>
 <body>
 <div class="topbar">
@@ -103,11 +103,12 @@
 
   <section id="program" class="section" aria-labelledby="program-title">
     <h2 id="program-title" data-i18n="programTitle">Program</h2>
+    <p class="muted small program-revision" id="program-revision" hidden></p>
     <div class="controls">
       <div class="day-tabs" id="day-tabs" role="group" data-i18n-attr="aria-label:dayGroup" aria-label="Choose a day"></div>
       <label class="search">
-        <span data-i18n="searchLabel">Search speaker, paper or session</span>
-        <input type="search" id="search" data-i18n-attr="placeholder:searchPlaceholder" placeholder="e.g. 謝志昇, trade, networks" autocomplete="off">
+        <span data-i18n="searchLabel">Search by name, affiliation, paper, session or room</span>
+        <input type="search" id="search" data-i18n-attr="placeholder:searchPlaceholder" placeholder="e.g. 謝志昇, trade, D401" autocomplete="off">
       </label>
       <p class="muted" id="result-count" aria-live="polite"></p>
     </div>

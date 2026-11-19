@@ -93,6 +93,7 @@ h3 { font-size: 1.05rem; margin: 0; overflow-wrap: anywhere; }
 .section:last-of-type { border-bottom: 0; }
 
 .controls { display: grid; gap: 12px; margin-bottom: 16px; }
+.program-revision { margin: -8px 0 14px; }
 
 .day-tabs { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 4px; }
 .day-tabs button {
@@ -136,6 +137,7 @@ h3 { font-size: 1.05rem; margin: 0; overflow-wrap: anywhere; }
 .talk { border-top: 1px solid var(--line); margin-top: 12px; padding-top: 10px; }
 .talk > strong { display: block; overflow-wrap: anywhere; }
 .talk p { margin: 2px 0; font-size: .95rem; overflow-wrap: anywhere; }
+.session .discussant { color: var(--accent); }
 .flag { font-size: .85rem; color: var(--muted); font-style: italic; margin: 6px 0 0; }
 
 .map { margin: 16px 0 0; }

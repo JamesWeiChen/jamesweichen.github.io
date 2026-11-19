@@ -18,8 +18,10 @@ const COPY = {
     step1: 'Install Acadenda from the App Store.', step2: 'In Acadenda, open Conference → Import → Add from a Link.',
     step3: 'Paste the program link, or scan the QR code with the app’s scanner.', step4: 'Preview the schedule, then tap Add to my conferences.',
     linkNote: 'The program link stays the same when the schedule is updated, so the QR code does not need to be replaced.',
-    programTitle: 'Program', dayGroup: 'Choose a day', searchLabel: 'Search speaker, paper or session',
-    searchPlaceholder: 'e.g. 謝志昇, trade, networks', venueTitle: 'Venue Map',
+    programTitle: 'Program', dayGroup: 'Choose a day',
+    programRevision: date => `Program draft · ${date}`,
+    searchLabel: 'Search by name, affiliation, paper, session or room',
+    searchPlaceholder: 'e.g. 謝志昇, trade, D401', venueTitle: 'Venue Map',
     venueText: 'Tap the image to view it full size.', funRunTitle: 'Fun Run / Walk',
     footerLine1: 'Independent conference companion · Powered by Acadenda',
     footerLine2: 'The program is compiled from the organizer’s conference schedule. This is not an official TEA website.',
@@ -31,7 +33,10 @@ const COPY = {
     venueMapTitle: 'Venue and Transport Map',
     resultCount: n => n === 1 ? '1 matching session' : `${n} matching sessions`,
     noMatching: 'No matching sessions.', noSessions: 'No sessions are listed for this day.',
-    chair: name => `Chair: ${name}`, flag: 'Some details are marked for organizer confirmation.',
+    chair: 'Chair', moderator: 'Moderator', organizer: 'Session organizer',
+    discussant: 'Discussant', sessionDiscussant: 'Session discussant', authors: 'Authors',
+    unknownAffiliation: 'affiliation pending', role: (label, person) => `${label}: ${person}`,
+    flag: 'Some details are marked for organizer confirmation.',
     throughout: 'Throughout the day', timeTbd: 'Time not specified',
     loading: 'Program unavailable', loadError: message => `The program could not be loaded (${message}). Refresh the page to try again.`,
     formatError: 'The program file has an unexpected format.',
@@ -51,8 +56,10 @@ const COPY = {
     step1: '從 App Store 安裝 Acadenda。', step2: '在 Acadenda 中開啟「會議」→「匯入」→「從連結加入」。',
     step3: '貼上議程連結，或用 App 的掃描功能掃描 QR Code。', step4: '預覽議程後，點選「加入我的會議」。',
     linkNote: '更新議程時連結不會改變，因此不需要更換 QR Code。',
-    programTitle: '議程', dayGroup: '選擇日期', searchLabel: '搜尋講者、論文或場次',
-    searchPlaceholder: '例如：謝志昇、貿易、網絡', venueTitle: '會場地圖',
+    programTitle: '議程', dayGroup: '選擇日期',
+    programRevision: date => `議程初稿 · ${date}`,
+    searchLabel: '搜尋姓名、所屬單位、論文、場次或會場',
+    searchPlaceholder: '例如：謝志昇、貿易、D401', venueTitle: '會場地圖',
     venueText: '點擊圖片可查看完整大小。', funRunTitle: '趣跑／健走', venueMapTitle: '會場與交通地圖',
     footerLine1: '獨立會議輔助網站 · 由 Acadenda 提供技術支援',
     footerLine2: '議程依主辦單位公布的會議安排整理，非台灣經濟學會官方網站。',
@@ -62,7 +69,10 @@ const COPY = {
     docTitle: '台灣經濟學會 2026 年年會 議程', 
     resultCount: n => `${n} 場符合`,
     noMatching: '沒有符合的場次。', noSessions: '這一天沒有列出場次。',
-    chair: name => `主持人：${name}`, flag: '部分資訊待主辦單位確認。',
+    chair: '主席', moderator: '主持人', organizer: '籌組人',
+    discussant: '評論人', sessionDiscussant: '綜合評論人', authors: '作者',
+    unknownAffiliation: '單位待確認', role: (label, person) => `${label}：${person}`,
+    flag: '部分資訊待主辦單位確認。',
     throughout: '全天', timeTbd: '時間未定',
     loading: '議程無法載入', loadError: message => `無法載入議程（${message}）。請重新整理頁面。`,
     formatError: '議程檔案格式不正確。',
@@ -75,9 +85,9 @@ let program = null;
 let selectedDay = 0;
 let lang = window.sitePreferences.language();
 
-function t(key, value) {
+function t(key, ...values) {
   const entry = COPY[lang][key];
-  return typeof entry === 'function' ? entry(value) : entry;
+  return typeof entry === 'function' ? entry(...values) : entry;
 }
 
 // Same storage key and language preference as the main site, so the choice carries over.
@@ -133,10 +143,16 @@ function dayLabel(day) {
   if (lang === 'zh') return day.label;
   return new Date(`${day.date}T00:00:00Z`).toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', timeZone: 'UTC' });
 }
-// Room names come from the program as “場地 A”; English shows them as “Room A”.
 function roomText(room) {
-  const match = lang === 'en' && room && room.match(/^場地\s*(.+)$/);
-  return match ? `Room ${match[1]}` : room;
+  if (lang !== 'en' || !room) return room;
+  if (room === '中庭') return 'Courtyard';
+  if (room === '成大校園') return 'NCKU campus';
+  const match = room.match(/^(北|南)棟 (\d+) 樓\s*(.*)$/);
+  if (!match) return room.replace(/^場地\s*/, 'Room ');
+  const [, building, floor, location] = match;
+  const locationEn = location.replace('大演講廳', 'Main Auditorium').replace('玻璃屋', 'Glass Room')
+    .replace('（經濟）', ' (Economics)').replace('（政治）', ' (Political Science)');
+  return [`${building === '北' ? 'North' : 'South'} Building ${floor}F`, locationEn].filter(Boolean).join(' · ');
 }
 // Times are kept as the program's local wall-clock strings; they are never converted through Date.
 function timeLabel(row) {
@@ -152,11 +168,16 @@ function todayIndex() {
 function query() {
   return byID('search').value.trim().toLowerCase();
 }
+function matches(q, ...values) {
+  return values.some(value => value && value.toLowerCase().includes(q));
+}
 function itemMatches(item, q) {
-  return [item.title, item.room, item.chair].some(text => text && text.toLowerCase().includes(q));
+  return matches(q, item.title, item.room, roomText(item.room), item.chair, item.chairAffiliation,
+    item.organizer, item.organizerAffiliation, item.sessionDiscussant, item.sessionDiscussantAffiliation);
 }
 function talkMatches(talk, q) {
-  return [talk.title, talk.speaker, talk.affiliation, ...(talk.coauthors || [])].some(text => text && text.toLowerCase().includes(q));
+  return matches(q, talk.title, talk.speaker, talk.affiliation, talk.discussant, talk.discussantAffiliation,
+    ...(talk.coauthors || []), ...(talk.coauthorAffiliations || []));
 }
 // Returns the talks to show for one item, or null when the item itself should be hidden.
 function visibleTalks(item, q) {
@@ -166,14 +187,29 @@ function visibleTalks(item, q) {
   return matching.length ? matching : null;
 }
 
-// Lists every author of a talk in one line; the speaker is set apart in bold.
+function personText(name, affiliation, showPending = false) {
+  const unit = affiliation || (showPending ? t('unknownAffiliation') : '');
+  return unit ? `${name} (${unit})` : name;
+}
+
+function roleText(key, person) {
+  return t('role', t(key), person);
+}
+
 function authorLine(talk) {
   const line = el('p', '', 'authors');
-  if (talk.speaker) line.append(el('strong', talk.speaker, 'presenter'));
-  if (talk.speaker && talk.affiliation) line.append(` (${talk.affiliation})`);
-  for (const name of talk.coauthors || []) {
-    if (line.childNodes.length) line.append(', ');
-    line.append(name);
+  const isAuthorList = talk.authorRole === 'authors';
+  const coauthors = (talk.coauthors || []).map((name, index) =>
+    personText(name, talk.coauthorAffiliations?.[index], isAuthorList));
+  if (isAuthorList) {
+    const authors = [personText(talk.speaker, talk.affiliation, true), ...coauthors];
+    line.textContent = roleText('authors', authors.join(lang === 'zh' ? '、' : '; '));
+  } else {
+    if (talk.speaker) {
+      line.append(el('strong', talk.speaker, 'presenter'));
+      if (talk.affiliation) line.append(` (${talk.affiliation})`);
+    }
+    if (coauthors.length) line.append(`${talk.speaker ? ', ' : ''}${coauthors.join(', ')}`);
   }
   return line;
 }
@@ -181,12 +217,20 @@ function authorLine(talk) {
 function sessionCard(item, talks) {
   const card = el('article', '', talks.length || item.kind !== 'parallelSession' ? 'session' : 'session break');
   card.append(el('h3', item.title));
-  card.append(el('p', [roomText(item.room), item.chair && t('chair', item.chair)].filter(Boolean).join(' · '), 'detail'));
+  if (item.room) card.append(el('p', roomText(item.room), 'detail'));
+  if (item.chair) card.append(el('p', roleText(item.chairRole || 'chair', personText(item.chair, item.chairAffiliation)), 'detail'));
+  if (item.organizer) card.append(el('p', roleText('organizer', personText(item.organizer, item.organizerAffiliation)), 'detail'));
+  if (item.sessionDiscussant) {
+    card.append(el('p', roleText('sessionDiscussant', personText(item.sessionDiscussant, item.sessionDiscussantAffiliation)), 'detail discussant'));
+  }
   if (item.uncertain?.length) card.append(el('p', t('flag'), 'flag'));
   for (const talk of talks) {
     const section = el('section', '', 'talk');
     section.append(el('strong', talk.title));
-    section.append(authorLine(talk));
+    if (talk.speaker || talk.coauthors?.length) section.append(authorLine(talk));
+    if (talk.discussant) {
+      section.append(el('p', roleText('discussant', personText(talk.discussant, talk.discussantAffiliation)), 'detail discussant'));
+    }
     if (talk.startTime) section.append(el('p', timeLabel(talk), 'detail'));
     if (talk.uncertain?.length) section.append(el('p', t('flag'), 'flag'));
     card.append(section);
@@ -309,6 +353,12 @@ function renderAll() {
   const meta = program.conference;
   const [city, venue] = lang === 'zh' ? [meta.city, meta.venue] : [COPY.en.cityEn, COPY.en.venueEn];
   byID('meta').textContent = [dateRange(meta), city, venue].filter(Boolean).join(' · ');
+  const revision = byID('program-revision');
+  revision.textContent = meta.programRevision
+    ? t('programRevision', new Date(`${meta.programRevision}T00:00:00Z`).toLocaleDateString(
+      lang === 'zh' ? 'zh-TW' : 'en-US', {dateStyle: 'medium', timeZone: 'UTC'}))
+    : '';
+  revision.hidden = !meta.programRevision;
   document.title = t('docTitle');
   renderTabs();
   renderSchedule();
