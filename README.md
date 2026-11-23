@@ -187,3 +187,9 @@ Regenerate it with `python scripts/generate-acadenda-qr.py` (`qrcode[pil]`).
 It is for joining the Android test and following the Google Play installation
 link, not importing the conference JSON. The card explains using the same Google
 account, opting into testing, installing, and returning to import the program.
+
+Conference pages also share `acadenda/qr-cards.css`. Paired import / iOS cards
+share grid rows for headings, descriptions, QR frames, actions and link/status
+text. QR frames stretch to the same height without truncating translated
+captions. The organizer demo's two sample download cards use the same approach.
+Below the existing mobile breakpoints, cards stack in normal document order.
