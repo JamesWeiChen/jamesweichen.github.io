@@ -132,9 +132,12 @@ Source: the Rural Economics Society of Taiwan's announcement dated 23 November
 announcement is retained in `conference.sourceURL`.
 `source-program.pdf` now preserves the user-supplied four-page 1123V4 PDF.
 The V4 update changes C4 discussant 李俊鴻 to 特聘教授兼永續發展中心主任
-and session G to 中文場. The abstract book and all 33 abstract strings are unchanged.
+and session G to 中文場. On 24 November, all 33 abstracts and author affiliations
+were checked against the newly supplied `2026年會_論文摘要集.pdf`. Only abstract
+15 differs in text: a full stop after 「借鏡」 is absent in the new PDF; its
+paragraph boundary is preserved in the JSON. Schedule times and stable IDs are unchanged.
 The supplied book of abstracts is used to populate the JSON but is not published
-as a Word download. The current PDF URL is recorded in
+as a Word or abstract-PDF download. The current PDF URL is recorded in
 `conference.sourcePDFURL`; `conference.organizerSourcePDFURL` retains the original
 announcement’s PDF link as a historical source. Program version metadata stays
 in the JSON for maintenance; the public page omits version labels.
@@ -154,8 +157,9 @@ organizer’s session times in the page source note and each talk’s `timingSou
 The 1123V3 revision corrects the D2 title to 「臺灣進口啤酒市場需求體系評估」.
 All 33 research papers now have verbatim `abstract` strings from the supplied
 book, with `abstractSourceNumber` matching its numbered entries.
-The PDF takes precedence for discussant titles where the sources differ
-(F2: 孔維新 is listed as 副教授 in the revised PDF, 教授 in the abstract book).
+The program PDF takes precedence for discussant titles. The new abstract PDF
+now agrees with V4 on C4 (李俊鴻: 特聘教授兼永續發展中心主任), F2
+(孔維新: 副教授), and session G (中文場).
 Do not invent missing details or silently correct source titles.
 
 Validate with the adjacent Acadenda publishing toolkit:
