@@ -5,7 +5,7 @@ const PROGRAM_LINK = 'https://jamesweichen.github.io/rest-2026/program.json';
 
 const COPY = {
   en: {
-    sourceNote: 'Updated from program version 1123V3 and the supplied book of abstracts, with all 33 paper abstracts and listed coauthor affiliations. Authors are listed with the presenter first. Paper slots are assigned at 20 minutes each; three-paper sessions use the first 60 minutes. Session times follow the PDF.', sourcePdf: 'Program PDF · 1123V3 ↗', sourceAbstracts: 'Book of abstracts (Word) ↗', sourcePage: 'Organizer’s announcement ↗',
+    sourceNote: 'Compiled from the conference program and book of abstracts, with all 33 paper abstracts and listed coauthor affiliations. Authors are listed with the presenter first. Paper slots are assigned at 20 minutes each; three-paper sessions use the first 60 minutes. Session times follow the PDF.', sourcePdf: 'Program PDF ↗', sourcePage: 'Organizer’s announcement ↗',
     abstract: 'Abstract',
     appearance: 'Appearance', themeSystem: 'System', themeLight: 'Light', themeDark: 'Dark',
     language: 'Language', langSystem: 'System',
@@ -45,7 +45,7 @@ const COPY = {
     copied: 'Program link copied.', copyFailed: 'Copy failed. Select the link above and copy it.',
   },
   zh: {
-    sourceNote: '依 1123V3 議程與論文摘要集更新，包含 33 篇論文摘要及列明的共同作者單位，作者首位為報告人。場次時段依議程 PDF；逐篇時間由本頁依每篇 20 分鐘編排，三篇場次使用前 60 分鐘。', sourcePdf: '議程 PDF · 1123V3 ↗', sourceAbstracts: '論文摘要集（Word）↗', sourcePage: '主辦單位公告 ↗',
+    sourceNote: '依議程與論文摘要集整理，包含 33 篇論文摘要及列明的共同作者單位，作者首位為報告人。場次時段依議程 PDF；逐篇時間由本頁依每篇 20 分鐘編排，三篇場次使用前 60 分鐘。', sourcePdf: '議程 PDF ↗', sourcePage: '主辦單位公告 ↗',
     abstract: '摘要',
     appearance: '外觀', themeSystem: '跟隨系統', themeLight: '淺色', themeDark: '深色',
     language: '語言', langSystem: '跟隨系統',
@@ -378,7 +378,7 @@ function renderAll() {
   const revision = byID('program-revision');
   revision.textContent = meta.programRevision
     ? t('programRevision', new Date(`${meta.programRevision}T00:00:00Z`).toLocaleDateString(
-      lang === 'zh' ? 'zh-TW' : 'en-US', {dateStyle: 'medium', timeZone: 'UTC'})) + (meta.programVersion ? ` · ${meta.programVersion}` : '')
+      lang === 'zh' ? 'zh-TW' : 'en-US', {dateStyle: 'medium', timeZone: 'UTC'}))
     : '';
   revision.hidden = !meta.programRevision;
   document.title = t('docTitle');

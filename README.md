@@ -131,10 +131,11 @@ Source: the Rural Economics Society of Taiwan's announcement dated 23 November
 2026, for the 6 December meeting at NTU Agricultural Economics. The original
 announcement is retained in `conference.sourceURL`.
 `source-program.pdf` now preserves the user-supplied four-page 1123V3 PDF.
-`source-abstracts.docx` preserves the supplied book of abstracts.
-The current snapshot URLs are recorded in `conference.sourcePDFURL` and
-`conference.abstractSourceURL`; `conference.organizerSourcePDFURL` retains the
-original announcement’s PDF link as a historical source.
+The supplied book of abstracts is used to populate the JSON but is not published
+as a Word download. The current PDF URL is recorded in
+`conference.sourcePDFURL`; `conference.organizerSourcePDFURL` retains the original
+announcement’s PDF link as a historical source. Program version metadata stays
+in the JSON for maintenance; the public page omits version labels.
 
 The program has 18 sessions/activities: three keynotes, a forum and eight parallel
 paper sessions (33 research papers), opening remarks, photo, lunch/member meeting,
