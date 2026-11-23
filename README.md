@@ -154,3 +154,9 @@ Validate with the adjacent Acadenda publishing toolkit:
 
 The import QR contains the stable JSON URL, not the website URL. Update the same
 JSON while preserving IDs and its URL when the organizer publishes revisions.
+
+REST paper records support optional `talks[].abstract` plain-text strings.
+The website shows a collapsed, keyboard-accessible 摘要 / Abstract section only
+for nonblank string values; absent, null, or blank values show no control.
+Abstracts preserve line breaks, render as text (never HTML), and are included in
+paper search. No abstract text is inferred from paper titles or the source PDF.

@@ -6,6 +6,7 @@ const PROGRAM_LINK = 'https://jamesweichen.github.io/rest-2026/program.json';
 const COPY = {
   en: {
     sourceNote: 'Program transcribed from the organizer’s four-page PDF. Authors are listed with the presenter first. Paper slots are assigned at 20 minutes each; three-paper sessions use the first 60 minutes. These individual times are editorial, while session times follow the PDF. Keynote titles, a dinner end time and a venue map are not provided.', sourcePdf: 'Source program PDF ↗', sourcePage: 'Organizer’s announcement ↗',
+    abstract: 'Abstract',
     appearance: 'Appearance', themeSystem: 'System', themeLight: 'Light', themeDark: 'Dark',
     language: 'Language', langSystem: 'System',
     navAria: 'Conference sections', navAcadenda: 'Acadenda', navProgram: 'Program', navVenue: 'Venue Map', navFunRun: 'Fun Run',
@@ -21,7 +22,7 @@ const COPY = {
     linkNote: 'The program link stays the same when the schedule is updated, so the QR code does not need to be replaced.',
     programTitle: 'Program', dayGroup: 'Choose a day',
     programRevision: date => `Source program · ${date}`,
-    searchLabel: 'Search by name, affiliation, paper, session or room',
+    searchLabel: 'Search by name, affiliation, paper, abstract, session or room',
     searchPlaceholder: 'e.g. 陳暐, water, 農經二', venueTitle: 'Venue Map',
     venueText: 'Tap the image to view it full size.', funRunTitle: 'Fun Run / Walk',
     footerLine1: 'Independent conference companion · Powered by Acadenda',
@@ -45,6 +46,7 @@ const COPY = {
   },
   zh: {
     sourceNote: '依主辦單位四頁 PDF 整理，作者首位為報告人。場次時段依原始 PDF；逐篇時間由本頁依每篇 20 分鐘編排，三篇場次使用前 60 分鐘。Keynote 題目、晚宴結束時間及會場地圖未提供。', sourcePdf: '原始議程 PDF ↗', sourcePage: '主辦單位公告 ↗',
+    abstract: '摘要',
     appearance: '外觀', themeSystem: '跟隨系統', themeLight: '淺色', themeDark: '深色',
     language: '語言', langSystem: '跟隨系統',
     navAria: '會議區塊', navAcadenda: 'Acadenda', navProgram: '議程', navVenue: '會場地圖', navFunRun: '趣跑',
@@ -60,7 +62,7 @@ const COPY = {
     linkNote: '更新議程時連結不會改變，因此不需要更換 QR Code。',
     programTitle: '議程', dayGroup: '選擇日期',
     programRevision: date => `議程公告 · ${date}`,
-    searchLabel: '搜尋姓名、所屬單位、論文、場次或會場',
+    searchLabel: '搜尋姓名、所屬單位、論文、摘要、場次或會場',
     searchPlaceholder: '例如：陳暐、水資源、農經二', venueTitle: '會場地圖',
     venueText: '點擊圖片可查看完整大小。', funRunTitle: '趣跑／健走', venueMapTitle: '會場與交通地圖',
     footerLine1: '獨立會議輔助網站 · 由 Acadenda 提供技術支援',
@@ -179,8 +181,12 @@ function itemMatches(item, q) {
   return matches(q, item.title, item.room, roomText(item.room), item.chair, item.chairAffiliation,
     item.organizer, item.organizerAffiliation, item.sessionDiscussant, item.sessionDiscussantAffiliation, item.subtitle, item.language);
 }
+function talkAbstract(talk) {
+  return typeof talk.abstract === 'string' ? talk.abstract.trim() : '';
+}
+
 function talkMatches(talk, q) {
-  return matches(q, talk.title, talk.speaker, talk.affiliation, talk.discussant, talk.discussantAffiliation,
+  return matches(q, talk.title, talk.speaker, talk.affiliation, talk.discussant, talk.discussantAffiliation, talkAbstract(talk),
     ...(talk.coauthors || []), ...(talk.coauthorAffiliations || []));
 }
 // Returns the talks to show for one item, or null when the item itself should be hidden.
@@ -243,6 +249,12 @@ function sessionCard(item, talks) {
     if (talk.sourceNote) section.append(el('p', talk.sourceNote, 'detail'));
     if (talk.startTime) section.append(el('p', timeLabel(talk), 'detail'));
     if (talk.uncertain?.length) section.append(el('p', t('flag'), 'flag'));
+    const abstract = talkAbstract(talk);
+    if (abstract) {
+      const details = el('details', '', 'talk-abstract');
+      details.append(el('summary', t('abstract')), el('p', abstract, 'abstract-text'));
+      section.append(details);
+    }
     card.append(section);
   }
   return card;

@@ -193,3 +193,9 @@ a:focus-visible, button:focus-visible, input:focus-visible {
 
 /* Keep optional sections and date tabs hidden when their content is absent. */
 [hidden] { display: none !important; }
+
+/* Abstracts are optional plain text, collapsed until the reader opens them. */
+.talk-abstract { margin-top: 12px; border-top: 1px solid var(--line); }
+.talk-abstract summary { min-height: 44px; padding: 10px 0; cursor: pointer; color: var(--accent); font-weight: 600; }
+.talk-abstract summary:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+.talk-abstract .abstract-text { margin: 0 0 10px; white-space: pre-wrap; overflow-wrap: anywhere; color: var(--ink); }
