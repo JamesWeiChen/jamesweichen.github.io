@@ -1,0 +1,33 @@
+/* Fits both the conference companions and the shared conference template. */
+.acadenda-android-beta {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 184px minmax(0, 1fr);
+  align-items: start;
+  gap: 12px 24px;
+  min-width: 0;
+  padding: 20px;
+  margin: 24px 0;
+  border: 1px solid var(--line, #d9d7cc);
+  border-radius: 12px;
+  background: var(--card, var(--paper-deep, #ffffff));
+  color: var(--ink, #1d1f1c);
+}
+.import-grid .acadenda-android-beta { margin: 0; }
+.acadenda-android-beta > h3, .acadenda-android-beta > .android-beta-intro { grid-column: 1 / -1; margin: 0; }
+.acadenda-android-beta > h3 { font-size: 1.05rem; line-height: 1.5; }
+.android-beta-intro, .android-beta-help { color: var(--muted, #5f635b); }
+.acadenda-android-beta .android-beta-qr { margin: 0; padding: 10px; border-radius: 12px; background: #fff; color-scheme: light; width: 184px; max-width: 100%; }
+.android-beta-qr a, .android-beta-qr img { display: block; }
+.android-beta-qr img { width: 100%; height: auto; }
+.android-beta-qr figcaption { margin-top: 6px; font-size: .8rem; line-height: 1.5; color: #5f635b; }
+.android-beta-instructions { min-width: 0; }
+.android-beta-instructions ol { margin: 0 0 16px; padding-left: 22px; }
+.android-beta-instructions li { margin: 0 0 8px; }
+.android-beta-button { display: inline-flex; align-items: center; min-height: 44px; padding: 9px 14px; border: 1px solid var(--line, #d9d7cc); border-radius: 8px; background: var(--card, var(--paper-deep, #fff)); color: var(--accent, #2c5d7c); text-decoration: none; font-weight: 600; }
+.android-beta-help { margin: 14px 0 0; font-size: .85rem; line-height: 1.6; }
+.android-beta-help a { color: var(--accent, #2c5d7c); }
+.acadenda-android-beta a:focus-visible { outline: 3px solid var(--accent, #2c5d7c); outline-offset: 3px; }
+@media (max-width: 640px) {
+  .acadenda-android-beta { grid-template-columns: minmax(0, 1fr); padding: 18px; }
+}

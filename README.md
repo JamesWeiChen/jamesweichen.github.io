@@ -170,3 +170,18 @@ The website shows a collapsed, keyboard-accessible 摘要 / Abstract section onl
 for nonblank string values; absent, null, or blank values show no control.
 Abstracts preserve line breaks, render as text (never HTML), and are included in
 paper search. No abstract text is inferred from paper titles or the source PDF.
+
+## Android beta on conference pages
+
+All conference companions (`tea-2026/`, `rest-2026/`, `na-esa-2026/`), the
+organizer demo, and the new-conference template share `acadenda/android-beta.js`
+and `acadenda/android-beta.css`. Add a `[data-acadenda-android-beta]` article
+where the Android sign-up/install instructions should appear. It follows the
+page's `lang` attribute and existing theme colors; the NA ESA page stays English.
+
+The shared QR at `acadenda/images/qr/android-beta.png` encodes exactly:
+`https://play.google.com/apps/testing/org.acadenda.android`.
+Regenerate it with `python scripts/generate-acadenda-qr.py` (`qrcode[pil]`).
+It is for joining the Android test and following the Google Play installation
+link, not importing the conference JSON. The card explains using the same Google
+account, opting into testing, installing, and returning to import the program.
