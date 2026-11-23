@@ -130,7 +130,9 @@ Acadenda JSON structure as `tea-2026/`. Public URLs:
 Source: the Rural Economics Society of Taiwan's announcement dated 23 November
 2026, for the 6 December meeting at NTU Agricultural Economics. The original
 announcement is retained in `conference.sourceURL`.
-`source-program.pdf` now preserves the user-supplied four-page 1123V3 PDF.
+`source-program.pdf` now preserves the user-supplied four-page 1123V4 PDF.
+The V4 update changes C4 discussant 李俊鴻 to 特聘教授兼永續發展中心主任
+and session G to 中文場. The abstract book and all 33 abstract strings are unchanged.
 The supplied book of abstracts is used to populate the JSON but is not published
 as a Word download. The current PDF URL is recorded in
 `conference.sourcePDFURL`; `conference.organizerSourcePDFURL` retains the original
