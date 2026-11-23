@@ -1,0 +1,904 @@
+{
+  "conference": {
+    "name": "2026年臺灣農村經濟學會年會暨學術研討會及永續水資源論壇",
+    "shortName": "REST 2026",
+    "venue": "國立臺灣大學農業經濟學系",
+    "city": "臺北市",
+    "startDate": "2026-12-06",
+    "endDate": "2026-12-06",
+    "maps": [],
+    "programRevision": "2026-11-23",
+    "sourceURL": "https://www.rest.org.tw/zh_tw/Download/-%E6%95%AC%E9%82%80%E5%8F%83%E5%8A%A0-2026%E5%B9%B4%E8%87%BA%E7%81%A3%E8%BE%B2%E6%9D%91%E7%B6%93%E6%BF%9F%E5%AD%B8%E6%9C%83%E5%B9%B4%E6%9C%83%E6%9A%A8%E5%AD%B8%E8%A1%93%E7%A0%94%E8%A8%8E%E6%9C%83%E5%8F%8A%E6%B0%B8%E7%BA%8C%E6%B0%B4%E8%B3%87%E6%BA%90%E8%AB%96%E5%A3%87-25644248",
+    "sourcePDFURL": "https://www.rest.org.tw/uploads/bulletin_file/file/6b03a70e085777f4b7fe1ed4/2026%E5%B9%B4%E8%87%BA%E7%81%A3%E8%BE%B2%E6%9D%91%E7%B6%93%E6%BF%9F%E5%AD%B8%E6%9C%83%E5%B9%B4%E6%9C%83%E6%9A%A8%E5%AD%B8%E8%A1%93%E7%A0%94%E8%A8%8E%E6%9C%83%E5%8F%8A%E6%B0%B8%E7%BA%8C%E6%B0%B4%E8%B3%87%E6%BA%90%E8%AB%96%E5%A3%87%E8%AD%B0%E7%A8%8B.pdf",
+    "organizers": [
+      "社團法人臺灣農村經濟學會",
+      "國立臺灣大學農業經濟學系"
+    ],
+    "supportingOrganizations": [
+      "財團法人七星農業發展基金會"
+    ],
+    "sourceNotes": [
+      "依主辦單位 2026-11-23 公告之四頁 PDF 整理。",
+      "作者欄首位為報告人；PDF 僅提供報告人所屬單位，共同作者單位未另行推定。",
+      "PDF 未提供個別論文時間、Keynote 題目、晚宴結束時間及會場地圖。個別論文時間依頁面製作者指定規則編排：每篇 20 分鐘，三篇場次使用前 60 分鐘。"
+    ]
+  },
+  "days": [
+    {
+      "label": "12/6 星期日",
+      "date": "2026-12-06",
+      "items": [
+        {
+          "id": "rest-2026-opening",
+          "kind": "other",
+          "title": "開幕致詞",
+          "room": "",
+          "chair": "",
+          "chairAffiliation": "",
+          "startTime": "10:30",
+          "endTime": "10:45",
+          "sourcePage": 1,
+          "talks": [
+            {
+              "id": "rest-2026-opening-chang",
+              "title": "理事長致詞",
+              "speaker": "張宏浩",
+              "affiliation": "國立臺灣大學農業經濟學系特聘教授兼生農學院副院長",
+              "coauthors": [],
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "id": "rest-2026-opening-chen",
+              "title": "系主任致詞",
+              "speaker": "陳郁蕙",
+              "affiliation": "國立臺灣大學農業經濟學系特聘教授",
+              "coauthors": [],
+              "startTime": "",
+              "endTime": ""
+            }
+          ]
+        },
+        {
+          "id": "rest-2026-photo",
+          "kind": "social",
+          "title": "團體合照",
+          "room": "",
+          "chair": "",
+          "chairAffiliation": "",
+          "startTime": "10:45",
+          "endTime": "10:50",
+          "sourcePage": 1,
+          "talks": []
+        },
+        {
+          "id": "rest-2026-keynote-1",
+          "kind": "keynote",
+          "title": "Keynote I",
+          "room": "",
+          "chair": "張宏浩",
+          "chairAffiliation": "國立臺灣大學農業經濟學系特聘教授兼生農學院副院長",
+          "startTime": "10:50",
+          "endTime": "11:40",
+          "sourcePage": 1,
+          "talks": [
+            {
+              "id": "rest-2026-keynote-1-talk",
+              "title": "Keynote I",
+              "speaker": "Doo Bong Han",
+              "affiliation": "高麗大學糧食與資源經濟學系榮譽教授、韓國農村經濟研究院（KREI）前院長",
+              "coauthors": [],
+              "startTime": "10:50",
+              "endTime": "11:40"
+            }
+          ],
+          "chairRole": "moderator"
+        },
+        {
+          "id": "rest-2026-keynote-2",
+          "kind": "keynote",
+          "title": "Keynote II",
+          "room": "",
+          "chair": "張宏浩",
+          "chairAffiliation": "國立臺灣大學農業經濟學系特聘教授兼生農學院副院長",
+          "startTime": "11:40",
+          "endTime": "12:30",
+          "sourcePage": 1,
+          "talks": [
+            {
+              "id": "rest-2026-keynote-2-talk",
+              "title": "Keynote II",
+              "speaker": "Kei Kajisa",
+              "affiliation": "京都大學農學研究科自然資源經濟學系教授",
+              "coauthors": [],
+              "startTime": "11:40",
+              "endTime": "12:30"
+            }
+          ],
+          "chairRole": "moderator"
+        },
+        {
+          "id": "rest-2026-lunch",
+          "kind": "lunch",
+          "title": "午餐 ＋ 會員大會、碩博士論文獎頒獎",
+          "room": "",
+          "chair": "",
+          "chairAffiliation": "",
+          "startTime": "12:30",
+          "endTime": "13:50",
+          "sourcePage": 1,
+          "talks": []
+        },
+        {
+          "id": "rest-2026-keynote-3",
+          "kind": "keynote",
+          "title": "Keynote III",
+          "room": "",
+          "chair": "張宏浩",
+          "chairAffiliation": "國立臺灣大學農業經濟學系特聘教授兼生農學院副院長",
+          "startTime": "13:50",
+          "endTime": "14:40",
+          "sourcePage": 1,
+          "talks": [
+            {
+              "id": "rest-2026-keynote-3-talk",
+              "title": "Keynote III",
+              "speaker": "Guojun He 何國俊",
+              "affiliation": "香港大學香港賽馬會基金經濟學講座教授暨經管學院 ESG 研究所所長、芝加哥大學能源政策研究所中國中心研究主任",
+              "coauthors": [],
+              "startTime": "13:50",
+              "endTime": "14:40"
+            }
+          ],
+          "chairRole": "moderator"
+        },
+        {
+          "id": "rest-2026-forum",
+          "kind": "parallelSession",
+          "title": "永續水資源論壇 · Forum on Sustainable Water Resources",
+          "room": "農經大講堂",
+          "chair": "柳婉郁",
+          "chairAffiliation": "國立中興大學森林學系；環保防災中心主任、循環經濟學院合聘教授",
+          "startTime": "14:40",
+          "endTime": "16:00",
+          "sourcePage": 2,
+          "talks": [
+            {
+              "id": "rest-2026-forum-01",
+              "title": "The Effects of Dams in a Transnational Context: Evidence from the Mekong Basin",
+              "speaker": "Pingting Song",
+              "affiliation": "Ph.D. Student, Faculty of Business and Commerce, Keio University",
+              "email": "",
+              "coauthors": [],
+              "discussant": "林柏熊",
+              "discussantAffiliation": "國立臺灣大學農業經濟學系",
+              "startTime": "14:40",
+              "endTime": "15:00",
+              "sourcePage": 2,
+              "order": 1,
+              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。"
+            },
+            {
+              "id": "rest-2026-forum-02",
+              "title": "Oil Palm Expansion, Upstream Land Clearing, and Downstream Welfare in Indonesia",
+              "speaker": "WU WEIWEI",
+              "affiliation": "Ph.D. Student, Tohoku University",
+              "email": "",
+              "coauthors": [
+                "Pak Hung LAM"
+              ],
+              "discussant": "柳婉郁",
+              "discussantAffiliation": "國立中興大學森林學系；環保防災中心主任、循環經濟學院合聘教授",
+              "startTime": "15:00",
+              "endTime": "15:20",
+              "sourcePage": 2,
+              "order": 2,
+              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。"
+            },
+            {
+              "id": "rest-2026-forum-03",
+              "title": "Reclaimed Water for Data Center Cooling: Trade-offs among Water Savings, Cost, and Carbon Emissions",
+              "speaker": "李長穎 Chang-Ying Lee",
+              "affiliation": "國立臺灣大學生物環境系統工程學系博士候選人",
+              "email": "",
+              "coauthors": [
+                "胡明哲 Ming-Che Hu"
+              ],
+              "discussant": "何率慈",
+              "discussantAffiliation": "國立臺灣大學農業經濟學系",
+              "startTime": "15:20",
+              "endTime": "15:40",
+              "sourcePage": 2,
+              "order": 3,
+              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。"
+            },
+            {
+              "id": "rest-2026-forum-04",
+              "title": "Riverbed Dust, Air Pollution, and Respiratory Health: Evidence from the Zhuoshui River",
+              "speaker": "王俊欽 Chun-Chin Wang",
+              "affiliation": "國立臺灣大學農業經濟學系博士生",
+              "email": "",
+              "coauthors": [
+                "楊豐安 Feng-An Yang"
+              ],
+              "discussant": "楊睿中",
+              "discussantAffiliation": "國立臺灣大學經濟學系",
+              "startTime": "15:40",
+              "endTime": "16:00",
+              "sourcePage": 2,
+              "order": 4,
+              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。"
+            }
+          ],
+          "subtitle": "跨境外部性、土地利用、能源與健康 / Transboundary Externalities, Land Use, Energy and Health",
+          "language": "中英混合場",
+          "chairRole": "moderator"
+        },
+        {
+          "id": "rest-2026-a",
+          "kind": "parallelSession",
+          "title": "A 氣候調適與糧食安全 · Climate Adaptation and Food Security",
+          "room": "農經三",
+          "chair": "魯真",
+          "chairAffiliation": "國立中興大學行銷學系",
+          "startTime": "14:40",
+          "endTime": "16:00",
+          "sourcePage": 2,
+          "talks": [
+            {
+              "id": "rest-2026-a-01",
+              "title": "Women's Adaptation Strategies In Beef Cattle Farming Households Towards Food Insecurity In The Teak Forest Area Of Bojonegoro, East Java, Indonesia",
+              "speaker": "Khofifa Dwi Hafsari",
+              "affiliation": "Master's Student, Department of Agribusiness Management, NPUST",
+              "email": "",
+              "coauthors": [
+                "Wen-Chi Huang",
+                "Eko Nugroho"
+              ],
+              "discussant": "劉鋼",
+              "discussantAffiliation": "國立臺灣大學農業經濟學系",
+              "startTime": "14:40",
+              "endTime": "15:00",
+              "sourcePage": 2,
+              "order": 1,
+              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。"
+            },
+            {
+              "id": "rest-2026-a-02",
+              "title": "Local planting-calendar reliance and climate adaptation portfolios among smallholder maize farmers in Indonesia",
+              "speaker": "Larasati Sukmadewi Wibowo",
+              "affiliation": "Ph.D. Candidate, Department of Tropical Agriculture and International Cooperation, NPUST",
+              "email": "",
+              "coauthors": [
+                "Wen-Chi Huang"
+              ],
+              "discussant": "黃邱麟",
+              "discussantAffiliation": "國立中興大學應用經濟學系",
+              "startTime": "15:00",
+              "endTime": "15:20",
+              "sourcePage": 2,
+              "order": 2,
+              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。"
+            },
+            {
+              "id": "rest-2026-a-03",
+              "title": "Consumer Perceptions of Climate Change and Willingness to Pay for Carbon Footprint-Labeled Milk: Evidence from Taiwan",
+              "speaker": "陳寧",
+              "affiliation": "國立嘉義大學應用經濟學系助理教授",
+              "email": "",
+              "coauthors": [
+                "張嘉玲"
+              ],
+              "discussant": "魯真",
+              "discussantAffiliation": "國立中興大學行銷學系",
+              "startTime": "15:20",
+              "endTime": "15:40",
+              "sourcePage": 2,
+              "order": 3,
+              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。"
+            }
+          ],
+          "subtitle": "性別、農戶決策與消費者支付意願 / Gender, Household Decisions and Consumer Willingness to Pay",
+          "language": "英文場",
+          "chairRole": "moderator"
+        },
+        {
+          "id": "rest-2026-b",
+          "kind": "parallelSession",
+          "title": "B 農企業與市場連結 · Agribusiness and Market Linkages",
+          "room": "二樓會議室",
+          "chair": "黃文琪",
+          "chairAffiliation": "國立屏東科技大學農企業管理系",
+          "startTime": "14:40",
+          "endTime": "16:00",
+          "sourcePage": 2,
+          "talks": [
+            {
+              "id": "rest-2026-b-01",
+              "title": "Middlemen as Informal Supply Chain Actors Supporting Smallholder Strawberry Farmers' Resilience: A Qualitative Case Study in Batu City, Indonesia",
+              "speaker": "Skye Islean Yuan Marleyan",
+              "affiliation": "Graduate Student, Department of Agribusiness Management, NPUST",
+              "email": "",
+              "coauthors": [
+                "Wen-Chi Huang",
+                "Keppi Sukesi"
+              ],
+              "discussant": "陳暐",
+              "discussantAffiliation": "國立臺灣大學農業經濟學系",
+              "startTime": "14:40",
+              "endTime": "15:00",
+              "sourcePage": 2,
+              "order": 1,
+              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。"
+            },
+            {
+              "id": "rest-2026-b-02",
+              "title": "Revealed Comparative Advantage and Export Dynamics of Indonesian Cephalopod Products in Major Destination Markets",
+              "speaker": "Ahmad Zharif Fajri (艾扎飛)",
+              "affiliation": "Graduate Student, Department of Agribusiness Management, NPUST",
+              "email": "",
+              "coauthors": [
+                "王鈺惠 Wang Yu-Hui",
+                "Suhartini"
+              ],
+              "discussant": "蕭堯仁",
+              "discussantAffiliation": "國立臺灣海洋大學應用經濟研究所",
+              "startTime": "15:00",
+              "endTime": "15:20",
+              "sourcePage": 2,
+              "order": 2,
+              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。"
+            },
+            {
+              "id": "rest-2026-b-03",
+              "title": "The Impact of Digital Literacy on Smallholder Rice Farmers’ Intention to Use Government Digital Agriculture Platforms: Evidence from Indonesia",
+              "speaker": "Muhammad Dava Warsyahdhana",
+              "affiliation": "Ph.D. Candidate, Department of Tropical Agriculture and International Cooperation, NPUST",
+              "email": "",
+              "coauthors": [
+                "Wen-Chi Huang"
+              ],
+              "discussant": "曹書誠",
+              "discussantAffiliation": "國立中央大學經濟學系",
+              "startTime": "15:20",
+              "endTime": "15:40",
+              "sourcePage": 2,
+              "order": 3,
+              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。"
+            }
+          ],
+          "subtitle": "中間商、出口、數位採用與創業 / Intermediaries, Exports, Digital Adoption and Entrepreneurship",
+          "language": "英文場",
+          "chairRole": "moderator"
+        },
+        {
+          "id": "rest-2026-c",
+          "kind": "parallelSession",
+          "title": "C 農地利用與能源轉型 · Farmland Use and the Energy Transition",
+          "room": "一樓研討室",
+          "chair": "鍾秋悅",
+          "chairAffiliation": "國立屏東科技大學農企業管理系",
+          "startTime": "14:40",
+          "endTime": "16:00",
+          "sourcePage": 3,
+          "talks": [
+            {
+              "id": "rest-2026-c-01",
+              "title": "我國再生能源發展對農地轉化與能源公司選址策略是否影響土地細碎化",
+              "speaker": "葉天南",
+              "affiliation": "國立屏東科技大學農企業管理系研究生",
+              "email": "",
+              "coauthors": [
+                "鍾秋悅"
+              ],
+              "discussant": "石曜合",
+              "discussantAffiliation": "國立臺灣大學農業經濟學系",
+              "startTime": "14:40",
+              "endTime": "15:00",
+              "sourcePage": 3,
+              "order": 1,
+              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。"
+            },
+            {
+              "id": "rest-2026-c-02",
+              "title": "大型太陽能設施是否偏向特定類型的農業土地?以美國明尼蘇達州為例",
+              "speaker": "許藜瀞",
+              "affiliation": "國立臺灣大學農業經濟學系研究生",
+              "email": "",
+              "coauthors": [
+                "巫凱琳"
+              ],
+              "discussant": "鍾秋悅",
+              "discussantAffiliation": "國立屏東科技大學農企業管理系",
+              "startTime": "15:00",
+              "endTime": "15:20",
+              "sourcePage": 3,
+              "order": 2,
+              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。"
+            },
+            {
+              "id": "rest-2026-c-03",
+              "title": "台灣半導體產業環境效率與碳排減量之研究",
+              "speaker": "林浚騰",
+              "affiliation": "國立嘉義大學企業管理學系博士生",
+              "email": "",
+              "coauthors": [
+                "李協裕",
+                "林灼榮",
+                "陳靜瑜"
+              ],
+              "discussant": "盧永祥",
+              "discussantAffiliation": "國立嘉義大學科技管理學系",
+              "startTime": "15:20",
+              "endTime": "15:40",
+              "sourcePage": 3,
+              "order": 3,
+              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。"
+            },
+            {
+              "id": "rest-2026-c-04",
+              "title": "量化氣候變遷與人類活動對臺中市都市綠地碳匯能力之影響",
+              "speaker": "賴昱維",
+              "affiliation": "國立中興大學森林學系研究生",
+              "email": "",
+              "coauthors": [
+                "柳婉郁"
+              ],
+              "discussant": "李俊鴻",
+              "discussantAffiliation": "國立東華大學自然資源與環境學系",
+              "startTime": "15:40",
+              "endTime": "16:00",
+              "sourcePage": 3,
+              "order": 4,
+              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。"
+            }
+          ],
+          "subtitle": "光電選址、產業減碳與碳匯 / Solar Siting, Industrial Decarbonisation and Carbon Sinks",
+          "language": "中文場",
+          "chairRole": "moderator"
+        },
+        {
+          "id": "rest-2026-d",
+          "kind": "parallelSession",
+          "title": "D 農產貿易與農會經營 · Agricultural Trade and Farmers' Associations",
+          "room": "農經二",
+          "chair": "張國益",
+          "chairAffiliation": "國立中興大學應用經濟學系",
+          "startTime": "14:40",
+          "endTime": "16:00",
+          "sourcePage": 3,
+          "talks": [
+            {
+              "id": "rest-2026-d-01",
+              "title": "外部衝擊與關稅政策下菲律賓進口美國豬肉產品需求彈性分析",
+              "speaker": "王慈誼",
+              "affiliation": "國立屏東科技大學農企業管理研究所碩士生",
+              "email": "",
+              "coauthors": [
+                "王鈺惠"
+              ],
+              "discussant": "張國益",
+              "discussantAffiliation": "國立中興大學應用經濟學系",
+              "startTime": "14:40",
+              "endTime": "15:00",
+              "sourcePage": 3,
+              "order": 1,
+              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。"
+            },
+            {
+              "id": "rest-2026-d-02",
+              "title": "臺灣進口啤酒市場需求體系評",
+              "speaker": "王水賢",
+              "affiliation": "國立屏東科技大學農企業管理系碩士生",
+              "email": "",
+              "coauthors": [
+                "王鈺惠"
+              ],
+              "discussant": "林幸君",
+              "discussantAffiliation": "國立嘉義大學應用經濟學系",
+              "startTime": "15:00",
+              "endTime": "15:20",
+              "sourcePage": 3,
+              "order": 2,
+              "sourceNote": "題名依 PDF 原文保留；原文止於「評」。",
+              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。"
+            },
+            {
+              "id": "rest-2026-d-03",
+              "title": "農會選舉是否影響農會信用部經營績效-以台灣基層農會為例",
+              "speaker": "陳品翰",
+              "affiliation": "國立屏東科技大學農企業管理系碩士生",
+              "email": "",
+              "coauthors": [
+                "鍾秋悅"
+              ],
+              "discussant": "周百隆",
+              "discussantAffiliation": "國立高雄科技大學風險管理與保險系",
+              "startTime": "15:20",
+              "endTime": "15:40",
+              "sourcePage": 3,
+              "order": 3,
+              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。"
+            },
+            {
+              "id": "rest-2026-d-04",
+              "title": "優惠貿易協定對農產品進口與出口成效評估:台灣之驗證",
+              "speaker": "陳敬凱",
+              "affiliation": "國立中興大學應用經濟學系碩士生",
+              "email": "",
+              "coauthors": [
+                "鄭芳旻",
+                "張國益"
+              ],
+              "discussant": "陳逸潔",
+              "discussantAffiliation": "財團法人農業科技研究院農業政策研究中心",
+              "startTime": "15:40",
+              "endTime": "16:00",
+              "sourcePage": 3,
+              "order": 4,
+              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。"
+            }
+          ],
+          "subtitle": "進口需求體系、關稅與貿易協定 / Import Demand Systems, Tariffs and Trade Agreements",
+          "language": "中文場",
+          "chairRole": "moderator"
+        },
+        {
+          "id": "rest-2026-break",
+          "kind": "coffeeBreak",
+          "title": "茶敘／換場",
+          "room": "",
+          "chair": "",
+          "chairAffiliation": "",
+          "startTime": "16:00",
+          "endTime": "16:30",
+          "sourcePage": 1,
+          "talks": []
+        },
+        {
+          "id": "rest-2026-e",
+          "kind": "parallelSession",
+          "title": "E 長期發展與歷史遺緒 · Long-run Development and Historical Legacies",
+          "room": "一樓研討室",
+          "chair": "林俊昇",
+          "chairAffiliation": "國立屏東大學行銷與流通管理學系",
+          "startTime": "16:30",
+          "endTime": "17:50",
+          "sourcePage": 3,
+          "talks": [
+            {
+              "id": "rest-2026-e-01",
+              "title": "Sophie and the Locust Curse: Effects of Locust Plague on Human Capital Accumulation",
+              "speaker": "Yu Bai",
+              "affiliation": "Associate Professor, Graduate School of Economics and Management, Tohoku University",
+              "email": "",
+              "coauthors": [
+                "Guojun He",
+                "Pak Hung Lam",
+                "Yanjun Li"
+              ],
+              "discussant": "楊豐安",
+              "discussantAffiliation": "國立臺灣大學農業經濟學系",
+              "startTime": "16:30",
+              "endTime": "16:50",
+              "sourcePage": 3,
+              "order": 1,
+              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。"
+            },
+            {
+              "id": "rest-2026-e-02",
+              "title": "Civil War Legacies in Infrastructure Development Evidence from Early Meiji Railways",
+              "speaker": "SANG DI",
+              "affiliation": "Ph.D. Student, Tohoku University",
+              "email": "",
+              "coauthors": [
+                "Pak Hung Lam"
+              ],
+              "discussant": "許聖章",
+              "discussantAffiliation": "國立高雄大學應用經濟學系",
+              "startTime": "16:50",
+              "endTime": "17:10",
+              "sourcePage": 3,
+              "order": 2,
+              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。"
+            },
+            {
+              "id": "rest-2026-e-03",
+              "title": "When does environmental knowledge translate into willingness to pay? Psychological distance and climate-risk financing in Japan",
+              "speaker": "Katsuhito Nohara",
+              "affiliation": "Professor, College of Tourism, Rikkyo University",
+              "email": "",
+              "coauthors": [],
+              "discussant": "林柏熊",
+              "discussantAffiliation": "國立臺灣大學農業經濟學系",
+              "startTime": "17:10",
+              "endTime": "17:30",
+              "sourcePage": 3,
+              "order": 3,
+              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。"
+            },
+            {
+              "id": "rest-2026-e-04",
+              "title": "Who Gains from Climate Change? Climate Damage Heterogeneity, Terms of Trade, and Strategic Adaptation",
+              "speaker": "Akira Hibiki",
+              "affiliation": "Professor, Graduate School of Economics and Management, Tohoku University",
+              "email": "",
+              "coauthors": [
+                "Kohei Kamaga",
+                "Huey-Lin Lee"
+              ],
+              "discussant": "許玉雪",
+              "discussantAffiliation": "國立臺北大學統計學系",
+              "startTime": "17:30",
+              "endTime": "17:50",
+              "sourcePage": 3,
+              "order": 4,
+              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。"
+            }
+          ],
+          "subtitle": "日本場：蝗災、鐵道、環境認知與氣候損害 / Japan Session: Locust Plague, Railways, Environmental Knowledge and Climate Damage",
+          "language": "英文場",
+          "chairRole": "moderator"
+        },
+        {
+          "id": "rest-2026-f",
+          "kind": "parallelSession",
+          "title": "F 災害風險與調適政策 · Disaster Risk and Adaptation Policy",
+          "room": "農經二",
+          "chair": "曾偉君",
+          "chairAffiliation": "國立中興大學應用經濟學系",
+          "startTime": "16:30",
+          "endTime": "17:50",
+          "sourcePage": 3,
+          "talks": [
+            {
+              "id": "rest-2026-f-01",
+              "title": "Innovation and Adaptation to Expanding Biological Threats",
+              "speaker": "曹書誠 Tsao, Shu-Chen",
+              "affiliation": "國立中央大學經濟學系助理教授",
+              "email": "",
+              "coauthors": [],
+              "discussant": "曾偉君",
+              "discussantAffiliation": "國立中興大學應用經濟學系",
+              "startTime": "16:30",
+              "endTime": "16:50",
+              "sourcePage": 4,
+              "order": 1,
+              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。"
+            },
+            {
+              "id": "rest-2026-f-02",
+              "title": "Constructing a Climate Risk Proxy via Principal Component Analysis: An Empirical Application to Hedging Portfolios",
+              "speaker": "楊睿中",
+              "affiliation": "國立臺灣大學經濟學系副教授",
+              "email": "",
+              "coauthors": [
+                "傅萱",
+                "蔡皓瑋"
+              ],
+              "discussant": "孔維新",
+              "discussantAffiliation": "國立宜蘭大學應用經濟與管理學系",
+              "startTime": "16:50",
+              "endTime": "17:10",
+              "sourcePage": 4,
+              "order": 2,
+              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。"
+            },
+            {
+              "id": "rest-2026-f-03",
+              "title": "災害救助會鼓勵高風險種植嗎?臺灣蕉農種植時點選擇之實證分析",
+              "speaker": "韓硯",
+              "affiliation": "國立臺灣大學農業經濟學系專任研究助理",
+              "email": "",
+              "coauthors": [
+                "陳暐"
+              ],
+              "discussant": "楊奕農",
+              "discussantAffiliation": "中原大學國際經營與貿易學系",
+              "startTime": "17:10",
+              "endTime": "17:30",
+              "sourcePage": 4,
+              "order": 3,
+              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。"
+            }
+          ],
+          "subtitle": "生物威脅、氣候風險衡量與救助誘因 / Biological Threats, Climate Risk Measurement and Relief Incentives",
+          "language": "中英混合場",
+          "chairRole": "moderator"
+        },
+        {
+          "id": "rest-2026-g",
+          "kind": "parallelSession",
+          "title": "G 農村永續與個體選擇 · Rural Sustainability and Individual Choice",
+          "room": "農經三",
+          "chair": "陳郁蕙",
+          "chairAffiliation": "國立臺灣大學農業經濟學系",
+          "startTime": "16:30",
+          "endTime": "17:50",
+          "sourcePage": 4,
+          "talks": [
+            {
+              "id": "rest-2026-g-01",
+              "title": "近郊森林遊客數位工具使用行為與數位足跡之研究-以臺中大坑登山步道為例",
+              "speaker": "王雅雯",
+              "affiliation": "國立中興大學循環經濟研究學院研究生",
+              "email": "",
+              "coauthors": [
+                "柳婉郁"
+              ],
+              "discussant": "林俊男",
+              "discussantAffiliation": "國立屏東科技大學農企業管理系",
+              "startTime": "16:30",
+              "endTime": "16:50",
+              "sourcePage": 4,
+              "order": 1,
+              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。"
+            },
+            {
+              "id": "rest-2026-g-02",
+              "title": "以永續生計取徑探討臺灣農村永續發展之關鍵影響因素",
+              "speaker": "陳柏安",
+              "affiliation": "國立臺灣海洋大學應用經濟研究所碩士生",
+              "email": "",
+              "coauthors": [
+                "蕭堯仁"
+              ],
+              "discussant": "蔡旻翰",
+              "discussantAffiliation": "中華經濟研究院第一研究所",
+              "startTime": "16:50",
+              "endTime": "17:10",
+              "sourcePage": 4,
+              "order": 2,
+              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。"
+            },
+            {
+              "id": "rest-2026-g-03",
+              "title": "新冠疫情前後家庭收入與外食支出關係中的分配異質性",
+              "speaker": "羅亦成",
+              "affiliation": "國立中興大學應用經濟學系博士生",
+              "email": "",
+              "coauthors": [],
+              "discussant": "王鈺惠",
+              "discussantAffiliation": "國立屏東科技大學農企業管理系",
+              "startTime": "17:10",
+              "endTime": "17:30",
+              "sourcePage": 4,
+              "order": 3,
+              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。"
+            },
+            {
+              "id": "rest-2026-g-04",
+              "title": "Determinants of Participation in Taiwan's Endangered Species Payment for Ecosystem Services Program: A Cross-Sectional Analysis",
+              "speaker": "李天裕 Tian-Yuh Lee",
+              "affiliation": "國立中興大學森林學系研究生",
+              "email": "",
+              "coauthors": [
+                "柳婉郁 Wan-Yu Liu"
+              ],
+              "discussant": "陳寧",
+              "discussantAffiliation": "國立嘉義大學應用經濟學系",
+              "startTime": "17:30",
+              "endTime": "17:50",
+              "sourcePage": 4,
+              "order": 4,
+              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。"
+            }
+          ],
+          "subtitle": "森林遊憩、永續生計、保育參與與家戶支出 / Forest Recreation, Sustainable Livelihoods, Conservation Participation and Household Spending",
+          "language": "中英混合場",
+          "chairRole": "moderator"
+        },
+        {
+          "id": "rest-2026-h",
+          "kind": "parallelSession",
+          "title": "H 農業保險與政策工具 · Agricultural Insurance and Policy Instruments",
+          "room": "二樓會議室",
+          "chair": "楊明憲",
+          "chairAffiliation": "逢甲大學國際經營與貿易學系",
+          "startTime": "16:30",
+          "endTime": "17:50",
+          "sourcePage": 4,
+          "talks": [
+            {
+              "id": "rest-2026-h-01",
+              "title": "氣象參數型農業保險之研究:以溫度參數養殖水產保險為例",
+              "speaker": "李俊諺",
+              "affiliation": "國立臺中科技大學保險金融管理系大專生",
+              "email": "",
+              "coauthors": [
+                "劉議謙",
+                "沈文雅",
+                "曾宇安"
+              ],
+              "discussant": "楊宗諭",
+              "discussantAffiliation": "國立高雄科技大學漁業科技與管理系",
+              "startTime": "16:30",
+              "endTime": "16:50",
+              "sourcePage": 4,
+              "order": 1,
+              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。"
+            },
+            {
+              "id": "rest-2026-h-02",
+              "title": "台灣農產品外銷促進政策之成效評估:進口端視角之驗證",
+              "speaker": "鄭芳旻",
+              "affiliation": "國立中興大學應用經濟學系博士生",
+              "email": "",
+              "coauthors": [
+                "王鈺惠",
+                "張國益"
+              ],
+              "discussant": "巫凱琳",
+              "discussantAffiliation": "國立臺灣大學農業經濟學系",
+              "startTime": "16:50",
+              "endTime": "17:10",
+              "sourcePage": 4,
+              "order": 2,
+              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。"
+            },
+            {
+              "id": "rest-2026-h-03",
+              "title": "AI 在農業政策展望之應用案例—農業水晶球開發",
+              "speaker": "黃振德",
+              "affiliation": "農業部退休技監",
+              "email": "",
+              "coauthors": [],
+              "discussant": "劉育姍",
+              "discussantAffiliation": "亞太糧食肥料技術中心（FFTC）",
+              "startTime": "17:10",
+              "endTime": "17:30",
+              "sourcePage": 4,
+              "order": 3,
+              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。"
+            },
+            {
+              "id": "rest-2026-h-04",
+              "title": "香蕉颱風風速參數型保險之研究",
+              "speaker": "田文馨",
+              "affiliation": "國立臺中科技大學保險金融管理系大專生",
+              "email": "",
+              "coauthors": [
+                "劉議謙",
+                "莊子槿"
+              ],
+              "discussant": "楊明憲",
+              "discussantAffiliation": "逢甲大學國際經營與貿易學系",
+              "startTime": "17:30",
+              "endTime": "17:50",
+              "sourcePage": 4,
+              "order": 4,
+              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。"
+            }
+          ],
+          "subtitle": "參數型保險、外銷促進與 AI 應用 / Parametric Insurance, Export Promotion and AI Applications",
+          "language": "中文場",
+          "chairRole": "moderator"
+        },
+        {
+          "id": "rest-2026-closing",
+          "kind": "other",
+          "title": "閉幕",
+          "room": "",
+          "chair": "",
+          "chairAffiliation": "",
+          "startTime": "17:50",
+          "endTime": "17:55",
+          "sourcePage": 1,
+          "talks": []
+        },
+        {
+          "id": "rest-2026-dinner",
+          "kind": "dinner",
+          "title": "晚宴",
+          "room": "",
+          "chair": "",
+          "chairAffiliation": "",
+          "startTime": "18:30",
+          "endTime": "",
+          "sourcePage": 1,
+          "talks": []
+        }
+      ]
+    }
+  ]
+}

@@ -117,3 +117,40 @@ inverse supply `P = 20 + c + Q`, and unit tax `t`. The sliders and presets updat
 quantity, buyer / seller prices, tax revenue, and deadweight loss. The comparison
 button overlays the initial market (`d = c = t = 0`); reset restores that market.
 The HTML also opens directly from a local file without a server.
+
+## REST 2026 conference companion
+
+`rest-2026/` uses the same layout, search, language/theme preferences, and
+Acadenda JSON structure as `tea-2026/`. Public URLs:
+
+- Page: https://jamesweichen.github.io/rest-2026/
+- Acadenda import / QR target: https://jamesweichen.github.io/rest-2026/program.json
+- Snapshot of the organizer's source PDF: https://jamesweichen.github.io/rest-2026/source-program.pdf
+
+Source: the Rural Economics Society of Taiwan's announcement dated 23 November
+2026, for the 6 December meeting at NTU Agricultural Economics. Original source
+links are retained in `conference.sourceURL` and `conference.sourcePDFURL`.
+`source-program.pdf` preserves the exact four-page PDF used for transcription.
+
+The program has 18 sessions/activities: three keynotes, a forum and eight parallel
+paper sessions (33 research papers), opening remarks, photo, lunch/member meeting,
+break, closing, and dinner. There are 38 talk records including the two opening
+speakers and three keynotes. Source page numbers and stable IDs are retained.
+The PDF identifies the first author as presenter and only gives that person's
+affiliation; coauthor affiliations are not inferred. Individual paper times,
+keynote titles, dinner end time, and venue maps are not supplied by the PDF.
+At the page author’s explicit instruction, each forum/parallel paper is assigned
+a 20-minute slot in source order. Three-paper sessions use the first 60 minutes
+of their 80-minute session. These assigned times are distinguished from the
+organizer’s session times in the page source note and each talk’s `timingSource`.
+The D2 paper title ends with 「評」 in the source and is preserved with a note.
+Do not invent missing details or silently correct source titles.
+
+Validate with the adjacent Acadenda publishing toolkit:
+
+```sh
+../Acadenda/ConferencePublishing/.venv/bin/python ../Acadenda/ConferencePublishing/publishing.py validate rest-2026/program.json
+```
+
+The import QR contains the stable JSON URL, not the website URL. Update the same
+JSON while preserving IDs and its URL when the organizer publishes revisions.
