@@ -9,7 +9,7 @@
     "maps": [],
     "programRevision": "2026-11-23",
     "sourceURL": "https://www.rest.org.tw/zh_tw/Download/-%E6%95%AC%E9%82%80%E5%8F%83%E5%8A%A0-2026%E5%B9%B4%E8%87%BA%E7%81%A3%E8%BE%B2%E6%9D%91%E7%B6%93%E6%BF%9F%E5%AD%B8%E6%9C%83%E5%B9%B4%E6%9C%83%E6%9A%A8%E5%AD%B8%E8%A1%93%E7%A0%94%E8%A8%8E%E6%9C%83%E5%8F%8A%E6%B0%B8%E7%BA%8C%E6%B0%B4%E8%B3%87%E6%BA%90%E8%AB%96%E5%A3%87-25644248",
-    "sourcePDFURL": "https://www.rest.org.tw/uploads/bulletin_file/file/6b03a70e085777f4b7fe1ed4/2026%E5%B9%B4%E8%87%BA%E7%81%A3%E8%BE%B2%E6%9D%91%E7%B6%93%E6%BF%9F%E5%AD%B8%E6%9C%83%E5%B9%B4%E6%9C%83%E6%9A%A8%E5%AD%B8%E8%A1%93%E7%A0%94%E8%A8%8E%E6%9C%83%E5%8F%8A%E6%B0%B8%E7%BA%8C%E6%B0%B4%E8%B3%87%E6%BA%90%E8%AB%96%E5%A3%87%E8%AD%B0%E7%A8%8B.pdf",
+    "sourcePDFURL": "https://jamesweichen.github.io/rest-2026/source-program.pdf",
     "organizers": [
       "社團法人臺灣農村經濟學會",
       "國立臺灣大學農業經濟學系"
@@ -18,10 +18,14 @@
       "財團法人七星農業發展基金會"
     ],
     "sourceNotes": [
-      "依主辦單位 2026-11-23 公告之四頁 PDF 整理。",
-      "作者欄首位為報告人；PDF 僅提供報告人所屬單位，共同作者單位未另行推定。",
-      "PDF 未提供個別論文時間、Keynote 題目、晚宴結束時間及會場地圖。個別論文時間依頁面製作者指定規則編排：每篇 20 分鐘，三篇場次使用前 60 分鐘。"
-    ]
+      "議程依使用者提供的「2026年會_議程_1123V3.pdf」更新；33 篇論文摘要依「2026年會_論文摘要集.docx」逐篇轉錄，保留原文與段落。",
+      "作者欄首位為報告人；報告人單位依新版議程與摘要集的報告人欄，共同作者單位依摘要集作者欄。",
+      "個別論文時間依頁面製作者指定規則編排：每篇 20 分鐘，三篇場次使用前 60 分鐘。PDF 未提供 Keynote 題目、晚宴結束時間及會場地圖。",
+      "孔維新的職稱在摘要集與議程 PDF 標示不同；以 1123V3 議程 PDF 的「副教授」為準。"
+    ],
+    "programVersion": "1123V3",
+    "organizerSourcePDFURL": "https://www.rest.org.tw/uploads/bulletin_file/file/6b03a70e085777f4b7fe1ed4/2026%E5%B9%B4%E8%87%BA%E7%81%A3%E8%BE%B2%E6%9D%91%E7%B6%93%E6%BF%9F%E5%AD%B8%E6%9C%83%E5%B9%B4%E6%9C%83%E6%9A%A8%E5%AD%B8%E8%A1%93%E7%A0%94%E8%A8%8E%E6%9C%83%E5%8F%8A%E6%B0%B8%E7%BA%8C%E6%B0%B4%E8%B3%87%E6%BA%90%E8%AB%96%E5%A3%87%E8%AD%B0%E7%A8%8B.pdf",
+    "abstractSourceURL": "https://jamesweichen.github.io/rest-2026/source-abstracts.docx"
   },
   "days": [
     {
@@ -167,7 +171,7 @@
               "id": "rest-2026-forum-01",
               "title": "The Effects of Dams in a Transnational Context: Evidence from the Mekong Basin",
               "speaker": "Pingting Song",
-              "affiliation": "Ph.D. Student, Faculty of Business and Commerce, Keio University",
+              "affiliation": "Assistant Professor, Faculty of Business and Commerce, Keio University",
               "email": "",
               "coauthors": [],
               "discussant": "林柏熊",
@@ -176,7 +180,11 @@
               "endTime": "15:00",
               "sourcePage": 2,
               "order": 1,
-              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。"
+              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。",
+              "coauthorAffiliations": [],
+              "abstract": "The rapid expansion of hydropower dams in the upper Mekong has raised concerns about their transboundary economic and environmental impacts on downstream countries. This research analyses the impacts of upstream dam development on agricultural productivity, fisheries, and flooding patterns in Cambodia. Using commune-level panel data from 2006 to 2020, this paper exploits geographical variation in commune proximity to the Mekong system and temporal variation in upstream dam activities to identify causal effects. The results indicate that upstream dams significantly reduce agricultural productivity, with more pronounced declines during the dry season. There is no statistically significant impact on fish harvests, but it reduced short-term downstream flood extent during dam construction periods. These findings highlight the transboundary externalities of large-scale infrastructure projects and underscore the need for regional water governance policies that account for downstream vulnerabilities.",
+              "abstractSourceNumber": 1,
+              "discussantTitle": "助理教授"
             },
             {
               "id": "rest-2026-forum-02",
@@ -193,7 +201,13 @@
               "endTime": "15:20",
               "sourcePage": 2,
               "order": 2,
-              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。"
+              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。",
+              "coauthorAffiliations": [
+                "National Taiwan University"
+              ],
+              "abstract": "Land conversion can generate economic benefits where development occurs while imposing environmental costs on communities downstream. In Indonesia, oil palm expansion has raised concerns about flooding, yet evidence linking specific development stages to downstream flood risk and household welfare remains limited. This paper asks whether rainfall produces a stronger flood response during upstream land clearing and whether this exposure translates into adverse economic outcomes for downstream households.\n\nWe combine remotely sensed forest-to-oil-palm conversion histories, hydrologically delineated upstream catchments, daily precipitation, and village-level reports of flood occurrence and frequency in Sumatra and Kalimantan. The flood analysis covers seven outcome years between 2011 and 2018. For each village, we measure the share of its external upstream catchment occupied by land at different stages relative to clearing. We distinguish upstream exposure from clearing within the village and construct an annual rainfall measure from the strongest three-day accumulation of spatially averaged upstream precipitation.\n\nThe empirical design compares rainfall responses across development stages within the same village, using the year before clearing as the reference. Village fixed effects account for persistent local differences, while district-by-year fixed effects absorb common local shocks. Additional controls allow rainfall responses to vary with catchment size, village terrain, and total conversion exposure. This approach examines when upstream development changes downstream rainfall sensitivity, rather than treating all plantation land as having a constant effect.\n\nThe estimates indicate a stronger rainfall response during the clearing year, with the contrast against the following year most evident across flood occurrence and frequency outcomes. For flood occurrence, shifting one percentage point of upstream catchment area from the pre-clearing reference stage to the clearing stage increases the estimated rainfall-response slope by approximately 5.8 percentage points per 100 millimeters of three-day rainfall. This is a difference in rainfall sensitivity, rather than an unconditional increase in flood probability. Translating the estimates into realized exposure and rainfall reveals substantial variation across locations. Pre-clearing diagnostics and sensitivity to basin composition qualify the causal interpretation.\n\nA planned microdata extension will examine whether these upstream exposures affect household consumption, business earnings, and labor outcomes. Household survey observations will be linked to hydrological exposure at the finest consistently available geographic level, with rainfall and clearing measures aligned to interview dates and outcome recall periods. The analysis will distinguish average welfare changes from differences across households with different pre-existing livelihoods. It will also assess whether economic responses are consistent with a flood mechanism, while allowing for other channels through which rainfall and plantation development affect livelihoods.\n\nThe paper connects the timing and location of land conversion to downstream environmental risk and sets out a framework for evaluating its distributional consequences. Its policy relevance lies in complementing project-area regulation with information on hydrological connections, contemporaneous upstream clearing, and the communities potentially bearing the costs.",
+              "abstractSourceNumber": 2,
+              "discussantTitle": "特聘教授"
             },
             {
               "id": "rest-2026-forum-03",
@@ -210,7 +224,13 @@
               "endTime": "15:40",
               "sourcePage": 2,
               "order": 3,
-              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。"
+              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。",
+              "coauthorAffiliations": [
+                "國立臺灣大學生物環境系統工程學系"
+              ],
+              "abstract": "Reclaimed water can replace conventional supplies for data-center cooling, but source substitution does not necessarily reduce carbon emissions or cost. Here, water savings means avoided conventional-source deliveries, rather than net basin-wide savings. We examine scenarios representing Google Changhua, Chunghwa Telecom Banqiao, and MediaTek Tongluo by applying fixed facility configurations and assumed loads to 2016–2024 weather conditions. These are simulations, not historical facility water-use records. A reference cooling schedule is determined for each weather day and held unchanged across water-source alternatives for that day. Modeled makeup averages 584.5, 52.9, and 191.4 thousand m³/year, respectively. Reclaimed substitution increases annual modeled emissions by 1,640.2 t CO2e relative to Changhua's industrial-water configuration and by 140.3 t CO2e relative to Banqiao's potable-water scenario. Replacing Tongluo's reclaimed-water scenario with potable water introduces 191.4 thousand m³/year of conventional demand while reducing modeled emissions by 329.0 t CO2e. These differences are conditional on an assumed reverse-osmosis treatment chain, additional onsite treatment, and source factors with incompletely harmonized boundaries. Procurement-price rankings depend on the comparator; including onsite treatment electricity can reverse a small apparent price advantage. The agricultural contribution is a screening framework for identifying potential irrigation-allocation links. Official evidence connects the regional Changbin industrial supply system to Fuma Canal, but Google's individual supply route and changes in irrigation availability remain unverified.",
+              "abstractSourceNumber": 3,
+              "discussantTitle": "副教授"
             },
             {
               "id": "rest-2026-forum-04",
@@ -227,7 +247,13 @@
               "endTime": "16:00",
               "sourcePage": 2,
               "order": 4,
-              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。"
+              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。",
+              "coauthorAffiliations": [
+                "國立臺灣大學農業經濟學系"
+              ],
+              "abstract": "Riverbed dust is an important source of particulate air pollution, yet its consequences for population health remain insufficiently understood. This study examines the relationship between river conditions, PM2.5 pollution, and respiratory health along the Zhuoshui River in Taiwan. Using daily township-level data from 2009 to 2019, we employ an instrumental-variable approach that exploits variation in river water levels to identify changes in local PM2.5 concentrations. The results show a strong positive relationship between PM2.5 and respiratory visits, particularly during the October–March dust season. A 1 μg/m³ increase in PM2.5 is associated with a 0.57% increase in respiratory visits during the dust season, compared with 0.26% during the non-dust season. We also find larger estimated health effects among individuals aged 64 and below and females. These findings highlight the public health consequences of river-related particulate pollution and the broader implications of river management for local air quality.",
+              "abstractSourceNumber": 4,
+              "discussantTitle": "副教授"
             }
           ],
           "subtitle": "跨境外部性、土地利用、能源與健康 / Transboundary Externalities, Land Use, Energy and Health",
@@ -249,7 +275,7 @@
               "id": "rest-2026-a-01",
               "title": "Women's Adaptation Strategies In Beef Cattle Farming Households Towards Food Insecurity In The Teak Forest Area Of Bojonegoro, East Java, Indonesia",
               "speaker": "Khofifa Dwi Hafsari",
-              "affiliation": "Master's Student, Department of Agribusiness Management, NPUST",
+              "affiliation": "M.S. Student, Department of Agribusiness Management, NPUST",
               "email": "",
               "coauthors": [
                 "Wen-Chi Huang",
@@ -261,7 +287,14 @@
               "endTime": "15:00",
               "sourcePage": 2,
               "order": 1,
-              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。"
+              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。",
+              "coauthorAffiliations": [
+                "Department of Agribusiness Management, National Pingtung University of Science and Technology, Taiwan",
+                "Department of Socio-Economy, Faculty of Animal Science and Technology, Universitas Brawijaya, Malang, Indonesia"
+              ],
+              "abstract": "Food insecurity is a growing concern for smallholder livestock households in forest-fringe areas, where climate variability limits feed availability and income stability, and women bear primary responsibility for household food provisioning. This study analyzes women's adaptation strategies in beef cattle farming households toward food insecurity in the teak forest area of Bojonegoro, East Java, Indonesia. A quantitative survey was conducted with 317 women from beef cattle farming households in Setren Village, Ngasem District, selected through purposive and quota sampling. Household food insecurity was measured using the Food Insecurity Experience Scale (FIES), coping strategies were analyzed descriptively, and determinants of food insecurity were examined using Partial Least Squares Structural Equation Modeling (PLS-SEM). The FIES results showed that 55.5% of households were food secure, while 35.3%, 8.5%, and 0.6% experienced mild, moderate, and severe food insecurity, respectively. Women relied mainly on locally available and self-reliant strategies, particularly purchasing food from itinerant vendors within the village, harvesting food from their own gardens and home yards, and utilizing forest-based food sources, whereas buying from sub-district or nearby markets was rarely practiced because of limited market access. PLS-SEM showed that gender social capital was the strongest factor associated with lower food insecurity (β = −0.652, p < 0.001), followed by access to resources (β = −0.200) and economic status (β = −0.197). Adaptive capacity showed a positive association with the level of food insecurity (β = 0.196). This finding may indicate that households experiencing higher levels of food insecurity tend to demonstrate greater adaptive capacity in responding to the food-related pressures they face. Socioeconomic characteristics had no significant effect. Together, these factors explained 47% of the variance in food insecurity. The findings indicate that women's food-related adaptation in teak forest areas is shaped more by social networks, resource access, and economic standing than by individual socioeconomic characteristics. Strengthening women's participation in farmer groups and cooperatives, improving access to markets and productive resources, and supporting garden-based and forest-based food sources are recommended to reduce household food insecurity.",
+              "abstractSourceNumber": 5,
+              "discussantTitle": "教授"
             },
             {
               "id": "rest-2026-a-02",
@@ -278,7 +311,13 @@
               "endTime": "15:20",
               "sourcePage": 2,
               "order": 2,
-              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。"
+              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。",
+              "coauthorAffiliations": [
+                "Distinguished Professor, Department of Agribusiness Management, National Pingtung University of Science and Technology, Taiwan"
+              ],
+              "abstract": "Research Motivation: Climate change poses increasing challenges for smallholder agriculture, particularly in rainfed farming systems where local knowledge continues to guide seasonal and adaptation decisions. Although local planting calendars remain relevant to seasonal decision-making, limited empirical evidence explains how different levels of reliance on such calendars are associated with farmers’ broader adaptation portfolios. Examining individual strategies in isolation may also overlook the interdependence among adaptation decisions.\n\nObjective: This study examined how the frequency of reliance on a local planting calendar was associated with the composition and intensity of climate adaptation strategies among smallholder maize farmers in Gorontalo Province, Indonesia.\n\nResearch Methods: Cross-sectional survey data from 438 smallholder maize farmers were analyzed. Five binary adaptation strategies were considered: crop diversification, crop rotation, planting-date adjustment, soil and water conservation, and adoption of drought-tolerant maize. A five-equation multivariate probit model was estimated using maximum simulated likelihood with 1,000 simulated draws and robust standard errors to account for potential interdependence among adaptation decisions. Models adjusted for sex, age, education, maize area, household size, available farm labor, log monthly income, climate-information frequency, extension-contact frequency, and district fixed effects. Local planting-calendar reliance was categorized as rarely, sometimes, often, or always, with rarely as the reference category. Adaptation intensity, defined as the number of strategies adopted, was additionally examined using an ordered logit model, with robust Poisson regression as a sensitivity analysis.\n\nResults: The joint residual-correlation test rejected independence across the five adaptation equations (χ2(10) = 147.558, p < 0.001), indicating significant interdependence among adaptation choices. Relative to farmers who rarely relied on the local planting calendar, those who often relied on it had lower propensities to adopt crop diversification (β = −1.281, p < 0.001) and crop rotation (β = −1.015, p < 0.001), but higher propensities to adopt soil and water conservation (β = 0.594, p = 0.005) and drought-tolerant maize (β = 0.652, p = 0.006). Farmers who always relied on the calendar also had a lower propensity to adjust planting dates (β = −0.919, p = 0.001). The adaptation-intensity analysis showed significantly lower overall adaptation intensity among farmers who often relied on the calendar (β = −0.851, p = 0.002), whereas the association among always users was less robust across model specifications.\n\nConclusion: Local planting-calendar reliance was associated with a selective reconfiguration of adaptation portfolios rather than a uniform increase or decrease in adaptation. Stronger reliance was linked to greater use of some technical responses but lower adoption of other agronomic strategies. These findings suggest that local seasonal knowledge should be understood as one component of a broader decision environment in which multiple adaptation choices are interdependent. Climate services and agricultural extension may therefore benefit from integrating locally grounded seasonal knowledge with current meteorological information and a wider range of climate-resilient farming options.",
+              "abstractSourceNumber": 6,
+              "discussantTitle": "助理教授"
             },
             {
               "id": "rest-2026-a-03",
@@ -295,7 +334,13 @@
               "endTime": "15:40",
               "sourcePage": 2,
               "order": 3,
-              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。"
+              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。",
+              "coauthorAffiliations": [
+                "國立中興大學應用經濟學系"
+              ],
+              "abstract": "Taiwan introduced a carbon footprint labeling scheme in 2009 to encourage firms to disclose product-level carbon information and to support low-carbon consumption. However, while carbon labeling has been applied to a range of manufactured goods, its use in agricultural products remains limited. As countries move toward net-zero targets, reducing the carbon footprint of agricultural production has become an increasingly important policy and market issue. Dairy products are particularly relevant in this context, given the greenhouse gas emissions associated with dairy cattle production and the growing need to identify lower-carbon pathways for the dairy sector.\n\nThis study examines Taiwanese consumers’ willingness to pay (WTP) for fresh milk carrying a carbon footprint label. Using data from a nationwide online survey conducted in 2026, with 632 valid responses, we estimate consumers’ WTP through a double-bounded dichotomous choice model commonly used in contingent valuation studies. Respondents participated in a two-stage bidding process, and the estimated price premium for carbon footprint-labeled milk ranges from NTD 12.9 to NTD 21.9 per 936-mL package.\n\nThe results show that female respondents and respondents living with more household members under the age of 18 are willing to pay higher premiums for carbon footprint-labeled milk. Attitudinal factors also play an important role. Stronger support for greenhouse gas mitigation, greater trust in the certification mechanism, and stronger belief that consumer choices can encourage producers to reduce product carbon footprints are all associated with higher WTP. In addition, respondents who prefer domestically produced fresh milk over imported dairy products are willing to pay a higher premium.\n\nThese findings suggest that Taiwanese consumers generally recognize the importance of greenhouse gas mitigation and attach value to credible carbon labeling. The results also indicate that carbon footprint labeling may serve as a market-based instrument to support the transition toward a lower-carbon dairy sector, provided that certification credibility, consumer understanding, and product differentiation are carefully strengthened.",
+              "abstractSourceNumber": 7,
+              "discussantTitle": "特聘教授兼副國際長"
             }
           ],
           "subtitle": "性別、農戶決策與消費者支付意願 / Gender, Household Decisions and Consumer Willingness to Pay",
@@ -329,7 +374,14 @@
               "endTime": "15:00",
               "sourcePage": 2,
               "order": 1,
-              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。"
+              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。",
+              "coauthorAffiliations": [
+                "Department Agribusiness Management, National Pingtung University of Science and Technology",
+                "Department of Agricultural Socio-Economics, Faculty of Agricultural and Forestry Bio-Industry, Brawijaya University"
+              ],
+              "abstract": "Smallholders in the horticultural agribusiness system face various challenges in the form of limited access to production capital, market uncertainty, production fluctuations, and characteristics of perishable agricultural products. These conditions cause vulnerability to the sustainability of farming, especially in commodities with high economic value such as strawberries. In this system, middlemen are often an alternative mechanism that connects farmers to the market through the provision of marketing access and resource support. However, the broader role of middlemen as informal actors in building supply chain resilience mechanisms has not been widely studied. This study aims to analyze the role of middlemen in supporting supply chain resilience mechanisms in the smallholder strawberry agribusiness system in Batu City, Indonesia. This study uses a qualitative case study approach. Data were obtained through semi-structured interviews, field observations, and documentation involving ten strawberry farmers and one middleman as key informants. Data analysis was carried out using thematic analysis by following the Miles and Huberman interactive model, through the stages of data condensation, data presentation, and conclusion drawn. The research analysis framework focused on the relationship between supply chain challenges, the function of middlemen as informal actors, and resilience mechanisms in maintaining the continuity of the strawberry agribusiness system. The credibility of the data was strengthened through triangulation of sources, methods, and time.\n\nThe results show that middlemen carry out a broader function than just collecting production products. Through long-term relationships based on trust, middlemen play the role of informal financial support providers, market access guarantors, logistics coordinators, product quality managers, and risk mitigation supporters. The relationship mechanism helps farmers overcome capital constraints, maintain marketing continuity, and maintain production activities when facing production and market uncertainties. This research contributes to the study of agricultural economics and rural development by showing that middlemen can function as informal supply chain institutions, not just as intermediaries in economic transactions. These findings suggest that strengthening trust-based governance mechanisms and recognition of the role of local actors need to be considered in the development of rural agricultural policies to support the resilience and sustainability of small farms.",
+              "abstractSourceNumber": 8,
+              "discussantTitle": "助理教授"
             },
             {
               "id": "rest-2026-b-02",
@@ -347,7 +399,14 @@
               "endTime": "15:20",
               "sourcePage": 2,
               "order": 2,
-              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。"
+              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。",
+              "coauthorAffiliations": [
+                "Department of Agribusiness Management, National Pingtung University of Science and Technology (NPUST), Taiwan",
+                "Faculty of Agricultural Bio-Industry and Forestry, University of Brawijaya, Indonesia"
+              ],
+              "abstract": "Indonesia is an important exporter of cephalopod products, including squid, cuttlefish, and octopus, with exports distributed across diverse international markets. However, growth in export value does not necessarily indicate that Indonesian cephalopod products maintain a consistent comparative advantage or favorable export-market position across destination markets. This study examines the revealed comparative advantage and export dynamics of Indonesian cephalopod products in six major destination markets, with particular attention to differences among markets and changes over time.\n\nThe study uses secondary international trade data from the United Nations Comtrade database covering 1995–2024. Bilateral Revealed Comparative Advantage (RCA) is employed to identify Indonesia’s comparative advantage in cephalopod exports in each major destination market. Annual RCA is calculated for 1995–2024 to examine long-term market-specific patterns, while Export Product Dynamics (EPD) is used to classify the export-market position of Indonesian cephalopod products based on changes in Indonesia’s market position and destination-market attractiveness. The analytical framework therefore combines a comparative advantage perspective with an export-market dynamics perspective.\n\nThe results indicate that Indonesia’s revealed comparative advantage varies across the six major destination markets and over time. Comparative advantage becomes more prevalent during the later part of the study period, although its occurrence and persistence differ among destinations. The EPD analysis also indicates heterogeneous export-market positions across the six markets, reflecting differences in Indonesia’s market position and the attractiveness of each destination market. These findings demonstrate that strong export performance does not necessarily correspond to the same comparative advantage or export-market position across destination markets.\n\nThe study contributes destination-specific evidence on Indonesia’s position in international cephalopod trade by linking revealed comparative advantage with export-market dynamics over an extended period. The findings provide an analytical basis for identifying destination markets with sustained comparative advantage and different export-market characteristics, which may support more targeted export market development and diversification strategies.",
+              "abstractSourceNumber": 9,
+              "discussantTitle": "教授兼所長"
             },
             {
               "id": "rest-2026-b-03",
@@ -364,7 +423,13 @@
               "endTime": "15:40",
               "sourcePage": 2,
               "order": 3,
-              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。"
+              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。",
+              "coauthorAffiliations": [
+                "Distinguished Professor, Department of Agribusiness Management, National Pingtung University of Science and Technology, Taiwan"
+              ],
+              "abstract": "Research Motivation:\n\nThe increasing use of digital platforms in agriculture has created new opportunities for governments to deliver agricultural information and services to smallholder farmers. However, access to these platforms does not guarantee use, especially when smallholder farmers have different levels of digital literacy. Such differences may shape farmers’ perceptions of usefulness and ease of use, which can subsequently influence their intention to use Government Digital Agriculture Platforms (GDAP). This highlights the need to further consider digital literacy when explaining how smallholder rice farmers form their intention to use GDAP.\n\nObjective:\n\nThis study aims to examine the impact of digital literacy on smallholder rice farmers’ intention to use GDAP. It examines the direct effects of digital literacy on performance expectancy, effort expectancy, and behavioral intention, as well as the effects of performance expectancy and effort expectancy on behavioral intention. It also evaluates the mediating roles of performance expectancy and effort expectancy between digital literacy and behavioral intention.\n\nResearch Methods:\n\nThe study used a cross-sectional quantitative research design and collected survey data from 529 smallholder rice farmers in North Sumatra Province, Indonesia. Data were obtained through a structured questionnaire and analyzed using Partial Least Squares Structural Equation Modeling (PLS-SEM). The conceptual model consisted of four constructs, including Digital Literacy, Performance Expectancy, Effort Expectancy, and Behavioral Intention. The measurement model was assessed to ensure construct reliability and validity before evaluating the structural model. Bootstrapping tested the significance of direct and indirect relationships, while the coefficient of determination assessed the explanatory power of the endogenous constructs.\n\nResults:\n\nThe results showed that digital literacy had a strong positive effect on effort expectancy (β = 0.763, p < 0.001) and performance expectancy (β = 0.711, p < 0.001). Digital literacy also significantly influenced behavioral intention directly (β = 0.200, p < 0.001). Furthermore, effort expectancy\n\n(β = 0.325, p < 0.001) and performance expectancy (β = 0.313, p < 0.001) significantly predicted behavioral intention. The model explained 50.5% of the variance in performance expectancy, 58.1% in effort expectancy, and 57.3% in behavioral intention. Mediation analysis confirmed significant indirect effects of digital literacy on behavioral intention through performance expectancy (β = 0.223, p < 0.001) and effort expectancy (β = 0.248, p < 0.001), demonstrating that both constructs partially mediated the relationship between digital literacy and behavioral intention.\n\nConclusions:\n\nThis study shows that digital literacy plays a significant role in shaping smallholder rice farmers’ behavioral intention to use GDAP. It influences behavioral intention directly and indirectly through perceptions of usefulness and ease of use. The stronger indirect effect through effort expectancy suggests that ease of interaction with digital technology is important in shaping behavioral intention. These findings extend the UTAUT framework by highlighting digital literacy as an important factor in explaining behavioral intention. Government agencies should combine digital infrastructure development with digital literacy training, farmer-oriented assistance, and simpler interfaces to strengthen smallholder rice farmers’ intention to use GDAP.\n\nKeywords: behavioral intention, digital literacy, effort expectancy, performance expectancy,\n\ngovernment digital agriculture platforms",
+              "abstractSourceNumber": 10,
+              "discussantTitle": "助理教授"
             }
           ],
           "subtitle": "中間商、出口、數位採用與創業 / Intermediaries, Exports, Digital Adoption and Entrepreneurship",
@@ -397,11 +462,17 @@
               "endTime": "15:00",
               "sourcePage": 3,
               "order": 1,
-              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。"
+              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。",
+              "coauthorAffiliations": [
+                "國立屏東科技大學農企業管理系"
+              ],
+              "abstract": "氣候變遷促使全球加速發展再生能源,但對國土狹小、人口稠密的國家而言卻是極大的負擔。臺灣在推動再生能源政策及能源轉型的過程中,土地利用型態所產生的轉變路徑,以及土地變化對農業環境與農地資源造成的長期影響。\n\n本研究以經濟部能源署2021年至2023年許可的太陽光電案場為研究對象,研究樣本共4296筆土地及127間能源公司,總開發面積達2211.94公頃,探討目前太陽能光電廠是從何種土地樣貌轉化而來,探究太陽能光電業者設置案場的決策,並進一步了解太陽能電廠設置是否造成土地細碎化。本文採用馬可夫鏈分析及辛普森細碎化指數(Simpson's Land Fragmentation Index)來驗證以上研究問題。\n\n研究結果顯示,以水產養殖轉化為太陽能光電的比例20.34%為最高約449.91公頃(相當於17.3座大安森林公園),其次為其他利用為16.10%約365.12公頃(相當於14座大安森林公園),接續為旱田轉化電為11.20%約247.74公頃(相當於9.55座大安森林公園),顯示其開發涉及不同土地利用型態之間的轉換。能源公司在決策設置太陽能光電廠多集中在日照時數較長的中南部縣市依序為台南市、屏東縣、雲林縣、高雄市、嘉義縣等中南部縣市由為最多,在地能源公司多選擇於當地設置太陽能發電廠以利後續設備的維護。設置太陽能發電廠造成土地細碎化的縣市以彰化縣為最高細碎化指數0.997其次為台南市土地細碎化指數0.996接續為屏東縣土地細碎化指數0.991,這種土地切割且細碎化使得土地長期且難以回復的特性,對台灣農業土地利用帶來極大的衝擊,有損生態環境的完整性,以及國家糧食安全,已經構成潛在的隱憂。",
+              "abstractSourceNumber": 11,
+              "discussantTitle": "副教授"
             },
             {
               "id": "rest-2026-c-02",
-              "title": "大型太陽能設施是否偏向特定類型的農業土地?以美國明尼蘇達州為例",
+              "title": "大型太陽能設施是否偏向特定類型的農業土地？以美國明尼蘇達州為例",
               "speaker": "許藜瀞",
               "affiliation": "國立臺灣大學農業經濟學系研究生",
               "email": "",
@@ -414,11 +485,17 @@
               "endTime": "15:20",
               "sourcePage": 3,
               "order": 2,
-              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。"
+              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。",
+              "coauthorAffiliations": [
+                "國立臺灣大學農業經濟學系"
+              ],
+              "abstract": "隨著太陽能發電快速發展,太陽能案場的土地需求也隨之增加。由於大型太陽能設施通常需要較大的土地面積,其設置地點經常位於農業地區,使原本用於農業生產的土地可能轉為能源用途,進而形成農業生產與再生能源發展之間的土地使用競爭。然而,不同農地在作物類型、面積及區位條件上存在差異,這些土地特徵可能與太陽能案場的選址決策密切相關。因此,了解哪些類型與條件的農地較容易被選為太陽能案場,有助於評估太陽能發展對農地利用的潛在影響。\n\n本文以美國明尼蘇達州為研究區域,採用條件羅吉特模型 (conditional logit model),比較玉米、大 豆、休耕及其他一年生作物農地在大型太陽能選址上的差異,並分析土地面積、太陽輻射及輸電線距離與選址的關聯。\n\n研究整合2008–2024年美國農業部作物田區界線與作物分類資料 (Crop Sequence Boundaries, CSB)、美國能源情報署EIA-860太陽能案場資料、國家太陽輻射資料庫(National Solar Radiation Database, NSRDB) 及輸電線空間資料,並使用案場啟用前一年的土地利用資訊,比較實際設置太陽能案場之農地與同郡其他候選農地的土地條件。\n\n主要模型結果顯示,在其他條件不變之下,面積倍增與相對選址勝算提高約 26.8%相關;距離最近輸電線每增加 1 公里,則與勝算下降約 22.4%相關。此外,相較於其他一年生作物農地,玉米、大豆及休耕地均具有較高的太陽能案場選址機率。另一方面,過去平均晴空太陽輻射較高的農地反而較不容易被選為案場。不同模型設定與樣本限制下的穩健性檢驗亦呈現一致的主要結果。\n\n本文透過同郡候選農地間的比較,辨識與大型太陽能案場選址相關的重要土地利用與區位特徵。研究結果顯示,太陽能案場的設置不僅受到能源基礎設施與土地規模影響,也與既有農業土地利用型態密切相關。這些發現有助於進一步評估再生能源擴張可能帶來的農地轉用壓力,並為未來在太陽能發展、農業生產與農地保存之間進行更具效率的土地配置與政策規劃提供實證依據。",
+              "abstractSourceNumber": 12,
+              "discussantTitle": "教授"
             },
             {
               "id": "rest-2026-c-03",
-              "title": "台灣半導體產業環境效率與碳排減量之研究",
+              "title": "臺灣半導體產業環境效率與碳排減量之研究",
               "speaker": "林浚騰",
               "affiliation": "國立嘉義大學企業管理學系博士生",
               "email": "",
@@ -433,7 +510,15 @@
               "endTime": "15:40",
               "sourcePage": 3,
               "order": 3,
-              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。"
+              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。",
+              "coauthorAffiliations": [
+                "國立嘉義大學企業管理學系博士生",
+                "東海大學國際經營與貿易學系",
+                "東海大學國際經營與貿易學系"
+              ],
+              "abstract": "台灣半導體產業(尤其是台積電),已成為舉世地緣政治與經濟之要角,但亦面臨2050年淨零排碳之壓力。本文首先利用2017 ~ 2021年追蹤資料,透過非意願產出不可分離資料包絡分析法,各別推估設計、製造與封測之環境效率,三製程之平均值分別為0.287、0.633及0.542;換言之,為了達到效率為1之標竿企業,平均減碳幅度各需68.556%、28.727%與34.709%。其次,經由聯立迴歸模型推估結果,發現:(1)環境效率對碳排強度之迴歸係數為-1.439且顯著(t=-2.127),充分彰顯生產效率對減碳之重要性。(2)研發投入每增加1%,可顯著提高環境效率約0.056;且透過直接、中介及總效果,分別顯著降低碳排強度達-0.228、-0.081與-0.309。(3)經理人持股比每上升1%,可顯著提高環境效率0.055;對碳排強度之直接、中介與總效果,分別顯著降低-0.338、-0.079及-0.418。整合本文實證結果,顯示台灣半導體生態鏈,在環境效率與碳排減量上,仍存在相當幅度改善空間;而透過先進製成之研發投入與經理人之公司治理,則可發揮提升營運效率與降低碳排強度之綜效。",
+              "abstractSourceNumber": 13,
+              "discussantTitle": "教授"
             },
             {
               "id": "rest-2026-c-04",
@@ -450,7 +535,13 @@
               "endTime": "16:00",
               "sourcePage": 3,
               "order": 4,
-              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。"
+              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。",
+              "coauthorAffiliations": [
+                "國立中興大學森林學系"
+              ],
+              "abstract": "為因應全球氣候變遷與高強度都市開發所造成的綠地破碎化及碳匯功能受阻等挑戰,本研究以臺中市為對象,旨在量化2014至2023年間之氣候變異與人類活動對都市綠地碳匯能力(UGCSC)的影響程度及驅動機制。在資料來源與分析架構方面,本研究整合 2014 至 2023 年每年 8 月的 Landsat 8 衛星遙測影像,以及中央氣象署(如月總蒸發散量)與 TCCIP 的氣象資料(含月總降雨量、月均溫、日照量);透過 ArcMap 計算出 NDVI、NDBI 與 MNDWI,並採用改良型 CASA 模型推估植被淨初級生產力(NPP)後轉換為 UGCSC。此外,在剔除水體後的陸地範圍內隨機抽取 240,000 個像元,利用線性迴歸分析像元的趨勢斜率,並建構多元迴歸模型以剖析各驅動因子的影響權重。初步結果顯示,平均常態化差異建物指標(Avg-NDBI)對 UGCSC 具有壓倒性的極顯著獨立負向影響(標準化係數beta = -0.823,p < 0.001),證實建築密度與土地開發是導致碳匯流失的首要主因,其影響力顯著高於蒸發散量(beta = -0.340)、均溫(beta = 0.168)與日照(beta = 0.167)等氣象因子。在空間趨勢上,龍井、大肚與潭子等區因重大公共工程與地表硬化,導致碳匯顯著衰退;相對地,受法律保護的雪霸國家公園與太魯閣國家公園範圍則展現穩定成長的碳匯趨勢。本研究的貢獻與政策效益,在於證實高度都市化區域的碳匯機制已由自然氣候轉為人為干預為主導。據此提出導入微氣候風廊導向的綠地空間幾何配置改善、推動土壤通氣與有機殘體回填等低碳維護管理,以及建構多層次原生演替群落等創新治理策略,為都市永續發展與2050淨零轉型提供科學實證與管理藍圖。",
+              "abstractSourceNumber": 14,
+              "discussantTitle": "教授"
             }
           ],
           "subtitle": "光電選址、產業減碳與碳匯 / Solar Siting, Industrial Decarbonisation and Carbon Sinks",
@@ -483,11 +574,17 @@
               "endTime": "15:00",
               "sourcePage": 3,
               "order": 1,
-              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。"
+              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。",
+              "coauthorAffiliations": [
+                "國立屏東科技大學農企業管理系"
+              ],
+              "abstract": "(一)研究目的\n\n菲律賓為全球主要豬肉進口國之一,受非洲豬瘟(African Swine Fever, ASF)疫情衝擊,國內毛豬在養頭數大幅減少,供需缺口持續擴大。為穩定肉價,菲律賓政府自2021年起以行政命令調降豬肉進口關稅,並預計延續此關稅政策至2028年。臺灣於2020年成為口蹄疫非疫區後積極拓展外銷,並於2023年取得菲律賓市場准入,惟目前仍以專案推廣及樣品形式為主,尚未形成常態性貿易。美國為菲律賓長期穩定之豬肉供應國,其輸菲產品涵蓋生鮮、加工與內臟等品項,且歷經非洲豬瘟、COVID-19疫情與關稅調整等外部衝擊,其貿易經驗可作為臺灣拓展菲律賓市場之借鏡。此外,過去研究多將進口豬肉視為均質商品,然菲律賓具有「全豬利用」之飲食文化,內臟廣泛用於家庭料理與街頭小吃,使不同豬肉產品在價格變動與外部衝擊下可能呈現相異之需求反應。因此,本研究旨在估計菲律賓進口不同豬肉產品之需求彈性,釐清產品間之替代與互補關係,並探討外部衝擊與關稅政策對需求結構之影響。\n\n(二)研究方法\n\n本研究以菲律賓自美國進口之冷凍分切豬肉(HS 020329)、加工豬肉製品(HS 160249)及冷凍豬內臟(HS 020649)為研究對象,採用2015年至2025年之月資料,運用近似理想需求體系(Almost Ideal Demand System, AIDS),估計三類產品之自價格彈性、交叉價格彈性與支出彈性,並納入非洲豬瘟、COVID-19疫情及關稅政策等外部衝擊,分析其對產品支出份額與需求結構之影響。\n\n(三)預期結論\n\n本研究預期釐清菲律賓進口豬肉產品間之替代與互補關係,以及外部衝擊下之預算再分配現象。研究結果可作為臺灣豬肉業者選擇輸菲品項,及訂定價格策略與規劃風險因應之參考。",
+              "abstractSourceNumber": 15,
+              "discussantTitle": "教授"
             },
             {
               "id": "rest-2026-d-02",
-              "title": "臺灣進口啤酒市場需求體系評",
+              "title": "臺灣進口啤酒市場需求體系評估",
               "speaker": "王水賢",
               "affiliation": "國立屏東科技大學農企業管理系碩士生",
               "email": "",
@@ -500,12 +597,17 @@
               "endTime": "15:20",
               "sourcePage": 3,
               "order": 2,
-              "sourceNote": "題名依 PDF 原文保留；原文止於「評」。",
-              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。"
+              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。",
+              "coauthorAffiliations": [
+                "國立屏東科技大學農企業管理系"
+              ],
+              "abstract": "啤酒長年為臺灣進口酒精飲品中占比最高的品類。近年COVID-19疫情使得烈酒消費量下降而低價酒類飲品需求相對增長,此外,臺灣政府於2025年7月對中國大陸進口啤酒徵收反傾銷稅,臺灣進口啤酒的需求結構可能因此變化。在中華民國財政部統計,國產啤酒的市占率持續下降,2024年已經下跌超過50%,顯示臺灣對進口啤酒的依賴程度日益加深。就進口結構而言,中國大陸一直是臺灣啤酒進口的最大來源國,日本為第二大來源國,呈現持續上升的趨勢。而荷蘭進口啤酒為第三大來源國,因荷蘭啤酒品牌直接在臺灣建設生產設施,其進口量有所下降。本文採用2015年至2025年臺灣啤酒進口數據。研究運用近似理想需求系統(AIDS),估算來自不同來源國的啤酒進口支出彈性、需求價格彈性及交叉彈性。彈性估計結果顯示,中國大陸啤酒的價格彈性相對較高,主要針對低價啤酒市場。相較之下,日本進口啤酒在價格競爭方面面臨更大的挑戰。本文發現不同國家啤酒相對於中國大陸啤酒的替代和互補關係,進而推估影響世界貿易的重大事件亦可能對臺灣進口啤酒市場的需求結構造成顯著影響,為相關啤酒廠商提供進入臺灣市場的參考作證。",
+              "abstractSourceNumber": 16,
+              "discussantTitle": "教授"
             },
             {
               "id": "rest-2026-d-03",
-              "title": "農會選舉是否影響農會信用部經營績效-以台灣基層農會為例",
+              "title": "農會選舉是否影響農會信用部經營績效-以臺灣基層農會為例",
               "speaker": "陳品翰",
               "affiliation": "國立屏東科技大學農企業管理系碩士生",
               "email": "",
@@ -518,11 +620,17 @@
               "endTime": "15:40",
               "sourcePage": 3,
               "order": 3,
-              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。"
+              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。",
+              "coauthorAffiliations": [
+                "國立屏東科技大學農企業管理系"
+              ],
+              "abstract": "基層農會信用部為臺灣農業金融體系之核心,其經營績效之良窳連帶影響農會整體營運與農民福祉之推動。然而,隨著每四年一次的農會選舉的競爭激烈外及後續權力結構重組和農會總幹事的變更,使農會信用部營運極易受到干擾。縱觀國內現有文獻,多採用年資料或是局部地區農會,難以全面性觀察選舉事件對於全台農會信用部金融績效之影響。有鑑於此,本研究以2009年至2025年間歷經5次農會選舉之臺灣258家基層農會信用部為研究對象,共計1290樣本數。並依據CAMELS指標篩選核心財務比率藉由雙向固定效果模型(Two-way Fixed Effects Model)進行實證分析。實證結果顯示,農會選舉對信用部各項績效指標存在實質且顯著變化。首先,在經營品質方面,農會選舉初期其存放比率與逾期放款比率皆顯著提升,說明選舉前放款政策的短期擴張易使資產品質面臨波動。其次,在獲利營運方面,員工平均獲利額於農會選舉前一個月至選舉後兩個月有增加的現象,證實農會信用部面臨農會選舉時會積極開催帳款與開展業務之動機。最後,控制變數顯示,員工人數增加將降低平均獲利,而高教育程度員工占比提高則能提升員工平均獲利額,有效優化營運效能。",
+              "abstractSourceNumber": 17,
+              "discussantTitle": "教授"
             },
             {
               "id": "rest-2026-d-04",
-              "title": "優惠貿易協定對農產品進口與出口成效評估:台灣之驗證",
+              "title": "優惠貿易協定對農產品進口與出口成效評估：臺灣之驗證",
               "speaker": "陳敬凱",
               "affiliation": "國立中興大學應用經濟學系碩士生",
               "email": "",
@@ -536,7 +644,14 @@
               "endTime": "16:00",
               "sourcePage": 3,
               "order": 4,
-              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。"
+              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。",
+              "coauthorAffiliations": [
+                "國立中興大學應用經濟學系博士生",
+                "國立中興大學應用經濟學系教授"
+              ],
+              "abstract": "一、        研究動機與目的:\n\n台灣受限於特殊的國際政治處境,簽署優惠貿易協定 (PTA) 的數量遠低於其他主要貿易國家,目前僅與少數邦交國及特定夥伴(如紐西蘭ANZTEC、新加坡ASTEP,以及兩岸ECFA等)簽有相關協議。在此背景下,農產品貿易因涉及糧食安全、國內農業保護與敏感性議題,往往是PTA談判中最具爭議性的部分,其市場開放幅度與關稅減讓進程也常與工業產品有所差異。過去文獻對PTA整體貿易效果已有豐富討論,但針對台灣農產品貿易,在PTA簽署前後的貿易創造(trade creation)效果是否顯著,仍缺乏長時間跨度且方法穩健的實證研究。本研究希望透過重力模型,量化評估台灣與已簽署PTA國家之間,農產品進出口貿易的變動情形,檢驗此類協議是否確實為台灣農產品造成貿易創造效果的變化,並藉此為未來洽簽貿易協定的政策方向提供實證依據。\n\n二、        研究方法:\n\n本研究採用引力模型(Gravity Model),以經濟部國際貿易署(國貿署)及聯合國商品貿易統計資料庫(UN Comtrade)2004年至2025年間之雙邊貿易數據,建立台灣與主要貿易夥伴國之農產品進出口追蹤資料(panel data)。核心解釋變數為「PTA虛擬變數」,用以標示台灣與該貿易夥伴是否於當年度已簽署並生效相關協定,並輔以傳統重力模型變數(如GDP、地理距離等)作為控制變數。為處理雙邊貿易流量中常見的零貿易額問題並提升估計效率,本研究除採用傳統對數線性迴歸搭配高維固定效果(HDFE)外,亦將採用卜瓦松偽極大概似法(PPML)結合高維固定效果進行穩健性估計,以比較不同方法下PTA對台灣農產品貿易創造效果之估計結果是否一致。\n\n三、        預期結果:\n\n本研究預期,台灣與已簽署PTA之貿易夥伴,其農產品雙邊貿易額將顯著高於未簽署協定之貿易夥伴,顯示PTA對台灣農產品貿易具有正向的貿易創造效果,且此效果可能隨協定生效年限增加而逐漸擴大(動態效果)。此外,本研究亦預期不同方法(傳統迴歸 vs. PPML)所估計之效果方向一致,但估計量可能有所差異,藉此驗證研究結果的穩健性。本研究希望能為台灣在有限的PTA網絡下,農業部門所獲得之實質貿易利益提供具體量化證據,並作為未來洽簽或擴大農產品市場開放談判之政策參考。",
+              "abstractSourceNumber": 18,
+              "discussantTitle": "資深研究員"
             }
           ],
           "subtitle": "進口需求體系、關稅與貿易協定 / Import Demand Systems, Tariffs and Trade Agreements",
@@ -583,7 +698,15 @@
               "endTime": "16:50",
               "sourcePage": 3,
               "order": 1,
-              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。"
+              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。",
+              "coauthorAffiliations": [
+                "The University of Hong Kong",
+                "National Taiwan University",
+                "Graduate School of Economics and Management, Tohoku University"
+              ],
+              "abstract": "We investigate the impact of locust swarm invasions on human capital accumulation using data from Burkina Faso, emphasizing short-, medium-, and longer-term effects. Using geo-coded data, we find that locust outbreaks reduce school enrollment among cohorts at school-entry age, lower subsequent cognitive performance and educational attainment, and are associated with weaker early labor-market outcomes. Evidence on crop losses, rising food prices, and work-related non-enrollment is consistent with household resource constraints and increased labor demands contributing to these effects. An illustrative back-of-the-envelope calculation suggests that the potential benefits of early locust control may be large relative to its costs under the maintained assumptions.",
+              "abstractSourceNumber": 19,
+              "discussantTitle": "副教授"
             },
             {
               "id": "rest-2026-e-02",
@@ -600,7 +723,13 @@
               "endTime": "17:10",
               "sourcePage": 3,
               "order": 2,
-              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。"
+              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。",
+              "coauthorAffiliations": [
+                "National Taiwan University"
+              ],
+              "abstract": "Question: Did territories exposed to defeated domains in the Boshin War become less incorporated into Japan’s\n\nearly Meiji railway network?\n\nSetting: The Meiji state inherited a postwar political geography: some former domains had resisted the new\n\ngovernment and were subsequently reorganized from a position of defeat.\n\nMethod.\n\n• Construct old-county exposure to core defeated domains using continuous koku-weighted EnemyShare.\n\n• Measure railway incorporation by 1910 using line-polygon intersections between N05 railway segments and\n\nold-county polygons.\n\n• Estimate within-modern-prefecture dose-response regressions with scale, geography, terrain, and\n\ninherited-network controls.\n\nMain finding: Higher defeated-domain exposure predicts fewer railway kilometers by 1910; the pattern is\n\nrobust to scale, geographic, terrain, and inherited-network controls and appears more consistent with\n\nrealization-stage frictions than formal planning exclusion.",
+              "abstractSourceNumber": 20,
+              "discussantTitle": "副教授"
             },
             {
               "id": "rest-2026-e-03",
@@ -615,7 +744,11 @@
               "endTime": "17:30",
               "sourcePage": 3,
               "order": 3,
-              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。"
+              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。",
+              "coauthorAffiliations": [],
+              "abstract": "Public financing for climate-risk management depends not only on what people know about climate change but also on whether that knowledge is associated with willingness to pay (WTP). This study examines whether perceived psychological distance from climate change differed between 2022 and 2025 in Japan and whether psychological distance conditions the association between environmental knowledge and WTP for a climate-risk preparedness and response fund. Two nationwide repeated cross-sectional web surveys were conducted in 2022 (n = 2,000) and 2025 (n = 1,503). Overlap weighting and a partial proportional-odds model show that the combined probability of perceiving climate change as close or somewhat close was 13.39 percentage points higher in 2025. In the 2025 contingent valuation analysis, a Heckman-type sample-selection model indicates that the positive association between environmental knowledge and stated WTP weakens as psychological distance increases (interaction: β = −121.39, p = 0.058). Mean conditional WTP among fund supporters is approximately JPY 2,411 (approximately USD 16.3). The period comparison is observational and does not identify an effect of the exceptional heat of 2023–2024. The results identify psychological distance as a potential boundary condition in the knowledge–WTP relationship relevant to climate-risk financing policy.",
+              "abstractSourceNumber": 21,
+              "discussantTitle": "助理教授"
             },
             {
               "id": "rest-2026-e-04",
@@ -633,7 +766,14 @@
               "endTime": "17:50",
               "sourcePage": 3,
               "order": 4,
-              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。"
+              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。",
+              "coauthorAffiliations": [
+                "Sophia University",
+                "National Chengchi University"
+              ],
+              "abstract": "This paper develops a two-country (developed countries vs developing countries), two-good (agricultural goods and manufacturing goods), two-input (land and capital) general equilibrium model to examine how climate change, i.e. temperature rise, and adaptation affect international trade and welfare, and how terms-of-trade effects distort national adaptation incentives.\n\nWe obtain three main results. First, the welfare effect of a temperature increase differs fundamentally between agricultural importers and exporters. For a net importer of agricultural goods, a temperature increase unambiguously reduces welfare: the direct loss from lower agricultural productivity is reinforced by a rise in the world agricultural price, which worsens the country’s terms of trade. For a net exporter, by contrast, the welfare effect is ambiguous. Although climate change directly reduces domestic agricultural productivity, the associated contraction in world agricultural supply raises the agricultural price and improves the exporter’s terms of trade. If this terms-of-trade gain is sufficiently large relative to the direct productivity loss, the exporter’s welfare can increase.\n\nImportantly, these welfare effects depend not only on the average decline in agricultural productivity but also on the cross-country dispersion of climate damages. Even for a given average climate-induced productivity loss, differences in the distribution of damages across countries alter comparative advantage, world prices, and the international distribution of welfare. An agricultural exporter is more likely to benefit from a terms-of-trade improvement when its trading partner suffers relatively larger productivity losses, whereas an exporter that is relatively more severely affected may suffer both a direct productivity loss and an adverse shift in comparative advantage. Thus, both the average magnitude and the cross-country distribution of climate damages matter for welfare.\n\nSecond, adaptation generates international welfare spillovers. By restoring agricultural productivity, adaptation expands agricultural supply and lowers the world agricultural price. Consequently, adaptation in one country can either increase or reduce welfare in another country depending on its trade position. If a developing country is a net agricultural exporter and a developed country is a net importer, adaptation by the developed country can lower the developing country’s welfare by reducing its export price. This case is relevant to agricultural exporters such as South Africa and Thailand. Conversely, if the developing country is a net agricultural importer, as in countries such as Egypt or the Philippines, and the developed country is an exporter, adaptation by the developed country lowers the developing country’s import price and raises its welfare. However, the developed exporter has insufficient incentive to undertake such adaptation because it does not internalize this foreign welfare gain.\n\nThird, these spillovers distort national adaptation incentives. In a non-cooperative policy game, an agricultural exporter does not internalize the benefit that its adaptation confers on importing countries through lower agricultural prices and therefore undertakes too little adaptation. An agricultural importer does not internalize the terms-of-trade loss imposed on exporters and therefore undertakes too much adaptation. Hence, relative to the cooperative allocation, exporters under-adapt while importers over-adapt.",
+              "abstractSourceNumber": 22,
+              "discussantTitle": "教授"
             }
           ],
           "subtitle": "日本場：蝗災、鐵道、環境認知與氣候損害 / Japan Session: Locust Plague, Railways, Environmental Knowledge and Climate Damage",
@@ -664,7 +804,11 @@
               "endTime": "16:50",
               "sourcePage": 4,
               "order": 1,
-              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。"
+              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。",
+              "coauthorAffiliations": [],
+              "abstract": "Advanced technologies that mitigate global biological threats, such as vaccines for tropical\n\ndiseases, are chronically underprovided because the countries able to develop them bear\n\nlittle of the burden.\n\nWe ask how innovation responds when climate change pushes such biological threats into\n\nthose countries. In our spatial dynamic game, a reproducing threat diffuses across borders;\n\nwhile every country controls the threat locally, only one can innovate, generating technology\n\nthat spills over internationally.\n\nOur analysis yields two main findings. First, the primary catalyst for innovation is not a\n\nthreat's inherent severity, but rather its underlying biology: innovation arises only when the\n\nbiology makes sustained eradication infeasible. Second, technology spillovers drive\n\ninnovation exclusively through their interaction with threat diffusion, as technology deployed\n\nabroad curbs the threat flowing back across borders. Applying this framework to the\n\nclimate-driven expansion of dengue-transmitting mosquitoes into the U.S., structural\n\nestimates suggest that self-interested U.S. vaccine innovation could cut cases in the\n\nAmericas by 54% compared to a fixed-innovation benchmark, ultimately leaving Latin\n\nAmerica better off than before the expansion.",
+              "abstractSourceNumber": 23,
+              "discussantTitle": "教授兼系主任"
             },
             {
               "id": "rest-2026-f-02",
@@ -682,11 +826,18 @@
               "endTime": "17:10",
               "sourcePage": 4,
               "order": 2,
-              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。"
+              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。",
+              "coauthorAffiliations": [
+                "Université Laval",
+                "國立臺灣大學"
+              ],
+              "abstract": "Prior studies hedge climate risk with portfolios that mimic news-based climate risk indices. Because news-based indices contain substantial noise, such portfolios often have low correlations with their hedging targets; moreover, the correlations among different news indices are low, so any single index captures only part of true climate risk. This thesis uses principal component analysis (PCA) to extract the first principal component from multiple heterogeneous climate risk indices and names it the Common Climate Risk Signal (CCRS). Our CCRS integrates the climate news indices of Ardia et al. (2023), Faccini et al. (2023), and De Nard et al. (2024), together with physical climate observations from the National Oceanic and Atmospheric Administration (NOAA), for a total of 16 series. Using rolling-window PCA to ensure strict out-of-sample testing, combined with an eigenvector alignment procedure (Hirsa et al. 2023), we construct hedging portfolios from the 2000 largest U.S. stocks by market capitalization. The hedging portfolio built on the CCRS achieves a correlation of 14.7% over the 184-month out-of-sample period with a p-value of 0.046, the only one significant at the 5% level, whereas the hedging portfolios of all single climate news indices fail to reach 5% significance. We further show that two features of rolling PCA both improve hedging: re-estimating the weights in every rolling window, and using PCA weights rather than equal weights to combine the series. Fixed-window PCA, which estimates the weights only once, yields a correlation statistically indistinguishable from zero (-2.9%, p-value 0.692), and a simple standardized average, which weights all series equally, also underperforms rolling PCA. We interpret the advantage of the CCRS over individual indices as reflecting a higher signal-to-noise ratio. Taken together, the analyses of climate-event matches, the out-of-sample predictive ability of stock-level climate risk sensitivities, and their temporal stability are consistent with this interpretation. Regarding series selection, we find that adding series from more heterogeneous sources improves the hedging performance of the common signal, whereas adding too many homogeneous series reduces it, indicating that the heterogeneity of the input series matters more than their number.",
+              "abstractSourceNumber": 24,
+              "discussantTitle": "副教授"
             },
             {
               "id": "rest-2026-f-03",
-              "title": "災害救助會鼓勵高風險種植嗎?臺灣蕉農種植時點選擇之實證分析",
+              "title": "災害救助會鼓勵高風險種植嗎？臺灣蕉農種植時點選擇之實證分析",
               "speaker": "韓硯",
               "affiliation": "國立臺灣大學農業經濟學系專任研究助理",
               "email": "",
@@ -699,7 +850,13 @@
               "endTime": "17:30",
               "sourcePage": 4,
               "order": 3,
-              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。"
+              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。",
+              "coauthorAffiliations": [
+                "國立臺灣大學農業經濟學系"
+              ],
+              "abstract": "本文探討農業天然災害救助制度與農民事前生產配置之間的關聯,特別關注農民是否傾向將生產安排於災害風險較高的時段。以臺灣香蕉產業為研究對象,我們利用香蕉可全年下苗且颱風風險具有明確季節性的特性,將抽穗期與颱風季重疊且採收時點位於 10 月或之後的種植月份界定為高風險種植時點,並以高風險種植月份之種苗出貨量占全年種苗出貨量的比例建構投機指數。本文使用 2012 年至 2024 年臺灣主要香蕉產區之縣市年度追蹤資料,結合種苗出貨、批發市場價格、農業天然災害救助、聖嬰事件及颱風侵臺及登陸資料,並採用分數型邏輯迴歸模型,分析市場價格、制度經驗、氣候與災害經驗、栽培制度傾向及區域差異與高風險種植配置之間的關聯。實證結果顯示,蕉農的高風險種植配置與市場價格訊號具有顯著關聯,且存在穩定的區域差異;替代品價格與理性預期價格多與投機指數呈現負向關聯,前一期價格飆漲率則穩定呈現正向關聯,東部地區的投機指數亦持續高於其他地區。氣候與災害經驗方面,滯後颱風連續未登陸事件與非東部地區蕉農較低的投機行為相關,但當年度聖嬰颱風數所代表的大尺度氣候條件未呈現穩定相關性;制度參與頻率與制度強度亦未呈現一致結果。本文的研究貢獻在於,將天然災害救助制度下難以直接觀察的投機行為轉化為可量化的實證對象,並指出農業災害政策不僅可能與災後補償結果相關,也可能與農民的事前風險配置決策相關。",
+              "abstractSourceNumber": 25,
+              "discussantTitle": "副教授"
             }
           ],
           "subtitle": "生物威脅、氣候風險衡量與救助誘因 / Biological Threats, Climate Risk Measurement and Relief Incentives",
@@ -732,7 +889,13 @@
               "endTime": "16:50",
               "sourcePage": 4,
               "order": 1,
-              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。"
+              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。",
+              "coauthorAffiliations": [
+                "國立中興大學森林學系"
+              ],
+              "abstract": "隨著民眾對自然環境需求增加,資通訊科技的普及催生了數位遊憩趨勢。本研究以問卷形式,針對臺中大坑登山步道遊客進行調查,透過線上與現地雙軌蒐集281份有效問卷,並採用曼-惠特尼U檢定、斯皮爾曼等級相關分析與克魯斯卡爾-沃利斯檢定,主要目的為了解遊客居住地對行程規劃之影響、步道難度與導航依賴之相關性,以及個體數位能力與景觀特徵對數位足跡生成之效應。本研究分析結果顯示,在行前規劃方面,臺中在地遊客平均等級(147.22)顯著高於非臺中市遊客(108.40),傾向依賴過往經驗;非臺中市遊客則顯著依賴社群媒體(175.70)與數位地圖(167.36)等外部資訊。在步道行進間,遊客選擇的步道難度等級與手機GPS導航或登山App使用頻率呈顯著正相關(r=0.155),地形挑戰度越高則定位需求越強。此外,遊客數位工具使用能力與事後分享行為皆呈顯著正相關,並以向朋友推薦特定的步道或景點(r=0.275)及上傳照片(r=0.273)最為顯著。在景觀感知方面,對地景特徵受吸引項數達3至4項時,照片上傳與景點推薦意願達到行為峰值,但分享GPS軌跡與撰寫評論等深層數位足跡則未達統計顯著。透過本研究提供之遊客行為與多維數位足跡分析,可提供未來資源管理單位在規劃智慧遊憩、精準數位行銷及智慧化監測管理決策之學術參考。",
+              "abstractSourceNumber": 26,
+              "discussantTitle": "副教授兼系主任"
             },
             {
               "id": "rest-2026-g-02",
@@ -749,7 +912,13 @@
               "endTime": "17:10",
               "sourcePage": 4,
               "order": 2,
-              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。"
+              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。",
+              "coauthorAffiliations": [
+                "國立臺灣海洋大學應用經濟所教授"
+              ],
+              "abstract": "為探討農村永續發展,研究以永續生計理論,構建人力、社會、自然、物質、文化、經濟、數位與心理等八大資本構面,分析農村生計體系之多樣性、脆弱性與發展韌性。研究運用文獻梳理和修正式德菲法,篩選與確立農村永續發展之關鍵影響因素;其次透過層級分析法,針對13個金牌農村、13處青年工作站之代表,以及10位專家學者進行問卷調查,並分析不同群體對各生計資本構面及相關因素之重視程度,結果顯示人力、自然、社會與心理資本為影響農村永續發展之主要構面。進一步比較不同權益關係人發現,金牌農村最重視自然資本與生態環境;青年工作站則關注心理資本與居民內在能動力;專家學者則將人力資本視為推動農村永續發展之核心基礎。",
+              "abstractSourceNumber": 27,
+              "discussantTitle": "助研究員"
             },
             {
               "id": "rest-2026-g-03",
@@ -764,13 +933,17 @@
               "endTime": "17:30",
               "sourcePage": 4,
               "order": 3,
-              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。"
+              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。",
+              "coauthorAffiliations": [],
+              "abstract": "本文利用2016至2024年臺灣家庭收支調查148,752戶資料,檢視新冠疫情前(2016-2019年)、疫情期間(2020-2022年)與疫情後(2023-2024年)家庭所得與外食支出之分配關係。本文以實質外食支出為應變數,取對數之調整後可支配所得為核心解釋變數,採用分量對分量迴歸,並控制家庭人口、社經、職業、住宅與區域特徵。結果顯示,所得與外食支出整體呈正向關聯,但關係主要集中於中高所得與中高外食支出家庭,低分位家庭的反應較弱,且於疫情期間與疫情後呈現較大波動。分組結果顯示,有伴侶家庭與服務業家庭的所得效果較穩定,無伴侶家庭及農林漁牧礦業家庭則較不規則。疫情後外食需求雖有回升,卻未全面回到疫情前的分配型態,顯示臺灣餐飲市場的復甦具有明顯分層特徵。",
+              "abstractSourceNumber": 28,
+              "discussantTitle": "助理教授"
             },
             {
               "id": "rest-2026-g-04",
               "title": "Determinants of Participation in Taiwan's Endangered Species Payment for Ecosystem Services Program: A Cross-Sectional Analysis",
               "speaker": "李天裕 Tian-Yuh Lee",
-              "affiliation": "國立中興大學森林學系研究生",
+              "affiliation": "國立中興大學森林學系博士生",
               "email": "",
               "coauthors": [
                 "柳婉郁 Wan-Yu Liu"
@@ -781,7 +954,13 @@
               "endTime": "17:50",
               "sourcePage": 4,
               "order": 4,
-              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。"
+              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。",
+              "coauthorAffiliations": [
+                "國立中興大學森林學系"
+              ],
+              "abstract": "Payments for ecosystem services (PES) are increasingly adopted to promote biodiversity conservation. This study examines the factors associated with participation in Taiwan’s endangered-species PES program using cross-sectional survey data from 404 respondents. Binary logistic regression was employed to analyze the relationships between participation and demographic, educational, agricultural, institutional, and economic factors. The results indicate that environmental education was the strongest positive correlate of participation. Age and crop or fruit production were also positively associated with participation, whereas requested compensation was negatively associated. Other institutional and social factors showed positive but comparatively limited statistical significance. Overall, the findings demonstrate that participation in biodiversity-oriented PES programs is not determined solely by financial incentives; environmental education, agricultural characteristics, and social interactions are also important correlates of participation. These findings highlight the importance of integrating environmental education, conservation communication, and community engagement with appropriate financial and institutional support. Such an integrated approach may strengthen program accessibility and encourage broader participation in biodiversity conservation. Given the cross-sectional design, the results indicate associations rather than causal relationships. Further longitudinal research is needed to examine long-term participation and biodiversity outcomes.",
+              "abstractSourceNumber": 29,
+              "discussantTitle": "助理教授"
             }
           ],
           "subtitle": "森林遊憩、永續生計、保育參與與家戶支出 / Forest Recreation, Sustainable Livelihoods, Conservation Participation and Household Spending",
@@ -801,7 +980,7 @@
           "talks": [
             {
               "id": "rest-2026-h-01",
-              "title": "氣象參數型農業保險之研究:以溫度參數養殖水產保險為例",
+              "title": "氣象參數型農業保險之研究：以溫度參數養殖水產保險為例",
               "speaker": "李俊諺",
               "affiliation": "國立臺中科技大學保險金融管理系大專生",
               "email": "",
@@ -816,11 +995,19 @@
               "endTime": "16:50",
               "sourcePage": 4,
               "order": 1,
-              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。"
+              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。",
+              "coauthorAffiliations": [
+                "國立臺中科技大學保險金融管理系副教授",
+                "國立臺中科技大學保險金融管理系大專生",
+                "國立臺中科技大學保險金融管理系大專生"
+              ],
+              "abstract": "本研究旨在探討雙層保險機制應用於降低參數型保險基差風險之可行性與成效。目前臺灣水產養殖易受寒害衝擊,但現行溫度型參數保險僅以單一溫度門檻為理賠依據,無法精準反映不同地區與養殖場的微氣候及實際災損。再者,參數指標無法完全貼合實際損害,容易導致養殖戶陷入實際受災卻未達門檻而拿不到理賠,或獲得的理賠金額與實際損失嚴重不符的雙重困境。受基差風險影響,當養殖戶受災卻無法獲賠或未出險而保費沒拿回時,行為經濟學中的狹隘框架偏誤會放大其虧損感,將保險視為不划算的賭局,致使農民投保與續保意願長期低迷。投保率持續低迷導致風險無法有效規模化分散 ;對保險公司而言,氣候變遷帶來的極端寒害損失風險高且精算困難,容易面臨財務虧損與清償能力考驗,形成養殖戶不願投保、業者缺乏承辦意願的惡性循環,嚴重衝擊水產養殖保險市場的永續經營。是故,設計雙層制參數型保險以降低基差風險有其必要性。\n\n財團法人農業保險基金統計之投保與理賠數據顯示,保險之投保件數與理賠件數於不同年度呈現明顯波動。投保件數與理賠件數之差異本身尚不足以直接證明基差風險存在,因此,本研究將進一步從實際災損與保險理賠結果間之落差探討基差風險,並據此提出雙層制參數型保險設計。當災害發生達到設定溫度門檻,即先行給付第一層應急金,無需等待現場勘災與損失確認,協助養殖戶即時取得救急資金。第二層為災害發生後進行現場實際損害鑑定,再依損害填補原則補足剩餘的實際損失。\n\n研究將比較現行溫度參數型保險與雙層保險制度下實際災損及保險給付之差異,以評估雙層制度降低基差風險之效果。預期研究結果讓雙層保險機制能在維持參數型保險快速給付優勢的同時,能有效縮小實際災損與理賠之落差,降低養殖戶受災卻未能獲得適當保障之情形,進而顯著提升農民的投保意願與續保率,最終促進水產養殖保險市場與養殖產業的永續經營。",
+              "abstractSourceNumber": 30,
+              "discussantTitle": "助理教授"
             },
             {
               "id": "rest-2026-h-02",
-              "title": "台灣農產品外銷促進政策之成效評估:進口端視角之驗證",
+              "title": "臺灣農產品外銷促進政策之成效評估：進口端視角之驗證",
               "speaker": "鄭芳旻",
               "affiliation": "國立中興大學應用經濟學系博士生",
               "email": "",
@@ -834,7 +1021,14 @@
               "endTime": "17:10",
               "sourcePage": 4,
               "order": 2,
-              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。"
+              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。",
+              "coauthorAffiliations": [
+                "國立屏東科技大學農企業管理系助理教授",
+                "國立中興大學應用經濟學系教授"
+              ],
+              "abstract": "一、研究動機與目的:\n\n農產品外銷促進一直為臺灣政府致力發展之施政。近年來政府積極推動與貿易國簽訂雙邊的優惠貿易協定,促使特定產品享有比最惠國待遇關稅更優惠的關稅,並推動「農產品拓銷獎勵計畫」,來促進臺灣農產品外銷。然而,過去對於農產品外銷成效的評估缺乏從目標國進口端進行檢視之視角,亦少有經對已實施的個別外銷農產品探究其事後政策效果。故本研究旨在估計特定農產品之ATT值變化,探討台灣農產品外銷促進政策之成效。\n\n二、研究方法:\n\n本文整理2021年至2023年由行政院農業部頒布的「農產品拓銷獎勵計畫」中主要拓銷的農產品品項,透過政策分析模型(差異中之差異法及合成控制法)檢視臺灣農產外銷獎勵的重點產品進入到主要對手國之後,在對手國進口端適用優惠關稅之成效。\n\n三、預期結果:\n\n本文預期農產品拓銷獎勵政策具有正向效果,重點農產品進入主要目標市場後,進口表現提升,預期估計ATT值為正;並預期政策效果會因目標市場與產品特性而有所差異,例如中國市場之政策效果可能較集中於漁產品,日本市場則可能以水果類產品較為明顯。本研究嘗試透過估計成果提供政策效果之重要意涵,作為後續農產外銷獎勵政策及簽訂優惠貿易協定策略延續與改善之參考。",
+              "abstractSourceNumber": 31,
+              "discussantTitle": "助理教授"
             },
             {
               "id": "rest-2026-h-03",
@@ -849,7 +1043,11 @@
               "endTime": "17:30",
               "sourcePage": 4,
               "order": 3,
-              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。"
+              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。",
+              "coauthorAffiliations": [],
+              "abstract": "農業政策規劃及農業決策時,對於未來相關情勢的掌握,攸關農業政策品質、農業決策之得失與施政結果之良窳,至為重要。然而農業相關情勢涉及諸多層面,不僅在國內需視農業本身的發展基礎、農產業情況與條件,還受到總體經濟與社會面等影響;國際上則受到國際農業、能源、農業科技、經貿情勢甚至地緣政治等影響,且需符合國際減碳淨零、循環經濟、平權、動保等農業的主流價值;此外還有來自老天的氣候變遷、極端天氣等因素。更難的是這些因素常是變化多端,難以預料。\n\n由於農業展望所需蒐集的相關資訊項目太多,且多數項目難以預料,過去農業部門往往需要編列相當的經費,花費相當多的時間和人力心力,才有辦法做出展望報告。此外由於資訊龐雜,如果沒有較佳的綜整與關聯分析,得到的報告也是解讀不易。更甚者若遇到經費不足或時間太短的情況下,常跳過未來的展望,就進行規劃,以至事後看來,與實際發生情況大有出入。\n\n近年來人工智慧(Artificial Intelligence, AI)快速發展,能協助快速蒐集資料、快速開發演算程式與顯示介面,並有快速綜整龐雜資訊的能力,使用成本也不算高,似適合用來協助克服上列政策展望的困難。\n\n本研究即試圖使用AI的各項能力,開發一個農業政策展望系統─農業政策水晶球,綜整蒐集到的農業相關各層面預期內容,並以水晶球的方式呈現。以協助農業政策規劃人員、農業政策決策者等更容易及準確掌握未來相關情勢,提高農業政策規劃、農業政策決策及農業施政之品質。",
+              "abstractSourceNumber": 32,
+              "discussantTitle": "農業政策專家"
             },
             {
               "id": "rest-2026-h-04",
@@ -867,7 +1065,14 @@
               "endTime": "17:50",
               "sourcePage": 4,
               "order": 4,
-              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。"
+              "timingSource": "依頁面製作者指定規則：每篇 20 分鐘，三篇場次使用前 60 分鐘。",
+              "coauthorAffiliations": [
+                "國立臺中科技大學保險金融管理系副教授",
+                "國立臺中科技大學保險金融管理系大專生"
+              ],
+              "abstract": "近年受氣候變遷加劇與極端天災頻傳影響,農作物受損風險大幅提高,使農業保險成為農民轉移經營風險、維持生計不可或缺的關鍵工具。以我國重要經濟作物香蕉為例,因臺灣位處颱風路徑,強風極易造成植株倒伏與果實損失。過去推動之香蕉收入型保險及傳統實損補償保險,常面臨現場勘損程序繁瑣、災後人力不足及理賠時程延宕等痛點,無法提供即時資金。為有效彌補上述缺失,我國自 115 年起將香蕉保險改採「颱風風速參數型保險」。該保險以約定之中央氣象署觀測站陣風風速作為啟動與理賠標準,具有理賠門檻明確、免去現場逐筆勘損負擔,以及風災後能迅速撥款等特性。此外,該制度將多次颱風獨立計算,使重複受災者亦能獲得保障,再搭配精準的保險標的定義,能顯著減少投保與理賠資格的爭議,為農民築起更即時且透明的風險分散機制。\n\n本研究旨在探討颱風風速參數型保險應用於香蕉產業之保障效果,並評估其理賠金額與農民實際災損之吻合程度。研究假設該保險制度於過去已實施,蒐集2000年至2025年間臺灣地區颱風風速、颱風發生頻率及香蕉實際災損的數據,並依據富邦產物颱風風速參數型保險之理賠金額計算方式,回溯模擬各年度可能產生之理賠金額,再與該期實際災損進行比較分析。預期可釐清颱風風速參數型保險於不同颱風事件及災損程度下之理賠表現,進一步評估其理賠結果與香蕉農民實際承受損失之間的關聯性與適配程度。",
+              "abstractSourceNumber": 33,
+              "discussantTitle": "教授"
             }
           ],
           "subtitle": "參數型保險、外銷促進與 AI 應用 / Parametric Insurance, Export Promotion and AI Applications",

@@ -5,7 +5,7 @@ const PROGRAM_LINK = 'https://jamesweichen.github.io/rest-2026/program.json';
 
 const COPY = {
   en: {
-    sourceNote: 'Program transcribed from the organizer’s four-page PDF. Authors are listed with the presenter first. Paper slots are assigned at 20 minutes each; three-paper sessions use the first 60 minutes. These individual times are editorial, while session times follow the PDF. Keynote titles, a dinner end time and a venue map are not provided.', sourcePdf: 'Source program PDF ↗', sourcePage: 'Organizer’s announcement ↗',
+    sourceNote: 'Updated from program version 1123V3 and the supplied book of abstracts, with all 33 paper abstracts and listed coauthor affiliations. Authors are listed with the presenter first. Paper slots are assigned at 20 minutes each; three-paper sessions use the first 60 minutes. Session times follow the PDF.', sourcePdf: 'Program PDF · 1123V3 ↗', sourceAbstracts: 'Book of abstracts (Word) ↗', sourcePage: 'Organizer’s announcement ↗',
     abstract: 'Abstract',
     appearance: 'Appearance', themeSystem: 'System', themeLight: 'Light', themeDark: 'Dark',
     language: 'Language', langSystem: 'System',
@@ -45,7 +45,7 @@ const COPY = {
     copied: 'Program link copied.', copyFailed: 'Copy failed. Select the link above and copy it.',
   },
   zh: {
-    sourceNote: '依主辦單位四頁 PDF 整理，作者首位為報告人。場次時段依原始 PDF；逐篇時間由本頁依每篇 20 分鐘編排，三篇場次使用前 60 分鐘。Keynote 題目、晚宴結束時間及會場地圖未提供。', sourcePdf: '原始議程 PDF ↗', sourcePage: '主辦單位公告 ↗',
+    sourceNote: '依 1123V3 議程與論文摘要集更新，包含 33 篇論文摘要及列明的共同作者單位，作者首位為報告人。場次時段依議程 PDF；逐篇時間由本頁依每篇 20 分鐘編排，三篇場次使用前 60 分鐘。', sourcePdf: '議程 PDF · 1123V3 ↗', sourceAbstracts: '論文摘要集（Word）↗', sourcePage: '主辦單位公告 ↗',
     abstract: '摘要',
     appearance: '外觀', themeSystem: '跟隨系統', themeLight: '淺色', themeDark: '深色',
     language: '語言', langSystem: '跟隨系統',
@@ -244,7 +244,7 @@ function sessionCard(item, talks) {
     section.append(el('strong', talk.title));
     if (talk.speaker || talk.coauthors?.length) section.append(authorLine(talk));
     if (talk.discussant) {
-      section.append(el('p', roleText('discussant', personText(talk.discussant, talk.discussantAffiliation)), 'detail discussant'));
+      section.append(el('p', roleText('discussant', personText([talk.discussant, talk.discussantTitle].filter(Boolean).join(' '), talk.discussantAffiliation)), 'detail discussant'));
     }
     if (talk.sourceNote) section.append(el('p', talk.sourceNote, 'detail'));
     if (talk.startTime) section.append(el('p', timeLabel(talk), 'detail'));
@@ -378,7 +378,7 @@ function renderAll() {
   const revision = byID('program-revision');
   revision.textContent = meta.programRevision
     ? t('programRevision', new Date(`${meta.programRevision}T00:00:00Z`).toLocaleDateString(
-      lang === 'zh' ? 'zh-TW' : 'en-US', {dateStyle: 'medium', timeZone: 'UTC'}))
+      lang === 'zh' ? 'zh-TW' : 'en-US', {dateStyle: 'medium', timeZone: 'UTC'})) + (meta.programVersion ? ` · ${meta.programVersion}` : '')
     : '';
   revision.hidden = !meta.programRevision;
   document.title = t('docTitle');

@@ -128,22 +128,31 @@ Acadenda JSON structure as `tea-2026/`. Public URLs:
 - Snapshot of the organizer's source PDF: https://jamesweichen.github.io/rest-2026/source-program.pdf
 
 Source: the Rural Economics Society of Taiwan's announcement dated 23 November
-2026, for the 6 December meeting at NTU Agricultural Economics. Original source
-links are retained in `conference.sourceURL` and `conference.sourcePDFURL`.
-`source-program.pdf` preserves the exact four-page PDF used for transcription.
+2026, for the 6 December meeting at NTU Agricultural Economics. The original
+announcement is retained in `conference.sourceURL`.
+`source-program.pdf` now preserves the user-supplied four-page 1123V3 PDF.
+`source-abstracts.docx` preserves the supplied book of abstracts.
+The current snapshot URLs are recorded in `conference.sourcePDFURL` and
+`conference.abstractSourceURL`; `conference.organizerSourcePDFURL` retains the
+original announcement’s PDF link as a historical source.
 
 The program has 18 sessions/activities: three keynotes, a forum and eight parallel
 paper sessions (33 research papers), opening remarks, photo, lunch/member meeting,
 break, closing, and dinner. There are 38 talk records including the two opening
 speakers and three keynotes. Source page numbers and stable IDs are retained.
-The PDF identifies the first author as presenter and only gives that person's
-affiliation; coauthor affiliations are not inferred. Individual paper times,
+The PDF identifies the first author as presenter. Presenter affiliations follow
+the revised program / presenter lines in the abstract book; explicitly supplied
+coauthor affiliations come from the abstract book. Individual paper times,
 keynote titles, dinner end time, and venue maps are not supplied by the PDF.
 At the page author’s explicit instruction, each forum/parallel paper is assigned
 a 20-minute slot in source order. Three-paper sessions use the first 60 minutes
 of their 80-minute session. These assigned times are distinguished from the
 organizer’s session times in the page source note and each talk’s `timingSource`.
-The D2 paper title ends with 「評」 in the source and is preserved with a note.
+The 1123V3 revision corrects the D2 title to 「臺灣進口啤酒市場需求體系評估」.
+All 33 research papers now have verbatim `abstract` strings from the supplied
+book, with `abstractSourceNumber` matching its numbered entries.
+The PDF takes precedence for discussant titles where the sources differ
+(F2: 孔維新 is listed as 副教授 in the revised PDF, 教授 in the abstract book).
 Do not invent missing details or silently correct source titles.
 
 Validate with the adjacent Acadenda publishing toolkit:
