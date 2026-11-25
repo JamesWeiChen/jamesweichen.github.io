@@ -264,17 +264,19 @@ function renderDay(day, q, showDate) {
   const fragment = document.createDocumentFragment();
   if (showDate) fragment.append(el('h3', dayLabel(day), 'day-heading'));
   let block = null;
-  let lastLabel = null;
+  let lastGroup = null;
   let shown = 0;
   for (const item of day.items) {
     const talks = visibleTalks(item, q);
     if (talks === null) continue;
     const label = timeLabel(item);
-    if (!block || label !== lastLabel) {
+    // Only parallel sessions share a time block; other activities stand alone.
+    const group = `${label}|${item.kind === 'parallelSession' ? 'parallel' : item.id}`;
+    if (!block || group !== lastGroup) {
       block = el('div', '', 'time-block');
       block.append(el('p', label, 'time-label'));
       fragment.append(block);
-      lastLabel = label;
+      lastGroup = group;
     }
     block.append(sessionCard(item, talks));
     shown++;

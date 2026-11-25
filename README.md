@@ -200,3 +200,8 @@ share grid rows for headings, descriptions, QR frames, actions and link/status
 text. QR frames stretch to the same height without truncating translated
 captions. The organizer demo's two sample download cards use the same approach.
 Below the existing mobile breakpoints, cards stack in normal document order.
+
+The REST water-resources forum uses `kind: "session"`, independently of the
+eight `parallelSession` entries. The website gives it its own time block even
+though it shares the 14:40–16:00 time range with sessions A–D. Times, paper
+order, abstracts and stable IDs are unchanged.
