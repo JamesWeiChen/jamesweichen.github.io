@@ -1,0 +1,14 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["T4477L7L5F.WJC.Acadenda"],
+        "components": [
+          { "/": "/acadenda/program/Official_Conference_Demo.json" },
+          { "/": "/*/*/program.json", "exclude": true },
+          { "/": "/*/program.json" }
+        ]
+      }
+    ]
+  }
+}
